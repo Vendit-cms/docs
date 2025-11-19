@@ -3,9 +3,9 @@
   "theme": "aspen",
   "name": "VCMS 사용자 가이드",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#2E3649",
+    "light": "#646A78",
+    "dark": "#141D33"
   },
   "favicon": "/CMS_48px.svg",
   "navigation": {
