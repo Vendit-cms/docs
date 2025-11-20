@@ -39,8 +39,8 @@
           {
             "group": "재고/요금 설정",
             "pages": [
-              "inventory-rate/pacage/package-stay",
-              "inventory-rate/pacage/package-day-use",
+              "inventory-rate/package/package-stay",
+              "inventory-rate/package/package-day-use",
               "inventory-rate/roomType",
               "inventory-rate/rate",
               "inventory-rate/period",
