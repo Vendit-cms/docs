@@ -11,10 +11,10 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "사용자 가이드",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "VCMS 시작하기",
             "pages": [
               "index",
               "quickstart",
