@@ -3,7 +3,7 @@
   "theme": "aspen",
   "name": "VCMS 사용자 가이드",
 
-  "styles": "_styles.css",
+  "styles": "/public/styles.css",
 
   "colors": {
     "primary": "#2E3649",
