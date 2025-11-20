@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme":"aspen",
+  "theme": "aspen",
   "name": "VCMS 사용자 가이드",
   "colors": {
     "primary": "#2E3649",
@@ -8,10 +8,17 @@
     "dark": "#C1C5CC"
   },
   "logo": {
-      "light": "/logo/Logo-dark.svg",
-      "dark": "/logo/Logo-light.svg"
-    },
+    "light": "/logo/Logo-dark.svg",
+    "dark": "/logo/Logo-light.svg"
+  },
   "favicon": "/logo/favicon.svg",
+
+  "expandedGroups": [
+    "숙박업소 관리",
+    "예약 내역",
+    "자주 묻는 질문"
+  ],
+
   "navigation": {
     "tabs": [
       {
@@ -69,12 +76,6 @@
             ]
           },
           {
-            "group": "연동 서비스 연결",
-            "pages": [
-              "integrations/vcloud"
-            ]
-          },
-          {
             "group": "자주 묻는 질문",
             "pages": [
               "faq/어떤-판매-채널과-연동할-수-있나요",
@@ -97,7 +98,6 @@
               "faq/객실을-다른-타입으로-옮길-수-있나요",
               "faq/채널-수수료를-별도로-설정할-수-있나요",
               "faq/에어비앤비를-다른-방식으로-로그인했어요-vcms에는-어떻게-연결하나요"
-
             ]
           }
         ]
