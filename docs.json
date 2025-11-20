@@ -16,20 +16,20 @@
           {
             "group": "숙박업소 관리",
             "pages": [
-              "property-management/signup-login",
-              "property-management/create-property",
-              "property-management/invite-user",
-              "property-management/property-settings",
-              "property-management/subscription-payment"
+              "accommodations/signup-login",
+              "accommodations/create-accommodation",
+              "accommodations/invite-user",
+              "accommodations/accommodations-settings",
+              "accommodations/billing"
             ]
           },
           {
             "group": "판매 관리",
             "pages": [
-              "sales-management/understanding",
-              "sales-management/usage",
-              "sales-management/channel-sync",
-              "sales-management/view-settings"
+              "distributions/understanding",
+              "distributions/usage",
+              "distributions/channel-sync",
+              "distributions/view-settings"
             ]
           },
           {
@@ -44,8 +44,8 @@
           {
             "group": "예약 내역",
             "pages": [
-              "booking-records/records",
-              "booking-records/view-settings"
+              "bookings/records",
+              "bookings/view-settings"
             ]
           },
           {
@@ -61,7 +61,7 @@
           {
             "group": "연동 서비스 연결",
             "pages": [
-              "integration-service/vcloud"
+              "integration/vcloud"
             ]
           },
           {
