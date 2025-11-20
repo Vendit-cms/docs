@@ -16,12 +16,6 @@
   },
   "favicon": "/logo/favicon.svg",
 
-  "expandedGroups": [
-    "숙박업소 관리",
-    "예약 내역",
-    "자주 묻는 질문"
-  ],
-
   "navigation": {
     "tabs": [
       {
@@ -29,6 +23,7 @@
         "groups": [
           {
             "group": "숙박업소 관리",
+            "collapsed": false,
             "pages": [
               "accommodations/signup-login",
               "accommodations/create-accommodation",
@@ -39,6 +34,7 @@
           },
           {
             "group": "판매 관리",
+            "collapsed": false,
             "pages": [
               "distributions/understanding",
               "distributions/usage",
@@ -48,6 +44,7 @@
           },
           {
             "group": "재고/요금 설정",
+            "collapsed": false,
             "pages": [
               "inventory-rate/package/package-stay",
               "inventory-rate/package/package-day-use",
@@ -59,6 +56,7 @@
           },
           {
             "group": "예약 내역",
+            "collapsed": false,
             "pages": [
               "bookings/bookings",
               "bookings/settings"
@@ -66,6 +64,7 @@
           },
           {
             "group": "채널 연결",
+            "collapsed": true,
             "pages": [
               "channels/yeogiottae",
               "channels/naver",
@@ -80,6 +79,7 @@
           },
           {
             "group": "자주 묻는 질문",
+            "collapsed": true,
             "pages": [
               "faq/20251120-01"
             ]
