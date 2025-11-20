@@ -8,32 +8,32 @@
 }
 
 /* ===========================================================
-   1) 링크(메뉴 항목) Hover / Active 스타일 — 강제 보라색
+   1) 링크 Hover / Active — 강제 보라색
    =========================================================== */
 
 /* Hover */
-.mint-navigation-item .mint-link:hover {
+.mint-navigation-item > .mint-link:hover {
   background-color: var(--vendit-purple-bg) !important;
   color: var(--vendit-purple) !important;
 }
 
-/* Active (우선순위 높이기) */
-.mint-navigation-item .mint-link.active,
-.mint-navigation-item .mint-link.active * {
+/* Active */
+.mint-navigation-item > .mint-link.active,
+.mint-navigation-item > .mint-link.active * {
   background-color: var(--vendit-purple-active-bg) !important;
   color: var(--vendit-purple) !important;
   font-weight: 600 !important;
 }
 
-/* 링크 기본 스타일 override */
-.mint-navigation-item .mint-link {
+/* 기본 링크 스타일 */
+.mint-navigation-item > .mint-link {
   border-radius: 8px !important;
   padding: 10px 14px !important;
   transition: all 0.15s ease;
 }
 
 /* ===========================================================
-   2) 그룹 타이틀 (숙박업소 관리 / 판매 관리 등)도 보라색
+   2) 그룹 타이틀 보라색
    =========================================================== */
 .mint-nav-group-title {
   color: var(--vendit-purple) !important;
@@ -41,10 +41,10 @@
 }
 
 /* ===========================================================
-   3) 아코디언 (채널 연결 + 자주 묻는 질문만)
+   3) 아코디언 — “채널 연결”, “자주 묻는 질문”만 열림 지원
    =========================================================== */
 
-/* 기본: 모든 그룹 닫힘 */
+/* 모든 그룹 기본 닫힘 */
 .mint-nav-group .mint-nav-group-items {
   max-height: 0;
   overflow: hidden;
@@ -52,24 +52,24 @@
   transition: max-height 0.25s ease, opacity 0.2s ease;
 }
 
-/* 토글 기본 숨김 */
+/* 기본 토글 숨김 */
 .mint-nav-group .mint-nav-group-toggle {
   display: none !important;
 }
 
-/* 허용 그룹만 토글 활성 */
-.mint-nav-group:has(.mint-nav-group-title:contains("채널 연결")) .mint-nav-group-toggle,
-.mint-nav-group:has(.mint-nav-group-title:contains("자주 묻는 질문")) .mint-nav-group-toggle {
+/* Mintlify 그룹에는 자동으로 data-group-title이 들어감 */
+.mint-nav-group[data-group-title="채널 연결"] .mint-nav-group-toggle,
+.mint-nav-group[data-group-title="자주 묻는 질문"] .mint-nav-group-toggle {
   display: flex !important;
 }
 
 /* 열린 상태 */
 .mint-nav-group[data-expanded="true"] .mint-nav-group-items {
-  max-height: 500px;
-  opacity: 1;
+  max-height: 500px !important;
+  opacity: 1 !important;
 }
 
-/* 화살표 회전 */
+/* 화살표 */
 .mint-nav-group-toggle svg {
   stroke: var(--vendit-purple) !important;
   transition: transform 0.25s ease;
@@ -79,15 +79,15 @@
 }
 
 /* ===========================================================
-   4) 다크모드 보라색 테마
+   4) 다크 모드
    =========================================================== */
 @media (prefers-color-scheme: dark) {
-  .mint-navigation-item .mint-link:hover {
+  .mint-navigation-item > .mint-link:hover {
     background-color: #2E225E !important;
     color: #D6C7FF !important;
   }
 
-  .mint-navigation-item .mint-link.active {
+  .mint-navigation-item > .mint-link.active {
     background-color: #3A2A66 !important;
     color: #E6DEFF !important;
   }
