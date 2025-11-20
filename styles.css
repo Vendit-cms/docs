@@ -1,112 +1,106 @@
 /* ===========================================================
-   0) 공통 변수 (Vendit 브랜드 컬러)
+   VENDIT 브랜드 컬러 변수
    =========================================================== */
 :root {
-  --vendit-primary: #5D21D4;
-  --vendit-primary-light: #EDE4FF;
-  --vendit-primary-hover: #F4ECFF;
+  --vendit-purple: #5D21D4;
+  --vendit-purple-bg: #F4ECFF;
+  --vendit-purple-active-bg: #EDE4FF;
   --vendit-dark-bg: #1A1A1A;
   --vendit-dark-hover: #2A2A2A;
   --vendit-dark-active: #3A2A66;
 }
 
 /* ===========================================================
-   1) 기본: 모든 그룹 항상 펼치기 금지 + 아코디언 숨김
-      → 모든 그룹은 기본적으로 펼쳐지지 않음
-      → 특정 그룹만 아코디언 활성화
+   1) 사이드바 기본 메뉴 스타일 (hover / active)
    =========================================================== */
 
-/* 모든 그룹 기본 상태 = "펼쳐지지 않음" */
-.mint-nav-group .mint-nav-group-items {
-  display: none !important;
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.25s ease, opacity 0.2s ease;
-  opacity: 0;
+/* Hover */
+.mint-navigation-item .mint-link:hover,
+.mint-navigation-item:hover > .mint-link {
+  background-color: var(--vendit-purple-bg) !important;
+  color: var(--vendit-purple) !important;
 }
 
-/* 모든 토글 버튼 숨기기 */
+/* Active */
+.mint-navigation-item .mint-link.active {
+  background-color: var(--vendit-purple-active-bg) !important;
+  color: var(--vendit-purple) !important;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* 메뉴 패딩/둥근 모서리 */
+.mint-navigation-item .mint-link {
+  padding: 10px 14px !important;
+  border-radius: 8px !important;
+  transition: all 0.15s ease;
+}
+
+/* ===========================================================
+   2) 그룹 타이틀 색상도 브랜드 컬러 적용
+   =========================================================== */
+.mint-nav-group-title {
+  font-weight: 600;
+  color: var(--vendit-purple) !important;
+}
+
+/* ===========================================================
+   3) 다크 모드
+   =========================================================== */
+@media (prefers-color-scheme: dark) {
+
+  /* Hover */
+  .mint-navigation-item .mint-link:hover {
+    background-color: var(--vendit-dark-hover) !important;
+    color: #C8B6FF !important; /* 밝은 퍼플 */
+  }
+
+  /* Active */
+  .mint-navigation-item .mint-link.active {
+    background-color: var(--vendit-dark-active) !important;
+    color: #E0D4FF !important;
+  }
+
+  .mint-nav-group-title {
+    color: #C8B6FF !important;
+  }
+}
+
+/* ===========================================================
+   4) 아코디언 지정 그룹만 열기/닫기 기능 허용
+      (채널 연결 + 자주 묻는 질문)
+   =========================================================== */
+
+/* 모든 그룹 기본 닫힘 */
+.mint-nav-group .mint-nav-group-items {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.25s ease, opacity 0.2s ease;
+}
+
+/* 기본 토글 숨김 */
 .mint-nav-group .mint-nav-group-toggle {
   display: none !important;
 }
 
-/* ===========================================================
-   2) 특정 그룹만 아코디언 활성화
-      (채널 연결 + 자주 묻는 질문)
-   =========================================================== */
-
-/* 채널 연결 */
+/* [채널 연결] 그룹만 아코디언 */
 .mint-nav-group:has(.mint-nav-group-title:contains("채널 연결")) .mint-nav-group-toggle,
 .mint-nav-group:has(.mint-nav-group-title:contains("자주 묻는 질문")) .mint-nav-group-toggle {
   display: flex !important;
-  align-items: center;
-  justify-content: center;
 }
 
-/* 기본값 닫힘(위에서 설정됨) */
-
-/* 열림 상태 */
+/* 열렸을 때 */
 .mint-nav-group[data-expanded="true"] .mint-nav-group-items {
-  display: block !important;
   max-height: 500px;
   opacity: 1;
 }
 
-/* ===========================================================
-   3) 브랜드 UI: Hover / Active 스타일
-   =========================================================== */
-
-.mint-navigation-item {
-  padding: 10px 14px !important;
-  border-radius: 8px !important;
-  transition: background-color 0.15s ease, color 0.15s ease;
-}
-
-/* Hover */
-.mint-navigation-item:hover {
-  background-color: var(--vendit-primary-hover) !important;
-}
-
-/* Active */
-.mint-navigation-item.active {
-  background-color: var(--vendit-primary-light) !important;
-  color: var(--vendit-primary) !important;
-  font-weight: 600;
-}
-
-/* ===========================================================
-   4) 아코디언 화살표 스타일 + 브랜드 색상
-   =========================================================== */
-
+/* 화살표 회전 */
 .mint-nav-group-toggle svg {
-  stroke: var(--vendit-primary) !important;
-  transition: transform 0.25s ease;
+  stroke: var(--vendit-purple) !important;
+  transition: transform 0.2s ease;
 }
-
-/* 열렸을 때 → 회전 */
 .mint-nav-group[data-expanded="true"] .mint-nav-group-toggle svg {
   transform: rotate(90deg);
-}
-
-/* ===========================================================
-   5) 다크모드 스타일
-   =========================================================== */
-@media (prefers-color-scheme: dark) {
-
-  .mint-navigation-item:hover {
-    background-color: var(--vendit-dark-hover) !important;
-  }
-
-  .mint-navigation-item.active {
-    background-color: var(--vendit-dark-active) !important;
-    color: #BFAAFF !important; /* 퍼플톤 강조 */
-  }
-
-  .mint-nav-group-toggle svg {
-    stroke: #BFAAFF !important;
-  }
-
-  .mint-nav-group[data-expanded="true"] .mint-nav-group-items {
-    background-color: var(--vendit-dark-bg);
-  }
 }
