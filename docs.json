@@ -1,13 +1,17 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "aspen",
+  "theme":"aspen",
   "name": "VCMS 사용자 가이드",
   "colors": {
     "primary": "#2E3649",
     "light": "#646A78",
     "dark": "#C1C5CC"
   },
-  "favicon": "/CMS_48px.svg",
+  "logo": {
+      "light": "/logo/Logo-light.svg",
+      "dark": "/logo/Logo-dark.svg"
+    },
+  "favicon": "/logo/favicon.svg",
   "navigation": {
     "tabs": [
       {
