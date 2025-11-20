@@ -23,7 +23,7 @@
               "accommodations/signup-login",
               "accommodations/create-accommodation",
               "accommodations/invite-user",
-              "accommodations/accommodations-settings",
+              "accommodations/accommodations-setting",
               "accommodations/billing"
             ]
           },
