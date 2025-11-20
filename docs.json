@@ -37,35 +37,41 @@
             ]
           },
           {
-            "group": "재고 및 요금 설정",
+            "group": "재고/요금 설정",
             "pages": [
-              "inventory-rate/room-type",
-              "inventory-rate/lodging-product",
-              "inventory-rate/dayuse-product",
+              "inventory-rate/pacage/package-stay",
+              "inventory-rate/pacage/package-day-use",
+              "inventory-rate/roomType",
+              "inventory-rate/rate",
+              "inventory-rate/period",
               "inventory-rate/timetable"
             ]
           },
           {
             "group": "예약 내역",
             "pages": [
-              "bookings/records",
-              "bookings/view-settings"
+              "bookings/bookings",
+              "bookings/settings"
             ]
           },
           {
             "group": "채널 연결",
             "pages": [
-              "channel-connection/channel-management",
-              "channel-connection/agoda",
-              "channel-connection/tripdotcom",
-              "channel-connection/naver",
-              "channel-connection/yanolja-hotel"
+              "channels/yeogiottae",
+              "channels/naver",
+              "channels/yanolja",
+              "channels/coolstay",
+              "channels/agoda",
+              "channels/tripdotcom",
+              "channels/onda",
+              "channels/ddnayodotcom",
+              "channels/tripbtoz"
             ]
           },
           {
             "group": "연동 서비스 연결",
             "pages": [
-              "integration/vcloud"
+              "integrations/vcloud"
             ]
           },
           {
