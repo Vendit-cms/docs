@@ -14,109 +14,64 @@
         "tab": "사용자 가이드",
         "groups": [
           {
-            "group": "VCMS 시작하기",
+            "group": "숙박업소 관리",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "property-management/signup-login",
+              "property-management/create-property",
+              "property-management/invite-user",
+              "property-management/property-settings",
+              "property-management/subscription-payment"
             ]
           },
           {
-            "group": "Customization",
+            "group": "판매 관리",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "sales-management/understanding",
+              "sales-management/usage",
+              "sales-management/channel-sync",
+              "sales-management/view-settings"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "재고 및 요금 설정",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "inventory-rate/room-type",
+              "inventory-rate/lodging-product",
+              "inventory-rate/dayuse-product",
+              "inventory-rate/timetable"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "예약 내역",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
+              "booking-records/records",
+              "booking-records/view-settings"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "채널 연결",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "channel-connection/channel-management",
+              "channel-connection/agoda",
+              "channel-connection/tripdotcom",
+              "channel-connection/naver",
+              "channel-connection/yanolja-hotel"
+            ]
+          },
+          {
+            "group": "연동 서비스 연결",
+            "pages": [
+              "integration-service/vcloud"
+            ]
+          },
+          {
+            "group": "자주 묻는 질문",
+            "pages": [
+              "faq/index"
             ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/Logo-dark.svg",
-    "dark": "/logo/Logo-light.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+    ]
   }
 }
