@@ -64,9 +64,6 @@
             "group": "채널",
             "expanded": false,
             "pages": [
-              {
-                "group": "채널 연결",
-                "pages": [
                   "channels/yeogiottae",
                   "channels/naver",
                   "channels/yanolja",
@@ -76,9 +73,7 @@
                   "channels/onda",
                   "channels/ddnayodotcom",
                   "channels/tripbtoz"
-                ]  
-              }             
-            ]
+            ]            
           },
           {
             "group": "자주 묻는 질문",
