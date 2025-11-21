@@ -18,6 +18,11 @@
     "tabs": [
       {
         "tab": "사용자 가이드",
+
+        "anchors": [
+          { "anchor": "채널" }
+        ],
+
         "groups": [
           {
             "group": "숙박업소 관리",
@@ -60,6 +65,7 @@
               "bookings/settings"
             ]
           },
+
           {
             "group": "채널 연결",
             "expanded": false,
@@ -73,8 +79,9 @@
               "channels/onda",
               "channels/ddnayodotcom",
               "channels/tripbtoz"
-            ]  
+            ]
           },
+
           {
             "group": "자주 묻는 질문",
             "expanded": false,
