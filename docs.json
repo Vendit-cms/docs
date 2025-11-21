@@ -64,15 +64,21 @@
             "group": "채널 연결",
             "collapsed": true,
             "pages": [
-              "channels/yeogiottae",
-              "channels/naver",
-              "channels/yanolja",
-              "channels/coolstay",
-              "channels/agoda",
-              "channels/tripdotcom",
-              "channels/onda",
-              "channels/ddnayodotcom",
-              "channels/tripbtoz"
+              "channels",
+              {
+                "groups": "Nested Channel Page", 
+                "pages": [
+                  "channels/yeogiottae",
+                  "channels/naver",
+                  "channels/yanolja",
+                  "channels/coolstay",
+                  "channels/agoda",
+                  "channels/tripdotcom",
+                  "channels/onda",
+                  "channels/ddnayodotcom",
+                  "channels/tripbtoz"
+                ]  
+              }             
             ]
           },
           {
