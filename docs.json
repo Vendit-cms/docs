@@ -68,7 +68,7 @@
           },
           {
             "group": "채널",
-            "expanded": true,
+            "expanded": false,
             "pages": [
               "channels/yeogiottae",
               "channels/naver",
