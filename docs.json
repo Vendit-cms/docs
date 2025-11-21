@@ -21,7 +21,7 @@
         "groups": [
           {
             "group": "숙박업소 관리",
-            "collapsed": false,
+            "expanded": true,
             "pages": [
               "accommodations/signup-login",
               "accommodations/create-accommodation",
@@ -32,7 +32,7 @@
           },
           {
             "group": "판매 관리",
-            "collapsed": false,
+            "expanded": true,
             "pages": [
               "distributions/understanding",
               "distributions/usage",
@@ -42,7 +42,7 @@
           },
           {
             "group": "재고/요금 설정",
-            "collapsed": false,
+            "expanded": true,
             "pages": [
               "inventory-rate/package/package-stay",
               "inventory-rate/package/package-day-use",
@@ -54,7 +54,7 @@
           },
           {
             "group": "예약 내역",
-            "collapsed": false,
+            "expanded": true,
             "pages": [
               "bookings/bookings",
               "bookings/settings"
@@ -62,7 +62,7 @@
           },
           {
             "group": "채널",
-            "collapsed": true,
+            "expanded": false,
             "pages": [
               {
                 "group": "채널 연결",
@@ -82,7 +82,7 @@
           },
           {
             "group": "자주 묻는 질문",
-            "collapsed": true,
+            "expanded": false,
             "pages": [
               "faq/20251120-01"
             ]
