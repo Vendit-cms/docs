@@ -60,38 +60,42 @@
               "bookings/settings"
             ]
           },
+
           {
-            "groups": [
-              {
-              "group": "채널",
-              "expanded": true,
-              "pages": [
-                "channels/yeogiottae",
-                "channels/naver",
-                "channels/yanolja",
-                "channels/coolstay",
-                "channels/agoda",
-                "channels/tripdotcom",
-                "channels/onda",
-                "channels/ddnayodotcom",
-                "channels/tripbtoz"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "자주 묻는 질문",
-            "expanded": false,
+            "group": "채널",
+            "expanded": true,
             "pages": [
-              "faq/20251120-01"
+              "channels/yeogiottae",
+              "channels/naver",
+              "channels/yanolja",
+              "channels/coolstay",
+              "channels/agoda",
+              "channels/tripdotcom",
+              "channels/onda",
+              "channels/ddnayodotcom",
+              "channels/tripbtoz"
             ]
           },
+
           {
             "group": "Reference",
             "expanded": true,
             "pages": [
               "terms-conditions",
               "privacy-policy"
+            ]
+          }
+        ]
+      },
+
+      {
+        "tab": "자주 묻는 질문",
+        "groups": [
+          {
+            "group": "자주 묻는 질문",
+            "expanded": false,
+            "pages": [
+              "faq/20251120-01"
             ]
           }
         ]
