@@ -64,9 +64,8 @@
             "group": "채널",
             "collapsed": true,
             "pages": [
-              "채널 연결",
               {
-                 
+                "group": "채널 연결",
                 "pages": [
                   "channels/yeogiottae",
                   "channels/naver",
