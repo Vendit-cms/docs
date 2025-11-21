@@ -68,18 +68,24 @@
           },
           {
             "group": "채널",
-            "expanded": false,
-            "pages": [
-              "channels/yeogiottae",
-              "channels/naver",
-              "channels/yanolja",
-              "channels/coolstay",
-              "channels/agoda",
-              "channels/tripdotcom",
-              "channels/onda",
-              "channels/ddnayodotcom",
-              "channels/tripbtoz"
-              ]
+            "expanded": true,
+            "groups": [
+              {
+                "group": "채널 연결",
+                "expanded": false,
+                "pages": [
+                  "channels/yeogiottae",
+                  "channels/naver",
+                  "channels/yanolja",
+                  "channels/coolstay",
+                  "channels/agoda",
+                  "channels/tripdotcom",
+                  "channels/onda",
+                  "channels/ddnayodotcom",
+                  "channels/tripbtoz"
+                ]
+              }
+            ]
           },
           {
             "group": "자주 묻는 질문",
