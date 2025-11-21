@@ -60,32 +60,29 @@
               "bookings/settings"
             ]
           },
+
           {
             "group": "채널",
             "expanded": true,
             "pages": [
-              {
-                "group": "채널 연동",
-                "pages": [
-                  "channels/yeogiottae",
-                  "channels/naver",
-                  "channels/yanolja",
-                  "channels/coolstay",
-                  "channels/agoda",
-                  "channels/tripdotcom",
-                  "channels/onda",
-                  "channels/ddnayodotcom",
-                  "channels/tripbtoz"
-                ]
-              }
+              "channels/yeogiottae",
+              "channels/naver",
+              "channels/yanolja",
+              "channels/coolstay",
+              "channels/agoda",
+              "channels/tripdotcom",
+              "channels/onda",
+              "channels/ddnayodotcom",
+              "channels/tripbtoz"
             ]
           },
+
           {
             "group": "Reference",
-            "expanded": true,
+            "expanded": false,
             "pages": [
-              "terms-conditions",
-              "privacy-policy"
+              "reference/terms-conditions",
+              "reference/privacy-policy"
             ]
           }
         ]
