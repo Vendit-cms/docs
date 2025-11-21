@@ -8,19 +8,16 @@
     "light": "#646A78",
     "dark": "#C1C5CC"
   },
-
   "logo": {
     "light": "/logo/Logo-dark.svg",
     "dark": "/logo/Logo-light.svg"
   },
-
   "favicon": "/logo/favicon.svg",
 
   "navigation": {
     "tabs": [
       {
         "tab": "사용자 가이드",
-
         "groups": [
           {
             "group": "숙박업소 관리",
@@ -33,7 +30,6 @@
               "accommodations/billing"
             ]
           },
-
           {
             "group": "판매 관리",
             "expanded": true,
@@ -44,7 +40,6 @@
               "distributions/view-settings"
             ]
           },
-
           {
             "group": "재고/요금 설정",
             "expanded": true,
@@ -57,7 +52,6 @@
               "inventory-rate/timetable"
             ]
           },
-
           {
             "group": "예약 내역",
             "expanded": true,
@@ -69,22 +63,16 @@
           {
             "group": "채널",
             "expanded": true,
-            "groups": [
-              {
-                "group": "채널 연결",
-                "expanded": false,
-                "pages": [
-                  "channels/yeogiottae",
-                  "channels/naver",
-                  "channels/yanolja",
-                  "channels/coolstay",
-                  "channels/agoda",
-                  "channels/tripdotcom",
-                  "channels/onda",
-                  "channels/ddnayodotcom",
-                  "channels/tripbtoz"
-                ]
-              }
+            "pages": [
+              "channels/yeogiottae",
+              "channels/naver",
+              "channels/yanolja",
+              "channels/coolstay",
+              "channels/agoda",
+              "channels/tripdotcom",
+              "channels/onda",
+              "channels/ddnayodotcom",
+              "channels/tripbtoz"
             ]
           },
           {
@@ -92,6 +80,14 @@
             "expanded": false,
             "pages": [
               "faq/20251120-01"
+            ]
+          },
+          {
+            "group": "Reference",
+            "expanded": false,
+            "pages": [
+              "terms-conditions",
+              "privacy-policy"
             ]
           }
         ]
