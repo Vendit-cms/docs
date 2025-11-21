@@ -66,7 +66,7 @@
             "pages": [
               "channels",
               {
-                "groups": "Nested Channel Page", 
+                "group": "Nested Channel Page", 
                 "pages": [
                   "channels/yeogiottae",
                   "channels/naver",
