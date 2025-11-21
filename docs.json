@@ -65,18 +65,23 @@
             "group": "채널",
             "expanded": true,
             "pages": [
-              "channels/yeogiottae",
-              "channels/naver",
-              "channels/yanolja",
-              "channels/coolstay",
-              "channels/agoda",
-              "channels/tripdotcom",
-              "channels/onda",
-              "channels/ddnayodotcom",
-              "channels/tripbtoz"
+              "채널 연동",
+              {
+                "group": "채널 연동",
+                "pages": [
+                  "channels/yeogiottae",
+                  "channels/naver",
+                  "channels/yanolja",
+                  "channels/coolstay",
+                  "channels/agoda",
+                  "channels/tripdotcom",
+                  "channels/onda",
+                  "channels/ddnayodotcom",
+                  "channels/tripbtoz"
+                ]
+              }
             ]
           },
-
           {
             "group": "Reference",
             "expanded": true,
