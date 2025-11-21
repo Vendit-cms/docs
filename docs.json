@@ -61,18 +61,22 @@
             ]
           },
           {
-            "group": "채널",
-            "expanded": true,
-            "pages": [
-              "channels/yeogiottae",
-              "channels/naver",
-              "channels/yanolja",
-              "channels/coolstay",
-              "channels/agoda",
-              "channels/tripdotcom",
-              "channels/onda",
-              "channels/ddnayodotcom",
-              "channels/tripbtoz"
+            "groups": [
+              {
+              "group": "채널",
+              "expanded": true,
+              "pages": [
+                "channels/yeogiottae",
+                "channels/naver",
+                "channels/yanolja",
+                "channels/coolstay",
+                "channels/agoda",
+                "channels/tripdotcom",
+                "channels/onda",
+                "channels/ddnayodotcom",
+                "channels/tripbtoz"
+                ]
+              }
             ]
           },
           {
@@ -84,7 +88,7 @@
           },
           {
             "group": "Reference",
-            "expanded": false,
+            "expanded": true,
             "pages": [
               "terms-conditions",
               "privacy-policy"
