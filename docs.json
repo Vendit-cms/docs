@@ -60,12 +60,10 @@
               "bookings/settings"
             ]
           },
-
           {
             "group": "채널",
             "expanded": true,
             "pages": [
-              "채널 연동",
               {
                 "group": "채널 연동",
                 "pages": [
