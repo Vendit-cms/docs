@@ -127,8 +127,18 @@
               }
             ]
           },
+
           "en": {
-            "groups": []
+            "groups": [
+              {
+                "group": "Reference",
+                "expanded": true,
+                "pages": [
+                  "en/reference/terms-conditions",
+                  "en/reference/PrivacyPolicy"
+                ]
+              }
+            ]
           }
         }
       }
