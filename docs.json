@@ -124,7 +124,9 @@
               {
                 "group": "자주 묻는 질문",
                 "expanded": false,
-                "pages": ["ko/faq/20251120-01"]
+                "pages": [
+                  "ko/faq/20251120-01"
+                ]
               }
             ]
           },
