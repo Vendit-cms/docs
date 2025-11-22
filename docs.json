@@ -70,23 +70,18 @@
                 ]
               },
               {
-                "group": "채널",
+                "group": "채널 연동",
                 "expanded": true,
-                "groups": [
-                  {
-                    "group": "채널 연동",
-                    "pages": [
-                      "channels/yeogiottae",
-                      "channels/naver",
-                      "channels/yanolja",
-                      "channels/coolstay",
-                      "channels/agoda",
-                      "channels/tripdotcom",
-                      "channels/onda",
-                      "channels/ddnayodotcom",
-                      "channels/tripbtoz"
-                    ]
-                  }
+                "pages": [
+                  "channels/yeogiottae",
+                  "channels/naver",
+                  "channels/yanolja",
+                  "channels/coolstay",
+                  "channels/agoda",
+                  "channels/tripdotcom",
+                  "channels/onda",
+                  "channels/ddnayodotcom",
+                  "channels/tripbtoz"
                 ]
               },
               {
