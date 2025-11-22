@@ -93,9 +93,9 @@
                 "group": "Reference",
                 "expanded": true,
                 "pages": [
-                  "ko/reference-ko/collection-personal-information",
-                  "ko/reference-ko/privacy-policy",
-                  "ko/reference-ko/terms-conditions"
+                  "ko/reference/collection-personal-information",
+                  "ko/reference/privacy-policy",
+                  "ko/reference/terms-conditions"
                 ]
               }
             ]
@@ -107,8 +107,8 @@
                 "group": "Reference",
                 "expanded": true,
                 "pages": [
-                  "en/reference-en/terms-conditions",
-                  "en/reference-en/privacy-policy"
+                  "en/reference/terms-conditions",
+                  "en/reference/privacy-policy"
                 ]
               }
             ]
