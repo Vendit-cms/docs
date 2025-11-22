@@ -65,7 +65,7 @@
                 "group": "예약 내역",
                 "expanded": true,
                 "pages": [
-                  "ko/bookings/bookings",
+                  "ko/bookings/booking",
                   "ko/bookings/settings"
                 ]
               },
