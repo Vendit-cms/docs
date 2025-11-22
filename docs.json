@@ -1,9 +1,8 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "VCMS 사용자 가이드",
-
-  "colors": {
+  "name": "VCMS Documentation",
+   "colors": {
     "primary": "#5D21D4",
     "light": "#646A78",
     "dark": "#C1C5CC"
@@ -13,31 +12,10 @@
     "dark": "/logo/Logo-light.svg"
   },
   "favicon": "/logo/favicon.svg",
-
   "navigation": {
     "languages": [
       {
         "language": "ko",
-        "groups": []
-      },
-      {
-        "language": "en",
-        "groups": [
-          {
-            "group": "Reference",
-            "expanded": true,
-            "pages": [
-              "en/reference/terms-conditions",
-              "en/reference/PrivacyPolicy"
-            ]
-          }
-        ]
-      }
-    ],
-
-    "tabs": [
-      {
-        "tab": "사용자 가이드",
         "groups": [
           {
             "group": "숙박업소 관리",
@@ -73,6 +51,13 @@
             ]
           },
           {
+            "group": "통합 연동",
+            "expanded": true,
+            "pages": [
+              "ko/integrations/intro"
+            ]
+          },
+          {
             "group": "예약 내역",
             "expanded": true,
             "pages": [
@@ -83,7 +68,7 @@
           {
             "group": "채널",
             "expanded": true,
-            "pages": [
+            "groups": [
               {
                 "group": "채널 연동",
                 "pages": [
@@ -105,20 +90,28 @@
             "expanded": true,
             "pages": [
               "ko/reference/collection-personal-information",
-              "ko/reference/terms-conditions",
-              "ko/reference/privacy-policy"
+              "ko/reference/privacy-policy",
+              "ko/reference/terms-conditions"
             ]
-          }
-        ]
-      },
-      {
-        "tab": "자주 묻는 질문",
-        "groups": [
+          },
           {
             "group": "자주 묻는 질문",
             "expanded": false,
             "pages": [
               "ko/faq/20251120-01"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "groups": [
+          {
+            "group": "Reference",
+            "expanded": true,
+            "pages": [
+              "en/reference/terms-conditions",
+              "en/reference/PrivacyPolicy"
             ]
           }
         ]
