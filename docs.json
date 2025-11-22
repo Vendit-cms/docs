@@ -8,10 +8,12 @@
     "light": "#646A78",
     "dark": "#C1C5CC"
   },
+
   "logo": {
     "light": "/logo/Logo-dark.svg",
     "dark": "/logo/Logo-light.svg"
   },
+
   "favicon": "/logo/favicon.svg",
 
   "navigation": {
@@ -70,7 +72,7 @@
               {
                 "group": "채널",
                 "expanded": true,
-                "pages": [
+                "groups": [
                   {
                     "group": "채널 연동",
                     "pages": [
@@ -91,8 +93,9 @@
                 "group": "Reference",
                 "expanded": true,
                 "pages": [
-                  "ko/reference/terms-conditions",
-                  "ko/reference/privacy-policy"
+                  "ko/reference/collection-personal-information",
+                  "ko/reference/privacy-policy",
+                  "ko/reference/terms-conditions"
                 ]
               }
             ]
@@ -121,24 +124,12 @@
               {
                 "group": "자주 묻는 질문",
                 "expanded": false,
-                "pages": [
-                  "ko/faq/20251120-01"
-                ]
+                "pages": ["ko/faq/20251120-01"]
               }
             ]
           },
-
           "en": {
-            "groups": [
-              {
-                "group": "Reference",
-                "expanded": true,
-                "pages": [
-                  "en/reference/terms-conditions",
-                  "en/reference/privacy-policy"
-                ]
-              }
-            ]
+            "groups": []
           }
         }
       }
