@@ -99,6 +99,36 @@
           "en": {
             "groups": [
               {
+                "group": "Accommodations",
+                "expanded": true,
+                "pages": []
+              },
+              {
+                "group": "Distributions",
+                "expanded": true,
+                "pages": []
+              },
+              {
+                "group": "Inventory",
+                "expanded": true,
+                "pages": []
+              },
+              {
+                "group": "Bookings",
+                "expanded": true,
+                "pages": []
+              },
+              {
+                "group": "Channels",
+                "expanded": true,
+                "pages": []
+              },
+	      {
+                "group": "Integrations",
+                "expanded": true,
+                "pages": []
+              },
+              {
                 "group": "Reference",
                 "expanded": true,
                 "pages": [
