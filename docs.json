@@ -54,7 +54,7 @@
                 ]
               },
               {
-                "group": "예약 내역",
+                "group": "예약",
                 "expanded": true,
                 "pages": [
                   "ko/bookings/bookings",
@@ -62,23 +62,18 @@
                 ]
               },
               {
-                "group": "채널",
+                "group": "채널 연동",
                 "expanded": false,
-                "groups": [
-                  {
-                    "group": "채널 연동",
-                    "pages": [
-                      "ko/channels/yeogiottae",
-                      "ko/channels/naver",
-                      "ko/channels/yanolja",
-                      "ko/channels/coolstay",
-                      "ko/channels/agoda",
-                      "ko/channels/tripdotcom",
-                      "ko/channels/onda",
-                      "ko/channels/ddnayodotcom",
-                      "ko/channels/tripbtoz"
-                    ]
-                  }
+                "pages": [
+                  "ko/channels/yeogiottae",
+                  "ko/channels/naver",
+                  "ko/channels/yanolja",
+                  "ko/channels/coolstay",
+                  "ko/channels/agoda",
+                  "ko/channels/tripdotcom",
+                  "ko/channels/onda",
+                  "ko/channels/ddnayodotcom",
+                  "ko/channels/tripbtoz"
                 ]
               },
               {
