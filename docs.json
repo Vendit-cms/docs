@@ -18,14 +18,11 @@
 
   "navigation": {
     "languages": [
-      { "language": "ko" },
-      { "language": "en" }
-    ],
-    "tabs": [
       {
-        "tab": "사용자 가이드",
-        "languages": {
-          "ko": {
+        "language": "ko",
+        "tabs": [
+          {
+            "tab": "사용자 가이드",
             "groups": [
               {
                 "group": "숙박업소 관리",
@@ -102,7 +99,26 @@
             ]
           },
 
-          "en": {
+          {
+            "tab": "자주 묻는 질문",
+            "groups": [
+              {
+                "group": "자주 묻는 질문",
+                "expanded": false,
+                "pages": [
+                  "ko/faq/20251120-01"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+
+      {
+        "language": "en",
+        "tabs": [
+          {
+            "tab": "User Guide",
             "groups": [
               {
                 "group": "Reference",
@@ -113,28 +129,12 @@
                 ]
               }
             ]
-          }
-        }
-      },
-
-      {
-        "tab": "자주 묻는 질문",
-        "languages": {
-          "ko": {
-            "groups": [
-              {
-                "group": "자주 묻는 질문",
-                "expanded": false,
-                "pages": [
-                  "ko/faq/20251120-01"
-                ]
-              }
-            ]
           },
-          "en": {
+          {
+            "tab": "FAQ",
             "groups": []
           }
-        }
+        ]
       }
     ]
   }
