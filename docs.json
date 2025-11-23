@@ -32,65 +32,65 @@
                 "group": "숙박업소 관리",
                 "expanded": true,
                 "pages": [
-                  "accommodations/signup-login",
-                  "accommodations/create-accommodation",
-                  "accommodations/invite-user",
-                  "accommodations/accommodations-setting",
-                  "accommodations/billing"
+                  "ko/accommodations/signup-login",
+                  "ko/accommodations/create-accommodation",
+                  "ko/accommodations/invite-user",
+                  "ko/accommodations/accommodations-setting",
+                  "ko/accommodations/billing"
                 ]
               },
               {
                 "group": "판매 관리",
                 "expanded": true,
                 "pages": [
-                  "distributions/understanding",
-                  "distributions/usage",
-                  "distributions/channel-sync",
-                  "distributions/view-settings"
+                  "ko/distributions/understanding",
+                  "ko/distributions/usage",
+                  "ko/distributions/channel-sync",
+                  "ko/distributions/view-settings"
                 ]
               },
               {
                 "group": "재고/요금 설정",
                 "expanded": true,
                 "pages": [
-                  "inventory-rate/package/package-stay",
-                  "inventory-rate/package/package-day-use",
-                  "inventory-rate/roomType",
-                  "inventory-rate/rate",
-                  "inventory-rate/period",
-                  "inventory-rate/timetable"
+                  "ko/inventory-rate/package/package-stay",
+                  "ko/inventory-rate/package/package-day-use",
+                  "ko/inventory-rate/roomType",
+                  "ko/inventory-rate/rate",
+                  "ko/inventory-rate/period",
+                  "ko/inventory-rate/timetable"
                 ]
               },
               {
                 "group": "예약 내역",
                 "expanded": true,
                 "pages": [
-                  "bookings/bookings",
-                  "bookings/settings"
+                  "ko/bookings/bookings",
+                  "ko/bookings/settings"
                 ]
               },
               {
                 "group": "채널 연동",
                 "expanded": true,
                 "pages": [
-                  "channels/yeogiottae",
-                  "channels/naver",
-                  "channels/yanolja",
-                  "channels/coolstay",
-                  "channels/agoda",
-                  "channels/tripdotcom",
-                  "channels/onda",
-                  "channels/ddnayodotcom",
-                  "channels/tripbtoz"
+                  "ko/channels/yeogiottae",
+                  "ko/channels/naver",
+                  "ko/channels/yanolja",
+                  "ko/channels/coolstay",
+                  "ko/channels/agoda",
+                  "ko/channels/tripdotcom",
+                  "ko/channels/onda",
+                  "ko/channels/ddnayodotcom",
+                  "ko/channels/tripbtoz"
                 ]
               },
               {
                 "group": "Reference",
                 "expanded": true,
                 "pages": [
-                  "reference/collection-personal-information",
-                  "reference/privacy-policy",
-                  "reference/terms-conditions"
+                  "ko/reference/collection-personal-information",
+                  "ko/reference/privacy-policy",
+                  "ko/reference/terms-conditions"
                 ]
               }
             ]
@@ -102,8 +102,8 @@
                 "group": "Reference",
                 "expanded": true,
                 "pages": [
-                  "reference/terms-conditions",
-                  "reference/privacy-policy"
+                  "en/reference/terms-conditions",
+                  "en/reference/privacy-policy"
                 ]
               }
             ]
@@ -120,7 +120,7 @@
                 "group": "자주 묻는 질문",
                 "expanded": false,
                 "pages": [
-                  "faq/20251120-01"
+                  "ko/faq/20251120-01"
                 ]
               }
             ]
