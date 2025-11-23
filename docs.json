@@ -2,20 +2,16 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "VCMS 사용자 가이드",
-
   "colors": {
     "primary": "#5D21D4",
     "light": "#646A78",
     "dark": "#C1C5CC"
   },
-
   "logo": {
     "light": "/logo/Logo-dark.svg",
     "dark": "/logo/Logo-light.svg"
   },
-
   "favicon": "/logo/favicon.svg",
-
   "navigation": {
     "languages": [
       {
@@ -98,7 +94,6 @@
               }
             ]
           },
-
           {
             "tab": "자주 묻는 질문",
             "groups": [
@@ -113,7 +108,6 @@
           }
         ]
       },
-
       {
         "language": "en",
         "tabs": [
@@ -129,10 +123,6 @@
                 ]
               }
             ]
-          },
-          {
-            "tab": "FAQ",
-            "groups": []
           }
         ]
       }
