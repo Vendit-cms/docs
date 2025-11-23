@@ -63,7 +63,7 @@
               },
               {
                 "group": "채널 연동",
-                "expanded": true,
+                "expanded": false,
                 "pages": [
                   "ko/channels/yeogiottae",
                   "ko/channels/naver",
