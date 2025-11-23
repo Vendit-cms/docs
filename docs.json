@@ -85,6 +85,13 @@
                 ]
               },
               {
+                "group": "연동 서비스",
+                "expanded": true,
+                "pages": [
+                  "ko/integrations/vcloud"
+                ]
+              },
+              {
                 "group": "Reference",
                 "expanded": true,
                 "pages": [
