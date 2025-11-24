@@ -27,8 +27,7 @@
                   "ko/accommodations/signup-login",
                   "ko/accommodations/create-accommodation",
                   "ko/accommodations/invite-user",
-                  "ko/accommodations/accommodations-setting",
-                  "ko/accommodations/billing"
+                  "ko/accommodations/accommodations-setting"
                 ]
               },
               {
