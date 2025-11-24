@@ -89,6 +89,13 @@
                 ]
               },
               {
+                "group": "구독",
+                "expanded": true,
+                "pages": [
+                  "ko/billing/billing"
+                ]
+              },
+              {
                 "group": "Reference",
                 "expanded": true,
                 "pages": [
