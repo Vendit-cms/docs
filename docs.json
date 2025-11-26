@@ -60,7 +60,9 @@
                   "ko/c-inventory-rate/e-inclusion",
                   "ko/c-inventory-rate/f-inclusion",
                   "ko/c-inventory-rate/g-timetable"
-                ],
+                ]
+              },
+              {
                 "group": "채널",
                 "expanded": false,
                 "pages": [
