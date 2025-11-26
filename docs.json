@@ -77,29 +77,29 @@
               }
             ]
           },
-            {
-              "group": "연동 서비스",
-              "expanded": false,
-              "pages": [
-                  "ko/integrations/vcloud"
-              ]
-             },
-            {
-                "group": "구독",
-                "expanded": false,
-                "pages": [
-                  "ko/billing/billing"
+          {
+            "group": "연동 서비스",
+            "expanded": false,
+            "pages": [
+              "ko/integrations/vcloud"
             ]
-            },
-            {
-              "group": "Reference",
-              "expanded": true,
-              "pages": [
-                 "ko/reference/collection-personal-information",
-                 "ko/reference/privacy-policy",
-                 "ko/reference/terms-conditions"
-              ]
-            },
+          },
+          {
+            "group": "구독",
+            "expanded": false,
+            "pages": [
+              "ko/billing/billing"
+            ]
+          },
+          {
+            "group": "Reference",
+            "expanded": true,
+            "pages": [
+              "ko/reference/collection-personal-information",
+              "ko/reference/privacy-policy",
+              "ko/reference/terms-conditions"
+            ]
+          },
           {
             "tab": "자주 묻는 질문",
             "groups": [
