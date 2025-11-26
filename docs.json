@@ -55,46 +55,12 @@
                   "ko/c-inventory-rate/a-roomType",
                   "ko/c-inventory-rate/b-package-stay",
                   "ko/c-inventory-rate/c-package-day-use",
-                  "ko/c-inventory-rate/d-rate",
-                  "ko/c-inventory-rate/e-inclusion",
-                  "ko/c-inventory-rate/f-period",
-                  "ko/c-inventory-rate/g-timetable"
-                ]
-              },
-              {
-                "group": "설정",
-                "expanded": false,
-                "pages": [
-                  "ko/c-inventory-rate/a-roomType",
-                  "ko/c-inventory-rate/b-package-stay",
-                  "ko/c-inventory-rate/c-package-day-use",
                   "ko/c-inventory-rate/d-period",
                   "ko/c-inventory-rate/e-rate",
                   "ko/c-inventory-rate/e-inclusion",
                   "ko/c-inventory-rate/f-inclusion",
                   "ko/c-inventory-rate/g-timetable"
                 ],
-                "group": "채널",
-                "expanded": false,
-                "pages": [
-                  "ko/e-channels/a-channel-setting",
-                  {
-                    "group": "채널 특이사항",
-                    "pages": [
-                      "ko/e-channels/b-agoda",
-                      "ko/e-channels/c-tripdotcom",
-                      "ko/e-channels/d-yeogiottae",
-                      "ko/e-channels/e-yeogiottae-partner",
-                      "ko/e-channels/f-naver",
-                      "ko/e-channels/g-yanolja",
-                      "ko/e-channels/h-coolstay",
-                      "ko/e-channels/i-onda",
-                      "ko/e-channels/j-ddnayodotcom"
-                    ]
-                  }
-                ]
-              },
-              {
                 "group": "채널",
                 "expanded": false,
                 "pages": [
