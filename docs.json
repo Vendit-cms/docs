@@ -60,8 +60,9 @@
                   "ko/inventory-rate/inclusion",
                   "ko/inventory-rate/timetable",
                   {
-                    "group": "채널 특이사항",
+                    "group": "채널",
                     "pages": [
+                      "ko/channels/channel-setting",
                       "ko/channels/agoda",
                       "ko/channels/tripdotcom",
                       "ko/channels/yeogiottae",
@@ -72,42 +73,19 @@
                       "ko/channels/onda",
                       "ko/channels/ddnayodotcom"
                     ]
-                  }
-                ]
-              },
-              {
-                "group": "채널",
-                "expanded": false,
-                "pages": [
-                  "ko/channels/channel-setting",
+                  },
                   {
-                    "group": "채널 특이사항",
+                    "group": "연동 서비스",
                     "pages": [
-                      "ko/channels/agoda",
-                      "ko/channels/tripdotcom",
-                      "ko/channels/yeogiottae",
-                      "ko/channels/yeogiottae-partner",
-                      "ko/channels/naver",
-                      "ko/channels/yanolja",
-                      "ko/channels/coolstay",
-                      "ko/channels/onda",
-                      "ko/channels/ddnayodotcom"
+                      "ko/integrations/vcloud"
                     ]
-                  }
-                ]
-              },
-              {
-                "group": "연동 서비스",
-                "expanded": false,
-                "pages": [
-                  "ko/integrations/vcloud"
-                ]
-              },
-              {
-                "group": "구독",
-                "expanded": false,
-                "pages": [
-                  "ko/billing/billing"
+                  },
+                  {
+                    "group": "구독",
+                    "pages": [
+                      "ko/billing/billing"
+                    ]
+                  } 
                 ]
               },
               {
