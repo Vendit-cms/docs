@@ -68,9 +68,10 @@
                   "ko/c-inventory-rate/a-roomType",
                   "ko/c-inventory-rate/b-package-stay",
                   "ko/c-inventory-rate/c-package-day-use",
-                  "ko/c-inventory-rate/d-rate",
+                  "ko/c-inventory-rate/d-period",
+                  "ko/c-inventory-rate/e-rate",
                   "ko/c-inventory-rate/e-inclusion",
-                  "ko/c-inventory-rate/f-period",
+                  "ko/c-inventory-rate/f-inclusion",
                   "ko/c-inventory-rate/g-timetable"
                 ],
                 "group": "채널",
