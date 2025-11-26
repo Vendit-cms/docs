@@ -71,50 +71,50 @@
                       "ko/channels/coolstay",
                       "ko/channels/onda",
                       "ko/channels/ddnayodotcom"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "group": "연동 서비스",
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "group": "연동 서비스",
+                  "expanded": false,
+                  "pages": [
+                    "ko/integrations/vcloud"
+                  ]
+                },
+                {
+                  "group": "구독",
+                  "expanded": false,
+                  "pages": [
+                    "ko/billing/billing"
+                  ]
+                },
+                {
+                  "group": "Reference",
+                  "expanded": true,
+                  "pages": [
+                    "ko/reference/collection-personal-information",
+                    "ko/reference/privacy-policy",
+                    "ko/reference/terms-conditions"
+                  ]
+                },
+       {
+          "tab": "자주 묻는 질문",
+          "groups": [
+            {
+            "group": "자주 묻는 질문",
             "expanded": false,
             "pages": [
-              "ko/integrations/vcloud"
+                      "ko/faq/20251120-01"
             ]
-          },
-          {
-            "group": "구독",
-            "expanded": false,
-            "pages": [
-              "ko/billing/billing"
-            ]
-          },
-          {
-            "group": "Reference",
-            "expanded": true,
-            "pages": [
-              "ko/reference/collection-personal-information",
-              "ko/reference/privacy-policy",
-              "ko/reference/terms-conditions"
-            ]
-          },
-          {
-            "tab": "자주 묻는 질문",
-            "groups": [
-              {
-                "group": "자주 묻는 질문",
-                "expanded": false,
-                "pages": [
-                  "ko/faq/20251120-01"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
+         }
+      ]
+    }
+  ]
+},
+    {
         "language": "en",
         "tabs": [
           {
