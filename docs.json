@@ -24,58 +24,60 @@
                 "group": "숙박업소 관리",
                 "expanded": true,
                 "pages": [
-                  "ko/accommodations/signup-login",
-                  "ko/accommodations/create-accommodation",
-                  "ko/accommodations/invite-user",
-                  "ko/accommodations/accommodations-setting"
+                  "ko/a-accommodations/a-signup-login",
+                  "ko/a-accommodations/b-create-accommodation",
+                  "ko/a-accommodations/c-invite-user",
+                  "ko/a-accommodations/d-accommodation-setting"
                 ]
               },
               {
                 "group": "판매 관리",
                 "expanded": true,
                 "pages": [
-                  "ko/distributions/understanding",
-                  "ko/distributions/usage",
-                  "ko/distributions/channel-sync",
-                  "ko/distributions/view-settings"
+                  "ko/b-distributions/a-understanding",
+                  "ko/b-distributions/b-usage",
+                  "ko/b-distributions/c-channel-sync",
+                  "ko/b-distributions/d-view-setting"
                 ]
               },
               {
                 "group": "재고/요금 설정",
                 "expanded": true,
                 "pages": [
-                  "ko/inventory-rate/package/package-stay",
-                  "ko/inventory-rate/package/package-day-use",
-                  "ko/inventory-rate/roomType",
-                  "ko/inventory-rate/rate",
-                  "ko/inventory-rate/period",
-                  "ko/inventory-rate/timetable"
+                  "ko/c-inventory-rate/a-roomType",
+                  "ko/c-inventory-rate/b-package-stay",
+                  "ko/c-inventory-rate/c-package-day-use",
+                  "ko/c-inventory-rate/d-period",
+                  "ko/c-inventory-rate/e-rate",
+                  "ko/c-inventory-rate/f-inclusion",
+                  "ko/c-inventory-rate/g-timetable"
                 ]
               },
               {
                 "group": "예약",
                 "expanded": true,
                 "pages": [
-                  "ko/bookings/bookings",
-                  "ko/bookings/settings"
+                  "ko/d-bookings/a-bookings",
+                  "ko/d-bookings/b-view-setting"
                 ]
               },
               {
                 "group": "채널",
                 "expanded": false,
                 "pages": [
+                  "ko/e-channels/a-channel-setting",
                   {
                     "group": "채널별 특이사항",
                     "pages": [
-                      "ko/channels/yeogiottae",
-                      "ko/channels/naver",
-                      "ko/channels/yanolja",
-                      "ko/channels/coolstay",
-                      "ko/channels/agoda",
-                      "ko/channels/tripdotcom",
-                      "ko/channels/onda",
-                      "ko/channels/ddnayodotcom",
-                      "ko/channels/tripbtoz"
+                      "ko/e-channels/b-agoda",
+                      "ko/e-channels/c-tripdotcom",
+                      "ko/e-channels/d-yeogiottae",
+                      "ko/e-channels/e-yeogiottae-partner",
+                      "ko/e-channels/f-naver",
+                      "ko/e-channels/g-yanolja",
+                      "ko/e-channels/h-coolstay",
+                      "ko/e-channels/i-onda",
+                      "ko/e-channels/j-ddnayodotcom"
                     ]
                   }
                 ]
@@ -84,23 +86,23 @@
                 "group": "연동 서비스",
                 "expanded": true,
                 "pages": [
-                  "ko/integrations/vcloud"
+                  "ko/f-integrations/vcloud"
                 ]
               },
               {
                 "group": "구독",
                 "expanded": true,
                 "pages": [
-                  "ko/billing/billing"
+                  "ko/g-billing/billing"
                 ]
               },
               {
                 "group": "Reference",
                 "expanded": true,
                 "pages": [
-                  "ko/reference/collection-personal-information",
-                  "ko/reference/privacy-policy",
-                  "ko/reference/terms-conditions"
+                  "ko/_reference/collection-personal-information",
+                  "ko/_reference/privacy-policy",
+                  "ko/_reference/terms-conditions"
                 ]
               }
             ]
@@ -112,7 +114,7 @@
                 "group": "자주 묻는 질문",
                 "expanded": false,
                 "pages": [
-                  "ko/faq/20251120-01"
+                  "ko/_faq/20251120-01"
                 ]
               }
             ]
@@ -129,8 +131,8 @@
                 "group": "Reference",
                 "expanded": true,
                 "pages": [
-                  "en/reference/terms-conditions",
-                  "en/reference/privacy-policy"
+                  "en/_reference/terms-conditions",
+                  "en/_reference/privacy-policy"
                 ]
               }
             ]
