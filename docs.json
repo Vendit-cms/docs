@@ -83,14 +83,14 @@
               },
               {
                 "group": "연동 서비스",
-                "expanded": true,
+                "expanded": false,
                 "pages": [
                   "ko/f-integrations/vcloud"
                 ]
               },
               {
                 "group": "구독",
-                "expanded": true,
+                "expanded": false,
                 "pages": [
                   "ko/g-billing/billing"
                 ]
