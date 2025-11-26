@@ -24,10 +24,10 @@
                 "group": "숙박업소 관리",
                 "expanded": true,
                 "pages": [
-                  "ko/a-accommodations/a-signup-login",
-                  "ko/a-accommodations/b-create-accommodation",
-                  "ko/a-accommodations/c-invite-user",
-                  "ko/a-accommodations/d-accommodation-setting"
+                  "ko/a-accommodation/a-signup-login",
+                  "ko/a-accommodation/b-create-accommodation",
+                  "ko/a-accommodation/c-invite-user",
+                  "ko/a-accommodation/d-accommodation-setting"
                 ]
               },
               {
