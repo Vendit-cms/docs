@@ -60,9 +60,8 @@
                   "ko/inventory-rate/inclusion",
                   "ko/inventory-rate/timetable",
                   {
-                    "group": "채널",
+                    "group": "채널 특이사항",
                     "pages": [
-                      "ko/channels/channel-setting",
                       "ko/channels/agoda",
                       "ko/channels/tripdotcom",
                       "ko/channels/yeogiottae",
@@ -73,32 +72,34 @@
                       "ko/channels/onda",
                       "ko/channels/ddnayodotcom"
                     ]
-                  },
-                  {
-                    "group": "연동 서비스",
-                    "pages": [
-                      "ko/integrations/vcloud"
-                    ]
-                  },
-                  {
-                    "group": "구독",
-                    "pages": [
-                      "ko/billing/billing"
-                    ]
-                  } 
-                ]
-              },
-              {
-                "group": "Reference",
-                "expanded": true,
-                "pages": [
-                  "ko/reference/collection-personal-information",
-                  "ko/reference/privacy-policy",
-                  "ko/reference/terms-conditions"
+                  }
                 ]
               }
             ]
           },
+            {
+              "group": "연동 서비스",
+              "expanded": false,
+              "pages": [
+                  "ko/integrations/vcloud"
+              ]
+             },
+            {
+                "group": "구독",
+                "expanded": false,
+                "pages": [
+                  "ko/billing/billing"
+            ]
+            },
+            {
+              "group": "Reference",
+              "expanded": true,
+              "pages": [
+                 "ko/reference/collection-personal-information",
+                 "ko/reference/privacy-policy",
+                 "ko/reference/terms-conditions"
+              ]
+            },
           {
             "tab": "자주 묻는 질문",
             "groups": [
