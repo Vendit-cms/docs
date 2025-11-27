@@ -44,8 +44,7 @@
                 "group": "예약 관리",
                 "expanded": true,
                 "pages": [
-                  "ko/bookings/bookings",
-                  "ko/bookings/view-setting"
+                  "ko/bookings/bookings"
                 ]
               },
               {
@@ -59,7 +58,7 @@
                   "ko/inventory-rate/rate",
                   "ko/inventory-rate/inclusion",
                   "ko/inventory-rate/timetable"
-                  ]
+                ]
               },
               {
                 "group": "채널 관리",
@@ -67,18 +66,18 @@
                 "pages": [
                   "ko/channels/channel-setting",
                   {
-                  "group": "채널별 설정",
-                  "expanded": false,
-                  "pages": [
-                    "ko/channels/agoda",
-                    "ko/channels/tripdotcom",
-                    "ko/channels/yeogiottae",
-                    "ko/channels/yeogiottae-partner",
-                    "ko/channels/naver",
-                    "ko/channels/yanolja",
-                    "ko/channels/coolstay",
-                    "ko/channels/onda",
-                    "ko/channels/ddnayodotcom"
+                    "group": "채널별 설정",
+                    "expanded": false,
+                    "pages": [
+                      "ko/channels/agoda",
+                      "ko/channels/tripdotcom",
+                      "ko/channels/yeogiottae",
+                      "ko/channels/yeogiottae-partner",
+                      "ko/channels/naver",
+                      "ko/channels/yanolja",
+                      "ko/channels/coolstay",
+                      "ko/channels/onda",
+                      "ko/channels/ddnayodotcom"
                     ]
                   }
                 ]
