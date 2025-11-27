@@ -41,7 +41,7 @@
                 ]
               },
               {
-                "group": "예약 관리",
+                "group": "예약",
                 "expanded": true,
                 "pages": [
                   "ko/bookings/bookings"
@@ -61,12 +61,12 @@
                 ]
               },
               {
-                "group": "채널 관리",
+                "group": "채널",
                 "expanded": false,
                 "pages": [
                   "ko/channels/channel-setting",
                   {
-                    "group": "채널별 설정",
+                    "group": "채널 연결",
                     "expanded": false,
                     "pages": [
                       "ko/channels/agoda",
