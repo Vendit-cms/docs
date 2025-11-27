@@ -58,19 +58,27 @@
                   "ko/inventory-rate/period",
                   "ko/inventory-rate/rate",
                   "ko/inventory-rate/inclusion",
-                  "ko/inventory-rate/timetable",
+                  "ko/inventory-rate/timetable"
+                  ]
+              },
+              {
+                "group": "채널 관리",
+                "expanded": false,
+                "pages": [
+                  "ko/channels/channel-setting",
                   {
-                    "group": "채널 특이사항",
-                    "pages": [
-                      "ko/channels/agoda",
-                      "ko/channels/tripdotcom",
-                      "ko/channels/yeogiottae",
-                      "ko/channels/yeogiottae-partner",
-                      "ko/channels/naver",
-                      "ko/channels/yanolja",
-                      "ko/channels/coolstay",
-                      "ko/channels/onda",
-                      "ko/channels/ddnayodotcom"
+                  "group": "채널별 설정",
+                  "expanded": false,
+                  "pages": [
+                    "ko/channels/agoda",
+                    "ko/channels/tripdotcom",
+                    "ko/channels/yeogiottae",
+                    "ko/channels/yeogiottae-partner",
+                    "ko/channels/naver",
+                    "ko/channels/yanolja",
+                    "ko/channels/coolstay",
+                    "ko/channels/onda",
+                    "ko/channels/ddnayodotcom"
                     ]
                   }
                 ]
