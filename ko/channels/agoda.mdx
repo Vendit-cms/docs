@@ -16,7 +16,7 @@ description: "원활한 연결을 위해 YCS 커넥티비티 설정이 필요합
 ## 아고다 YCS 커넥티비티 설정
 
 <Check>
-  [아고다 YCS](https://ycs.agoda.com/) 접속해 주세요.
+  [아고다 YCS](https://ycs.agoda.com/) 접속해 커넥티비티 설정이 필요합니다.
 </Check>
 
 <iframe src="https://preview.vendit.co.kr/demo/cme6nz0yt250eh3pyiouju82z?utm_source=link" title="Embedded content" width="100%" height="300" style={{ border:"none",borderRadius:"12px" }} />
@@ -27,10 +27,10 @@ description: "원활한 연결을 위해 YCS 커넥티비티 설정이 필요합
 
 ---
 
-## YCS 자체 설정 주의사항
+## YCS 설정 주의사항
 
-### 1. 요금제 설정
-
+<AccordionGroup>
+  <Accordion title="1. 요금제 설정">
     ![image (56).png](/images/image\(56\).png)
 
     <Warning>
@@ -43,18 +43,21 @@ description: "원활한 연결을 위해 YCS 커넥티비티 설정이 필요합
     <Check>
       요금 미설정인 경우, 요금 & 예약 설정 관리 \> 캘린더 화면에서도 객실 수량만 노출되며, 요금 정보를 확인할 수 없습니다.
     </Check>
+  </Accordion>
+  <Accordion title="2. 객실 설정">
+    ![image (58).png](/images/image\(58\).png)
 
-### 2. 객실 설정
+    <Check>
+      YCS 숙소 \> 객실 설정
 
-![image (58).png](/images/image\(58\).png)
-
-<Check>
-  YCS 숙소 \> 객실 설정
-
-  - 판매 상태를 확인해 주세요. 판매 대기 중 상태에서는 판매가 불가합니다.
-</Check>
+      - 판매 상태를 확인해 주세요. 판매 대기 중 상태에서는 판매가 불가합니다.
+    </Check>
+  </Accordion>
+</AccordionGroup>
 
 ## VCMS 연동 주의사항
+
+<Accordion title="재고 자동 보충 설정 주의사항">
 
 ![image (55).png](/images/image\(55\).png)
 
@@ -63,3 +66,4 @@ description: "원활한 연결을 위해 YCS 커넥티비티 설정이 필요합
 
   - VCMS에서 재고 자동 보충을 사용하는 경우, 각 수량을 동일하게 설정해야 합니다. 다르게 설정 시, 잔여 수량이 설정값에 따라 계속 변경되어 재고 불일치가 발생할 수 있습니다.
 </Check>
+</Accordion>

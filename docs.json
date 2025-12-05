@@ -71,9 +71,7 @@
                     "pages": [
                       "ko/channels/agoda",
                       "ko/channels/tripdotcom",
-                      "ko/channels/yeogiottae-partner",
-                      "ko/channels/naver",
-                      "ko/channels/yanolja"
+                      "ko/channels/naver"
                     ]
                   }
                 ]
