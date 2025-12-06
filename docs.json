@@ -63,8 +63,14 @@
               {
                 "group": "채널",
                 "expanded": false,
-                "pages": [
-                  "ko/channels/channel-setting",
+                "groups": [
+                  {
+                    "group": "채널 설정",
+                    "expanded": false,
+                    "pages": [
+                      "ko/channels/channel-setting"
+                    ]
+                  },
                   {
                     "group": "채널 연결",
                     "expanded": false,
@@ -105,29 +111,60 @@
             "tab": "자주 묻는 질문",
             "groups": [
               {
-                "group": "자주 묻는 질문",
+                "group": "사용 방법",
                 "expanded": false,
                 "pages": [
-                  "ko/faq/20251120-01",
-                  "ko/faq/20251120-02",
-                  "ko/faq/20251120-03",
-                  "ko/faq/20251120-04",
-                  "ko/faq/20251120-05",
-                  "ko/faq/20251120-06",
-                  "ko/faq/20251120-07",
-                  "ko/faq/20251120-08",
-                  "ko/faq/20251120-09",
-                  "ko/faq/20251120-10",
-                  "ko/faq/20251120-11",
-                  "ko/faq/20251120-12",
-                  "ko/faq/20251120-13",
-                  "ko/faq/20251120-14",
-                  "ko/faq/20251120-15",
-                  "ko/faq/20251120-16",
-                  "ko/faq/20251120-17",
-                  "ko/faq/20251120-18",
-                  "ko/faq/20251120-19",
-                  "ko/faq/20251120-20"
+                  "ko/faq/usage/use-on-mobile",
+                  "ko/faq/usage/cancel-booking-in-vcms"
+                ]
+              },
+              {
+                "group": "재고·요금",
+                "expanded": false,
+                "pages": [
+                  "ko/faq/usage/day-use-inventory-rate",
+                  "ko/faq/inventory-rate/yanolja-hotdeal-goldclass",
+                  "ko/faq/inventory-rate/bulk-edit-period-inventory",
+                  "ko/faq/inventory-rate/bulk-period-rate-adjustment",
+                  "ko/faq/inventory-rate/timetables",
+                  "ko/faq/inventory-rate/change-room-count",
+                  "ko/faq/inventory-rate/move-room-to-other-type",
+                  "ko/faq/inventory-rate/limit-inventory-by-channel"
+                ]
+              },
+              {
+                "group": "채널 관리",
+                "expanded": false,
+                "pages": [
+                  "ko/faq/channels/available-channels",
+                  "ko/faq/channels/channel-final-rate",
+                  "ko/faq/channels/channel-inventory-rate-setting",
+                  "ko/faq/channels/channels-commission-setting",
+                  "ko/faq/channels/connect-airbnb-without-naver",
+                  "ko/faq/channels/max-sync-days"
+                ]
+              },
+              {
+                "group": "문제 해결",
+                "expanded": false,
+                "pages": [
+                  "ko/faq/issue/vcloud-booking-not-synced",
+                  "ko/faq/issue/overbooking",
+                  "ko/faq/usage/booking-sync-free"
+                ]
+              },
+              {
+                "group": "연동 서비스",
+                "expanded": false,
+                "pages": [
+                  "ko/faq/integrations/use-with-vcloud"
+                ]
+              },
+              {
+                "group": "계정",
+                "expanded": false,
+                "pages": [
+                  "ko/faq/account/verification-code-not-received"
                 ]
               }
             ]
