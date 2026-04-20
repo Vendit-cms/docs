@@ -64,21 +64,22 @@
                 "group": "채널",
                 "expanded": false,
                 "pages": [
-              {
-                "group": "채널 설정",
-                "expanded": false,
-                "pages": [
-                  "ko/channels/channel-setting"
-                ]
-              },
-              {
-                "group": "채널별 특이사항",
-                "expanded": false,
-                "pages": [
-                  "ko/channels/agoda",
-                  "ko/channels/tripdotcom",
-                  "ko/channels/naver",
-                  "ko/channels/airbnb"
+                  {
+                    "group": "채널 설정",
+                    "expanded": false,
+                    "pages": [
+                      "ko/channels/channel-setting"
+                    ]
+                  },
+                  {
+                    "group": "채널별 특이사항",
+                    "expanded": false,
+                    "pages": [
+                      "ko/channels/naver",
+                      "ko/channels/agoda",
+                      "ko/faq/channels/untitled-page",
+                      "ko/channels/tripdotcom",
+                      "ko/channels/airbnb"
                     ]
                   }
                 ]
@@ -145,7 +146,8 @@
                   "ko/faq/billing/add-payment-card",
                   "ko/faq/billing/default-card-setting"
                 ]
-              },              {
+              },
+              {
                 "group": "문제 해결",
                 "expanded": false,
                 "pages": [
@@ -184,27 +186,28 @@
                   "ko/reference/privacy-policy",
                   "ko/reference/personal-information-consent"
                 ]
-              }            
+              }
             ]
           },
           {
             "tab": "업데이트 노트",
             "groups": [
-              {"group": "2026",
+              {
+                "group": "2026",
                 "expanded": true,
                 "pages": [
                   "ko/release-notes/2026-01-14"
                 ]
-              }
-              ,
-               {"group": "2025",
+              },
+              {
+                "group": "2025",
                 "expanded": true,
                 "pages": [
                   "ko/release-notes/2025-12-23"
                 ]
               }
             ]
-          } 
+          }
         ]
       },
       {
