@@ -77,8 +77,8 @@
                     "pages": [
                       "ko/channels/naver",
                       "ko/channels/agoda",
-                      "ko/faq/channels/airbnb",
-                      "ko/faq/channels/expedia",
+                      "ko/channels/airbnb",
+                      "ko/channels/expedia",
                       "ko/channels/tripdotcom"
                     ]
                   }
