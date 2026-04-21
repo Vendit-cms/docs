@@ -4,18 +4,81 @@ title: "에어비앤비/익스피디아 연결이 끊겼어요."
 
 연결이 되지 않을 때 아래 항목을 순서대로 확인해 주세요.
 
-<Accordion title="크롬 브라우저에서 에어비앤비/익스피디아가 로그인되어 있나요?" defaultOpen>
-  - 처음 채널을 연결했던 크롬 브라우저를 열어주세요.
-  - 에어비앤비 또는 익스피디아 관리자 페이지에 로그인되어 있는지 확인해 주세요.\
-    로그아웃 상태라면 다시 로그인해 주세요.
-  - 로그인 후 탭을 닫지 말고 그대로 유지해 주세요.
+<Accordion title="크롬에서 로그인 상태를 확인해 주세요." defaultOpen>
+  - 에어비앤비/익스피디아가 열려 있는 크롬 브라우저를 확인해 주세요.
+    <Columns cols={2}>
+      <Column>
+        <Frame>
+          <img
+            src="/images/스크린샷-2026-04-21-19.52.52-1.png"
+            alt="스크린샷 2026 04 21 19 52 52 1"
+            title="스크린샷 2026 04 21 19 52 52 1"
+            lightAlt="expedia-sign-in"
+            darkAlt="expedia-sign-in"
+            className="dark:hidden"
+          />
+          <img
+            src="expedia-sign-in"
+            alt="스크린샷 2026 04 21 19 52 52 1"
+            title="스크린샷 2026 04 21 19 52 52 1"
+            lightAlt="expedia-sign-in"
+            darkAlt="expedia-sign-in"
+            className="hidden dark:block"
+          />
+        </Frame>
+      </Column>
+      <Column>
+        <Frame>
+          <img
+            src="/images/스크린샷-2026-04-21-19.52.43-1.png"
+            alt="스크린샷 2026 04 21 19 52 43 1"
+            title="스크린샷 2026 04 21 19 52 43 1"
+            lightAlt="airbnb-sign-in"
+            darkAlt="airbnb-sign-in"
+            className="dark:hidden"
+          />
+          <img
+            src="airbnb-sign-in"
+            alt="스크린샷 2026 04 21 19 52 43 1"
+            title="스크린샷 2026 04 21 19 52 43 1"
+            lightAlt="airbnb-sign-in"
+            darkAlt="airbnb-sign-in"
+            className="hidden dark:block"
+          />
+        </Frame>
+      </Column>
+    </Columns>
+  - 로그아웃 상태라면 다시 로그인해 주세요.
+  - 로그인 후 탭을 닫지 말고 그대로 유지해 주세요. 창은 내리셔도 됩니다.
     <Check>
       탭이 열려있어야 예약 동기화가 정상적으로 유지됩니다.
     </Check>
+    <Warning>
+      채널 확인은 해당 탭이 아닌 다른 탭을 열어 확인해 주세요.
+    </Warning>
 </Accordion>
 
 <Accordion title="벤디트 확장 프로그램이 활성화되어 있나요?" defaultOpen>
   크롬에 설치된 확장 프로그램을 확인해 주세요.
+
+  <Frame>
+    <img
+      src="/images/크롬확장프로그램-다시연결-4.png"
+      alt="크롬확장프로그램 다시연결 3"
+      title="크롬확장프로그램 다시연결 3"
+      lightAlt="크롬확장프로그램 다시연결"
+      darkAlt="크롬확장프로그램 다시연결"
+      className="mx-auto dark:hidden"
+    />
+    <img
+      src="/images/크롬확장프로그램-다시연결"
+      alt="크롬확장프로그램 다시연결 3"
+      title="크롬확장프로그램 다시연결 3"
+      lightAlt="크롬확장프로그램 다시연결"
+      darkAlt="크롬확장프로그램 다시연결"
+      className="mx-auto hidden dark:block"
+    />
+  </Frame>
 </Accordion>
 
 <Accordion title="업장 네트워크(인터넷)에 문제가 없나요?" defaultOpen>
