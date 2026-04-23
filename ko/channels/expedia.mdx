@@ -85,8 +85,8 @@ VCMS로 돌아와 익스피디아 숙소를 연결하고 상품을 매핑하면 
   **매핑 전 반드시 확인해 주세요.**
 
   - 매핑하기 전 VCMS 판매 관리에서 재고, 요금 설정을 먼저 완료해 주세요.
-  - 익스피디아에서 인원별 요금(OBP)을 사용하시면, VCMS에서도 동일하게 인원별 요금을 설정해 주세요.
-  - 판매관리 설정이 완료되지 않은 상태에서 매핑하면 의도하지 않은 재고, 요금이 익스피디아에 반영될 수 있습니다.
+  - 익스피디아에서 인원별 요금(OBP)을 사용하시면, VCMS에서도 동일하게 [🔗 인원별 요금을 설정](https://docs.vcms.io/ko/inventory-rate/package-stay#인원별-요금)해 주세요.
+  - OBP가 설정되지 않은 상태에서 매핑하면 요금이 정상적으로 익스피디아에 반영되지 않습니다.
 </Warning>
 
 1. 채널 숙소 활성화
@@ -170,4 +170,26 @@ VCMS로 돌아와 익스피디아 숙소를 연결하고 상품을 매핑하면 
   <Accordion title="다시 설치가 필요한 경우" defaultOpen>
     다지점을 운영하여 같은 채널에 다른 숙소를 2개 이상 연결하는 경우, 크롬 프로필을 분리하고 각 프로필에 확장 프로그램을 별도로 설치해야 합니다.
   </Accordion>
+</Accordion>
+
+<Accordion title="VCMS 기준으로 익스피디아 요금이 바뀌지 않아요.">
+  익스피디아에서 인원별 요금(Occupancy Based Pricing) 사용 여부를 확인해주세요.
+
+  <Warning>
+    익스피디아에서 인원별 요금을 설정한 경우, VCMS에서 인원별 요금이 반드시 설정해야 합니다. 설정되지 않은 상태에서 매핑하면 요금이 정상적으로 익스피디아에 반영되지 않습니다.
+  </Warning>
+
+  - 인원별 요금 사용 예시
+    <Frame>
+      ![Expedia Partner Center Obp](/images/expedia-partner-center-obp.png)
+    </Frame>
+
+  - 인원별 요금 미사용 예시
+    <Frame>
+      ![Expedia Partner Center](/images/expedia-partner-center.png)
+    </Frame>
+
+  <Info>
+    설정 방법이 어려우시면 벤디트 고객센터(1644-5442)로 문의해 주세요.
+  </Info>
 </Accordion>
