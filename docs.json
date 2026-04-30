@@ -193,11 +193,12 @@
           },
           {
             "tab": "업데이트 노트",
-            "groups": [
+            "pages": [
               {
                 "group": "2026",
                 "expanded": true,
                 "pages": [
+                  "ko/release-notes/2026-4-29",
                   "ko/release-notes/2026-04-28",
                   "ko/release-notes/2026-04-24",
                   "ko/release-notes/2026-03-16",
