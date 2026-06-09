@@ -76,12 +76,12 @@
                     "expanded": false,
                     "pages": [
                       "ko/channels/naver",
-                      "ko/channels/yeogieottae-partnercenter",
+                      "ko/channels/liveanywhere",
                       "ko/channels/agoda",
+                      "ko/channels/yeogieottae-partnercenter",
                       "ko/channels/airbnb",
                       "ko/channels/expedia",
                       "ko/channels/tripdotcom",
-                      "ko/channels/liveanywhere",
                       "ko/channels/file"
                     ]
                   }
