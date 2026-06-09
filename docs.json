@@ -81,6 +81,7 @@
                       "ko/channels/airbnb",
                       "ko/channels/expedia",
                       "ko/channels/tripdotcom",
+                      "ko/channels/liveanywhere",
                       "ko/channels/file"
                     ]
                   }
