@@ -169,7 +169,7 @@
                 ]
               },
               {
-                "group": "연동 서비스 / VCLOUD",
+                "group": "연동 서비스",
                 "pages": [
                   "ko/faq/integrations/use-with-vcloud",
                   "ko/faq/integrations/vcloud-early-checkout-inventory",
