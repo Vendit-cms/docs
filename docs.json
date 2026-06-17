@@ -82,6 +82,7 @@
                       "ko/channels/airbnb",
                       "ko/channels/expedia",
                       "ko/channels/camfit",
+                      "ko/channels/camperest",
                       "ko/channels/tripdotcom"
                     ]
                   }
