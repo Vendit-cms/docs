@@ -132,6 +132,12 @@
                 ]
               },
               {
+                "group": "예약 내역",
+                "pages": [
+                  "sort-by-cancel-date"
+                ]
+              },
+              {
                 "group": "채널",
                 "expanded": false,
                 "pages": [
