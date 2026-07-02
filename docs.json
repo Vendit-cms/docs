@@ -64,16 +64,9 @@
                 "group": "채널",
                 "expanded": false,
                 "pages": [
+                  "ko/channels/channel-setting",
                   {
-                    "group": "채널 설정",
-                    "expanded": false,
-                    "pages": [
-                      "ko/channels/channel-setting"
-                    ]
-                  },
-                  {
-                    "group": "채널별 특이사항",
-                    "expanded": false,
+                    "group": "채널별 운영 노트",
                     "pages": [
                       "ko/channels/naver",
                       "ko/channels/liveanywhere",
