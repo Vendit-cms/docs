@@ -19,7 +19,7 @@
         "tabs": [
           {
             "tab": "사용자 가이드",
-            "groups": [
+            "pages": [
               {
                 "group": "VCMS 시작하기",
                 "expanded": true,
@@ -31,7 +31,7 @@
                 ]
               },
               {
-                "group": "판매 관리 · 예약 내역",
+                "group": "판매 관리",
                 "expanded": true,
                 "pages": [
                   "ko/distributions/understanding",
@@ -40,12 +40,7 @@
                   "ko/distributions/view-setting"
                 ]
               },
-              {
-                "group": "예약 내역",
-                "pages": [
-                  "ko/bookings/bookings"
-                ]
-              },
+              "ko/bookings/bookings",
               {
                 "group": "VCMS 설정",
                 "pages": [
