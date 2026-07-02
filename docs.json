@@ -41,7 +41,7 @@
                 ]
               },
               {
-                "group": "예약 내역",
+                "group": "예약",
                 "pages": [
                   "ko/bookings/bookings"
                 ]
