@@ -40,7 +40,12 @@
                   "ko/distributions/view-setting"
                 ]
               },
-              "ko/bookings/bookings",
+              {
+                "group": "예약 내역",
+                "pages": [
+                  "ko/bookings/bookings"
+                ]
+              },
               {
                 "group": "VCMS 설정",
                 "pages": [
