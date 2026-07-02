@@ -21,7 +21,7 @@
             "tab": "사용자 가이드",
             "groups": [
               {
-                "group": "숙박업소 관리",
+                "group": "VCMS 시작하기",
                 "expanded": true,
                 "pages": [
                   "ko/accommodation/signup-login",
@@ -31,38 +31,30 @@
                 ]
               },
               {
-                "group": "판매 관리",
+                "group": "판매 · 예약 관리",
                 "expanded": true,
                 "pages": [
                   "ko/distributions/understanding",
                   "ko/distributions/usage",
                   "ko/distributions/channel-sync",
-                  "ko/distributions/view-setting"
-                ]
-              },
-              {
-                "group": "예약",
-                "expanded": true,
-                "pages": [
+                  "ko/distributions/view-setting",
                   "ko/bookings/bookings"
                 ]
               },
               {
-                "group": "설정",
-                "expanded": false,
+                "group": "VCMS 설정하기",
                 "pages": [
                   "ko/inventory-rate/roomType",
                   "ko/inventory-rate/package-stay",
                   "ko/inventory-rate/package-day-use",
-                  "ko/inventory-rate/period",
                   "ko/inventory-rate/rate",
+                  "ko/inventory-rate/period",
                   "ko/inventory-rate/inclusion",
                   "ko/inventory-rate/timetable"
                 ]
               },
               {
-                "group": "채널",
-                "expanded": false,
+                "group": "채널 연동하기",
                 "pages": [
                   "ko/channels/channel-setting",
                   {
@@ -111,7 +103,7 @@
             "tab": "자주 묻는 질문",
             "groups": [
               {
-                "group": "재고·요금",
+                "group": "판매 관리",
                 "expanded": true,
                 "pages": [
                   "ko/faq/usage/day-use-inventory-rate",
@@ -127,6 +119,7 @@
               {
                 "group": "예약 내역",
                 "pages": [
+                  "ko/faq/usage/booking-sync-free",
                   "sort-by-cancel-date"
                 ]
               },
@@ -162,15 +155,6 @@
                 ]
               },
               {
-                "group": "사용 방법",
-                "expanded": false,
-                "pages": [
-                  "ko/faq/usage/booking-sync-free",
-                  "ko/faq/usage/use-on-mobile",
-                  "ko/faq/usage/cancel-booking-in-vcms"
-                ]
-              },
-              {
                 "group": "연동 서비스",
                 "pages": [
                   "ko/faq/integrations/use-with-vcloud",
@@ -183,6 +167,14 @@
                 "expanded": false,
                 "pages": [
                   "ko/faq/account/verification-code-not-received"
+                ]
+              },
+              {
+                "group": "사용 방법",
+                "expanded": false,
+                "pages": [
+                  "ko/faq/usage/use-on-mobile",
+                  "ko/faq/usage/cancel-booking-in-vcms"
                 ]
               },
               {
