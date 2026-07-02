@@ -31,18 +31,23 @@
                 ]
               },
               {
-                "group": "판매 · 예약 관리",
+                "group": "판매 관리 · 예약 내역",
                 "expanded": true,
                 "pages": [
                   "ko/distributions/understanding",
                   "ko/distributions/usage",
                   "ko/distributions/channel-sync",
-                  "ko/distributions/view-setting",
+                  "ko/distributions/view-setting"
+                ]
+              },
+              {
+                "group": "예약 내역",
+                "pages": [
                   "ko/bookings/bookings"
                 ]
               },
               {
-                "group": "VCMS 설정하기",
+                "group": "VCMS 설정",
                 "pages": [
                   "ko/inventory-rate/roomType",
                   "ko/inventory-rate/package-stay",
@@ -54,7 +59,7 @@
                 ]
               },
               {
-                "group": "채널 연동하기",
+                "group": "채널 연동",
                 "pages": [
                   "ko/channels/channel-setting",
                   {
