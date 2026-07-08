@@ -6,6 +6,8 @@ hidden: true
 
 > 원천(Source of Truth): Figma `🅥 CMS Design System v.1.0.0` 파일의 Variables. 이 문서의 값은 Figma 변수에서 추출한 것이며, 변수 변경 시 이 문서도 갱신해야 한다. 마지막 동기화: 2026-07-07
 
+---
+
 ## 1. 아키텍처
 
 토큰은 2계층 \+ 컴포넌트 토큰으로 구성된다.
@@ -32,6 +34,8 @@ Primitive (원시값, 픽커에서 숨김)
 - **수치 스케일은 오름차순**: 컬러 램프 50→950, space 0→64, 웨이트 400→700
 - **시맨틱 위계는 내림차순(강→약)**: strong → default → subtle → muted, heading → body → caption
 - 상태 토큰(placeholder, disabled)은 위계가 아니므로 목록 맨 뒤
+
+---
 
 ## 2. Color — Primitive
 
@@ -74,6 +78,8 @@ Primitive (원시값, 픽커에서 숨김)
 - Green은 에메랄드 계열(hue 160). Slack·Notion 그린과 같은 방향.
 - 시맨틱 매핑: red=danger, yellow=warning, green=success, blue=info, purple=brand.
 
+---
+
 ## 3. Color — Semantic
 
 ### text (위계 강→약, 상태는 뒤)
@@ -93,7 +99,7 @@ Primitive (원시값, 픽커에서 숨김)
 | text/success | green/800 | #047857 | 성공 메시지 |
 | text/info | blue/800 | #1D4ED8 | 안내 메시지 |
 
-위계는 default/subtle/muted 3단만 고르면 된다. strong은 선택적 강조, placeholder·disabled는 컴포넌트 상태에 박제되는 값이라 선택지가 아니다. 한 화면에 위계 3단을 다 쓰는 경우는 밀도 높은 테이블 정도이며, 보통 default \+ muted 2단이면 충분하다.
+> 위계는 default/subtle/muted 3단만 고르면 된다. strong은 선택적 강조, placeholder·disabled는 컴포넌트 상태에 박제되는 값이라 선택지가 아니다. 한 화면에 위계 3단을 다 쓰는 경우는 밀도 높은 테이블 정도이며, 보통 default \+ muted 2단이면 충분하다.
 
 ### background
 
@@ -153,7 +159,7 @@ Primitive (원시값, 픽커에서 숨김)
 | border/success | green/600 | 성공 테두리 |
 | border/info | blue/600 | 안내 테두리 |
 
-border 스코프에는 STROKE 외에 FILL도 열려 있다. 1px 사각형 divider, outline stroke된 벡터에도 바인딩 가능. 단, UI 요소의 스트로크는 outline하지 않는 것이 원칙이다.
+> border 스코프에는 STROKE 외에 FILL도 열려 있다. 1px 사각형 divider, outline stroke된 벡터에도 바인딩 가능. 단, UI 요소의 스트로크는 outline하지 않는 것이 원칙이다.
 
 ### icon
 
@@ -176,6 +182,8 @@ border 스코프에는 STROKE 외에 FILL도 열려 있다. 1px 사각형 divide
 3. **진한 배경 위는 inverse** — 단 bg/warning(yellow/600) 위는 대비 부족으로 어두운 텍스트(yellow/900 계열) 사용
 4. **subtle 배경 \+ 같은 계열 진한 텍스트** — 에러 배너 = bg/danger-subtle \+ text/danger
 5. **텍스트 컬러는 강조 위계, 크기는 타이포 토큰** — 두 축을 직교로 조합
+
+---
 
 ## 4. Typography
 
@@ -211,6 +219,8 @@ border 스코프에는 STROKE 외에 FILL도 열려 있다. 1px 사각형 divide
 4. **위계는 크기\+웨이트\+컬러의 조합** — 크기 차이를 줄이고 컬러(text/\*)로 위계를 주는 것 권장
 5. heading 번호는 시각 스타일 이름이며 HTML h태그와 1:1이 아님 (접근성 마크업은 문서 구조 기준으로 개발에서 결정)
 
+---
+
 ## 5. Space · Radius · Size
 
 ### space (gap·padding 공용, 4px 그리드)
@@ -245,7 +255,9 @@ border 스코프에는 STROKE 외에 FILL도 열려 있다. 1px 사각형 divide
 | --- | --- | --- |
 | breakpoint/md | 768 | 이하 태블릿 레이아웃 |
 
-**width/height는 변수화하지 않는다.** 요소 크기는 오토레이아웃 fill/hug가 원칙. 고정이 필요한 아이콘·컨트롤 높이·컨테이너 폭만 size/\*를 쓴다.
+> **width/height는 변수화하지 않는다.** 요소 크기는 오토레이아웃 fill/hug가 원칙. 고정이 필요한 아이콘·컨트롤 높이·컨테이너 폭만 size/\*를 쓴다.
+
+---
 
 ## 6. Component Tokens
 
@@ -255,6 +267,8 @@ border 스코프에는 STROKE 외에 FILL도 열려 있다. 1px 사각형 divide
 | tooltip/max-width | 250 | 툴팁 최대 폭 (초과 시 줄바꿈) |
 
 컴포넌트 토큰은 시맨틱으로 표현 안 되는 고유값에만 추가한다. 개수가 늘어나면 별도 Component 컬렉션으로 분리한다.
+
+---
 
 ## 7. 운영 규칙
 
