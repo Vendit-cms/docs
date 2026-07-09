@@ -149,7 +149,8 @@
                 "pages": [
                   "ko/faq/billing/add-payment-card",
                   "ko/faq/billing/default-card-setting",
-                  "ko/faq/billing/repay-after-unpaid"
+                  "ko/faq/billing/repay-after-unpaid",
+                  "ko/faq/billing/billing-date-pending-change"
                 ]
               },
               {
