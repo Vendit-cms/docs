@@ -2,35 +2,45 @@
 title: "채널 동기화"
 ---
 
-### 동기화 중
+## 동기화 중
 
-![동기화.png](/images/동기화.png)
+<Frame>
+  ![Distribution Syncing](/images/Distribution-Syncing.png "Distribution Syncing")
+</Frame>
 
-<Check>
-  모든 채널의 판매 상태, 재고, 요금, 입/퇴실 시간 정보가 VCMS 판매 관리에 맞춰 동일하게 반영돼요.
+<Info>
+  모든 채널의 판매 상태, 재고, 요금, 입/퇴실 시간 정보가 VCMS 판매 관리에 맞춰 동일하게 반영돼요. 채널 상품이 최소 1개 이상 VCMS와 연결되면 동기화를 시작할 수 있어요.
+</Info>
 
-  채널 상품이 최소 1개 이상 VCMS와 연결되면 동기화를 시작할 수 있어요.
+<Warning>
+  동기화 중일 땐 채널에서 변경해도 VCMS 기준으로 다시 적용됩니다.
+</Warning>
 
-  **동기화 중일 땐 채널에서 변경해도 CMS 정보로 다시 반영돼요.**
-</Check>
+---
 
-### 동기화 중지
+## 동기화 중지 / 예약 연동 중
 
-![동기화 중지.png](/images/동기화중지.png)
+<Frame>
+  ![Distribution Booking Sync Only](/images/Distribution-Booking-Sync-Only.png "Distribution Booking Sync Only")
+</Frame>
 
-<Check>
+<Info>
   동기화를 중지하면 마지막 연동 시점 이후 예약 정보만 연동되고, 모든 채널의 재고, 요금, 판매 상태 동기화는 멈춰요.
-</Check>
+</Info>
 
-### 부분 동기화
+---
 
-<Check>
+## 부분 동기화
+
+<Info>
   필요할 때 특정 채널 상품의 재고나 요금만 선택해 동기화할 수 있어요.
 
   [👉 채널 상품 부분 동기화 상세 가이드 바로가기](https://docs.vcms.io/ko/channels/channel-setting#채널-상품-세부-설정)
-</Check>
+</Info>
 
-### 미설정 상품 동기화
+---
+
+## 미설정 상품 동기화
 
 요금 관리를 사용하지 않고 재고 관리만 사용하는 업장은, 채널의 미설정 상품을 VCMS에서 자동으로 열지 않아요. 미설정 상품의 판매 오픈 시점과 요금 설정은 채널에서 직접 관리할 수 있어요.
 
