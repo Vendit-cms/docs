@@ -178,8 +178,7 @@
                 ]
               },
               {
-                "group": "사용 방법",
-                "expanded": false,
+                "group": "기타",
                 "pages": [
                   "ko/faq/usage/use-on-mobile",
                   "ko/faq/usage/cancel-booking-in-vcms"
