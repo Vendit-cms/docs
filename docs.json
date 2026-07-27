@@ -158,7 +158,6 @@
                 "group": "문제 해결",
                 "expanded": false,
                 "pages": [
-                  "ko/faq/issue/vcloud-booking-not-synced",
                   "ko/faq/issue/yanolja-booking-delay"
                 ]
               },
@@ -166,6 +165,7 @@
                 "group": "연동 서비스",
                 "pages": [
                   "ko/faq/integrations/use-with-vcloud",
+                  "ko/faq/issue/vcloud-booking-not-synced",
                   "ko/faq/integrations/vcloud-early-checkout-inventory",
                   "ko/faq/integrations/channel-cancel-booking-processing"
                 ]
