@@ -139,7 +139,6 @@
                   "ko/faq/inventory-rate/limit-inventory-by-channel",
                   "ko/faq/inventory-rate/daily-chek-in-out-time",
                   "ko/faq/channels/yanolja-hotdeal-goldclass",
-                  "ko/faq/channels/airbnb-promotion-reset",
                   "ko/faq/channels/channels-commission-setting",
                   "ko/faq/channels/channel-final-rate"
                 ]
@@ -173,6 +172,7 @@
                 "pages": [
                   "ko/faq/issue/yanolja-booking-delay",
                   "ko/faq/channels/airbnb-disconnected",
+                  "ko/faq/channels/airbnb-promotion-reset",
                   "ko/faq/channels/channel-auto-disconnected",
                   "ko/faq/issue/vcloud-booking-not-synced"
                 ]
