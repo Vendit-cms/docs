@@ -110,9 +110,26 @@
             "tab": "자주 묻는 질문",
             "groups": [
               {
-                "group": "판매 관리",
-                "expanded": true,
+                "group": "시작하기 · 계정",
+                "expanded": false,
                 "pages": [
+                  "ko/faq/account/verification-code-not-received",
+                  "ko/faq/usage/use-on-mobile"
+                ]
+              },
+              {
+                "group": "채널 연결",
+                "expanded": false,
+                "pages": [
+                  "ko/faq/channels/available-channels",
+                  "ko/faq/channels/max-sync-days"
+                ]
+              },
+              {
+                "group": "재고 · 요금 관리",
+                "expanded": false,
+                "pages": [
+                  "ko/faq/channels/channel-inventory-rate-setting",
                   "ko/faq/usage/day-use-inventory-rate",
                   "ko/faq/inventory-rate/bulk-edit-period-inventory",
                   "ko/faq/inventory-rate/bulk-period-rate-adjustment",
@@ -120,34 +137,27 @@
                   "ko/faq/inventory-rate/change-room-count",
                   "ko/faq/inventory-rate/move-room-to-other-type",
                   "ko/faq/inventory-rate/limit-inventory-by-channel",
-                  "ko/faq/inventory-rate/daily-chek-in-out-time"
+                  "ko/faq/inventory-rate/daily-chek-in-out-time",
+                  "ko/faq/channels/yanolja-hotdeal-goldclass",
+                  "ko/faq/channels/channels-commission-setting",
+                  "ko/faq/channels/channel-final-rate"
                 ]
               },
               {
-                "group": "예약 내역",
+                "group": "예약 관리",
                 "pages": [
                   "ko/faq/usage/booking-sync-free",
-                  "sort-by-cancel-date"
-                ]
+                  "sort-by-cancel-date",
+                  "ko/faq/channels/ddananyo-booking-split",
+                  "ko/faq/usage/cancel-booking-in-vcms",
+                  "ko/faq/integrations/use-with-vcloud",
+                  "ko/faq/integrations/vcloud-early-checkout-inventory",
+                  "ko/faq/integrations/channel-cancel-booking-processing"
+                ],
+                "expanded": false
               },
               {
-                "group": "채널",
-                "expanded": false,
-                "pages": [
-                  "ko/faq/channels/available-channels",
-                  "ko/faq/channels/channel-final-rate",
-                  "ko/faq/channels/channel-inventory-rate-setting",
-                  "ko/faq/channels/channels-commission-setting",
-                  "ko/faq/channels/max-sync-days",
-                  "ko/faq/channels/yanolja-hotdeal-goldclass",
-                  "ko/faq/channels/airbnb-promotion-reset",
-                  "ko/faq/channels/airbnb-disconnected",
-                  "ko/faq/channels/channel-auto-disconnected",
-                  "ko/faq/channels/ddananyo-booking-split"
-                ]
-              },
-              {
-                "group": "구독",
+                "group": "구독 · 결제",
                 "expanded": false,
                 "pages": [
                   "ko/faq/billing/add-payment-card",
@@ -160,30 +170,11 @@
                 "group": "문제 해결",
                 "expanded": false,
                 "pages": [
-                  "ko/faq/issue/yanolja-booking-delay"
-                ]
-              },
-              {
-                "group": "연동 서비스",
-                "pages": [
-                  "ko/faq/integrations/use-with-vcloud",
-                  "ko/faq/issue/vcloud-booking-not-synced",
-                  "ko/faq/integrations/vcloud-early-checkout-inventory",
-                  "ko/faq/integrations/channel-cancel-booking-processing"
-                ]
-              },
-              {
-                "group": "계정",
-                "expanded": false,
-                "pages": [
-                  "ko/faq/account/verification-code-not-received"
-                ]
-              },
-              {
-                "group": "기타",
-                "pages": [
-                  "ko/faq/usage/use-on-mobile",
-                  "ko/faq/usage/cancel-booking-in-vcms"
+                  "ko/faq/issue/yanolja-booking-delay",
+                  "ko/faq/channels/airbnb-disconnected",
+                  "ko/faq/channels/airbnb-promotion-reset",
+                  "ko/faq/channels/channel-auto-disconnected",
+                  "ko/faq/issue/vcloud-booking-not-synced"
                 ]
               },
               {
