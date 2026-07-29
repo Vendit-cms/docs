@@ -121,15 +121,13 @@
                 "group": "채널 연결",
                 "expanded": false,
                 "pages": [
-                  "ko/faq/channels/available-channels",
-                  "ko/faq/channels/max-sync-days"
+                  "ko/faq/channels/available-channels"
                 ]
               },
               {
                 "group": "재고 · 요금 관리",
                 "expanded": false,
                 "pages": [
-                  "ko/faq/channels/channel-inventory-rate-setting",
                   "ko/faq/usage/day-use-inventory-rate",
                   "ko/faq/inventory-rate/bulk-edit-period-inventory",
                   "ko/faq/inventory-rate/bulk-period-rate-adjustment",
@@ -138,9 +136,7 @@
                   "ko/faq/inventory-rate/move-room-to-other-type",
                   "ko/faq/inventory-rate/limit-inventory-by-channel",
                   "ko/faq/inventory-rate/daily-chek-in-out-time",
-                  "ko/faq/channels/yanolja-hotdeal-goldclass",
-                  "ko/faq/channels/channels-commission-setting",
-                  "ko/faq/channels/channel-final-rate"
+                  "ko/faq/channels/yanolja-hotdeal-goldclass"
                 ]
               },
               {
@@ -148,7 +144,6 @@
                 "pages": [
                   "ko/faq/usage/booking-sync-free",
                   "sort-by-cancel-date",
-                  "ko/faq/channels/ddananyo-booking-split",
                   "ko/faq/usage/cancel-booking-in-vcms",
                   "ko/faq/integrations/use-with-vcloud",
                   "ko/faq/integrations/vcloud-early-checkout-inventory",
@@ -171,7 +166,6 @@
                 "expanded": false,
                 "pages": [
                   "ko/faq/issue/yanolja-booking-delay",
-                  "ko/faq/channels/airbnb-disconnected",
                   "ko/faq/channels/airbnb-promotion-reset",
                   "ko/faq/channels/channel-auto-disconnected",
                   "ko/faq/issue/vcloud-booking-not-synced"
