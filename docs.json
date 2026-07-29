@@ -75,7 +75,8 @@
                       "ko/channels/camperest",
                       "ko/channels/camfit",
                       "ko/channels/tripdotcom",
-                      "ko/channels/tripbtoz"
+                      "ko/channels/tripbtoz",
+                      "ko/channels/ddananyo"
                     ]
                   }
                 ]
@@ -141,7 +142,8 @@
                   "ko/faq/channels/yanolja-hotdeal-goldclass",
                   "ko/faq/channels/airbnb-promotion-reset",
                   "ko/faq/channels/airbnb-disconnected",
-                  "ko/faq/channels/channel-auto-disconnected"
+                  "ko/faq/channels/channel-auto-disconnected",
+                  "ko/faq/channels/ddananyo-booking-split"
                 ]
               },
               {
