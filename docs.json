@@ -66,6 +66,7 @@
                     "group": "채널별 운영 노트",
                     "pages": [
                       "ko/channels/naver",
+                      "ko/channels/ddananyo",
                       "ko/channels/liveanywhere",
                       "ko/channels/ban-life",
                       "ko/channels/agoda",
@@ -75,8 +76,7 @@
                       "ko/channels/camperest",
                       "ko/channels/camfit",
                       "ko/channels/tripdotcom",
-                      "ko/channels/tripbtoz",
-                      "ko/channels/ddananyo"
+                      "ko/channels/tripbtoz"
                     ]
                   }
                 ]
