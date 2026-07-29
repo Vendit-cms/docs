@@ -129,8 +129,8 @@
                 "group": "재고 · 요금 관리",
                 "expanded": false,
                 "pages": [
-                  "ko/faq/channels/channel-inventory-rate-setting",
-                  "ko/faq/usage/day-use-inventory-rate",
+                  "ko/faq/inventory-rate/channel-inventory-rate-setting",
+                  "ko/faq/inventory-rate/day-use-inventory-rate",
                   "ko/faq/inventory-rate/bulk-edit-period-inventory",
                   "ko/faq/inventory-rate/bulk-period-rate-adjustment",
                   "ko/faq/inventory-rate/timetables",
@@ -138,22 +138,22 @@
                   "ko/faq/inventory-rate/move-room-to-other-type",
                   "ko/faq/inventory-rate/limit-inventory-by-channel",
                   "ko/faq/inventory-rate/daily-chek-in-out-time",
-                  "ko/faq/channels/yanolja-hotdeal-goldclass",
-                  "ko/faq/channels/airbnb-promotion-reset",
-                  "ko/faq/channels/channels-commission-setting",
-                  "ko/faq/channels/channel-final-rate"
+                  "ko/faq/inventory-rate/yanolja-hotdeal-goldclass",
+                  "ko/faq/inventory-rate/airbnb-promotion-reset",
+                  "ko/faq/inventory-rate/channels-commission-setting",
+                  "ko/faq/inventory-rate/channel-final-rate"
                 ]
               },
               {
                 "group": "예약 관리",
                 "pages": [
-                  "ko/faq/usage/booking-sync-free",
-                  "sort-by-cancel-date",
-                  "ko/faq/channels/ddananyo-booking-split",
-                  "ko/faq/usage/cancel-booking-in-vcms",
-                  "ko/faq/integrations/use-with-vcloud",
-                  "ko/faq/integrations/vcloud-early-checkout-inventory",
-                  "ko/faq/integrations/channel-cancel-booking-processing"
+                  "ko/faq/booking/booking-sync-free",
+                  "ko/faq/booking/sort-by-cancel-date",
+                  "ko/faq/booking/ddananyo-booking-split",
+                  "ko/faq/booking/cancel-booking-in-vcms",
+                  "ko/faq/booking/use-with-vcloud",
+                  "ko/faq/booking/vcloud-early-checkout-inventory",
+                  "ko/faq/booking/channel-cancel-booking-processing"
                 ],
                 "expanded": false
               },
@@ -172,8 +172,8 @@
                 "expanded": false,
                 "pages": [
                   "ko/faq/issue/yanolja-booking-delay",
-                  "ko/faq/channels/airbnb-disconnected",
-                  "ko/faq/channels/channel-auto-disconnected",
+                  "ko/faq/issue/airbnb-disconnected",
+                  "ko/faq/issue/channel-auto-disconnected",
                   "ko/faq/issue/vcloud-booking-not-synced"
                 ]
               },
