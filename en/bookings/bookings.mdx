@@ -1,0 +1,134 @@
+---
+title: "Bookings"
+description: "Bookings shows every reservation that came in through a channel or a connected integration."
+---
+
+---
+
+## Booking status
+
+Bookings are grouped by where they are in the process.
+
+<Frame>
+  ![Booking Default](/images/Booking-Default.png)
+</Frame>
+
+- **All**: every booking, whatever its status.
+- **Completed**: the booking has synced.
+- **Cancelled**: the booking was cancelled.
+- **Assigned**: the booking was assigned to a room in the connected integration (VCLOUD).
+- **Pending**: the booking has not synced yet and is waiting.
+
+---
+
+## Searching bookings
+
+Find a specific booking fast by guest name, booking number, or phone number.
+
+---
+
+## View settings
+
+Choose which columns appear and reorder them however you like.
+
+### Shown by default
+
+- **Booking check**: whether the booking details have been reviewed
+- **Stay type**: overnight or day use
+- **Booking status**: completed, cancelled, assigned, or pending
+- **Check-in**: scheduled check-in date and time
+- **Check-out**: scheduled check-out date and time
+- **Nights**: length of stay
+- **Total guests**: number of guests on the booking
+  <Warning>
+    Yanolja, Yeogi Eottae, Naver, and Kkulstay do not send guest counts, so their bookings show 1 guest.
+  </Warning>
+- **Source**: where the booking came from
+- **Integration**: the connected integration
+- **Guest**: name of the lead guest
+- **Room type**: room type on the synced booking
+- **Booking number**: the channel's booking number
+- **Quantity**: number of rooms booked
+- **Phone number**: guest phone number
+- **Sale amount**: the channel's selling price
+- **Memo**: a note written by your property, editable from the booking detail
+- **Synced at**: when the booking synced
+
+### Hidden by default
+
+- **Paid at**: when the booking was paid
+- **Request**: what the guest wrote when booking
+- **Package**: the VCMS package linked to the channel package
+- **Channel package**: the channel package on the booking
+- **Net amount**: the channel's net rate
+- **Outstanding amount**: what the channel still owes
+- **Transport**: how the guest is arriving
+- **Cancelled at**: when the booking was cancelled
+- **Adults, children, infants**: guest counts by age group
+
+---
+
+## Filters
+
+Filters narrow the list to the bookings you want.
+
+- **Date**: pick the dates to look at.
+- **Date basis**: stay period, check-in, check-out, or synced at.
+- **Stay type**: overnight or day use.
+- **Channel**: only connected channels appear.
+- **Room type**: filter by room type.
+- **Package**: filter by package.
+
+---
+
+## Switching the view
+
+The booking list reads as a list or as cards.
+
+- **List view**: dense, and you pick which columns to show.
+
+<Frame>
+  ![Booking List View](/images/Booking-List-View.png)
+</Frame>
+
+- **Card view**: a visual read on the bookings coming in.
+
+<Frame>
+  ![Booking Card View](/images/Booking-Card-View.png)
+</Frame>
+
+---
+
+## Booking detail
+
+Click a booking and the detail panel opens, split into **Booking info** and **Change history**.
+
+### Booking info
+
+The booking's details, grouped by topic. For example:
+
+- **Guest info**: stay type, booking status, guest, phone number
+- **Sync info**: source, booking number, synced at
+- **Stay period**: check-in, check-out, nights
+- **Booking info**: room type, channel package, package, quantity, total guests, transport
+- **Request and memo**
+- **Payment info**: sale amount, net amount, outstanding amount, paid at
+- **Booking check**
+
+### Change history
+
+Who changed what, and when. Each entry shows the changed field as "before → after" alongside the timestamp.
+
+---
+
+## CSV download
+
+Bookings download as a CSV. Press **CSV download** above the list and every booking matching the filters you have applied (stay date range and the rest) is saved to the file.
+
+<Frame>
+  ![Booking CSV Download](/images/Booking-CSV-Download.png)
+</Frame>
+
+<Info>
+  The CSV holds only the bookings currently loaded on screen. Load 30 of 50 and you download 30. To get them all, scroll to the end of the list so every booking loads, then download again.
+</Info>

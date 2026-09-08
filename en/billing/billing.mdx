@@ -1,0 +1,171 @@
+---
+title: "Subscription"
+description: "Check your subscription and manage payment methods."
+---
+
+---
+
+## Subscribing to services
+
+<Frame>
+  ![Subscription](/images/구독-1.png "Subscription")
+</Frame>
+
+Subscribe to as much of VCMS as you actually use. Booking sync is free. Inventory management and rate management are chosen to match how you work.
+
+<Frame>
+  ![Subscription, service selection](/images/구독-서비스구독-2.png "Subscription service selection")
+</Frame>
+
+- Booking sync is included and free.
+- Paid subscriptions come as inventory management alone, or inventory management together with rate management.
+  - Rate management cannot be used on its own. It goes with inventory management.
+- Each service is billed annually or monthly, your choice.
+- All payments are by card.
+
+<Info>
+  **If I subscribe during the free trial, when am I charged?**
+
+  Subscribe during the trial and you are charged when the trial ends, which is when the subscription starts. Before the trial begins, you can cancel the subscription yourself.
+</Info>
+
+<Info>
+  **Add rooms or notification contacts after subscribing and the added amount is charged before it takes effect.**
+</Info>
+
+---
+
+## Billing cycle
+
+<Frame>
+  ![Subscription, annual billing](/images/구독-서비스구독-연간결제.png "Subscription annual billing")
+</Frame>
+
+### Annual
+
+Charged once a year on the set month and day, with a 10% discount on the amount.
+
+### Monthly
+
+Charged every month on the set day.
+
+<Info>
+  You cannot switch from monthly to annual mid-subscription. To change the cycle, cancel the current subscription and subscribe again on the cycle you want.
+</Info>
+
+---
+
+## Payment cards
+
+<Frame>
+  ![Subscription Register Card](/images/Subscription-Register-Card.png)
+</Frame>
+
+Register and manage the cards used for subscription payments.
+
+- **Default payment method**: the card registered as default is charged automatically.
+- **Backup cards**: up to four. They are never charged automatically.
+
+---
+
+## Changing the billing date
+
+<Frame>
+  ![Subscription, change billing date](/images/구독-결제일변경.png "Subscription billing date change")
+</Frame>
+
+Annual and monthly subscriptions can both move to a billing date you choose. Charges are settled against the new date.
+
+- Move it **later** than the current date and the extra days are charged today.
+- Move it **earlier** and the next charge covers only what you have not already paid for.
+
+<Info>
+  Card settlement rules mean the billing date cannot be set between the 26th and the 31st.
+</Info>
+
+---
+
+## Changing or cancelling a subscription
+
+<Frame>
+  ![Setting Subscription](/images/Setting-Subscription.png)
+</Frame>
+
+<Frame>
+  ![Setting Subscription 2](/images/Setting-Subscription-2.png)
+</Frame>
+
+Change what you subscribe to, or cancel.
+
+- On inventory management and rate management together, you can drop back to inventory management alone.
+- Cancellation works two ways.
+  - **Use until the next billing date, then cancel**: keep the service for the rest of the period, cancel at the next billing date.
+  - **Cancel immediately**: the subscription ends the moment you ask.
+
+<Warning>
+  **Cancelling immediately has consequences.**
+
+  - Cancel inventory management immediately and channel sync stops at once, which can produce overbooking.
+  - Cancel rate management immediately and channel sync stops at once, so rates edited in VCMS never reach the channels. Manage rates on the channels themselves after cancelling.
+  - Cancel extra notification contacts immediately and only the default contact keeps receiving notifications.
+</Warning>
+
+<Note>
+  **On Naver, be careful when running inventory management alone**
+
+  While the Naver channel is connected, stopping rate management can disturb Naver's own rate settings. Take particular care if your Naver room list has Today's Deal (a set discount applied if the room has not sold by 00:00) or holiday schedules registered.
+
+  - Sync inventory and rates together and Today's Deal and the holiday schedules are deleted, replaced by the inventory and rates on the VCMS Distribution screen.
+  - Sync inventory only and the deleted rate information can leave packages unsold on holiday dates, or selling at some older rate you registered earlier.
+</Note>
+
+---
+
+## Payment history
+
+<Frame>
+  ![Subscription, payment history](/images/구독-결제내역.png "Subscription payment history")
+</Frame>
+
+Every subscription payment in one place, each showing status, date and time, what was charged, the amount, and any discount.
+
+- **By status**: succeeded, failed, refunded, or cancelled.
+- **Sort**: change the sort order by payment date.
+- **Charge items**: charges from adding rooms, adding notification contacts, or changing plan are each recorded as their own entry.
+  - **Payment detail**
+  <Frame>
+    ![Subscription, payment detail](/images/구독-결제내역-상세.png "Subscription payment detail")
+  </Frame>
+  - **Receipt**: each payment's receipt opens in a new window.
+
+<Info>
+  When a payment happens, a KakaoTalk or SMS notification goes to the contact registered for the accommodation, and it also appears in the notification menu at the top. (Sent one day before a charge, when the free trial ends, and when a payment completes.)
+</Info>
+
+---
+
+## Subscription terms and refunds
+
+- Subscription fees are based on the number of rooms.
+  - Inventory management only: KRW 5,000 per room (up to 10 rooms, the base fee is KRW 50,000 per month)
+  - Inventory and rate management together: KRW 10,000 per room (up to 10 rooms, the base fee is KRW 100,000 per month)
+  - One notification contact is included. Each additional contact is KRW 5,000.
+  - These figures exclude VAT. The amount charged includes 10% VAT.
+- Using another Vendit product qualifies you for a bundle discount. Ask Vendit for the rate.
+  - The discount never cuts below the base fee. Even with it applied, you pay at least the base fee.
+- Cancel immediately, or keep the service until the next scheduled billing date and cancel then.
+- Cancel immediately and you are refunded for the unused period before the subscription ends. Refunds go back to the original payment method.
+  - With no refund due, you keep the service until the end of the paid period.
+- **Monthly subscription refunds**
+  - Cancel within 7 days of the charge and you are refunded the amount less the period used.
+  - After 7 days there is no refund, and you keep the service until the next billing date.
+- **Annual subscription refunds**
+  - Cancel within 7 days of the charge and you are refunded at the discounted rate, less the period used.
+  - After 7 days you are refunded for the remaining period, less the annual subscription discount.
+- A cancelled subscription cannot be restored. Using the service again means subscribing again.
+- A subscription you cancelled before it started can be re-subscribed at any time.
+- Once a failed payment goes through, the service reactivates from that moment.
+
+<Warning>
+  Unpaid charges stop channel sync. Keep an eye on it.
+</Warning>
