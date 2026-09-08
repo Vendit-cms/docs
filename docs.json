@@ -236,6 +236,16 @@
             "tab": "User Guide",
             "groups": [
               {
+                "group": "Getting Started with VCMS",
+                "expanded": true,
+                "pages": [
+                  "en/accommodation/signup-login",
+                  "en/accommodation/create-accommodation",
+                  "en/accommodation/invite-user",
+                  "en/accommodation/accommodation-setting"
+                ]
+              },
+              {
                 "group": "Reference",
                 "expanded": true,
                 "pages": [
