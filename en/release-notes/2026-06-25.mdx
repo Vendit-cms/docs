@@ -1,0 +1,24 @@
+---
+title: "June 25, 2026 update"
+description: "Hello from Vendit. Here is what changed in VCMS in the fourth week of June."
+---
+
+---
+
+> **Highlights**\
+> "A property deactivated or deleted on a channel is disconnected automatically, which stops bad sync."
+
+## Improved
+
+### Properties deactivated or deleted on a channel are disconnected automatically
+
+When the connected channel shows the property deactivated or deleted, or in a state where official integration is not permitted, VCMS disconnects that channel property automatically so bookings and rates do not sync wrongly. The disconnection is written to the audit log, and you are told through VCMS notifications and KakaoTalk.
+
+**More detail**
+
+- Channels covered: Agoda, Trip.com, Yanolja, Naver (when the property is hidden or the contract ends)
+- More channels are coming.
+
+<Info>
+  A connection dropped this way does not come back on its own. Once the property is healthy again on the channel, reconnect it in VCMS yourself.
+</Info>
