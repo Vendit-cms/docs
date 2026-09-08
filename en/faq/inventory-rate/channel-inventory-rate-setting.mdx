@@ -1,0 +1,64 @@
+---
+title: "How do I set inventory and rates?"
+description: "Set inventory and rates on the VCMS package, then link the channel package to it and those values sync to the channel."
+---
+
+<Steps>
+  <Step title="Start by creating packages from the room types and rates your property already uses.">
+  </Step>
+  <Step title="Build the package in VCMS on top of a room type.">
+    Create the package from the room types and rates your property uses.
+  </Step>
+  <Step title="Link the sales channel's packages to your VCMS packages so inventory and rate management run cleanly.">
+    Channel packages sitting under a linked package all take the same package rate, and they share inventory.
+  </Step>
+  <Step title="Link the channel package to the VCMS package.">
+    A linked channel package takes the VCMS package's rate exactly, and shares its inventory.
+  </Step>
+</Steps>
+
+<Info>
+  If you use the Vendit VCLOUD service, a channel package not linked to a package is created under an unassigned room type.
+</Info>
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Can I hide or delete packages I don't sell?">
+    Hide, yes. Delete, no. Deleting an unlinked channel package could take the booking data attached to it, so for safety and data integrity there is hiding but no deleting. Here is how to hide an unlinked channel package you do not sell.
+
+    <Steps>
+      <Step title="In [Settings] - [Channels] - [Channel packages], press the ⚙️ unlinked channel package display setting.">
+        <Frame>
+          ![Channel package display setting](/images/채널_17\(1\).png)
+        </Frame>
+
+        <Frame>
+          ![Unlinked channel packages](/images/채널_13\(1\).png)
+        </Frame>
+      </Step>
+      <Step title="Press hide or show, then save, and the channel packages you picked are hidden.">
+        <Frame>
+          ![Hiding channel packages](/images/채널_14\(1\).png)
+        </Frame>
+      </Step>
+    </Steps>
+  </Accordion>
+</AccordionGroup>
+
+<Accordion title="Can I mark up or discount a single channel package?">
+  Yes. Set that channel package's final channel rate.
+
+  <Steps>
+    <Step title="In [connected channel] - [Channel packages], pick the channel package to mark up or discount.">
+      <Frame>
+        ![Picking a channel package](/images/채널_22\(2\).png)
+      </Frame>
+    </Step>
+    <Step title="Set the final channel rate and the marked-up or discounted amount is what goes to the channel.">
+      <Frame>
+        ![Setting the final channel rate](/images/채널_15\(2\).png)
+      </Frame>
+    </Step>
+  </Steps>
+</Accordion>
