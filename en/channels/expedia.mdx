@@ -1,0 +1,260 @@
+---
+title: "Expedia"
+description: "Check the following before connecting Expedia."
+---
+
+---
+
+## Connecting Expedia
+
+<Info>
+  **What you need first**
+
+  - The Expedia account you want to connect
+  - Chrome
+  - A stable internet connection
+</Info>
+
+### Step 1. Sign in to Expedia in Chrome
+
+Open Chrome, go to Expedia, and sign in with your partner account.
+
+1. Launch Chrome.
+2. Go to [Expedia Partner Central](https://www.expediapartnercentral.com/Account/Logon?returnUrl=https%3A%2F%2Fwww.expediapartnercentral.com%2F).
+3. Sign in.
+4. Leave that tab open. Do not close it.
+
+<Frame>
+  <img
+    src="/images/익스피디아-4.png"
+    alt="Expedia Partner Central"
+    className="mx-auto"
+    style={{ width:"56%" }}
+  />
+</Frame>
+
+<Info>
+  The signed-in tab has to stay open even after the integration is running. Close it and sync stops.
+</Info>
+
+<Warning>
+  Leave the Expedia tab alone
+
+  - The pinned Expedia tab on the left of Chrome is doing the integration work. For a stable connection, touch it as little as possible.
+  - To look something up on Expedia, open a separate new tab instead of using the pinned one.
+</Warning>
+
+---
+
+### Step 2. Install the Chrome extension
+
+Install the VCMS extension from the Chrome Web Store and run it.
+
+<Info>
+  Already have the extension? Skip to Step 3.
+</Info>
+
+1. Install the [extension](https://chromewebstore.google.com/detail/vcms-%ED%81%AC%EB%A1%AC-%ED%99%95%EC%9E%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/fcjhlkhdjbehihbimdacnbclpmlchhpp).
+2. Click the puzzle icon at the top right of the browser.
+3. Click the VCMS extension to run it.
+
+<Frame>
+  <img
+    src="/images/크롬확장프로그램-다시연결-7.png"
+    alt="Chrome extension reconnect"
+    className="mx-auto"
+    style={{ width:"63%" }}
+  />
+</Frame>
+
+---
+
+### Step 3. Run and set up the extension
+
+Sign in to the extension with your VCMS account, pick the property, and press Expedia's "Use" button.
+
+1. Sign in with your VCMS account
+2. Pick the property
+3. Press Use
+
+<Warning>
+  **Check before you press it.**
+
+  - Chrome has to be signed in to Expedia before you press "Use".
+  - Make sure the Expedia tab you opened in Step 1 is still there.
+</Warning>
+
+---
+
+### Step 4. Connect the Expedia property in VCMS and map packages
+
+Back in VCMS, connect the Expedia property and map the packages. That completes the connection.
+
+<Warning>
+  **Check before you map.**
+
+  - Finish your inventory and rate setup in VCMS Distribution before mapping.
+  - If you use occupancy-based pricing (OBP) on Expedia, [🔗 set occupancy-based pricing](https://docs.vcms.io/en/inventory-rate/package-stay) in VCMS to match.
+  - Map without OBP set and rates do not reach Expedia properly.
+</Warning>
+
+1. Activate the channel property
+   - Go to the Channels menu in VCMS.
+   - Select the Expedia channel.
+   - Connect the property you operate.
+2. Map channel packages
+   - Link each Expedia package to the VCMS package it corresponds to.
+   - Press Save once every mapping is done.
+
+<Info>
+  Package mapping can be changed any time afterwards in the VCMS channel settings.
+</Info>
+
+---
+
+## Things to watch
+
+Once the channel is connected, bookings, inventory, and rates sync automatically. Keep to the following or sync will not hold.
+
+| Item | What to do | Consequence |
+| --- | --- | --- |
+| Chrome | Do not close the Chrome running the extension. | Closing it stops sync |
+| Expedia tab | Keep the signed-in channel tab open. | Closing it stops sync |
+| Computer power | The computer has to stay on. | Shutting down stops sync |
+| [Windows power settings](https://docs.vcms.io/en/faq/issue/airbnb-disconnected) | Set sleep and turn-off-screen to "Never". | Otherwise sync stops |
+
+<Warning>
+  **Important**
+
+  - Close Chrome or the Expedia tab after connecting and sync stops.
+  - After rebooting the computer, open Chrome and the Expedia tab again and sign back in.
+  - Expedia bookings, inventory, and rates sync every 5 minutes.
+</Warning>
+
+<Warning>
+  Running several properties
+
+  - With several properties, signing in to more than one Expedia account in a single Chrome tab causes conflicts.
+  - Sign in per property on separate PCs, separate browsers (Edge, Safari, and so on), or separate Chrome profiles.
+</Warning>
+
+---
+
+## FAQ
+
+### Q. What if I reboot the computer or close Chrome by accident?
+
+<Info>
+  Start Chrome again and the Expedia tab opens by itself.
+</Info>
+
+---
+
+### Q. How often does it sync?
+
+<Info>
+  Every 5 minutes. As long as the integration is healthy, bookings, inventory, and rates sync on that cycle.
+</Info>
+
+---
+
+### Q. I run several properties. What then?
+
+<Info>
+  One Chrome profile connects one property. Add a Chrome profile and run Step 1 through Step 4 again.
+</Info>
+
+---
+
+### Q. Can I sync inventory only?
+
+<Info>
+  Turn off rate sync under Settings, Channels, channel packages, and only inventory syncs. Manage rates on Expedia yourself.
+</Info>
+
+---
+
+### Q. I got a notification that the Expedia integration dropped.
+
+<Info>
+  Sign in again from the Expedia tab on the left of Chrome and it reconnects. If the notifications keep coming, check the network at your property.
+
+  <Frame>
+    ![Expedia reconnect notification](/images/익스피디아-6.png)
+  </Frame>
+</Info>
+
+---
+
+### Q. The extension is already installed. Do I have to install it again?
+
+It depends.
+
+<Accordion title="No install needed">
+  If the extension is already there from another channel (Airbnb, say) and you are adding Expedia for the same property, you do not need to install anything. Skip Step 2 and start at Step 3.
+</Accordion>
+
+<Accordion title="Install needed again">
+  If you run several properties and connect two or more of them to the same channel, separate your Chrome profiles and install the extension in each profile.
+</Accordion>
+
+---
+
+### Q. Expedia rates are not following VCMS.
+
+<Info>
+  Check whether occupancy-based pricing is turned on in Expedia.
+</Info>
+
+<Warning>
+  With occupancy-based pricing set on Expedia, you have to set it in VCMS too. Map without it and rates do not reach Expedia properly.
+</Warning>
+
+<Accordion title="With occupancy-based pricing" defaultOpen>
+  <Frame>
+    ![Expedia Partner Center OBP](/images/expedia-partner-center-obp.png)
+  </Frame>
+</Accordion>
+
+<Accordion title="Without occupancy-based pricing" defaultOpen>
+  <Frame>
+    ![Expedia Partner Center](/images/expedia-partner-center.png)
+  </Frame>
+
+  <Info>
+    Not using occupancy-based pricing on Expedia means not setting it in VCMS either.
+  </Info>
+</Accordion>
+
+---
+
+### Q. Some packages never sync their inventory or rates to Expedia.
+
+<Info>
+  Expedia decides whether a package uses occupancy-based pricing from the package's **rate data**. A package whose rate has never been set gives it nothing to judge by, so that package is dropped from inventory and rate adjustments automatically.
+</Info>
+
+<Warning>
+  **Save a rate at least once.**
+
+  - Save a rate once and it syncs normally from then on.
+  - You do not have to do it date by date. In Distribution, pick a range and **save the rates in bulk**.
+</Warning>
+
+<iframe src="https://preview.vendit.co.kr/demo/cmtmbyzmu0clbqmh5qu1b8n5l?utm_source=link" width="100%" height="415" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+
+---
+
+### Q. Saving Expedia rates throws an error, or the rates do not stick.
+
+<Info>
+  Expedia limits how much rate change it accepts at once, so saving a wide date range in one go can error out mid-save.
+</Info>
+
+<Warning>
+  **Break the range into shorter stretches.**
+
+  - Save in smaller ranges and it goes through.
+  - This shows up rarely, at properties selling room by room where each package has its own occupancy-based pricing.
+  - It does not happen with plain room rates.
+</Warning>

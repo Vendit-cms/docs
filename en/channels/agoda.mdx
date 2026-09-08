@@ -1,0 +1,106 @@
+---
+title: "Agoda"
+description: "Check the following before connecting Agoda."
+---
+
+---
+
+## Connecting Agoda
+
+### If your property is not on Agoda yet
+
+Register the property through the link below and you get the Vendit integration along with a discount on your VCMS subscription.
+
+<Info>
+  [**Register your property on Agoda →**](https://ycs.agoda.com/mldc/en-us/public/login?returnUrl=%2Fko-kr%2Flist-my-property%2Fget-started%3Focid%3D29)
+</Info>
+
+---
+
+### If your property is already on Agoda
+
+Finish the connectivity setup in [YCS](https://ycs.agoda.com/mldc/ko-kr/public/login?), then send your accommodation ID to your onboarding trainer.
+
+<iframe src="https://preview.vendit.co.kr/embed/cme6nz0yt250eh3pyiouju82z?embed_v=2&utm_source=embed" width="100%" height="415" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+
+<Info>
+  A property already registered on Agoda does not qualify for the subscription discount.
+</Info>
+
+---
+
+## Things to watch
+
+### Set occupancy-based pricing in VCMS
+
+Agoda prices against occupancy. Any package you connect to Agoda has to have occupancy-based pricing set in VCMS.
+
+<Warning>
+  **On occupancy-based pricing**
+
+  - Set occupancy-based pricing on a channel that does not support it and the rate is applied against max occupancy. If that is not what you want, split the packages by whether the channel supports occupancy-based pricing.
+    - Channels without occupancy-based pricing
+      - Yanolja, Yeogi Eottae owner app, Yeogi Eottae Partner Center, Kkulstay, Naver, Ddananyo, Onda, Tripbtoz
+      - Trip.com and Expedia vary by contract.
+  - VCMS supports occupancy-based pricing for adults. Set child rates directly in YCS.
+</Warning>
+
+---
+
+### Connecting several Agoda packages to one room type means matching their inventory
+
+When several Agoda packages hang off the same room type, availability is controlled at the room type level, so each package has to carry the same inventory.
+
+<Warning>
+  This holds even with auto top-up switched on in VCMS. Set the same quantity on every package. Different quantities keep moving availability around and inventory drifts out of line.
+</Warning>
+
+<Frame>
+  ![Agoda packages on one room type](/images/image\(55\).png)
+</Frame>
+
+---
+
+## FAQ
+
+### Where do I set Agoda child rates?
+
+In YCS, directly.
+
+<Info>
+  Path: \[YCS\] - \[Property\] - \[Room settings\] - \[Allow children\]
+</Info>
+
+---
+
+### The integration works but my packages are not showing on Agoda's booking site.
+
+Check in YCS whether a rate plan is attached and whether the package is on sale. Without a rate plan, or in any state other than on sale, the package cannot sell.
+
+<Accordion title="Checking whether a rate plan is attached">
+  📍Path: \[YCS\] - \[Rates & availability\] - \[Rate plan settings\]
+
+  <Frame>
+    ![Agoda rate plan settings](/images/image\(56\).png)
+  </Frame>
+
+  <Warning>
+    With no rate set, the Rates & availability calendar shows room quantities only, and no rate information.
+
+    <Frame>
+      ![Agoda calendar without rates](/images/image\(57\).png)
+    </Frame>
+  </Warning>
+</Accordion>
+
+<Accordion title="Checking the sale status">
+  📍Path: \[YCS\] - \[Property\] - \[Room settings\]
+
+  <Frame>
+    ![Agoda room sale status](/images/image\(58\).png)
+  </Frame>
+
+  <Warning>
+    A package waiting to go on sale cannot sell.
+  </Warning>
+</Accordion>

@@ -23,7 +23,7 @@ Every overnight package built on a room type, with its name, inventory, and time
   ![Pkg List Rate](/images/pkg-list-rate.png)
 </Frame>
 
-Check and set a package's base rate and its period rates.
+Check and set a package's base rate and its rate periods.
 
 - **Base rate**: the selling rate applied on any date without a period of its own.
 - **Period rate**: add a period and the package sells at a different rate for those dates only.
@@ -60,12 +60,12 @@ Here is what you enter:
 - **Currency**: the currency the package rate is in. Like the room type, it cannot be changed after creation.
 - **Timetable**: the package's check-in and check-out times.
 - **Inventory details**
-  - **Max sellable inventory**: caps how many can be sold, up to the number of rooms in the room type.
-  - **Auto-replenish inventory**: tops the availability of every connected channel package back up so inventory stays level. If the number you set matches actual inventory, it draws down as sales come in.
-  - **Booking multiplier**: how many rooms one booking consumes. Set it to 2 and each booking draws 2 from inventory. Inventory stays accurate even when several rooms are sold as a single package, as with capsule rooms.
+  - **Max inventory**: caps how many can be sold, up to the number of rooms in the room type.
+  - **Auto top-up**: tops the availability of every connected channel package back up so inventory stays level. If the number you set matches actual inventory, it draws down as sales come in.
+  - **Units per booking**: how many rooms one booking consumes. Set it to 2 and each booking draws 2 from inventory. Inventory stays accurate even when several rooms are sold as a single package, as with capsule rooms.
 
 <Warning>
-  Change the booking multiplier and it applies to rate adjustments made from then on. Adjustments already in place are untouched.
+  Change the units per booking and it applies to rate adjustments made from then on. Adjustments already in place are untouched.
 </Warning>
 
 <Accordion title="Spotting a booking with a multiplier applied">
@@ -127,9 +127,9 @@ On channels that support occupancy-based pricing (Agoda, for one), a per-person 
 
 ---
 
-## Setting period rates
+## Setting rate periods
 
-When you want a different rate in peak season than in the quiet months, period rates give you the room to do it.
+When you want a different rate in peak season than in the quiet months, rate periods give you the room to do it.
 
 ### Period rates
 
@@ -158,7 +158,7 @@ Connect a period you built on the periods page to a package, and it has a period
   If a period you add overlaps one already there, the higher period wins and the rate can change. Check each package's rate before you save.
 </Warning>
 
-### Applying period rates to other packages
+### Applying rate periods to other packages
 
 Period rates set on one package can be carried over to others, so you are not repeating the same periods package by package.
 
@@ -170,7 +170,7 @@ Period rates set on one package can be carried over to others, so you are not re
   <Frame>
     ![Bulk update rate plan button](/images/260903-bulk-update-rate-plan-button.png "Bulk update rate plan button")
   </Frame>
-- **Import**: the "Import" button on a package card pulls another package's period rates into this one.
+- **Import**: the "Import" button on a package card pulls another package's rate periods into this one.
   <Frame>
     ![Import rate plan into one package](/images/260903-single-pkg-import-rate-plan-button.png "Import rate plan into one package")
   </Frame>
@@ -186,7 +186,7 @@ Period rates set on one package can be carried over to others, so you are not re
 
 ### Sorting periods
 
-When periods overlap, the one higher up applies first. Out of order, they can sell at a rate you did not intend, so a package's period rates can be sorted to match the priority on the periods page.
+When periods overlap, the one higher up applies first. Out of order, they can sell at a rate you did not intend, so a package's rate periods can be sorted to match the priority on the periods page.
 
 - **Every package**: run "Sort periods" from the option (⋮) menu. Packages already in the right order are skipped.
 - **One package**: use the "Sort" button on the package card.

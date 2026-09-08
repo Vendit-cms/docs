@@ -1,0 +1,92 @@
+---
+title: "Naver"
+mode: "default"
+description: "Check the following before connecting Naver."
+---
+
+---
+
+## Connecting Naver
+
+To connect Naver to VCMS, **turn off Naver's two-step verification** first, then connect with your existing Naver ID and password.
+
+<Warning>
+  If the Naver connection has dropped, reconnect in the order below.
+</Warning>
+
+### Step 1. Turn off Naver two-step verification
+
+<Tabs>
+  <Tab title="Mobile">
+    Naver app, menu (≡) at the top left \> your name \> **Two-step verification** \> re-enter your password \> **Turn off** at the bottom of the page
+
+    <Columns cols={3}>
+      <Column>
+        <Frame>
+          ![Naver 2FA Deactivate 1](/images/naver-2FA-deactivate-1.png "Naver 2FA Deactivate 1")
+        </Frame>
+      </Column>
+      <Column>
+        <Frame>
+          ![Naver 2FA Deactivate 2](/images/naver-2FA-deactivate-3.png "Naver 2FA Deactivate 2")
+        </Frame>
+      </Column>
+      <Column>
+        <Frame>
+          ![Naver 2FA Deactivate 3](/images/naver-2FA-deactivate-2-1.png "Naver 2FA Deactivate 3")
+        </Frame>
+      </Column>
+    </Columns>
+  </Tab>
+  <Tab title="PC">
+    Naver ID \> Security settings \> Basic security \> **Two-step verification** \> re-enter your password \> cancel two-step verification \> **\[Turn off two-step verification completely and sign in with ID and password only\]** \> **Turn off**
+
+    <Frame>
+      ![Naver 2FA Deactivate Web](/images/naver-2FA-deactivate-web.png "Naver 2FA Deactivate Web")
+    </Frame>
+  </Tab>
+</Tabs>
+
+<Info>
+  For more on turning it off 👉 see [Naver's help page on two-step verification](https://help.naver.com/service/5640/contents/1853?lang=ko&osType=COMMONOS).
+</Info>
+
+### Step 2. Turn off Naver's login blocking
+
+Under Naver **Security settings \> Login block settings**, "Block logins from other regions" stops VCMS from connecting. Turn that off too.
+
+<Frame>
+  ![Naver Connect](/images/naver-connect.png "Naver Connect")
+</Frame>
+
+### Step 3. Reconnect Naver in VCMS
+
+VCMS \> Settings \> Channels \> Naver \> **Reconnect** \> enter ID and password
+
+<Info>
+  **Worth knowing**
+
+  - Turning off two-step verification deletes every application password you created.
+  - Turn two-step verification back on after connecting and the connection drops.
+</Info>
+
+---
+
+## Things to watch
+
+<Info>
+  Take care if your Naver room list has Today's Deal (a set discount applied if the room has not sold by 00:00) or holiday schedules registered.
+
+  - Syncing inventory and rates deletes Today's Deal and the holiday schedules, replacing them with the inventory and rates from the VCMS Distribution screen.
+    <Frame>
+      <img
+        src="/images/image-5.png"
+        alt="Naver room list"
+        style={{ width:"77%" }}
+      />
+    </Frame>
+</Info>
+
+<Warning>
+  Syncing inventory only leaves the rate information deleted, so packages can go unsold on the holiday dates you set, or sell at some older rate you registered earlier.
+</Warning>
