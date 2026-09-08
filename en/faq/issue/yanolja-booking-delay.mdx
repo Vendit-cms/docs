@@ -1,0 +1,98 @@
+---
+title: "Yanolja booking sync is delayed"
+description: "Check the following when this happens."
+hidden: true
+---
+
+<Check>
+  Delayed Yanolja booking sync is caused by a problem on the Yanolja channel.
+
+  - Inventory and rate sync keep working, but Yanolja booking sync can run more than an hour behind.
+  - On the front desk computer you use, open the Yanolja booking list and check whether the Yanolja system error below appears. 👉 [Yanolja booking search](https://partner.yanolja.com/reservation/search)
+    <img
+      src="/images/blocked.png"
+      alt="Yanolja system error"
+      style={{ width:"89%" }}
+    />
+</Check>
+
+<Warning>
+  Check the Yanolja `pause` setting that guards against overbooking.
+
+  - Without the Yanolja pause setting, you have to manage inventory for Yanolja bookings yourself until booking sync recovers, or you risk overbooking.
+    <img
+      src="/images/야놀자시스템오류모달-1.png"
+      alt="Yanolja system error dialog"
+      title="Yanolja system error dialog"
+      className="mr-auto"
+      style={{ width:"53%" }}
+    />
+    > ### What is the Yanolja pause setting?
+    >
+    > - When a Yanolja system error delays booking sync, it temporarily stops Yanolja packages selling, to prevent overbooking.
+    > - While paused, Yanolja sales stop for the length of the VCMS sync window. Once the Yanolja system error clears, the paused packages go back on sale by themselves.
+    > - If the same class of system error keeps recurring, the package is stopped automatically to prevent overbooking.
+</Warning>
+
+<Check>
+  When a channel integration problem occurs, we notify the contact your property registered, by SMS or KakaoTalk.
+
+  - With no notification contact registered, enter a phone number under VCMS Settings \> Accommodation \> Notification contacts.
+
+  <img
+    src="/images/설정_숙박업소_알림연락처.png"
+    alt="Notification contact setting"
+    style={{ width:"89%" }}
+  />
+</Check>
+
+---
+
+### How do I tell whether the booking list itself is failing?
+
+<Check>
+  Change the query on the Yanolja booking list, by switching to day view or changing the date range in detailed search, and the system error screen appears.
+
+  ![Yanolja booking list error](/images/image-10.png)
+
+  ![Yanolja booking list error detail](/images/image-9.png)
+</Check>
+
+### When will booking sync recover?
+
+<Check>
+  The system error comes from outside, so there is no exact recovery time. What we have observed so far:
+
+  - Tuesday, Wednesday, Thursday, 09:00 to 22:00
+  - Unstable sync lasting up to 6 to 8 hours
+</Check>
+
+### Yanolja recovered and then broke again.
+
+<Check>
+  If the delay returns, you may get another booking sync delay notification.
+
+  When you do, check whether the Yanolja Partner Center booking list is failing again.
+</Check>
+
+### Reporting the Yanolja system error
+
+<Check>
+  Report intermittent Yanolja Partner Center errors to Yanolja customer support.
+</Check>
+
+<Steps>
+  <Step title="1. Contact Yanolja customer support (1644-1346)">
+    - Report the error you see when opening the Yanolja Partner Center booking screen.
+  </Step>
+  <Step title="2. What to have ready">
+    - Business registration number
+    - Accommodation name
+    - A screenshot of the PC screen showing the error, with the whole screen visible
+  </Step>
+  <Step title="3. Recovery">
+    - Once the booking sync delay clears, the Yanolja Partner Center booking search opens again and VCMS booking sync recovers with it.
+  </Step>
+</Steps>
+
+---

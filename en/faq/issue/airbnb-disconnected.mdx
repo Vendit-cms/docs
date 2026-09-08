@@ -1,0 +1,91 @@
+---
+title: "My Airbnb or Expedia connection dropped"
+description: "Work through these in order: Chrome extension sign-in, extension enabled, Windows power options, network."
+---
+
+## What to check when the connection drops
+
+### Check you are signed in to the Chrome extension
+
+<Accordion title="Check the sign-in state on the screen where the Chrome extension is installed." defaultOpen>
+  - Look at the Chrome window with the pinned Airbnb or Expedia tab on the left.
+    <Columns cols={2}>
+      <Column>
+        <Frame>
+          ![Airbnb sign-in](/images/airbnb-sign-in-2.png "Airbnb sign-in")
+        </Frame>
+      </Column>
+      <Column>
+        <Frame>
+          ![Expedia Partner Central](/images/expedia-partner-center-1.png "Expedia Partner Central")
+        </Frame>
+      </Column>
+    </Columns>
+  - Signed out? Sign back in.
+  - After signing in, leave the tab open. Minimizing the window is fine.
+    <Info>
+      The tab has to stay open for sync with Vendit to hold.
+    </Info>
+    <Warning>
+      The pinned tab on the left exists for the integration. Do not work in it. To check something on the channel, open a new tab.
+    </Warning>
+</Accordion>
+
+### Check the Vendit extension is switched on
+
+<Accordion title="Is the Vendit extension enabled?" defaultOpen>
+  Check the extensions installed in Chrome.
+
+  <Frame>
+    ![Chrome extension enabled](/images/chrome-extension-1.png "Chrome extension enabled")
+  </Frame>
+</Accordion>
+
+### Check the Windows power options
+
+<Accordion title="Is sleep or turn-off-screen set in the Windows power options?" defaultOpen>
+  <Info>
+    Set the power options for the Windows version you run.
+  </Info>
+
+  <Accordion title="Windows 10 power settings" icon="computer" iconType="regular">
+    <Steps>
+      <Step title='Windows icon → Settings → "System".'>
+        <Frame>
+          ![Windows 10 system settings](/images/image-35.png)
+        </Frame>
+      </Step>
+      <Step title='Set power and sleep to "Never", as below.'>
+        <Frame>
+          ![Windows 10 power and sleep](/images/image-36.png)
+        </Frame>
+      </Step>
+      <Step title="Check the additional power settings.">
+        <Frame>
+          ![Windows 10 additional power settings](/images/image-37.png)
+        </Frame>
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion title="Windows 11 power settings" icon="computer" iconType="regular">
+    <Steps>
+      <Step title='Settings → System → "Power & battery".'>
+        <Frame>
+          ![Windows 11 power and battery](/images/image-39.png)
+        </Frame>
+      </Step>
+      <Step title='Set every power option below to "Never" and set power mode to "Best performance".'>
+        <Frame>
+          ![Windows 11 power options](/images/image-38.png)
+        </Frame>
+      </Step>
+    </Steps>
+  </Accordion>
+</Accordion>
+
+### Check the network at your property
+
+<Accordion title="Is the property network working?" defaultOpen>
+  If everything above checks out and it still will not connect, look at the network at your property.
+</Accordion>
