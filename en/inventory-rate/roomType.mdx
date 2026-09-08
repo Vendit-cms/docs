@@ -1,0 +1,75 @@
+---
+title: "Room Types"
+description: "Inventory is managed from the room types your property offers and how many rooms each one has."
+---
+
+---
+
+## Room type list
+
+<Frame>
+  ![Roomtype List](/images/roomtype-list.png)
+</Frame>
+
+This is where your rooms are grouped and managed by room type. Inventory for each type is set automatically from the number of rooms.
+
+- See the number of rooms in operation, the number suspended, and the max occupancy for each room type.
+- Reorder room types and the rooms under them freely.
+
+<Info>
+  **Do suspended rooms still count toward sellable inventory?**
+
+  No. Distribution sells only the **rooms in operation**, with suspended rooms excluded from sellable inventory. A suspended room never sells, and changing a room's operating status shows up in Distribution right away.
+
+  <Frame>
+    ![Roomtype List Unfold](/images/roomtype-list-unfold.png)
+  </Frame>
+</Info>
+
+---
+
+## Creating a room type
+
+<Frame>
+  ![Create Roomtype](/images/create-roomtype.png)
+</Frame>
+
+Set a room type name, room details, max occupancy, and management type to create a new room type. Existing room types are edited on the same screen.
+
+- **Room type name**: the name that distinguishes this type.
+- **Room details**: the rooms in this type and how many there are.
+- **Max occupancy**: the most guests who can stay in the room.
+- **Management type**: how connected channel packages sync.
+  - **CMS**: bookings, inventory, and rates for every channel package connected to the room type sync with the CMS.
+  - **Managed in channel**: only bookings sync. Inventory and rates do not, and your property manages them directly.
+
+---
+
+## Connected packages adjust themselves
+
+<Frame>
+  ![Edit Roomtype Confirm](/images/edit-roomtype-confirm.png)
+</Frame>
+
+Edit a room type or change its max occupancy and the settings on connected packages are pulled back into the allowed range automatically. You do not have to revisit each package.
+
+These package settings adjust on their own:
+
+- Max sellable inventory
+- Auto-replenish inventory
+- Booking multiplier
+- Occupancy settings (base occupancy, max occupancy)
+
+<Info>
+  When a value has to move, a confirmation dialog tells you before anything changes. Read it, then go ahead.
+</Info>
+
+---
+
+## Deleting a room type
+
+A room type can only be deleted when it holds no rooms. One with rooms left in it cannot be deleted.
+
+<Warning>
+  Deleting a room type deletes the packages connected to it.
+</Warning>
