@@ -5,7 +5,7 @@
 `en-` 로 시작하는 파일은 영어 UI 에서 새로 찍은 것이다. 나머지는 한국어 원본을 그대로 쓴다.
 `images/` 는 한국어 문서와 공유하므로 원본을 덮으면 한국어까지 바뀐다. 그래서 새 파일로 넣는다.
 
-참조 275건 중 167건 정리 완료, 108건 남음.
+참조 275건 중 172건 정리 완료, 103건 남음.
 
 ## `en/accommodation/create-accommodation.mdx`
 
@@ -370,13 +370,13 @@
 | `en-pkg-list-rate.png` | 영어 캡처 완료 |
 | `en-create-pkg.png` | 영어 캡처 완료 |
 | `booking_scaleFactor.png` | 재현 불가 — 배수가 걸린 예약 두 건을 나란히 놓은 합성이다 |
-| `create-pkg-rate-1.png` | 한국어 유지 — 영어 재캡처 필요 |
+| `en-create-pkg-rate.png` | 영어 캡처 완료 |
 | `create-pkg-rate-select.png` | 한국어 유지 — 영어 재캡처 필요 |
 | `create-pkg-inclusions.png` | 한국어 유지 — 영어 재캡처 필요 |
-| `create-pkg-multiplier.png` | 한국어 유지 — 영어 재캡처 필요 |
-| `create-pkg-min-max.png` | 한국어 유지 — 영어 재캡처 필요 |
-| `create-pkg-obp.png` | 한국어 유지 — 영어 재캡처 필요 |
-| `create-pkg-rate-period.png` | 한국어 유지 — 영어 재캡처 필요 |
+| `en-create-pkg-rate-scale.png` | 영어 캡처 완료 |
+| `en-create-pkg-rate-range.png` | 영어 캡처 완료 |
+| `en-create-pkg-obp.png` | 영어 캡처 완료 |
+| `en-pkg-rate-periods.png` | 영어 캡처 완료 |
 | `260903-add-multi-period.png` | 한국어 유지 — 영어 재캡처 필요 |
 | `260903-single-pkg-add-period.png` | 한국어 유지 — 영어 재캡처 필요 |
 | `260903-bulk-update-rate-plan-modal.png` | 한국어 유지 — 영어 재캡처 필요 |
