@@ -17,8 +17,6 @@ CHANNEL = re.compile(
 
 # 다시 못 찍는 이유. 확인한 것만 적는다.
 BLOCKED = {
-    "Setting-Subscription.png": "재고·요금을 구독 중인 업소가 있어야 뜬다",
-    "Setting-Subscription-2.png": "재고·요금을 구독 중인 업소가 있어야 뜬다",
     "구독-서비스구독-연간결제.png": "현재 빌드 모달에 연간 결제 토글이 없다",
     "edit-roomtype-confirm.png": "CMS 관리 객실타입 + 범위를 벗어난 연결 상품이 필요하다",
     "일괄변경_4.png": "임시 변경 바는 일괄변경이 아니라 셀 직접 수정 플로우 것이다",

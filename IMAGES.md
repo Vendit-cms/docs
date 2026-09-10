@@ -5,7 +5,7 @@
 `en-` 로 시작하는 파일은 영어 UI 에서 새로 찍은 것이다. 나머지는 한국어 원본을 그대로 쓴다.
 `images/` 는 한국어 문서와 공유하므로 원본을 덮으면 한국어까지 바뀐다. 그래서 새 파일로 넣는다.
 
-참조 275건 중 172건 정리 완료, 103건 남음.
+참조 275건 중 174건 정리 완료, 101건 남음.
 
 ## `en/accommodation/create-accommodation.mdx`
 
@@ -39,8 +39,8 @@
 | `구독-서비스구독-연간결제.png` | 재현 불가 — 현재 빌드 모달에 연간 결제 토글이 없다 |
 | `en-subscription-payment-method.png` | 영어 캡처 완료 |
 | `en-subscription-change-payment-date.png` | 영어 캡처 완료 |
-| `Setting-Subscription.png` | 재현 불가 — 재고·요금을 구독 중인 업소가 있어야 뜬다 |
-| `Setting-Subscription-2.png` | 재현 불가 — 재고·요금을 구독 중인 업소가 있어야 뜬다 |
+| `en-subscription-detail.png` | 영어 캡처 완료 |
+| `en-subscription-manage.png` | 영어 캡처 완료 |
 | `en-subscription-history.png` | 영어 캡처 완료 |
 | `en-subscription-history-detail.png` | 영어 캡처 완료 |
 
