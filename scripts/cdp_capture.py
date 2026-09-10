@@ -29,6 +29,10 @@ import websockets  # type: ignore
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 PROFILE = os.path.expanduser(os.environ.get("VCMS_CAPTURE_PROFILE", "~/.vcms-capture-profile"))
 PORT = int(os.environ.get("CDP_PORT", "9333"))
+# ATTACH=1 이면 크롬을 새로 띄우지 않고 이미 열려 있는 창에 붙는다.
+# Dean 이 직접 로그인해 놓은 창(개발 서버 등)을 그대로 쓰려고 있다.
+ATTACH = os.environ.get("ATTACH") == "1"
+TAB_MATCH = os.environ.get("TAB_MATCH", "")
 WIDTH = int(os.environ.get("WIN_W", "1440"))
 HEIGHT = int(os.environ.get("WIN_H", "900"))
 SCALE = int(os.environ.get("SCALE", "3"))
@@ -107,10 +111,13 @@ def page_ws():
     import urllib.request
     with urllib.request.urlopen(f"http://127.0.0.1:{PORT}/json/list") as r:
         targets = json.load(r)
-    for t in targets:
-        if t.get("type") == "page":
-            return t["webSocketDebuggerUrl"]
-    raise SystemExit("page 타깃을 못 찾았다")
+    pages = [t for t in targets if t.get("type") == "page"]
+    if TAB_MATCH:
+        pages = [t for t in pages
+                 if TAB_MATCH in t.get("url", "") or TAB_MATCH in t.get("title", "")]
+    if not pages:
+        raise SystemExit(f"page 타깃을 못 찾았다 (TAB_MATCH={TAB_MATCH!r})")
+    return pages[0]["webSocketDebuggerUrl"]
 
 
 class CDP:
@@ -178,11 +185,17 @@ async def run(jobs, outdir):
         cdp = CDP(ws)
         await cdp.send("Page.enable")
         await cdp.send("Runtime.enable")
+        if ATTACH:
+            # 백그라운드 탭은 실제 마우스 이벤트를 받아도 아무 일이 없다. 앞으로 꺼내야 한다.
+            await cdp.send("Page.bringToFront")
+            await asyncio.sleep(0.4)
+            await cdp.send("Emulation.setDeviceMetricsOverride", width=WIDTH, height=HEIGHT,
+                           deviceScaleFactor=SCALE, mobile=False)
         last_url = None
         for job in jobs:
             name = job["name"]
             try:
-                if job["url"] != last_url or job.get("reload", True):
+                if job.get("url") and (job["url"] != last_url or job.get("reload", True)):
                     await cdp.send("Page.navigate", url=job["url"])
                     await asyncio.sleep(job.get("load", 4.0))
                     last_url = job["url"]
@@ -248,6 +261,8 @@ async def run(jobs, outdir):
             except Exception as e:
                 failed.append((name, str(e)[:120]))
                 print(f"  FAIL {name}  {e}")
+        if ATTACH:
+            await cdp.send("Emulation.clearDeviceMetricsOverride")
     return done, failed
 
 
@@ -255,15 +270,16 @@ def main():
     jobs = json.load(open(sys.argv[1], encoding="utf-8"))
     outdir = sys.argv[2] if len(sys.argv) > 2 else "/tmp/vcms-shots"
     os.makedirs(outdir, exist_ok=True)
-    proc = launch()
+    proc = None if ATTACH else launch()
     try:
         done, failed = asyncio.run(run(jobs, outdir))
     finally:
-        proc.send_signal(signal.SIGTERM)
-        time.sleep(1)
-        lock = os.path.join(PROFILE, "SingletonLock")
-        if os.path.exists(lock):
-            os.remove(lock)
+        if proc is not None:
+            proc.send_signal(signal.SIGTERM)
+            time.sleep(1)
+            lock = os.path.join(PROFILE, "SingletonLock")
+            if os.path.exists(lock):
+                os.remove(lock)
     print(f"\n완료 {len(done)} / 실패 {len(failed)}")
     for n, e in failed:
         print(f"  {n}: {e}")
