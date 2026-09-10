@@ -9,6 +9,8 @@ import websockets  # type: ignore
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 PROFILE = os.path.expanduser(os.environ.get("VCMS_CAPTURE_PROFILE", "~/.vcms-capture-profile"))
 PORT = int(os.environ.get("CDP_PORT", "9334"))
+WIN_W = int(os.environ.get("WIN_W", "1440"))
+WIN_H = int(os.environ.get("WIN_H", "900"))
 
 
 def launch():
@@ -18,7 +20,7 @@ def launch():
     p = subprocess.Popen(
         [CHROME, "--headless=new", "--disable-gpu", "--no-first-run", "--hide-scrollbars",
          f"--user-data-dir={PROFILE}", f"--remote-debugging-port={PORT}",
-         "--window-size=1440,900", "about:blank"],
+         f"--window-size={WIN_W},{WIN_H}", "about:blank"],
         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     for _ in range(60):
         try:

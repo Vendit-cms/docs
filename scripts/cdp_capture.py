@@ -16,7 +16,10 @@ jobs.json 형식:
       "js": "document.querySelector('button').click()",   # 선택
       "wait": 1.5,                                        # js 실행 후 대기(초)
       "blur": [[425,362,540,700]],                        # 선택, CSS 픽셀 기준
-      "box": [1252,209,1392,254]}]                        # 선택, 보라 강조 사각형
+      "box": [1252,209,1392,254],                          # 선택, 보라 강조 사각형
+      "crops": "JS -> [{name,x,y,w,h,pad}]"}]               # 선택, CSS 좌표로 잘라 여러 장 저장
+
+환경변수: WIN_W / WIN_H (기본 1440x900), SCALE (기본 3), VCMS_CAPTURE_PROFILE
 """
 import base64, json, os, shutil, signal, subprocess, sys, time, asyncio
 import websockets  # type: ignore
@@ -24,7 +27,8 @@ import websockets  # type: ignore
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 PROFILE = os.path.expanduser(os.environ.get("VCMS_CAPTURE_PROFILE", "~/.vcms-capture-profile"))
 PORT = int(os.environ.get("CDP_PORT", "9333"))
-WIDTH, HEIGHT = 1440, 900
+WIDTH = int(os.environ.get("WIN_W", "1440"))
+HEIGHT = int(os.environ.get("WIN_H", "900"))
 SCALE = int(os.environ.get("SCALE", "3"))
 
 # 우하단 채팅 위젯을 숨긴다. 크기로 거르면 놓치는 래퍼가 있어서 위치로 잡는다.
@@ -165,6 +169,25 @@ async def run(jobs, outdir):
                     await asyncio.sleep(job.get("wait", 1.5))
                 shot = await cdp.send("Page.captureScreenshot", format="png",
                                       captureBeyondViewport=False)
+                raw = base64.b64decode(shot["data"])
+                # crops: CSS 픽셀 좌표 [{name,x,y,w,h}] 를 돌려주는 JS. 있으면 잘라서 저장한다.
+                boxes = await cdp.js(job["crops"]) if job.get("crops") else None
+                if boxes:
+                    from PIL import Image
+                    import io as _io
+                    im = Image.open(_io.BytesIO(raw))
+                    for b in boxes:
+                        pad = b.get("pad", 0)
+                        px, py = b.get("padx", pad), b.get("pady", pad)
+                        x, y = int((b["x"] - px) * SCALE), int((b["y"] - py) * SCALE)
+                        w, h = int((b["w"] + px * 2) * SCALE), int((b["h"] + py * 2) * SCALE)
+                        x, y = max(0, x), max(0, y)
+                        c = im.crop((x, y, min(x + w, im.width), min(y + h, im.height)))
+                        cp = os.path.join(outdir, b["name"])
+                        c.save(cp)
+                        done.append((b["name"], os.path.getsize(cp)))
+                        print(f"  ok   {b['name']}  {c.width}x{c.height}  {os.path.getsize(cp)//1024}KB")
+                    continue
                 path = os.path.join(outdir, name)
                 with open(path, "wb") as f:
                     f.write(base64.b64decode(shot["data"]))
