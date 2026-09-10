@@ -234,7 +234,82 @@
         "tabs": [
           {
             "tab": "User Guide",
-            "groups": [
+            "pages": [
+              {
+                "group": "Getting Started with VCMS",
+                "expanded": true,
+                "pages": [
+                  "en/accommodation/signup-login",
+                  "en/accommodation/create-accommodation",
+                  "en/accommodation/invite-user",
+                  "en/accommodation/accommodation-setting"
+                ]
+              },
+              {
+                "group": "Distribution",
+                "expanded": true,
+                "pages": [
+                  "en/distributions/understanding",
+                  "en/distributions/usage",
+                  "en/distributions/channel-sync",
+                  "en/distributions/view-setting"
+                ]
+              },
+              {
+                "group": "Bookings",
+                "pages": [
+                  "en/bookings/bookings"
+                ]
+              },
+              {
+                "group": "VCMS Settings",
+                "pages": [
+                  "en/inventory-rate/roomType",
+                  "en/inventory-rate/package-stay",
+                  "en/inventory-rate/package-day-use",
+                  "en/inventory-rate/rate",
+                  "en/inventory-rate/period",
+                  "en/inventory-rate/inclusion",
+                  "en/inventory-rate/timetable"
+                ]
+              },
+              {
+                "group": "Channel Integration",
+                "pages": [
+                  "en/channels/channel-setting",
+                  {
+                    "group": "Channel Notes",
+                    "pages": [
+                      "en/channels/naver",
+                      "en/channels/ddananyo",
+                      "en/channels/liveanywhere",
+                      "en/channels/ban-life",
+                      "en/channels/agoda",
+                      "en/channels/yeogieottae-partnercenter",
+                      "en/channels/airbnb",
+                      "en/channels/expedia",
+                      "en/channels/camperest",
+                      "en/channels/camfit",
+                      "en/channels/tripdotcom",
+                      "en/channels/tripbtoz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Integrations",
+                "expanded": false,
+                "pages": [
+                  "en/faq/integrations/vcloud"
+                ]
+              },
+              {
+                "group": "Subscription",
+                "expanded": false,
+                "pages": [
+                  "en/billing/billing"
+                ]
+              },
               {
                 "group": "Reference",
                 "expanded": true,
@@ -242,6 +317,127 @@
                   "en/reference/terms-conditions",
                   "en/reference/privacy-policy",
                   "en/reference/personal-information-consent"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "FAQ",
+            "groups": [
+              {
+                "group": "Getting Started and Accounts",
+                "expanded": false,
+                "pages": [
+                  "en/faq/account/verification-code-not-received",
+                  "en/faq/account/use-on-mobile"
+                ]
+              },
+              {
+                "group": "Connecting Channels",
+                "expanded": false,
+                "pages": [
+                  "en/faq/channels/available-channels",
+                  "en/faq/channels/max-sync-days"
+                ]
+              },
+              {
+                "group": "Inventory and Rates",
+                "expanded": false,
+                "pages": [
+                  "en/faq/inventory-rate/channel-inventory-rate-setting",
+                  "en/faq/inventory-rate/day-use-inventory-rate",
+                  "en/faq/inventory-rate/bulk-edit-period-inventory",
+                  "en/faq/inventory-rate/bulk-period-rate-adjustment",
+                  "en/faq/inventory-rate/timetables",
+                  "en/faq/inventory-rate/change-room-count",
+                  "en/faq/inventory-rate/move-room-to-other-type",
+                  "en/faq/inventory-rate/limit-inventory-by-channel",
+                  "en/faq/inventory-rate/daily-chek-in-out-time",
+                  "en/faq/inventory-rate/yanolja-hotdeal-goldclass",
+                  "en/faq/inventory-rate/airbnb-promotion-reset",
+                  "en/faq/inventory-rate/channels-commission-setting",
+                  "en/faq/inventory-rate/channel-final-rate"
+                ]
+              },
+              {
+                "group": "Bookings",
+                "pages": [
+                  "en/faq/booking/booking-sync-free",
+                  "en/faq/booking/sort-by-cancel-date",
+                  "en/faq/booking/ddananyo-booking-split",
+                  "en/faq/booking/cancelled-booking-no-history",
+                  "en/faq/booking/cancel-booking-in-vcms",
+                  "en/faq/booking/use-with-vcloud",
+                  "en/faq/booking/vcloud-early-checkout-inventory",
+                  "en/faq/booking/channel-cancel-booking-processing"
+                ],
+                "expanded": false
+              },
+              {
+                "group": "Subscription and Billing",
+                "expanded": false,
+                "pages": [
+                  "en/faq/billing/add-payment-card",
+                  "en/faq/billing/default-card-setting",
+                  "en/faq/billing/repay-after-unpaid",
+                  "en/faq/billing/billing-date-pending-change"
+                ]
+              },
+              {
+                "group": "Troubleshooting",
+                "expanded": false,
+                "pages": [
+                  "en/faq/issue/yanolja-booking-delay",
+                  "en/faq/issue/airbnb-disconnected",
+                  "en/faq/issue/channel-auto-disconnected",
+                  "en/faq/issue/vcloud-booking-not-synced"
+                ]
+              },
+              {
+                "group": "Reference",
+                "expanded": true,
+                "pages": [
+                  "en/reference/terms-conditions",
+                  "en/reference/privacy-policy",
+                  "en/reference/personal-information-consent"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Release Notes",
+            "pages": [
+              {
+                "group": "2026",
+                "expanded": true,
+                "pages": [
+                  "en/release-notes/2026-09-03",
+                  "en/release-notes/2026-08-20",
+                  "en/release-notes/2026-08-07",
+                  "en/release-notes/2026-07-27",
+                  "en/release-notes/2026-07-24",
+                  "en/release-notes/2026-07-07",
+                  "en/release-notes/2026-07-02",
+                  "en/release-notes/2026-06-29",
+                  "en/release-notes/2026-06-25",
+                  "en/release-notes/2026-06-17",
+                  "en/release-notes/2026-06-09",
+                  "en/release-notes/2026-05-15",
+                  "en/release-notes/2026-04-29",
+                  "en/release-notes/2026-04-28",
+                  "en/release-notes/2026-04-24",
+                  "en/release-notes/2026-03-16",
+                  "en/release-notes/2026-03-06",
+                  "en/release-notes/2026-02-27",
+                  "en/release-notes/2026-01-29",
+                  "en/release-notes/2026-01-14"
+                ]
+              },
+              {
+                "group": "2025",
+                "expanded": true,
+                "pages": [
+                  "en/release-notes/2025-12-23"
                 ]
               }
             ]

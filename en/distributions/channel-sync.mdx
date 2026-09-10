@@ -1,0 +1,47 @@
+---
+title: "Channel Sync"
+---
+
+## Syncing
+
+Sell status, inventory, rates, and check-in/out times on every channel are kept identical to what Distribution says. Sync can start once at least one channel package is connected to VCMS.
+
+<Frame>
+  ![Distribution Syncing](/images/Distribution-Syncing.png "Distribution Syncing")
+</Frame>
+
+<Warning>
+  While sync is running, a change made on the channel is overwritten back to the VCMS values.
+</Warning>
+
+---
+
+## Sync stopped / Booking sync only
+
+Stop sync and only bookings made after the last sync come through. Inventory, rates, and sell status stop syncing on every channel.
+
+<Frame>
+  ![Distribution Booking Sync Only](/images/Distribution-Booking-Sync-Only.png "Distribution Booking Sync Only")
+</Frame>
+
+---
+
+## Partial sync
+
+When you need it, you can sync just the inventory or just the rates of a specific channel package.
+
+[👉 Detailed guide to partial channel package sync](https://docs.vcms.io/en/channels/channel-setting)
+
+### Syncing unconfigured packages
+
+If your property uses inventory management without rate management, VCMS does not open the channel's unconfigured packages for you. You decide on the channel itself when those packages go on sale and what they cost.
+
+<Info>
+  **What is an unconfigured package?**
+
+  A package that has not been registered for sale on the channel yet. It is not sold on the guest-facing site. It shows up like this on the channel's own sales screen, for example the NOL Partner Center.
+
+  <Frame>
+    ![Unconfigured package on the channel](/images/260727-channel-example.png "Unconfigured package example")
+  </Frame>
+</Info>

@@ -1,0 +1,185 @@
+---
+title: "Airbnb"
+description: "Check the following before connecting Airbnb."
+---
+
+---
+
+## Connecting Airbnb
+
+<Info>
+  **What you need first**
+
+  - The Airbnb account you want to connect
+  - Chrome
+  - A stable internet connection
+</Info>
+
+### Step 1. Sign in to Airbnb in Chrome
+
+Open Chrome, go to Airbnb, and sign in with your host account.
+
+1. Launch Chrome.
+2. Go to [Airbnb](https://www.airbnb.com/).
+3. Sign in.
+4. Leave that tab open. Do not close it.
+
+<Frame>
+  ![Airbnb Host Mode](/images/airbnb-host-mode-4.png)
+</Frame>
+
+<Info>
+  The signed-in tab has to stay open even after the integration is running. Close it and sync stops.
+</Info>
+
+<Warning>
+  Leave the Airbnb tab alone
+
+  - The pinned Airbnb tab on the left of Chrome is doing the integration work. For a stable connection, touch it as little as possible.
+  - To look something up on Airbnb, open a separate new tab instead of using the pinned one.
+</Warning>
+
+---
+
+### Step 2. Install the Chrome extension
+
+Install the VCMS extension from the Chrome Web Store and run it.
+
+<Info>
+  Already have the extension? Skip to Step 3.
+</Info>
+
+1. Install the [extension](https://chromewebstore.google.com/detail/vcms-%ED%81%AC%EB%A1%AC-%ED%99%95%EC%9E%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/fcjhlkhdjbehihbimdacnbclpmlchhpp).
+2. Click the puzzle icon at the top right of the browser.
+3. Click the VCMS extension to run it.
+
+<Frame>
+  ![Chrome Extension](/images/chrome-extension.png)
+</Frame>
+
+---
+
+### Step 3. Run and set up the extension
+
+Sign in to the extension with your VCMS account, pick the property, and press Airbnb's "Use" button.
+
+1. Sign in with your VCMS account.
+2. Pick the property to connect.
+3. Press the Airbnb "Use" button.
+
+<Warning>
+  **Check before you press it.**
+
+  - Chrome has to be signed in to Airbnb before you press "Use".
+  - Make sure the Airbnb tab you opened in Step 1 is still there.
+</Warning>
+
+---
+
+### Step 4. Connect the Airbnb property in VCMS and map packages
+
+Back in VCMS, connect the Airbnb property and map the packages. That completes the connection.
+
+<Warning>
+  **Check before you map Airbnb.**
+
+  - Connecting VCMS to Airbnb resets the promotions you set up on Airbnb.
+  - Finish your inventory and rate setup in VCMS Distribution before mapping.
+  - Map before Distribution is set up and inventory and rates you did not intend can land on Airbnb.
+</Warning>
+
+1. Go to the Channels menu in VCMS.
+2. Select the Airbnb channel.
+3. Connect the property you operate.
+4. Link each Airbnb package to the VCMS package it corresponds to.
+5. Press Save once every mapping is done.
+
+<Info>
+  Package mapping can be changed any time afterwards in the VCMS channel settings.
+</Info>
+
+---
+
+## Things to watch
+
+Once the channel is connected, bookings, inventory, and rates sync automatically. Keep to the following or sync will not hold.
+
+| Item | What to do | Consequence |
+| --- | --- | --- |
+| Chrome | Do not close the Chrome running the extension. | Closing it stops sync |
+| Airbnb tab | Keep the signed-in channel tab open. | Closing it stops sync |
+| Computer power | The computer has to stay on. | Shutting down stops sync |
+| [Windows power settings](https://docs.vcms.io/en/faq/issue/airbnb-disconnected) | Set sleep and turn-off-screen to "Never". | Otherwise sync stops |
+
+<Warning>
+  **Important**
+
+  - Close Chrome or the Airbnb tab after connecting and sync stops.
+  - After rebooting the computer, open Chrome and the Airbnb tab again and sign back in.
+  - Airbnb bookings, inventory, and rates sync every 5 minutes.
+</Warning>
+
+<Warning>
+  Running several properties
+
+  - With several properties, signing in to more than one Airbnb account in a single Chrome tab causes conflicts.
+  - Sign in per property on separate PCs, separate browsers (Edge, Safari, and so on), or separate Chrome profiles.
+</Warning>
+
+---
+
+## FAQ
+
+### What if I reboot the computer or close Chrome by accident?
+
+<Info>
+  Start Chrome again and the Airbnb tab opens by itself.
+</Info>
+
+---
+
+### How often does it sync?
+
+<Info>
+  Airbnb syncs every 5 minutes. As long as the integration is healthy, bookings, inventory, and rates sync on that cycle.
+</Info>
+
+---
+
+### I run several properties. What then?
+
+<Info>
+  One Chrome profile connects one property. Add a Chrome profile and run Step 1 through Step 4 again.
+</Info>
+
+---
+
+### Can I sync inventory only?
+
+<Info>
+  Turn off rate sync under Settings, Channels, channel packages, and only inventory syncs. Manage rates on Airbnb yourself.
+</Info>
+
+---
+
+### I got a notification that the Airbnb integration dropped.
+
+<Info>
+  Sign in again from the Airbnb tab on the left of Chrome and it reconnects. If the notifications keep coming, check the network at your property.
+
+  <Frame>
+    ![Airbnb Sign In 1](/images/airbnb-sign-in-1.png)
+  </Frame>
+</Info>
+
+---
+
+### The extension is already installed. Do I have to install it again?
+
+<Accordion title="No install needed">
+  If the extension is already there from another channel (Expedia, say) and you are adding Airbnb for the same property, you do not need to install anything. Skip Step 2 and start at Step 3.
+</Accordion>
+
+<Accordion title="Install needed again">
+  If you run several properties and connect two or more of them to the same channel, separate your Chrome profiles and install the extension in each profile.
+</Accordion>

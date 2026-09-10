@@ -1,0 +1,18 @@
+---
+title: "A booking is cancelled but has no cancellation time or change history"
+description: "If the booking was already cancelled on the channel when VCMS first pulled it in, VCMS brings it across already cancelled. The cancellation did not happen inside VCMS, so there is no cancellation time and no change history."
+---
+
+<Frame>
+  <img
+    src="/images/faq-no-history.png"
+    alt="Booking with no change history"
+    title="Booking with no change history"
+    className="mx-auto"
+    style={{ width:"40%" }}
+  />
+</Frame>
+
+<Info>
+  Change history records only what happened after VCMS pulled the booking in. A booking already cancelled on the channel arrives with nothing but its "cancelled" status, so check the exact cancellation time on that channel.
+</Info>
