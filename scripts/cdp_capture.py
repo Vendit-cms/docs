@@ -15,13 +15,15 @@ jobs.json 형식:
       "url": "https://www.vcms.io/.../setting/users",
       "js": "document.querySelector('button').click()",   # 선택
       "wait": 1.5,                                        # js 실행 후 대기(초)
-      "blur": [[425,362,540,700]],                        # 선택, CSS 픽셀 기준
+      "blur": [[425,362,540,700]],                        # 선택, CSS 픽셀 [x1,y1,x2,y2]
+      "blur_js": "JS -> [[x1,y1,x2,y2], ...]",             # 선택, 셀렉터로 개인정보 영역 찾기
+      "box_js": "JS -> [[x1,y1,x2,y2], ...]",              # 선택, 강조 사각형을 셀렉터로
       "box": [1252,209,1392,254],                          # 선택, 보라 강조 사각형
       "crops": "JS -> [{name,x,y,w,h,pad}]"}]               # 선택, CSS 좌표로 잘라 여러 장 저장
 
 환경변수: WIN_W / WIN_H (기본 1440x900), SCALE (기본 3), VCMS_CAPTURE_PROFILE
 """
-import base64, json, os, shutil, signal, subprocess, sys, time, asyncio
+import base64, io, json, os, signal, subprocess, sys, time, asyncio
 import websockets  # type: ignore
 
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
@@ -52,6 +54,30 @@ PREP_JS = """
   return n;
 })()
 """
+
+
+def postprocess(raw, blurs, boxes, scale):
+    """개인정보는 가우시안 블러, 강조는 보라 라운드 사각형. 좌표는 CSS 픽셀."""
+    from PIL import Image, ImageDraw, ImageFilter
+    im = Image.open(io.BytesIO(raw)).convert("RGB")
+    for x1, y1, x2, y2 in blurs or []:
+        r = tuple(int(v * scale) for v in (x1, y1, x2, y2))
+        r = (max(0, r[0]), max(0, r[1]), min(im.width, r[2]), min(im.height, r[3]))
+        if r[2] <= r[0] or r[3] <= r[1]:
+            continue
+        region = im.crop(r)
+        # 세로로 긴 열 전체를 가릴 때 region.height 로 반경을 잡으면 완전 백지가 된다.
+        radius = max(4, min(int(region.height * 0.35), int(4 * scale)))
+        im.paste(region.filter(ImageFilter.GaussianBlur(radius)), r)
+    if boxes:
+        d = ImageDraw.Draw(im)
+        for x1, y1, x2, y2 in boxes:
+            r = [int(v * scale) for v in (x1, y1, x2, y2)]
+            d.rounded_rectangle(r, radius=int(6 * scale), outline=(109, 40, 217),
+                                width=max(2, int(scale)))
+    out = io.BytesIO()
+    im.save(out, format="PNG")
+    return out.getvalue()
 
 
 def launch():
@@ -104,6 +130,16 @@ class CDP:
                             awaitPromise=True, returnByValue=True)
         return r.get("result", {}).get("value")
 
+
+    async def mouse_click(self, x, y):
+        await self.send("Input.dispatchMouseEvent", type="mouseMoved", x=x, y=y, buttons=0)
+        await asyncio.sleep(0.12)
+        await self.send("Input.dispatchMouseEvent", type="mousePressed", x=x, y=y,
+                        button="left", buttons=1, clickCount=1)
+        await asyncio.sleep(0.06)
+        await self.send("Input.dispatchMouseEvent", type="mouseReleased", x=x, y=y,
+                        button="left", buttons=0, clickCount=1)
+
     async def click_text(self, pattern, nth=0):
         """텍스트로 요소를 찾아 실제 마우스 이벤트를 쏜다.
 
@@ -127,9 +163,7 @@ class CDP:
         }})()""")
         if not box:
             raise RuntimeError(f"클릭 대상 없음: {pattern}")
-        for t in ("mousePressed", "mouseReleased"):
-            await self.send("Input.dispatchMouseEvent", type=t, x=box["x"], y=box["y"],
-                            button="left", clickCount=1)
+        await self.mouse_click(box["x"], box["y"])
         return box["text"]
 
 
@@ -158,9 +192,7 @@ async def run(jobs, outdir):
                     box = await cdp.js(expr)
                     if not box:
                         raise RuntimeError(f"좌표 못 구함: {expr[:60]}")
-                    for t in ("mousePressed", "mouseReleased"):
-                        await cdp.send("Input.dispatchMouseEvent", type=t,
-                                       x=box["x"], y=box["y"], button="left", clickCount=1)
+                    await cdp.mouse_click(box["x"], box["y"])
                     await asyncio.sleep(job.get("step_wait", 1.5))
                 if job.get("js"):
                     await cdp.js(job["js"])
@@ -170,13 +202,22 @@ async def run(jobs, outdir):
                 shot = await cdp.send("Page.captureScreenshot", format="png",
                                       captureBeyondViewport=False)
                 raw = base64.b64decode(shot["data"])
+                blurs = list(job.get("blur", []))
+                boxes = list(job.get("box_list", []))
+                if job.get("box"):
+                    boxes.append(job["box"])
+                if job.get("blur_js"):
+                    blurs += (await cdp.js(job["blur_js"])) or []
+                if job.get("box_js"):
+                    boxes += (await cdp.js(job["box_js"])) or []
+                if blurs or boxes:
+                    raw = postprocess(raw, blurs, boxes, SCALE)
                 # crops: CSS 픽셀 좌표 [{name,x,y,w,h}] 를 돌려주는 JS. 있으면 잘라서 저장한다.
-                boxes = await cdp.js(job["crops"]) if job.get("crops") else None
-                if boxes:
+                cuts = await cdp.js(job["crops"]) if job.get("crops") else None
+                if cuts:
                     from PIL import Image
-                    import io as _io
-                    im = Image.open(_io.BytesIO(raw))
-                    for b in boxes:
+                    im = Image.open(io.BytesIO(raw))
+                    for b in cuts:
                         pad = b.get("pad", 0)
                         px, py = b.get("padx", pad), b.get("pady", pad)
                         x, y = int((b["x"] - px) * SCALE), int((b["y"] - py) * SCALE)
@@ -190,7 +231,7 @@ async def run(jobs, outdir):
                     continue
                 path = os.path.join(outdir, name)
                 with open(path, "wb") as f:
-                    f.write(base64.b64decode(shot["data"]))
+                    f.write(raw)
                 done.append((name, os.path.getsize(path)))
                 print(f"  ok   {name}  {os.path.getsize(path)//1024}KB")
             except Exception as e:
