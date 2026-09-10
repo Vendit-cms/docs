@@ -70,10 +70,14 @@ def postprocess(raw, blurs, boxes, scale):
         radius = max(4, min(int(region.height * 0.35), int(4 * scale)))
         im.paste(region.filter(ImageFilter.GaussianBlur(radius)), r)
     if boxes:
+        # 원본 문서와 같은 규칙: 보통 강조는 보라, 위험한 버튼은 빨강.
+        palette = {"purple": (109, 40, 217), "red": (220, 38, 38)}
         d = ImageDraw.Draw(im)
-        for x1, y1, x2, y2 in boxes:
+        for box in boxes:
+            x1, y1, x2, y2 = box[:4]
+            color = palette.get(box[4] if len(box) > 4 else "purple", palette["purple"])
             r = [int(v * scale) for v in (x1, y1, x2, y2)]
-            d.rounded_rectangle(r, radius=int(6 * scale), outline=(109, 40, 217),
+            d.rounded_rectangle(r, radius=int(6 * scale), outline=color,
                                 width=max(2, int(scale)))
     out = io.BytesIO()
     im.save(out, format="PNG")
@@ -196,8 +200,15 @@ async def run(jobs, outdir):
                     await asyncio.sleep(job.get("step_wait", 1.5))
                 if job.get("js"):
                     await cdp.js(job["js"])
+                # click_after: js 로 폼을 채운 다음에 눌러야 하는 버튼(예: 저장 -> 확인 다이얼로그)
+                for expr in job.get("click_after", []):
+                    box = await cdp.js(expr)
+                    if not box:
+                        raise RuntimeError(f"좌표 못 구함(click_after): {expr[:60]}")
+                    await cdp.mouse_click(box["x"], box["y"])
+                    await asyncio.sleep(job.get("step_wait", 1.5))
                 await cdp.js(PREP_JS)
-                if job.get("click") or job.get("js") or job.get("click_at"):
+                if job.get("click") or job.get("js") or job.get("click_at") or job.get("click_after"):
                     await asyncio.sleep(job.get("wait", 1.5))
                 shot = await cdp.send("Page.captureScreenshot", format="png",
                                       captureBeyondViewport=False)
