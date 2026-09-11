@@ -7,16 +7,20 @@
     python3 scripts/swap_image.py <en페이지.mdx> 옛파일.png=새파일.png [...]
     python3 scripts/swap_image.py --map map.tsv          # 탭 구분: 페이지<TAB>옛<TAB>새
 
-ko/ 는 절대 건드리지 않는다. ko 경로를 주면 거부한다.
+ko/ 는 글이 동결이다(2026-09-10). 이미지 참조 교체만 --ko-images 로 허용한다(2026-09-11 Dean).
+이 스크립트는 /images/ 경로만 바꾸므로 문장은 건드리지 않는다.
 """
 import os
 import sys
+KO_IMAGES = "--ko-images" in sys.argv
+if KO_IMAGES:
+    sys.argv.remove("--ko-images")
 import unicodedata as ud
 
 
 def swap(page, pairs):
-    if page.startswith("ko/") or "/ko/" in page:
-        raise SystemExit(f"거부: ko/ 는 동결이다 ({page})")
+    if (page.startswith("ko/") or "/ko/" in page) and not KO_IMAGES:
+        raise SystemExit(f"거부: ko/ 는 글이 동결이다. 이미지 참조만 바꾸려면 --ko-images ({page})")
     src = open(page, encoding="utf-8").read()
     out, hits, misses = src, [], []
     for old, new in pairs:
