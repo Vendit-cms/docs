@@ -5,7 +5,7 @@
 `en-` 로 시작하는 파일은 영어 UI 에서 새로 찍은 것이다. 나머지는 한국어 원본을 그대로 쓴다.
 `images/` 는 한국어 문서와 공유하므로 원본을 덮으면 한국어까지 바뀐다. 그래서 새 파일로 넣는다.
 
-참조 275건 중 175건 정리 완료, 100건 남음.
+참조 275건 중 185건 정리 완료, 90건 남음.
 
 ## `en/accommodation/create-accommodation.mdx`
 
@@ -57,10 +57,10 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `image(55` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image(56` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image(57` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image(58` | 채널사 화면 — Dean 이 직접 촬영 |
+| `image(55).png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `image(56).png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `image(57).png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `image(58).png` | 채널사 화면 — Dean 이 직접 촬영 |
 
 ## `en/channels/airbnb.mdx`
 
@@ -137,10 +137,10 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `image(59` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image(61` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image(63` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image(64` | 채널사 화면 — Dean 이 직접 촬영 |
+| `image(59).png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `image(61).png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `image(63).png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `image(64).png` | 채널사 화면 — Dean 이 직접 촬영 |
 
 ## `en/channels/yanolja.mdx`
 
@@ -152,8 +152,8 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `Distribution-Syncing.png` | 한국어 유지 — 영어 재캡처 필요 |
-| `Distribution-Booking-Sync-Only.png` | 한국어 유지 — 영어 재캡처 필요 |
+| `en-distribution-syncing.png` | 영어 캡처 완료 |
+| `Distribution-Booking-Sync-Only.png` | Dean 확인 필요 — 영어 배너가 {date} 를 그대로 찍는다. dev 번들 en.json 이 낡았고 vcms-i18n main 은 {launchedAt} 로 고쳐져 있다. en-distribution-booking-sync-only.png 준비됨, 배포 후 교체 |
 | `260727-channel-example.png` | 채널사 화면 — Dean 이 직접 촬영 |
 
 ## `en/distributions/understanding.mdx`
@@ -178,13 +178,13 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `faq-no-history.png` | 한국어 유지 — 영어 재캡처 필요 |
+| `faq-no-history.png` | 재현 불가 — 수집 시점에 이미 취소된 예약이 있어야 한다. VENDIT HOTEL 기본 조회 기간 Canceled 0건(2026-09-11) |
 
 ## `en/faq/booking/channel-cancel-booking-processing.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `cancel-booking-noti.png` | 한국어 유지 — 영어 재캡처 필요 |
+| `cancel-booking-noti.png` | 재현 불가 — 카카오 알림톡 원문이다. 한국어로만 발송된다 |
 
 ## `en/faq/channels/airbnb-promotion-reset.mdx`
 
@@ -192,7 +192,7 @@
 | --- | --- |
 | `image-34.png` | 채널사 화면 — Dean 이 직접 촬영 |
 | `KakaoTalk_Photo_2026-04-21-18-18-23-001-3.jpeg` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image-(1` | 채널사 화면 — Dean 이 직접 촬영 |
+| `image-(1).png` | 채널사 화면 — Dean 이 직접 촬영 |
 | `KakaoTalk_Photo_2026-04-21-18-18-23-002-2.jpeg` | 채널사 화면 — Dean 이 직접 촬영 |
 
 ## `en/faq/channels/available-channels.mdx`
@@ -224,17 +224,17 @@
 | 이미지 | 상태 |
 | --- | --- |
 | `en-integrations.png` | 영어 캡처 완료 |
-| `연동서비스_2.png` | 한국어 유지 — 영어 재캡처 필요 |
-| `연동서비스_5.png` | 한국어 유지 — 영어 재캡처 필요 |
-| `연동서비스_4.png` | 한국어 유지 — 영어 재캡처 필요 |
+| `연동서비스_2.png` | Dean 확인 필요 — VCLOUD 연동 입력 모달. dev 에서 Connect 를 여는 동작도 자동 모드가 막았다 |
+| `en-vcloud-failed.png` | 영어 캡처 완료 |
+| `연동서비스_4.png` | Dean 확인 필요 — VCLOUD 해제 대화상자. 해제 버튼을 여는 동작이라 자동 모드가 막았다 |
 
 ## `en/faq/inventory-rate/airbnb-promotion-reset.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `image-34.png` | 한국어 유지 — 영어 재캡처 필요 |
+| `image-34.png` | 채널사 화면 — Dean 이 직접 촬영 |
 | `KakaoTalk_Photo_2026-04-21-18-18-23-001-3.jpeg` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image-(1` | 한국어 유지 — 영어 재캡처 필요 |
+| `image-(1).png` | 채널사 화면 — Dean 이 직접 촬영 |
 | `KakaoTalk_Photo_2026-04-21-18-18-23-002-2.jpeg` | 채널사 화면 — Dean 이 직접 촬영 |
 
 ## `en/faq/inventory-rate/bulk-edit-period-inventory.mdx`
@@ -251,8 +251,8 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `기간가중치_1.png` | 한국어 유지 — 영어 재캡처 필요 |
-| `기간가중치_2.png` | 한국어 유지 — 영어 재캡처 필요 |
+| `en-period-rate-weighting.png` | 영어 캡처 완료 |
+| `en-pkg-period-weighting.png` | 영어 캡처 완료 |
 
 ## `en/faq/inventory-rate/change-room-count.mdx`
 
@@ -273,11 +273,11 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `채널_17(1` | 채널사 화면 — Dean 이 직접 촬영 |
-| `채널_13(1` | 채널사 화면 — Dean 이 직접 촬영 |
-| `채널_14(1` | 채널사 화면 — Dean 이 직접 촬영 |
-| `채널_22(2` | 채널사 화면 — Dean 이 직접 촬영 |
-| `채널_15(2` | 채널사 화면 — Dean 이 직접 촬영 |
+| `채널_17(1).png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `채널_13(1).png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `채널_14(1).png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `채널_22(2).png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `채널_15(2).png` | 채널사 화면 — Dean 이 직접 촬영 |
 
 ## `en/faq/inventory-rate/channels-commission-setting.mdx`
 
@@ -306,8 +306,8 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `image(65` | 한국어 유지 — 영어 재캡처 필요 |
-| `image(66` | 한국어 유지 — 영어 재캡처 필요 |
+| `image(65).png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `image(66).png` | 채널사 화면 — Dean 이 직접 촬영 |
 
 ## `en/faq/issue/airbnb-disconnected.mdx`
 
@@ -332,7 +332,7 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `image(67` | 채널사 화면 — Dean 이 직접 촬영 |
+| `image(67).png` | 채널사 화면 — Dean 이 직접 촬영 |
 
 ## `en/faq/issue/yanolja-booking-delay.mdx`
 
@@ -371,18 +371,18 @@
 | `en-create-pkg.png` | 영어 캡처 완료 |
 | `booking_scaleFactor.png` | 재현 불가 — 배수가 걸린 예약 두 건을 나란히 놓은 합성이다 |
 | `en-create-pkg-rate.png` | 영어 캡처 완료 |
-| `create-pkg-rate-select.png` | 한국어 유지 — 영어 재캡처 필요 |
-| `create-pkg-inclusions.png` | 한국어 유지 — 영어 재캡처 필요 |
+| `en-create-pkg-rate-select.png` | 영어 캡처 완료 |
+| `create-pkg-inclusions.png` | 재현 불가 — 현재 빌드 상품 모달에 서비스 선택이 없다. 서비스는 요금에 붙는다(en-rate-inclusions). 문서가 낡았다 |
 | `en-create-pkg-rate-scale.png` | 영어 캡처 완료 |
 | `en-create-pkg-rate-range.png` | 영어 캡처 완료 |
 | `en-create-pkg-obp.png` | 영어 캡처 완료 |
 | `en-pkg-rate-periods.png` | 영어 캡처 완료 |
-| `260903-add-multi-period.png` | 한국어 유지 — 영어 재캡처 필요 |
-| `260903-single-pkg-add-period.png` | 한국어 유지 — 영어 재캡처 필요 |
-| `260903-bulk-update-rate-plan-modal.png` | 한국어 유지 — 영어 재캡처 필요 |
-| `260903-bulk-update-rate-plan-button.png` | 한국어 유지 — 영어 재캡처 필요 |
-| `260903-single-pkg-import-rate-plan-button.png` | 한국어 유지 — 영어 재캡처 필요 |
-| `pkg_delete.png` | 한국어 유지 — 영어 재캡처 필요 |
+| `en-pkg-add-unlinked-periods.png` | 영어 캡처 완료 |
+| `en-pkg-add-period.png` | 영어 캡처 완료 |
+| `en-pkg-bulk-rate-plan-modal.png` | 영어 캡처 완료 |
+| `en-pkg-bulk-rate-plan-button.png` | 영어 캡처 완료 |
+| `en-pkg-import-rate-plan.png` | 영어 캡처 완료 |
+| `pkg_delete.png` | Dean 확인 필요 — 현재 빌드는 휴지통이 비활성으로 안 바뀐다. 눌러서 뜨는 대화상자를 찍어야 하는데 운영 삭제 버튼이라 자동 모드가 막았다 |
 
 ## `en/inventory-rate/period.mdx`
 

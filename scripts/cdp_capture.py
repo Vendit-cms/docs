@@ -19,6 +19,7 @@ jobs.json 형식:
       "blur_js": "JS -> [[x1,y1,x2,y2], ...]",             # 선택, 셀렉터로 개인정보 영역 찾기
       "box_js": "JS -> [[x1,y1,x2,y2], ...]",              # 선택, 강조 사각형을 셀렉터로
       "box": [1252,209,1392,254],                          # 선택, 보라 강조 사각형
+      "hover_at": ["JS -> {x,y}"],                         # 선택, 마우스만 올림(툴팁). 누르지 않는다
       "crops": "JS -> [{name,x,y,w,h,pad}]"}]               # 선택, CSS 좌표로 잘라 여러 장 저장
 
 환경변수: WIN_W / WIN_H (기본 1440x900), SCALE (기본 3), VCMS_CAPTURE_PROFILE
@@ -211,6 +212,15 @@ async def run(jobs, outdir):
                         raise RuntimeError(f"좌표 못 구함: {expr[:60]}")
                     await cdp.mouse_click(box["x"], box["y"])
                     await asyncio.sleep(job.get("step_wait", 1.5))
+                # hover_at: 좌표를 돌려주는 JS. 마우스만 올리고 누르지 않는다(툴팁용).
+                # 삭제 버튼 위 툴팁처럼 누르면 안 되는 곳은 반드시 이걸 써라.
+                for expr in job.get("hover_at", []):
+                    box = await cdp.js(expr)
+                    if not box:
+                        raise RuntimeError(f"좌표 못 구함(hover_at): {expr[:60]}")
+                    await cdp.send("Input.dispatchMouseEvent", type="mouseMoved",
+                                   x=box["x"], y=box["y"], buttons=0)
+                    await asyncio.sleep(job.get("step_wait", 1.5))
                 if job.get("js"):
                     await cdp.js(job["js"])
                 # click_after: js 로 폼을 채운 다음에 눌러야 하는 버튼(예: 저장 -> 확인 다이얼로그)
@@ -221,7 +231,7 @@ async def run(jobs, outdir):
                     await cdp.mouse_click(box["x"], box["y"])
                     await asyncio.sleep(job.get("step_wait", 1.5))
                 await cdp.js(PREP_JS)
-                if job.get("click") or job.get("js") or job.get("click_at") or job.get("click_after"):
+                if job.get("click") or job.get("js") or job.get("click_at") or job.get("click_after") or job.get("hover_at"):
                     await asyncio.sleep(job.get("wait", 1.5))
                 shot = await cdp.send("Page.captureScreenshot", format="png",
                                       captureBeyondViewport=False)
