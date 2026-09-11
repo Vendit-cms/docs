@@ -59,21 +59,17 @@ fb977c7  상품 요금정보 5 장
 
 `IMAGES.md` 가 정본이다. 손으로 고치지 마라, `python3 scripts/images_manifest.py > IMAGES.md` 로 다시 만든다.
 
-**참조 275 건 중 185 건 정리 완료, 90 건 남음.** (2026-09-11)
+**참조 275 건 중 187 건 정리 완료, 88 건 남음.** (2026-09-12)
 
 | 상태 | 건수 | 뜻 |
 | --- | --- | --- |
-| 영어 캡처 완료 | 84 | `en-` 파일 |
+| 영어 캡처 완료 | 86 | `en-` 파일 |
 | 한국어 재사용 | 82 | 릴리즈 노트. Dean 이 2026-09-09 에 그대로 두기로 결정 |
-| 채널사 화면 | 78 | 야놀자, 아고다, 여기어때, 네이버, 에어비앤비, 익스피디아, 트립닷컴 파트너 화면. **Dean 몫** |
+| 채널사 화면 | 51 | 외부 사이트. 아래 3 절 |
 | 채널 로고 | 19 | 언어 무관 |
-| 재현 불가 | 8 | 사유는 `images_manifest.py` 의 `BLOCKED` |
-| Dean 확인 필요 | 4 | 아래 3 절. 사유는 `NEEDS_DEAN` |
-| 한국어 유지 (내 몫) | 0 | 내가 찍을 수 있는 건 다 찍었다 |
-
-남은 90 건 = 채널사 78 + 재현 불가 8 + Dean 확인 4.
-
-구독 화면 9 장, 상품 요금정보(기간 추가, 불러오기, 일괄 적용, 요금 선택) 전부 영어로 끝났다.
+| 재현 불가 | 12 | 사유는 `images_manifest.py` 의 `BLOCKED` |
+| Dean 확인 필요 | 24 | 아래 3 절 |
+| 한국어 유지 (내 몫) | 1 | |
 
 ---
 
@@ -104,8 +100,16 @@ en 에서 다시 찍은 자리와 같은 위치의 한국어 이미지 84 장을
 | --- | --- | --- |
 | `Distribution-Booking-Sync-Only.png` | `en/distributions/channel-sync.mdx` | 영어 배너가 `Since {date}, ...` 를 그대로 찍는다. dev 번들 `en.json` 은 `{date}`, vcms-i18n `main` 은 `{launchedAt}` 로 이미 고쳐져 있다. 배포되면 devtester04 에서 다시 찍어 교체. 지금 찍은 건 `images/en-distribution-booking-sync-only.png` 에 넣어뒀다(참조 안 함) |
 | `pkg_delete.png` | `en/inventory-rate/package-stay.mdx` | 현재 빌드는 휴지통이 항상 활성이고 툴팁은 "Delete" 뿐이다. 채널 연결 상품 차단은 누른 뒤에 뜨는 것으로 보이는데, 운영 삭제 버튼을 누르는 동작이라 자동 모드 분류기가 막았다 |
-| `연동서비스_4.png` | `en/faq/integrations/vcloud.mdx` | VCLOUD 해제 대화상자. devtester04(dev, VCLOUD In use)에서 Delete 를 열고 체크박스 두 개만 누르면 된다. 분류기가 막았다. **해제 버튼은 절대 누르지 마라** |
-| `연동서비스_2.png` | 〃 | VCLOUD 연동 입력 모달. dev VENDIT 에서 Connect 를 열기만 하면 된다. 분류기가 막았다 |
+
+| 연결된 채널 화면 22 장 (`채널_*`) | `en/channels/channel-setting.mdx`, `en/faq/inventory-rate/channel-*.mdx`, `limit-inventory-by-channel.mdx` | VENDIT HOTEL 은 연결된 채널이 0 개다. dev 에서 채널이 붙은 업소는 전부 실제 업체 이름, 채널 숙소 ID, 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 채널 연결이 생기면 찍는다 |
+
+VCLOUD 연동/해제 창은 안 찍는다. 점주가 설정 못 하게 막아둔 게 의도다(Dean, 2026-09-12). 한국어 가이드도 같은 관리자 매뉴얼 절을 갖고 있다.
+
+### 채널사 화면 51 건(파일 47 장) 내역
+- 영어 화면이 있는 해외 채널, 지금은 한국어 UI: 에어비앤비 7, 익스피디아 5, 아고다 4, 트립닷컴 4. 파트너 계정이 있어야 다시 찍는다.
+- 한국어 전용 서비스라 영어판이 없다: NOL/야놀자 4, 네이버 6, 캠핏 2, 캠퍼레스트 1, 리브애니웨어 1, 트립비토즈 2, 카카오 알림톡 1. 그대로 둔다.
+- OS, 브라우저: 윈도우 전원 설정 5, 크롬 확장 메뉴 3.
+- 옛 "판매 설정" 모달 2 (야놀자 핫딜 FAQ).
 
 Dean 이 창에 띄워주면 `python3 scripts/shoot_now.py en-vcloud-disconnect.png images --match=development.vcms.io` 로 보이는 그대로 찍는다. 막힌 걸 우회하지 마라.
 
@@ -160,6 +164,8 @@ job 키: `url` `load` `click`(정규식, 스크롤됨) `click_at`(좌표 반환 
 - **여러 업소에서 특정 상태를 찾을 땐 탭을 앞으로 꺼내지 않는 CDP 스크립트로 훑어라.** dev 38 개 업소의 `/setting/systems` 와 `/inventories` 를 6 분에 훑어서 아래 6 절 업소들을 찾았다. 업소 ID 는 목록 카드의 React fiber props 에 있다(화면엔 끝 8 자리만 보인다).
 - **운영 캡처엔 `HIDE_INTERNAL` 을 꼭 넣어라.** 직원 계정이라 사이드바 맨 아래 `VENDIT only / VENDIT 전용` 이 보인다. 고객은 못 보는 메뉴다.
 - **영어 recipe 의 예약 블러를 한국어 UI 에 그대로 쓰지 마라.** 한글이면 전부 가리는 규칙이라 라벨이 다 뭉개지고 영문 이름(`su pei ming`)은 빠져나간다. `BOOKINGS_BLUR_LIST_KO` / `BOOKINGS_BLUR_CARD_KO` 를 써라.
+- **규격이 있는 이미지(판매관리 범례 등)는 제품 패널을 잘라서 대체하지 마라.** 한국어 이미지 위에 텍스트만 바꾼다(`overlay_text.py`). 2026-09-12 에 영어 범례 4 장이 크롭이라 규격이 달라 Dean 이 지적했다.
+- **영어 예약 블러의 "Firstname Lastname" 규칙은 `Download CSV` 도 가린다.** skip 목록에 넣었다. 새 블러 규칙을 만들면 화면의 UI 라벨이 멀쩡한지 꼭 잘라서 봐라.
 - **좌표로 버튼을 찾는 recipe 는 언어를 바꾸면 틀린다.** 한국어 라벨 폭이 달라서 판매관리 ⚙ 대신 ⓘ 가 눌렸다. `일괄 변경` 같은 이웃 텍스트 기준으로 찾아라.
 
 ### 나머지 스크립트

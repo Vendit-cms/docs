@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2026-09-12
+- 영어 판매관리 범례 4 장을 한국어 범례 규격으로 다시 만듦, 텍스트만 교체 (images/en-legend-*.png)
+- 채널 화면 27 장 재분류, 연결된 채널 화면 22 장은 테스트 연결 대기 (scripts/images_manifest.py)
+- 숙박업소 설정, 연결 가능 채널 영어 캡처, 한국어 숙박업소 설정 교체 (images/)
+- 예약 내역 영어 캡처의 Download CSV 라벨 블러 수정 (images/en-booking-*.png)
+
 ## 2026-09-11
 - 한국어 글 동결 유지, 이미지만 해제 (CLAUDE.md, scripts/swap_image.py --ko-images)
 - 한국어 이미지 84 장 비교 후 낡은 14 장 한국어 UI 로 교체, 제자리 덮어쓰기 (images/)

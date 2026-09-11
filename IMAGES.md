@@ -5,7 +5,7 @@
 `en-` 로 시작하는 파일은 영어 UI 에서 새로 찍은 것이다. 나머지는 한국어 원본을 그대로 쓴다.
 `images/` 는 한국어 문서와 공유하므로 원본을 덮으면 한국어까지 바뀐다. 그래서 새 파일로 넣는다.
 
-참조 275건 중 187건 정리 완료, 88건 남음.
+참조 275건 중 188건 정리 완료, 87건 남음.
 
 ## `en/accommodation/create-accommodation.mdx`
 
@@ -332,7 +332,7 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `image(67).png` | 한국어 유지 — 영어 재캡처 필요 |
+| `en-booking-confirm-button.png` | 영어 캡처 완료 |
 
 ## `en/faq/issue/yanolja-booking-delay.mdx`
 
