@@ -15,16 +15,27 @@ jobs.json 형식:
       "url": "https://www.vcms.io/.../setting/users",
       "js": "document.querySelector('button').click()",   # 선택
       "wait": 1.5,                                        # js 실행 후 대기(초)
-      "blur": [[425,362,540,700]],                        # 선택, CSS 픽셀 기준
-      "box": [1252,209,1392,254]}]                        # 선택, 보라 강조 사각형
+      "blur": [[425,362,540,700]],                        # 선택, CSS 픽셀 [x1,y1,x2,y2]
+      "blur_js": "JS -> [[x1,y1,x2,y2], ...]",             # 선택, 셀렉터로 개인정보 영역 찾기
+      "box_js": "JS -> [[x1,y1,x2,y2], ...]",              # 선택, 강조 사각형을 셀렉터로
+      "box": [1252,209,1392,254],                          # 선택, 보라 강조 사각형
+      "hover_at": ["JS -> {x,y}"],                         # 선택, 마우스만 올림(툴팁). 누르지 않는다
+      "crops": "JS -> [{name,x,y,w,h,pad}]"}]               # 선택, CSS 좌표로 잘라 여러 장 저장
+
+환경변수: WIN_W / WIN_H (기본 1440x900), SCALE (기본 3), VCMS_CAPTURE_PROFILE
 """
-import base64, json, os, shutil, signal, subprocess, sys, time, asyncio
+import base64, io, json, os, signal, subprocess, sys, time, asyncio
 import websockets  # type: ignore
 
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 PROFILE = os.path.expanduser(os.environ.get("VCMS_CAPTURE_PROFILE", "~/.vcms-capture-profile"))
 PORT = int(os.environ.get("CDP_PORT", "9333"))
-WIDTH, HEIGHT = 1440, 900
+# ATTACH=1 이면 크롬을 새로 띄우지 않고 이미 열려 있는 창에 붙는다.
+# Dean 이 직접 로그인해 놓은 창(개발 서버 등)을 그대로 쓰려고 있다.
+ATTACH = os.environ.get("ATTACH") == "1"
+TAB_MATCH = os.environ.get("TAB_MATCH", "")
+WIDTH = int(os.environ.get("WIN_W", "1440"))
+HEIGHT = int(os.environ.get("WIN_H", "900"))
 SCALE = int(os.environ.get("SCALE", "3"))
 
 # 우하단 채팅 위젯을 숨긴다. 크기로 거르면 놓치는 래퍼가 있어서 위치로 잡는다.
@@ -50,6 +61,34 @@ PREP_JS = """
 """
 
 
+def postprocess(raw, blurs, boxes, scale):
+    """개인정보는 가우시안 블러, 강조는 보라 라운드 사각형. 좌표는 CSS 픽셀."""
+    from PIL import Image, ImageDraw, ImageFilter
+    im = Image.open(io.BytesIO(raw)).convert("RGB")
+    for x1, y1, x2, y2 in blurs or []:
+        r = tuple(int(v * scale) for v in (x1, y1, x2, y2))
+        r = (max(0, r[0]), max(0, r[1]), min(im.width, r[2]), min(im.height, r[3]))
+        if r[2] <= r[0] or r[3] <= r[1]:
+            continue
+        region = im.crop(r)
+        # 세로로 긴 열 전체를 가릴 때 region.height 로 반경을 잡으면 완전 백지가 된다.
+        radius = max(4, min(int(region.height * 0.35), int(4 * scale)))
+        im.paste(region.filter(ImageFilter.GaussianBlur(radius)), r)
+    if boxes:
+        # 원본 문서와 같은 규칙: 보통 강조는 보라, 위험한 버튼은 빨강.
+        palette = {"purple": (109, 40, 217), "red": (220, 38, 38)}
+        d = ImageDraw.Draw(im)
+        for box in boxes:
+            x1, y1, x2, y2 = box[:4]
+            color = palette.get(box[4] if len(box) > 4 else "purple", palette["purple"])
+            r = [int(v * scale) for v in (x1, y1, x2, y2)]
+            d.rounded_rectangle(r, radius=int(6 * scale), outline=color,
+                                width=max(2, int(scale)))
+    out = io.BytesIO()
+    im.save(out, format="PNG")
+    return out.getvalue()
+
+
 def launch():
     if os.path.exists(os.path.join(PROFILE, "SingletonLock")):
         os.remove(os.path.join(PROFILE, "SingletonLock"))
@@ -73,10 +112,13 @@ def page_ws():
     import urllib.request
     with urllib.request.urlopen(f"http://127.0.0.1:{PORT}/json/list") as r:
         targets = json.load(r)
-    for t in targets:
-        if t.get("type") == "page":
-            return t["webSocketDebuggerUrl"]
-    raise SystemExit("page 타깃을 못 찾았다")
+    pages = [t for t in targets if t.get("type") == "page"]
+    if TAB_MATCH:
+        pages = [t for t in pages
+                 if TAB_MATCH in t.get("url", "") or TAB_MATCH in t.get("title", "")]
+    if not pages:
+        raise SystemExit(f"page 타깃을 못 찾았다 (TAB_MATCH={TAB_MATCH!r})")
+    return pages[0]["webSocketDebuggerUrl"]
 
 
 class CDP:
@@ -99,6 +141,16 @@ class CDP:
         r = await self.send("Runtime.evaluate", expression=expr,
                             awaitPromise=True, returnByValue=True)
         return r.get("result", {}).get("value")
+
+
+    async def mouse_click(self, x, y):
+        await self.send("Input.dispatchMouseEvent", type="mouseMoved", x=x, y=y, buttons=0)
+        await asyncio.sleep(0.12)
+        await self.send("Input.dispatchMouseEvent", type="mousePressed", x=x, y=y,
+                        button="left", buttons=1, clickCount=1)
+        await asyncio.sleep(0.06)
+        await self.send("Input.dispatchMouseEvent", type="mouseReleased", x=x, y=y,
+                        button="left", buttons=0, clickCount=1)
 
     async def click_text(self, pattern, nth=0):
         """텍스트로 요소를 찾아 실제 마우스 이벤트를 쏜다.
@@ -123,9 +175,7 @@ class CDP:
         }})()""")
         if not box:
             raise RuntimeError(f"클릭 대상 없음: {pattern}")
-        for t in ("mousePressed", "mouseReleased"):
-            await self.send("Input.dispatchMouseEvent", type=t, x=box["x"], y=box["y"],
-                            button="left", clickCount=1)
+        await self.mouse_click(box["x"], box["y"])
         return box["text"]
 
 
@@ -136,11 +186,17 @@ async def run(jobs, outdir):
         cdp = CDP(ws)
         await cdp.send("Page.enable")
         await cdp.send("Runtime.enable")
+        if ATTACH:
+            # 백그라운드 탭은 실제 마우스 이벤트를 받아도 아무 일이 없다. 앞으로 꺼내야 한다.
+            await cdp.send("Page.bringToFront")
+            await asyncio.sleep(0.4)
+            await cdp.send("Emulation.setDeviceMetricsOverride", width=WIDTH, height=HEIGHT,
+                           deviceScaleFactor=SCALE, mobile=False)
         last_url = None
         for job in jobs:
             name = job["name"]
             try:
-                if job["url"] != last_url or job.get("reload", True):
+                if job.get("url") and (job["url"] != last_url or job.get("reload", True)):
                     await cdp.send("Page.navigate", url=job["url"])
                     await asyncio.sleep(job.get("load", 4.0))
                     last_url = job["url"]
@@ -154,25 +210,69 @@ async def run(jobs, outdir):
                     box = await cdp.js(expr)
                     if not box:
                         raise RuntimeError(f"좌표 못 구함: {expr[:60]}")
-                    for t in ("mousePressed", "mouseReleased"):
-                        await cdp.send("Input.dispatchMouseEvent", type=t,
-                                       x=box["x"], y=box["y"], button="left", clickCount=1)
+                    await cdp.mouse_click(box["x"], box["y"])
+                    await asyncio.sleep(job.get("step_wait", 1.5))
+                # hover_at: 좌표를 돌려주는 JS. 마우스만 올리고 누르지 않는다(툴팁용).
+                # 삭제 버튼 위 툴팁처럼 누르면 안 되는 곳은 반드시 이걸 써라.
+                for expr in job.get("hover_at", []):
+                    box = await cdp.js(expr)
+                    if not box:
+                        raise RuntimeError(f"좌표 못 구함(hover_at): {expr[:60]}")
+                    await cdp.send("Input.dispatchMouseEvent", type="mouseMoved",
+                                   x=box["x"], y=box["y"], buttons=0)
                     await asyncio.sleep(job.get("step_wait", 1.5))
                 if job.get("js"):
                     await cdp.js(job["js"])
+                # click_after: js 로 폼을 채운 다음에 눌러야 하는 버튼(예: 저장 -> 확인 다이얼로그)
+                for expr in job.get("click_after", []):
+                    box = await cdp.js(expr)
+                    if not box:
+                        raise RuntimeError(f"좌표 못 구함(click_after): {expr[:60]}")
+                    await cdp.mouse_click(box["x"], box["y"])
+                    await asyncio.sleep(job.get("step_wait", 1.5))
                 await cdp.js(PREP_JS)
-                if job.get("click") or job.get("js") or job.get("click_at"):
+                if job.get("click") or job.get("js") or job.get("click_at") or job.get("click_after") or job.get("hover_at"):
                     await asyncio.sleep(job.get("wait", 1.5))
                 shot = await cdp.send("Page.captureScreenshot", format="png",
                                       captureBeyondViewport=False)
+                raw = base64.b64decode(shot["data"])
+                blurs = list(job.get("blur", []))
+                boxes = list(job.get("box_list", []))
+                if job.get("box"):
+                    boxes.append(job["box"])
+                if job.get("blur_js"):
+                    blurs += (await cdp.js(job["blur_js"])) or []
+                if job.get("box_js"):
+                    boxes += (await cdp.js(job["box_js"])) or []
+                if blurs or boxes:
+                    raw = postprocess(raw, blurs, boxes, SCALE)
+                # crops: CSS 픽셀 좌표 [{name,x,y,w,h}] 를 돌려주는 JS. 있으면 잘라서 저장한다.
+                cuts = await cdp.js(job["crops"]) if job.get("crops") else None
+                if cuts:
+                    from PIL import Image
+                    im = Image.open(io.BytesIO(raw))
+                    for b in cuts:
+                        pad = b.get("pad", 0)
+                        px, py = b.get("padx", pad), b.get("pady", pad)
+                        x, y = int((b["x"] - px) * SCALE), int((b["y"] - py) * SCALE)
+                        w, h = int((b["w"] + px * 2) * SCALE), int((b["h"] + py * 2) * SCALE)
+                        x, y = max(0, x), max(0, y)
+                        c = im.crop((x, y, min(x + w, im.width), min(y + h, im.height)))
+                        cp = os.path.join(outdir, b["name"])
+                        c.save(cp)
+                        done.append((b["name"], os.path.getsize(cp)))
+                        print(f"  ok   {b['name']}  {c.width}x{c.height}  {os.path.getsize(cp)//1024}KB")
+                    continue
                 path = os.path.join(outdir, name)
                 with open(path, "wb") as f:
-                    f.write(base64.b64decode(shot["data"]))
+                    f.write(raw)
                 done.append((name, os.path.getsize(path)))
                 print(f"  ok   {name}  {os.path.getsize(path)//1024}KB")
             except Exception as e:
                 failed.append((name, str(e)[:120]))
                 print(f"  FAIL {name}  {e}")
+        if ATTACH:
+            await cdp.send("Emulation.clearDeviceMetricsOverride")
     return done, failed
 
 
@@ -180,15 +280,16 @@ def main():
     jobs = json.load(open(sys.argv[1], encoding="utf-8"))
     outdir = sys.argv[2] if len(sys.argv) > 2 else "/tmp/vcms-shots"
     os.makedirs(outdir, exist_ok=True)
-    proc = launch()
+    proc = None if ATTACH else launch()
     try:
         done, failed = asyncio.run(run(jobs, outdir))
     finally:
-        proc.send_signal(signal.SIGTERM)
-        time.sleep(1)
-        lock = os.path.join(PROFILE, "SingletonLock")
-        if os.path.exists(lock):
-            os.remove(lock)
+        if proc is not None:
+            proc.send_signal(signal.SIGTERM)
+            time.sleep(1)
+            lock = os.path.join(PROFILE, "SingletonLock")
+            if os.path.exists(lock):
+                os.remove(lock)
     print(f"\n완료 {len(done)} / 실패 {len(failed)}")
     for n, e in failed:
         print(f"  {n}: {e}")
