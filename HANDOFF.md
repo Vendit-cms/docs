@@ -33,7 +33,7 @@ Mintlify 는 내비게이션에 없어도 루트의 `.md` 를 페이지로 만�
 ## 1. 레포
 
 - 경로 `~/projects/vcms-docs`, 정본 원격 `Vendit-cms/docs` (사본 2 개는 낡았다). 푸시 권한은 개인 계정 `yujy118`.
-- 현재 브랜치 **`en-full-recapture`**, `main` 대비 20 커밋 넘음(2026-09-11). 아직 PR 없다. 최신 목록은 `git log --oneline main..HEAD`.
+- 현재 브랜치 **`en-full-recapture`**, **PR #47 로 main 에 스쿼시 머지, 배포 완료(2026-09-11 16:42Z, `2f8e0fc`).** 라이브 확인: 페이지 174 개 전부 200, 이미지 323 개 전부 200. push 는 `git -c credential.helper= -c 'credential.helper=!gh auth git-credential' push` (키체인의 vendit-jinyoung 은 pull 전용이라 403).
 - Mintlify. 언어는 `docs.json` 의 `navigation.languages` 에 ko / en 두 블록.
 - `images/` 는 **ko 와 en 이 공유한다.** 원본을 덮으면 한국어 문서까지 바뀐다. 새 캡처는 반드시 `en-` 접두 새 파일로 넣고 참조만 갈아끼운다.
 
