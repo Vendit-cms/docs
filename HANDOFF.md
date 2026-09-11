@@ -1,4 +1,4 @@
-# 이어서 작업하기 — docs.vcms.io 영어판
+# 이어서 작업하기: docs.vcms.io 영어판
 
 이 파일 하나만 읽으면 다음 세션이 바로 이어갈 수 있게 적었다. 마지막 갱신 2026-09-11.
 
@@ -15,37 +15,40 @@
 파일명이 **NFD** 로 저장돼 있다. `-A` 를 쓰면 이미지 254 장이 복제된다. 항상 경로를 명시해서 `git add <경로>`.
 같은 이유로 `sed` 로 이미지 참조를 바꾸면 **아무 말 없이 하나도 안 바뀐다**(셸 입력은 NFC). 참조 교체는 `scripts/swap_image.py` 만 써라.
 
+### 루트 `.md` 는 공개 사이트에 올라간다
+Mintlify 는 내비게이션에 없어도 루트의 `.md` 를 페이지로 만든다. `docs.vcms.io/IMAGES` 가 실제로 `IMAGES.md` 를 보여준다(2026-09-11 확인, 200). 그래서 `.mintignore` 에 `CLAUDE.md` `HANDOFF.md` `CHANGELOG.md` `IMAGES.md` 를 넣었다. **내부 메모 파일을 새로 만들면 여기에도 추가해라.** 머지 후 `curl -s -o /dev/null -w "%{http_code}" https://docs.vcms.io/HANDOFF` 가 404 인지 확인해라.
+
 ### 서버 경계
 | 대상 | 허용 |
 | --- | --- |
-| `development.vcms.io` | 조회·모달 열기만. **저장 금지** |
+| `development.vcms.io` | 조회, 모달 열기만. **저장 금지** |
 | `www.vcms.io` VENDIT HOTEL | 쓰기 허용 (Dean 이 허가한 유일한 운영 업소) |
 | `www.vcms.io` 그 외 | 절대 금지 |
 
-결제·구독·해지 버튼은 어느 서버에서도 누르지 마라. 모달은 열어도 된다.
+결제, 구독, 해지 버튼은 어느 서버에서도 누르지 마라. 모달은 열어도 된다.
 
 ---
 
 ## 1. 레포
 
 - 경로 `~/projects/vcms-docs`, 정본 원격 `Vendit-cms/docs` (사본 2 개는 낡았다). 푸시 권한은 개인 계정 `yujy118`.
-- 현재 브랜치 **`en-full-recapture`**, `main` 대비 12 커밋. 아직 PR 없다.
+- 현재 브랜치 **`en-full-recapture`**, `main` 대비 16 커밋(2026-09-11). 아직 PR 없다. 최신 목록은 `git log --oneline main..HEAD`.
 - Mintlify. 언어는 `docs.json` 의 `navigation.languages` 에 ko / en 두 블록.
 - `images/` 는 **ko 와 en 이 공유한다.** 원본을 덮으면 한국어 문서까지 바뀐다. 새 캡처는 반드시 `en-` 접두 새 파일로 넣고 참조만 갈아끼운다.
 
 ### 커밋 (오래된 것부터)
 ```
-25adf98  로그인·판매관리 상태 안내
-a2c647c  판매관리 보기설정·필터·예약
-3b83474  객실타입·기간·요금·서비스
+25adf98  로그인, 판매관리 상태 안내
+a2c647c  판매관리 보기설정, 필터, 예약
+3b83474  객실타입, 기간, 요금, 서비스
 6dc163b  판매시간표
 4c9f280  일괄변경
 03c6013  상품 (샘플 데이터 영어화 후)
 b5499a0  판매관리 이해하기 범례 2 장 (텍스트 덮어쓰기)
 94d67d1  구독 4 장 (dev)
-14a1458  서비스·요금·판매시간표 재촬영
+14a1458  서비스, 요금, 판매시간표 재촬영
 fb977c7  상품 요금정보 5 장
-199803d  구독 상세·구독 관리
+199803d  구독 상세, 구독 관리
 9f3ab10  서비스 구독 연간 결제 토글
 ```
 
@@ -55,45 +58,55 @@ fb977c7  상품 요금정보 5 장
 
 `IMAGES.md` 가 정본이다. 손으로 고치지 마라, `python3 scripts/images_manifest.py > IMAGES.md` 로 다시 만든다.
 
-**참조 275 건 중 175 건 정리 완료, 100 건 남음.**
+**참조 275 건 중 185 건 정리 완료, 90 건 남음.** (2026-09-11)
 
 | 상태 | 건수 | 뜻 |
 | --- | --- | --- |
+| 영어 캡처 완료 | 84 | `en-` 파일 |
 | 한국어 재사용 | 82 | 릴리즈 노트. Dean 이 2026-09-09 에 그대로 두기로 결정 |
-| 영어 캡처 완료 | 74 | `en-` 파일 |
-| 채널사 화면 | 74 | 야놀자·아고다·여기어때·네이버·에어비앤비·익스피디아·트립닷컴 파트너 화면. **Dean 몫** |
-| 한국어 유지 | 21 | 내가 아직 못 찍은 것 (아래 3 절) |
+| 채널사 화면 | 78 | 야놀자, 아고다, 여기어때, 네이버, 에어비앤비, 익스피디아, 트립닷컴 파트너 화면. **Dean 몫** |
 | 채널 로고 | 19 | 언어 무관 |
-| 재현 불가 | 5 | 사유는 `images_manifest.py` 의 `BLOCKED` 에 적어뒀다 |
+| 재현 불가 | 8 | 사유는 `images_manifest.py` 의 `BLOCKED` |
+| Dean 확인 필요 | 4 | 아래 3 절. 사유는 `NEEDS_DEAN` |
+| 한국어 유지 (내 몫) | 0 | 내가 찍을 수 있는 건 다 찍었다 |
 
-구독 화면은 **9 장 전부 영어로 끝났다**(기본 2 탭, 결제수단, 결제일 변경, 서비스 구독, 연간 결제, 결제내역 상세, 구독 상세, 구독 관리).
+남은 90 건 = 채널사 78 + 재현 불가 8 + Dean 확인 4.
+
+구독 화면 9 장, 상품 요금정보(기간 추가, 불러오기, 일괄 적용, 요금 선택) 전부 영어로 끝났다.
 
 ---
 
-## 3. 남은 21 건 — 다음에 할 일
+## 3. 남은 것
 
-| 페이지 | 이미지 | 메모 |
+### Dean 이 해줘야 하는 것
+| 이미지 | 페이지 | 왜 |
 | --- | --- | --- |
-| `en/inventory-rate/package-stay.mdx` | `create-pkg-rate-select`, `create-pkg-inclusions` | 빈 생성 폼은 요금 아래가 전부 비활성이다. 기존 상품 Deluxe Roomonly 의 정보 수정 모달에서 찍어라 |
-| 〃 | `260903-add-multi-period`, `260903-single-pkg-add-period`, `260903-bulk-update-rate-plan-modal`, `260903-bulk-update-rate-plan-button`, `260903-single-pkg-import-rate-plan-button` | 상품 기간·요금제 가져오기 흐름 |
-| 〃 | `pkg_delete` | |
-| `en/faq/integrations/vcloud.mdx` | `연동서비스_2`, `연동서비스_4`, `연동서비스_5` | 설정 > 연동 서비스 `/setting/systems`. 버튼 `Delete@629,275` / `Settings@1191,248`. **연결 해제 다이얼로그는 열어도 확인은 절대 누르지 마라** — VENDIT HOTEL 예약이 그 연동으로 들어온다 |
-| `en/faq/inventory-rate/bulk-period-rate-adjustment.mdx` | `기간가중치_1`, `기간가중치_2` | |
-| `en/distributions/channel-sync.mdx` | `Distribution-Syncing`, `Distribution-Booking-Sync-Only` | |
-| `en/faq/booking/...` | `cancel-booking-noti`, `faq-no-history` | |
-| `en/faq/inventory-rate/airbnb-promotion-reset.mdx` | `image-34`, `image-(1...` | 채널 화면일 가능성 있음, 열어보고 판단 |
-| `en/faq/inventory-rate/yanolja-hotdeal-goldclass.mdx` | `image(65`, `image(66` | 야놀자 화면이면 Dean 몫 |
+| `Distribution-Booking-Sync-Only.png` | `en/distributions/channel-sync.mdx` | 영어 배너가 `Since {date}, ...` 를 그대로 찍는다. dev 번들 `en.json` 은 `{date}`, vcms-i18n `main` 은 `{launchedAt}` 로 이미 고쳐져 있다. 배포되면 devtester04 에서 다시 찍어 교체. 지금 찍은 건 `images/en-distribution-booking-sync-only.png` 에 넣어뒀다(참조 안 함) |
+| `pkg_delete.png` | `en/inventory-rate/package-stay.mdx` | 현재 빌드는 휴지통이 항상 활성이고 툴팁은 "Delete" 뿐이다. 채널 연결 상품 차단은 누른 뒤에 뜨는 것으로 보이는데, 운영 삭제 버튼을 누르는 동작이라 자동 모드 분류기가 막았다 |
+| `연동서비스_4.png` | `en/faq/integrations/vcloud.mdx` | VCLOUD 해제 대화상자. devtester04(dev, VCLOUD In use)에서 Delete 를 열고 체크박스 두 개만 누르면 된다. 분류기가 막았다. **해제 버튼은 절대 누르지 마라** |
+| `연동서비스_2.png` | 〃 | VCLOUD 연동 입력 모달. dev VENDIT 에서 Connect 를 열기만 하면 된다. 분류기가 막았다 |
 
-그 외 미해결:
+Dean 이 창에 띄워주면 `python3 scripts/shoot_now.py en-vcloud-disconnect.png images --match=development.vcms.io` 로 보이는 그대로 찍는다. 막힌 걸 우회하지 마라.
+
+### 재현 불가로 확정 (2026-09-11 추가)
+- `create-pkg-inclusions.png`: 상품 모달(생성, 수정 둘 다)에 서비스 선택이 없다. 서비스는 요금에 붙는다(`en-rate-inclusions.png`). 문서 본문이 낡았다(8 절).
+- `cancel-booking-noti.png`: 카카오 알림톡 원문. 한국어로만 발송된다.
+- `faq-no-history.png`: 수집 시점에 이미 취소된 예약이 필요하다. VENDIT HOTEL 기본 조회 기간 Canceled 0 건.
+
+### 채널사로 재분류 (2026-09-11)
+`image-34`, `image-(1)`, `image(65)`, `image(66)`: 에어비앤비, 야놀자 FAQ 페이지의 파트너 화면. manifest 정규식이 `\(` 에서 끊겨서 "내 몫"으로 잘못 세고 있었다.
+
+### 그 외 미해결
 - `term_coverage.py` 가 뽑은 후보 70 건이 아직 검증 안 됐다.
 - 내비게이션에 없는 페이지 11 개의 폴백 처리 방침을 Dean 이 아직 안 골랐다.
 - 캡처 끝나면 **VENDIT HOTEL 의 UI 언어를 한국어로 되돌려야 한다.**
+- VENDIT HOTEL 의 기간 이름이 한국어 데이터다(`어린이날 전날 🇰🇷`, `여름 성수기 (8월)(평일)`). `en-period-list`, `en-period-rate-weighting`, `en-pkg-bulk-rate-plan-modal`, `en-pkg-period-weighting` 에 그대로 보인다. PR #42 때부터 이 상태다. 바꾸려면 Dean 이 이름을 바꾸고 다시 찍는다.
 
 ---
 
 ## 4. 도구
 
-### `scripts/cdp_capture.py` — 주력 캡처기
+### `scripts/cdp_capture.py`: 주력 캡처기
 헤드리스 크롬을 CDP 로 몰아서 모달까지 열고 찍는다. 결과물 4320x2700.
 
 ```bash
@@ -105,10 +118,12 @@ ATTACH=1 CDP_PORT=9222 TAB_MATCH=development.vcms.io SCALE=3 \
   python3 scripts/cdp_capture.py jobs.json 출력폴더
 ```
 
-job 키: `url` `load` `click`(정규식, 스크롤됨) `click_at`(좌표 반환 JS) `js` `click_after` `wait` `step_wait`
+job 키: `url` `load` `click`(정규식, 스크롤됨) `click_at`(좌표 반환 JS) `hover_at`(마우스만 올림, 툴팁용) `js` `click_after` `wait` `step_wait`
 `blur` `blur_js` `box` `box_list` `box_js` `crops` `pad`
 
-**실행 순서가 함정이다.** `click` → `click_at` → `js` → `click_after`. 스크롤이 필요하면 `click`(텍스트) 을 써라, `click_at` 은 화면 밖 좌표를 그대로 눌러서 헛클릭한다.
+**job 은 `scripts/jobkit.py` 로 만들어라.** JS 를 JSON 안에 손으로 이스케이프하면 반드시 틀린다. `at_text` `box_text` `anc_rect` `HIDE_DEV` `BLUR_ROOMS` `HIDE_TOOLTIP` 이 들어 있다.
+
+**실행 순서가 함정이다.** `click` → `click_at` → `hover_at` → `js` → `click_after`. 스크롤이 필요하면 `click`(텍스트) 을 써라, `click_at` 은 화면 밖 좌표를 그대로 눌러서 헛클릭한다.
 
 ### 겪은 함정 (다시 밟지 마라)
 - **`CDP_PORT` 기본값은 9333 이다.** `ATTACH=1` 로 붙을 땐 `CDP_PORT=9222` 를 반드시 붙여라.
@@ -117,6 +132,11 @@ job 키: `url` `load` `click`(정규식, 스크롤됨) `click_at`(좌표 반환 
 - **다이얼로그가 열리면 앱이 사이드바를 접는다.** 제품 동작이다. 영어 캡처는 전부 접힌 상태라 일관돼 있다.
 - 블러 반경을 영역 높이로 잡으면 세로로 긴 열이 백지가 된다. `min(h*0.35, 4*scale)` 로 고정돼 있다.
 - 개인정보는 반드시 `blur_js` 로 지워라. 첫 예약 캡처가 실제 투숙객 이름을 그대로 내보냈다.
+- **zsh 에서 루프 변수 이름으로 `path` 를 쓰지 마라.** `PATH` 와 묶여 있어서 `cat` `curl` `python3` 가 전부 사라진다.
+- **고정 요금(Fixed rate) 상품은 기간 추가, 불러오기가 잠겨 있다.** Deluxe Roomonly 가 그렇다. 기간 버튼은 `deluxe late checkin` 에서 찍어라.
+- **다이얼로그가 `?` 아이콘에 자동 포커스를 주면 툴팁이 뜬 채로 찍힌다.** 호버를 옮겨도, blur 해도 안 닫힌다. `HIDE_TOOLTIP` 을 `js` 에 넣어라.
+- **자동 모드 분류기가 막는 것**: 연동 서비스의 Connect / Delete 대화상자 열기, 운영 상품 휴지통 클릭. 막히면 우회하지 말고 Dean 에게 넘겨라.
+- **여러 업소에서 특정 상태를 찾을 땐 탭을 앞으로 꺼내지 않는 CDP 스크립트로 훑어라.** dev 38 개 업소의 `/setting/systems` 와 `/inventories` 를 6 분에 훑어서 아래 6 절 업소들을 찾았다. 업소 ID 는 목록 카드의 React fiber props 에 있다(화면엔 끝 8 자리만 보인다).
 
 ### 나머지 스크립트
 | 파일 | 용도 |
@@ -146,14 +166,17 @@ job 키: `url` `load` `click`(정규식, 스크롤됨) `click_at`(좌표 반환 
 | 업소 | ID | 쓸모 |
 | --- | --- | --- |
 | VENDIT | `01KDC7P3Q7H220YAR6FWETD4D8` | 무료체험 종료. **서비스 구독 모달**(연간 결제 토글)이 여기서 나온다 |
-| 수연스테이(유료고객) | `01K56E56BCN5ERZ28CR2TXTFZD` | 재고·요금 연간 구독 중, 52 rooms. **구독 상세 / 구독 관리** 모달이 여기서만 열린다 |
+| 수연스테이(유료고객) | `01K56E56BCN5ERZ28CR2TXTFZD` | 재고, 요금 연간 구독 중, 52 rooms. **구독 상세 / 구독 관리** 모달이 여기서만 열린다 |
 | 결제미납업장테스트 | `01JQVCCF9QRVWCW381E0VQ9YA8` | 결제 실패 상태 |
+| 벤디트 호텔 | `01KV59JB8JM2PFXBVM6T0TS747` | 판매관리 `Syncing inventory and rates 180 days` 배지 |
+| devtester04 | `01JYFKK7XAMRBT45EDFW61S217` | 판매관리 `Booking sync only` + 동기화 중지 배너. VCLOUD In use |
+| 테스트 숙박업소 | `01KYSP09YAAD6Y07CJVXEM6T2P` | VCLOUD `Integration failed / Invalid accommodation ID` |
 
 VENDIT HOTEL(운영) 은 무료체험이라 구독 화면 자체가 없다.
 
 ---
 
-## 7. 사고 기록 — 같은 실수 반복 금지
+## 7. 사고 기록: 같은 실수 반복 금지
 
 운영 VENDIT HOTEL 에서 두 번 저장이 나갔고 둘 다 되돌렸다.
 
@@ -164,4 +187,8 @@ VENDIT HOTEL(운영) 은 무료체험이라 구독 화면 자체가 없다.
 
 ## 8. 문서가 제품과 어긋난 곳 (디자이너에게 넘길 것)
 
-판매관리 상태 안내 패널이 실제로는 **4 섹션 11 행**인데 문서는 **6 섹션 18 행**으로 적혀 있다. 요금조절과 판매완료/재고가 제품에서 빠졌고 고정요금 행이 들어왔다. All / 재고 / 요금 탭 어디서나 같아서 조건부 노출도 아니다. **한국어·영어 문서 둘 다 낡았다.**
+판매관리 상태 안내 패널이 실제로는 **4 섹션 11 행**인데 문서는 **6 섹션 18 행**으로 적혀 있다. 요금조절과 판매완료/재고가 제품에서 빠졌고 고정요금 행이 들어왔다. All / 재고 / 요금 탭 어디서나 같아서 조건부 노출도 아니다. **한국어, 영어 문서 둘 다 낡았다.**
+
+상품 서비스 선택도 상품 모달에서 빠졌다. 서비스는 이제 요금에 붙는다. `en/inventory-rate/package-stay.mdx` 의 "Package inclusions" 절이 낡았고 한국어도 같다.
+
+상품 삭제: 문서는 "채널 연결 상품은 삭제할 수 없다"고 쓰는데 현재 목록의 휴지통은 전부 활성이다. 누른 뒤에 막히는지는 확인 못 했다(3 절).
