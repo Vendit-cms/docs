@@ -1,6 +1,10 @@
 # CHANGELOG
 
 ## 2026-09-11
+- 한국어 글 동결 유지, 이미지만 해제 (CLAUDE.md, scripts/swap_image.py --ko-images)
+- 한국어 이미지 84 장 비교 후 낡은 14 장 한국어 UI 로 교체, 제자리 덮어쓰기 (images/)
+- 영어 캡처 28 장 재촬영, 직원 전용 사이드바 메뉴 제거 (images/en-*.png)
+- 운영 캡처 공용 헬퍼 추가: 직원 메뉴 숨김, 한국어 예약 블러 (scripts/jobkit.py)
 - 상품 요금정보 기간 5 장, 요금 선택, 기간 가중치 2 장, 판매관리 동기화, VCLOUD 연동 실패 영어 캡처 (images/en-*.png)
 - 영어 배너 {date} 버그로 보류한 판매관리 캡처 (images/en-distribution-booking-sync-only.png)
 - job 헬퍼 추가 (scripts/jobkit.py), 마우스만 올리는 hover_at 스텝 추가 (scripts/cdp_capture.py)
