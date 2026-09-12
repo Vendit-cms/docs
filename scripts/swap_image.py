@@ -24,8 +24,10 @@ def swap(page, pairs):
     src = open(page, encoding="utf-8").read()
     out, hits, misses = src, [], []
     for old, new in pairs:
-        for form in ("NFD", "NFC"):
-            token = "/images/" + ud.normalize(form, old)
+        # MDX 는 괄호를 이스케이프해서 쓴다: image\(67\).png. 그 형태도 찾는다.
+        esc = old.replace("(", "\\(").replace(")", "\\)")
+        for form, name in (("NFD", old), ("NFC", old), ("NFD", esc), ("NFC", esc)):
+            token = "/images/" + ud.normalize(form, name)
             if token in out:
                 out = out.replace(token, "/images/" + new)
                 hits.append((old, new))

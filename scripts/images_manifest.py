@@ -15,6 +15,24 @@ CHANNEL = re.compile(
     r"|camperest|트립비토즈|리브애니웨어|chrome-extension|크롬확장|KakaoTalk|260727-channel",
     re.I)
 
+# VCMS 자체 화면인데 파일명(채널_*)이나 페이지 위치(faq/issue) 때문에 채널사 화면으로 잘못 세던 것.
+# 2026-09-12 썸네일로 하나씩 확인했다. 우리가 찍는다.
+VCMS_OWN = {
+    "채널_연결완료-2.png", "채널_연결가능-1.png", "채널_연결-1.png", "채널_숙소정보_연결된숙소없음.png", "채널_숙소연결-1.png",
+    "채널_숙소정보.png", "채널_예약수수료율.png", "채널_채널전송가.png", "채널_채널상품.png", "채널_채널상품_정보수정.png",
+    "채널_채널상품_상품숨김.png", "채널_2-3.png", "채널_3-2.png", "채널_17(1).png", "채널_13(1).png", "채널_14(1).png",
+    "채널_22(2).png", "채널_15(2).png", "채널_수수료_2-1.png", "채널_수수료_3-1.png", "채널_17.png", "채널_22.png", "채널_23.png",
+    "image(67).png", "야놀자시스템오류모달-1.png", "설정_숙박업소_알림연락처.png", "notification.png",
+}
+
+# 연결된 채널이 있어야 찍히는 화면. VENDIT HOTEL 은 연결 0개, dev 업소들은 실제 업체 이름, 계정이 보인다.
+CHANNEL_CONNECTED = {
+    "채널_연결완료-2.png", "채널_연결-1.png", "채널_숙소정보_연결된숙소없음.png", "채널_숙소연결-1.png", "채널_숙소정보.png",
+    "채널_예약수수료율.png", "채널_채널전송가.png", "채널_채널상품.png", "채널_채널상품_정보수정.png", "채널_채널상품_상품숨김.png",
+    "채널_2-3.png", "채널_3-2.png", "채널_17(1).png", "채널_13(1).png", "채널_14(1).png", "채널_22(2).png", "채널_15(2).png",
+    "채널_수수료_2-1.png", "채널_수수료_3-1.png", "채널_17.png", "채널_22.png", "채널_23.png",
+}
+
 # 채널 FAQ 페이지. 이미지가 image-34.png 처럼 이름만으로는 채널 화면인지 모른다.
 CHANNEL_PAGE = re.compile(r"^(airbnb|yanolja|agoda|expedia|naver|tripcom|yeogi)", re.I)
 
@@ -27,6 +45,10 @@ BLOCKED = {
     "booking_scaleFactor.png": "배수가 걸린 예약 두 건을 나란히 놓은 합성이다",
     "create-pkg-inclusions.png": "현재 빌드 상품 모달에 서비스 선택이 없다. 서비스는 요금에 붙는다(en-rate-inclusions). 문서가 낡았다",
     "cancel-booking-noti.png": "카카오 알림톡 원문이다. 한국어로만 발송된다",
+    "연동서비스_2.png": "찍을 필요 없음. VCLOUD 는 점주가 설정 못 하게 막아둔 게 의도다(Dean, 2026-09-12). 한국어 가이드도 같은 관리자 매뉴얼 절을 갖고 있다",
+    "연동서비스_4.png": "찍을 필요 없음. VCLOUD 는 점주가 설정 못 하게 막아둔 게 의도다(Dean, 2026-09-12)",
+    "notification.png": "채널 상품 알림이 있어야 한다. VENDIT HOTEL 은 알림 0건이고, dev 는 여는 순간 읽음 처리될 수 있어서 안 열었다(2026-09-12)",
+    "야놀자시스템오류모달-1.png": "야놀자 장애 때만 뜨는 모달이라 재현 불가",
     "faq-no-history.png": "수집 시점에 이미 취소된 예약이 있어야 한다. VENDIT HOTEL 기본 조회 기간 Canceled 0건(2026-09-11)",
 }
 
@@ -34,8 +56,6 @@ BLOCKED = {
 NEEDS_DEAN = {
     "Distribution-Booking-Sync-Only.png": "영어 배너가 {date} 를 그대로 찍는다. dev 번들 en.json 이 낡았고 vcms-i18n main 은 {launchedAt} 로 고쳐져 있다. en-distribution-booking-sync-only.png 준비됨, 배포 후 교체",
     "pkg_delete.png": "현재 빌드는 휴지통이 비활성으로 안 바뀐다. 눌러서 뜨는 대화상자를 찍어야 하는데 운영 삭제 버튼이라 자동 모드가 막았다",
-    "연동서비스_4.png": "VCLOUD 해제 대화상자. 해제 버튼을 여는 동작이라 자동 모드가 막았다",
-    "연동서비스_2.png": "VCLOUD 연동 입력 모달. dev 에서 Connect 를 여는 동작도 자동 모드가 막았다",
 }
 
 
@@ -69,6 +89,10 @@ def status(name, page):
         return f"재현 불가 — {BLOCKED[name]}"
     if name in NEEDS_DEAN:
         return f"Dean 확인 필요 — {NEEDS_DEAN[name]}"
+    if name in CHANNEL_CONNECTED:
+        return "Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다"
+    if name in VCMS_OWN:
+        return "한국어 유지 — 영어 재캡처 필요"
     if CHANNEL.search(name) or "/channels/" in page or "/faq/issue/" in page \
             or CHANNEL_PAGE.search(os.path.basename(page)):
         return "채널사 화면 — Dean 이 직접 촬영"
