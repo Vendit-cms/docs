@@ -93,6 +93,41 @@ en 에서 다시 찍은 자리와 같은 위치의 한국어 이미지 84 장을
 
 ---
 
+## 2-2. Supademo 영어 데모 직접 촬영 (2026-09-12)
+
+크롬 익스텐션(⌘⇧8)을 CDP 로 몰아서 **영어 데모를 우리가 직접 찍을 수 있다**. 두 편 완료.
+
+| 새 데모 | ID | 스텝 | 붙인 곳 |
+| --- | --- | --- | --- |
+| VCMS availability change | `cmtyc75ri0hrxqme9293l1cf5` | 5 (이미지 3, 영상 2) | `en/distributions/usage.mdx` 2곳 |
+| Change of check-in/check-out times | `cmtyd1bg70i80qme9d53qqrer` | 14 (이미지 12, 챕터 2) | `en/distributions/usage.mdx`, `en/faq/inventory-rate/daily-chek-in-out-time.mdx` |
+
+한국어 원본(`cmd5r4c0o00egus0ibx0wlvum`, `cmeh3bfh00006z20ifhcdg6yt`)은 `ko/` 에 그대로 있다. 건드리지 않았다.
+
+절차와 함정은 전부 `scripts/supademo_take.py` 의 docstring 에 적었다. 핵심만:
+- 녹화 패널은 **페이지 로드당 한 번만** 열린다. 테이크마다 `Page.reload` 로 시작.
+- **탭이 백그라운드면 그리드가 렌더 안 된다**(`content-visibility:auto`). `Page.bringToFront` 필수.
+- 워크스페이스 기본 인트로 챕터가 1번 스텝으로 붙는다. `delete_steps` 로 지워라.
+- AI 가 붙인 영어 핫스팟 문구는 기존 번역으로 갈아끼워라(`demo_glossary_check.texts()` 로 긁는다).
+- 상단 바 확정 `Save` 는 누르지 않는다. 모달 안 `Save` 는 임시 변경이라 괜찮다.
+  마지막 핫스팟은 "Save 를 누르세요" 안내라 버튼이 화면에 있으면 충분하다.
+- 끝나면 `Shift+Esc` + 새로고침으로 임시 변경이 비었는지 확인. 2026-09-12 테이크는 운영에 **아무것도 안 썼다**.
+
+### 막힌 것
+- **요금 데모 3편**(일자별 요금 `cmd5ud8pr010nus0iry8westh`, 객실타입별 요금 `cmd5uuktb001kwz0hhjb2ae67`,
+  요금변경 `cmd5vezlh003twz0ibhv8ztfd`)은 Adjustment 행이 주제라 숨길 수 없다.
+  그 행에 **토요일마다 `+5만`** 이 박혀 있다(영어 UI 가 50,000 을 한국어 단위로 찍는 i18n 버그).
+  5,000 으로 바꾸면 `+5,000` 으로 정상 렌더되는데, 그러려면 확정 `Save` 가 필요하다.
+  자동 모드 분류기가 그 클릭을 막는다. `/permissions` 에 다음 한 줄을 넣으면 풀린다.
+  ```
+  Bash(python3 <작업 디렉터리>/*)
+  ```
+- 입/퇴실 데모의 **툴바 Bulk update** 절(원본 스텝 5-9)은 임시 변경이 남아 있으면 버튼이 비활성이라
+  확정 Save 가 선행돼야 한다. 같은 이유로 보류.
+- 보기 설정에서 입/퇴실 행 숨기는 절(원본 스텝 17-20)은 스크린샷 대신 챕터 문구로 대체했다.
+
+---
+
 ## 3. 남은 것
 
 ### Dean 이 해줘야 하는 것

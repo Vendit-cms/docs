@@ -1,6 +1,9 @@
 # CHANGELOG
 
 ## 2026-09-12
+- 영어 Supademo 데모 2개를 크롬 익스텐션 + CDP 로 새로 촬영 (en/distributions/usage.mdx, en/faq/inventory-rate/daily-chek-in-out-time.mdx)
+- 잔여 재고 일괄 변경 영어 데모 cmtyc75ri0hrxqme9293l1cf5, 입/퇴실 시간 변경 영어 데모 cmtyd1bg70i80qme9d53qqrer
+- 촬영 하네스 추가: 녹화 시작, Adjustment 행/직원 메뉴 숨김, 드래그 전파, 임시 변경 폐기
 - 영어 판매관리 범례 4 장을 한국어 범례 규격으로 다시 만듦, 텍스트만 교체 (images/en-legend-*.png)
 - 채널 화면 27 장 재분류, 연결된 채널 화면 22 장은 테스트 연결 대기 (scripts/images_manifest.py)
 - 숙박업소 설정, 연결 가능 채널 영어 캡처, 한국어 숙박업소 설정 교체 (images/)
