@@ -60,6 +60,64 @@ HIDE_ADJ_ROW = (
     ' if(bands.some(b=>Math.abs(cy-b)<14))hits.push(el);}'
     'hits.forEach(e=>e.style.setProperty("display","none","important"));return hits.length;})()')
 
+FIX_MAN_UNIT = (
+    # 영어 그리드가 50,000 을 `+5만` 으로 찍는 i18n 버그가 있다. 값은 그대로 두고 표기만
+    # 영어 자릿수 표기로 되돌린다. 조정 행이 데모의 주제여서 행을 통째로 숨길 수 없을 때 쓴다.
+    '(()=>{const fixed=[];const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;'
+    'const conv=(s)=>s.replace(/([+\u2212-]?)(\\d+(?:\\.\\d+)?)\uB9CC/g,'
+    '(m,sg,num)=>sg+Math.round(parseFloat(num)*10000).toLocaleString("en-US"));'
+    'while(n=w.nextNode()){const t=n.nodeValue||"";if(t.indexOf("\uB9CC")<0)continue;'
+    'const c=conv(t);if(c!==t){n.nodeValue=c;fixed.push([t.trim(),c.trim()]);}}return fixed;})()')
+
+def install_guard():
+    """`만` 표기를 되살아나는 족족 영어 자릿수로 되돌리는 관찰자를 심는다.
+
+    클릭 직전에 한 번 고치는 방식으로는 리액트가 다시 그린 프레임에 한글이 박히는 걸 못 막는다.
+    관찰자는 **변경된 노드만** 훑는다. 문서 전체를 훑고 getBoundingClientRect 를 돌리는 판은
+    2026-09-13 에 실제로 렌더러를 먹통으로 만들어 탭을 닫고 다시 열어야 했다. 레이아웃을 읽지 마라.
+    행 숨김과 사이드바 숨김은 비싸므로 관찰자에 넣지 말고 `hide_row` / `HIDE_INTERNAL` 로 그때그때 불러라.
+    """
+    return ('(()=>{if(window.__vcmsGuard)return "already";'
+            'const conv=(s)=>s.replace(/([+\u2212-]?)(\\d+(?:\\.\\d+)?)\uB9CC/g,'
+            '(m,sg,num)=>sg+Math.round(parseFloat(num)*10000).toLocaleString("en-US"));'
+            'const G={busy:false,fixed:0};'
+            'const one=(n)=>{const t=n.nodeValue||"";if(t.indexOf("\uB9CC")<0)return;'
+            ' const c=conv(t);if(c!==t){n.nodeValue=c;G.fixed++;}};'
+            'const sub=(el)=>{const w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);let n;'
+            ' while(n=w.nextNode())one(n);};'
+            'sub(document.body);'
+            'G.obs=new MutationObserver((recs)=>{if(G.busy)return;G.busy=true;try{'
+            ' for(const r of recs){'
+            '  if(r.type==="characterData"){one(r.target);continue;}'
+            '  for(const nd of r.addedNodes){if(nd.nodeType===3)one(nd);'
+            '   else if(nd.nodeType===1)sub(nd);}}'
+            '}finally{G.busy=false;}});'
+            'G.obs.observe(document.body,{childList:true,subtree:true,characterData:true});'
+            'window.__vcmsGuard=G;return "installed";})()')
+
+
+def hide_row(label):
+    """행 라벨로 그리드 한 줄을 통째로 숨긴다. 예: hide_row("Rate period").
+
+    Rate period 행에는 업장이 한국어로 지어놓은 요금 기간 이름(일요일/토요일)이 찍힌다.
+    그 행이 데모의 주제가 아닐 때 숨겨서 영어 화면을 지킨다.
+    """
+    import json as _j
+    return ('(()=>{const LB=' + _j.dumps(label) + ';'
+            'const tx=[];const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;'
+            'while(n=w.nextNode()){const t=(n.nodeValue||"").trim();if(!t)continue;'
+            'const g=document.createRange();g.selectNodeContents(n);const r=g.getBoundingClientRect();'
+            'if(r.width>0)tx.push([t,r]);}'
+            'const bands=tx.filter(([t])=>t===LB).map(([t,r])=>(r.top+r.bottom)/2);'
+            'if(!bands.length)return 0;const hits=[];'
+            'for(const el of document.querySelectorAll("div")){const r=el.getBoundingClientRect();'
+            ' if(r.height<20||r.height>60||r.width<40)continue;'
+            ' const cy=(r.top+r.bottom)/2;'
+            ' if(bands.some(b=>Math.abs(cy-b)<14))hits.push(el);}'
+            'hits.forEach(e=>e.style.setProperty("visibility","hidden","important"));'
+            'return hits.length;})()')
+
+
 HIDE_INTERNAL = (
     "(()=>{let k=0;const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let t;"
     "while(t=w.nextNode()){if(/^(VENDIT 전용|VENDIT only)$/.test((t.nodeValue||'').trim())){"
@@ -68,8 +126,12 @@ HIDE_INTERNAL = (
     "e=e.parentElement;}}}return k;})()")
 
 KOREAN_LEFT = (
+    # visibility:hidden 로 가린 요소도 레이아웃 박스는 남는다. 눈에 보이는 것만 세려면
+    # 계산된 visibility 까지 봐야 한다 - 이걸 안 봐서 가려놓고도 "한글 남았다"고 멈춘 적 있다.
     '(()=>{const bad=[];const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;'
     'while(n=w.nextNode()){const t=(n.nodeValue||"").trim();if(!t||!/[가-힣]/.test(t))continue;'
+    'const p=n.parentElement;if(!p)continue;'
+    'const s=getComputedStyle(p);if(s.visibility==="hidden"||s.display==="none"||s.opacity==="0")continue;'
     'const g=document.createRange();g.selectNodeContents(n);const r=g.getBoundingClientRect();'
     'if(r.width>0&&r.bottom>0&&r.top<innerHeight)bad.push(t);}return [...new Set(bad)];})()')
 
@@ -180,10 +242,16 @@ async def key(cdp, k, code, vk, mods=0):
 
 
 async def type_into(cdp, x, y, text, label=""):
-    """셀을 눌러 전체 선택한 뒤 값을 바꾼다."""
+    """셀을 눌러 전체 선택한 뒤 값을 바꾼다.
+
+    맥에서 `modifiers=4` 로 보낸 Cmd+A 는 편집 명령으로 안 바뀐다. 그대로 두면 선택이 안 되고
+    기존 값 뒤에 붙어버린다(2026-09-13 에 200,000 이 1,000,000 으로, 17.65 가 1,017.65 로 들어갔다).
+    `commands:["selectAll"]` 을 같이 보내야 실제로 전체 선택이 된다.
+    """
     await click(cdp, x, y, label or "cell", 0.8)
     await cdp.send("Input.dispatchKeyEvent", type="keyDown", key="a", code="KeyA",
-                   windowsVirtualKeyCode=65, nativeVirtualKeyCode=65, modifiers=4)
+                   windowsVirtualKeyCode=65, nativeVirtualKeyCode=65, modifiers=4,
+                   commands=["selectAll"])
     await cdp.send("Input.dispatchKeyEvent", type="keyUp", key="a", code="KeyA",
                    windowsVirtualKeyCode=65, nativeVirtualKeyCode=65, modifiers=4)
     await asyncio.sleep(0.3)
@@ -211,7 +279,7 @@ async def drag(cdp, x0, y0, x1, y1, steps=14):
 
 # ---------------------------------------------------------------- 테이크 골격
 
-async def prepare(cdp, click_today=True, wait=13.0):
+async def prepare(cdp, click_today=True, wait=13.0, hide_adjustment=True):
     """새로고침하고 화면을 정리한다. 한글이 남아 있으면 False."""
     await cdp.send("Page.bringToFront"); await asyncio.sleep(0.5)
     await cdp.send("Page.reload"); await asyncio.sleep(wait)
@@ -220,18 +288,19 @@ async def prepare(cdp, click_today=True, wait=13.0):
         t = await cdp.js(TODAY)
         if t:
             await click(cdp, t["x"], t["y"], "Today", 3.0)
-    return await tidy(cdp)
+    return await tidy(cdp, hide_adjustment)
 
 
-async def tidy(cdp):
-    a = await cdp.js(HIDE_ADJ_ROW)
+async def tidy(cdp, hide_adjustment=True):
+    a = await cdp.js(HIDE_ADJ_ROW) if hide_adjustment else await cdp.js(FIX_MAN_UNIT)
     b = await cdp.js(HIDE_INTERNAL)
     left = await cdp.js(KOREAN_LEFT)
-    print(f"  tidy adj={a} internal={b} korean={json.dumps(left, ensure_ascii=False)}")
+    print(f"  tidy adj={json.dumps(a, ensure_ascii=False)} internal={b} "
+          f"korean={json.dumps(left, ensure_ascii=False)}")
     return not left
 
 
-async def start_recording(cdp):
+async def start_recording(cdp, hide_adjustment=True):
     """⌘⇧8 -> Start Recording -> Get started. 창이 리사이즈되니 이후 좌표는 다시 따야 한다."""
     await key(cdp, "8", "Digit8", 56, 12)
     await asyncio.sleep(4)
@@ -243,7 +312,7 @@ async def start_recording(cdp):
     gs = await cdp.js(shadow_button("^Get started$"))
     if gs:
         await click(cdp, gs["x"], gs["y"], "Get started", 5.0)
-    await tidy(cdp)
+    await tidy(cdp, hide_adjustment)
     return True
 
 
@@ -257,9 +326,19 @@ async def stop_recording(cdp, settle=15.0):
 
 
 async def discard_changes(cdp):
-    """Shift+Esc 로 임시 변경을 버리고, 새로고침해서 실제로 비었는지 확인한다."""
-    await key(cdp, "Escape", "Escape", 27, 8)
-    await asyncio.sleep(2.5)
+    """임시 변경을 버리고, 새로고침해서 실제로 비었는지 확인한다.
+
+    Shift+Esc 단축키는 포커스가 입력칸에 있으면 씹힌다(2026-09-13 실측, 변경이 그대로 남았다).
+    상단 바의 `Cancel` 버튼을 직접 누르는 쪽이 확실하다. 버튼이 없을 때만 단축키로 떨어진다.
+    `Save` 는 확정이므로 절대 누르지 않는다.
+    """
+    bar = await cdp.js(PENDING_BAR)
+    cancel = next((b for b in (bar or []) if b[0] == "Cancel"), None)
+    if cancel:
+        await click(cdp, cancel[1], cancel[2], "Cancel", 3.0)
+    else:
+        await key(cdp, "Escape", "Escape", 27, 8)
+        await asyncio.sleep(2.5)
     await cdp.send("Page.reload"); await asyncio.sleep(13)
     await cdp.send("Page.bringToFront"); await asyncio.sleep(3.0)
     bar = await cdp.js(PENDING_BAR)
