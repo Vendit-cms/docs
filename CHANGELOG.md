@@ -1,6 +1,9 @@
 # CHANGELOG
 
 ## 2026-09-14
+- 9월 3일 릴리즈노트 사진 11장을 영어 화면으로 교체, 한국어 말풍선을 영어로 다시 그렸다 (images/en-260903-*.png, en/release-notes/2026-09-03.mdx)
+- 5월 15일 채널 연결 끊김 사진 영어판 추가, 숙소명만 가렸다 (images/en-distribution-channel-disconnected.png)
+- 보라 강조 상자와 말풍선을 그리는 도구 추가 (scripts/annotate.py)
 - 채널 캡처 9장 재촬영. 사이드바가 통째로 비어 있던 걸 고쳤다 (images/en-channel-*.png)
 - 내부 메뉴 숨김이 부모를 3단계 무조건 올라가 nav 를 지우던 것 수정 (scripts/capture_redacted.py)
 - 블러 좌표를 덜 그려진 DOM 에서 재던 경합 수정, settle() 추가 (scripts/capture_redacted.py)

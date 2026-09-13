@@ -503,7 +503,7 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `260515-Disconnected-Channel.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `en-distribution-channel-disconnected.png` | 영어 캡처 완료 |
 | `260515-High-Price.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
 | `260515-Roomtype-Max-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
 | `260515-Mobile-Channel.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
@@ -594,15 +594,15 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `260903-bulk-update-rate-plan-modal-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-bulk-update-rate-plan-button-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-single-pkg-import-rate-plan-button-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-add-multi-period.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-add-multi-period-modal.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-single-pkg-add-period.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-multi-order-align.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-single-pkg-order-align-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-pkg-expand-collapse-button.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-roomtype-filter-multi-select.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-temporary-update-undo.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `en-260903-bulk-apply-modal.png` | 영어 캡처 완료 |
+| `en-260903-bulk-apply-button.png` | 영어 캡처 완료 |
+| `en-260903-import-rate-plan.png` | 영어 캡처 완료 |
+| `en-260903-add-multi-period.png` | 영어 캡처 완료 |
+| `en-260903-add-multi-period-modal.png` | 영어 캡처 완료 |
+| `en-260903-single-add-period.png` | 영어 캡처 완료 |
+| `en-260903-bulk-align-button.png` | 영어 캡처 완료 |
+| `en-260903-single-align-order.png` | 영어 캡처 완료 |
+| `en-260903-expand-collapse.png` | 영어 캡처 완료 |
+| `en-260903-roomtype-filter-multi.png` | 영어 캡처 완료 |
+| `en-260903-temporary-change-bar.png` | 영어 캡처 완료 |
 
