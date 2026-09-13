@@ -43,11 +43,17 @@ BLOCKED = {
     "booking_scaleFactor.png": "배수가 걸린 예약 두 건을 나란히 놓은 합성이다",
     "create-pkg-inclusions.png": "현재 빌드 상품 모달에 서비스 선택이 없다. 서비스는 요금에 붙는다(en-rate-inclusions). 문서가 낡았다",
     "cancel-booking-noti.png": "카카오 알림톡 원문이다. 한국어로만 발송된다",
+    "channel-auto-disconnect-noti.png": "카카오 알림톡 원문이다. 한국어로만 발송된다",
     "연동서비스_2.png": "찍을 필요 없음. VCLOUD 는 점주가 설정 못 하게 막아둔 게 의도다(Dean, 2026-09-12). 한국어 가이드도 같은 관리자 매뉴얼 절을 갖고 있다",
     "연동서비스_4.png": "찍을 필요 없음. VCLOUD 는 점주가 설정 못 하게 막아둔 게 의도다(Dean, 2026-09-12)",
     "notification.png": "채널 상품 알림이 있어야 한다. VENDIT HOTEL 은 알림 0건이고, dev 는 여는 순간 읽음 처리될 수 있어서 안 열었다(2026-09-12)",
     "야놀자시스템오류모달-1.png": "야놀자 장애 때만 뜨는 모달이라 재현 불가",
     "faq-no-history.png": "수집 시점에 이미 취소된 예약이 있어야 한다. VENDIT HOTEL 기본 조회 기간 Canceled 0건(2026-09-11)",
+}
+
+# 크롬 브라우저 자체 UI. VCMS 화면이 아니라 확장 프로그램 메뉴다.
+BROWSER_UI = {
+    "chrome-extension.png", "chrome-extension-1.png",
 }
 
 # 찍을 수는 있는데 Dean 이 정해야 하는 것.
@@ -91,11 +97,14 @@ def status(name, page):
         return ("재현 불가 — 채널 연결 플로우 중간 단계라 실제로 연결을 눌러야 나온다. "
                 "운영 접근은 조회만 허용이라 못 찍는다(Dean, 2026-09-13)")
     if name in VCMS_OWN:
-        return "한국어 유지 — 영어 재캡처 필요"
+        return "영어 재캡처 필요"
+    if name in BROWSER_UI:
+        return "한국어 유지 — 크롬 브라우저 확장 프로그램 메뉴다. VCMS 화면이 아니다"
     if CHANNEL.search(name) or "/channels/" in page or "/faq/issue/" in page \
             or CHANNEL_PAGE.search(os.path.basename(page)):
-        return "채널사 화면 — Dean 이 직접 촬영"
-    return "한국어 유지 — 영어 재캡처 필요"
+        return ("한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. "
+                "본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13)")
+    return "영어 재캡처 필요"
 
 
 def main():
@@ -117,7 +126,7 @@ def main():
         for n in names:
             st = status(n, page)
             total += 1
-            if st.startswith("영어") or st.startswith("한국어 재사용") or st.startswith("채널 로고"):
+            if st.startswith(("영어 캡처 완료", "한국어 재사용", "한국어 유지 —", "채널 로고")):
                 done += 1
             body.append(f"| `{n}` | {st} |")
         body.append("")

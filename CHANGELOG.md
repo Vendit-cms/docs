@@ -1,6 +1,9 @@
 # CHANGELOG
 
 ## 2026-09-13
+- 채널사가 만든 화면 50장을 범위 밖으로 확정, 한국어 사진 유지하고 본문 번역만 한다 (scripts/images_manifest.py, CLAUDE.md)
+- 알림톡 원문 channel-auto-disconnect-noti.png 을 재현 불가로 분류, 크롬 확장 메뉴 2장은 브라우저 UI로 분리 (scripts/images_manifest.py)
+- 완료 판정이 접두사 "영어" 로 재캡처 대기까지 세던 것 수정 (scripts/images_manifest.py)
 - 채널 화면 영어 캡처 9장 추가, 한국어 원본 참조 20건 교체 (images/en-channel-*.png, en/channels/channel-setting.mdx, en/faq/inventory-rate/*.mdx)
 - 업장 식별자를 가리고 찍는 캡처 스크립트 추가 (scripts/capture_redacted.py)
 - 연결 플로우 2장은 조회 전용 권한으로 재현 불가라 사유와 함께 한국어 유지 (scripts/images_manifest.py)

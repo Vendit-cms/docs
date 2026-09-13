@@ -68,5 +68,7 @@ python3 scripts/demo_glossary_check.py      # Supademo 라이브 임베드 페�
 ## 이미지 정책
 
 - release-notes 82장은 한국어 이미지 재사용으로 결정(Dean, 2026-09-09).
-- 채널사 화면(야놀자·아고다 YCS 등)은 Dean 이 직접 찍는다.
+- **채널사가 만든 화면(야놀자 파트너센터, 아고다 YCS, 익스피디아 콘솔, 에어비앤비 등)은 범위 밖이다(Dean, 2026-09-13).** 사진은 한국어 그대로 두고 본문 영어 번역만 한다. 50장이 여기 해당한다.
+  우리가 손대는 건 VCMS 자체 화면뿐이다. 크롬 확장 프로그램 메뉴도 브라우저 UI라 범위 밖이다.
+- 카카오 알림톡 원문(`cancel-booking-noti.png`, `channel-auto-disconnect-noti.png`)은 한국어로만 발송된다.
 - 페이지별 현황은 `IMAGES.md`.
