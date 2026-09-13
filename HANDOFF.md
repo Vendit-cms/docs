@@ -93,6 +93,68 @@ en 에서 다시 찍은 자리와 같은 위치의 한국어 이미지 84 장을
 
 ---
 
+## 2-2. Supademo 영어 데모 직접 촬영 (2026-09-12 ~ 09-13)
+
+크롬 익스텐션(⌘⇧8)을 CDP 로 몰아서 **영어 데모를 우리가 직접 찍는다**. 여섯 편 완료.
+
+| 새 데모 | ID | 스텝 | 붙인 곳 |
+| --- | --- | --- | --- |
+| VCMS availability change | `cmtyc75ri0hrxqme9293l1cf5` | 5 (이미지 3, 영상 2) | `en/distributions/usage.mdx` 2곳 |
+| Change of check-in/check-out times | `cmtyd1bg70i80qme9d53qqrer` | 19 (이미지 16, 영상 1, 챕터 2) | `en/distributions/usage.mdx`, `en/faq/inventory-rate/daily-chek-in-out-time.mdx` |
+| Adjusting rates for every room at once | `cmtz313ow0sv8qme9m0s845be` | 4 | `en/distributions/usage.mdx` |
+| Adjusting rates for one room type | `cmtz35id90swnqme9v8xtizqs` | 4 | `en/distributions/usage.mdx` |
+| Changing a rate | `cmtz49f960tajqme9fiwfjexr` | 7 (이미지 6, 영상 1) | `en/distributions/usage.mdx` |
+| Moving a room to another room type | `cmtz4k5800tcwqme9w39nmeeb` | 6 | `en/faq/inventory-rate/move-room-to-other-type.mdx` |
+
+한국어 원본은 `ko/` 에 그대로 있다. 건드리지 않았다.
+
+절차와 함정은 전부 `scripts/supademo_take.py` 의 docstring 에 적었다. 핵심만:
+- 녹화 패널은 **페이지 로드당 한 번만** 열린다. 테이크마다 `Page.reload` 로 시작.
+- **탭이 백그라운드면 그리드가 렌더 안 된다**(`content-visibility:auto`). `Page.bringToFront` 필수.
+- 워크스페이스 기본 인트로 챕터가 1번 스텝으로 붙는다. `delete_steps` 로 지워라.
+- AI 가 붙인 영어 핫스팟 문구는 기존 번역으로 갈아끼워라(`demo_glossary_check.texts()` 로 긁는다).
+- **임시 변경은 상단 바의 `Cancel` 을 눌러서 버려라.** `Shift+Esc` 는 포커스가 입력칸에 있으면
+  씹힌다(09-13 실측, 변경이 그대로 남아 있었다).
+- 입력칸 값 교체는 `Input.dispatchKeyEvent` 에 **`commands:["selectAll"]`** 을 같이 보내야 한다.
+  맥에서 `modifiers=4` 만으로는 전체 선택이 안 되고 기존 값 뒤에 붙는다(200,000 이 1,000,000 이 됐다).
+- `install_guard()` 는 MutationObserver 로 `만` 표기를 실시간으로 되돌린다.
+  **관찰자 안에서 `getBoundingClientRect` 나 `querySelectorAll("div")` 를 돌리지 마라.**
+  09-13 에 그렇게 만들었다가 렌더러가 먹통이 돼서 탭을 닫고 다시 열어야 했다(CDP 도 같이 멈춘다).
+  행 숨김은 비싸니 관찰자에 넣지 말고 `hide_row()` 로 그때그때 호출해라.
+- `KOREAN_LEFT` 는 계산된 `visibility` 를 본다. `visibility:hidden` 요소도 레이아웃 박스는 남아서,
+  이걸 안 보면 가려놓고도 "한글 남았다"고 멈춘다.
+
+### 운영 서버 경계 (2026-09-13 갱신)
+
+Dean: **VENDIT HOTEL 은 테스트 업장이라 뭘 눌러도 된다.** 09-13 자 보기 설정 저장은 실제로 눌렀고
+바로 되돌렸다. 다른 업장은 여전히 금지. 촬영이 끝나면 화면 상태를 반드시 원복하고 읽어서 확인해라.
+09-13 종료 시점 확인값: 임시 변경 0, 입/퇴실 행 4개 보임, 객실 수 6/8/2/9, 조정행 원래대로.
+
+### 영어 페이지에 아직 한국어 데모가 남은 곳
+
+| 데모 | 페이지 | 왜 |
+| --- | --- | --- |
+| 결제 카드 등록 `cmrw1o4xe1ktaqmbljgwzc9ow` | `en/faq/billing/add-payment-card.mdx` | 카드번호 입력 화면. 한국어 유지 결정(Dean, 09-13). 해외 결제는 별도 수단이 붙어야 한다 |
+| 기본 카드 설정 `cmrw313oa1mliqmblyaawbzpv` | `en/faq/billing/default-card-setting.mdx` | 같음 |
+| 아고다(YCS) 연동 `cme6nz0yt250eh3pyiouju82z` | `en/channels/agoda.mdx` | 화면이 `ycs.agoda.com` 이다. 파트너 콘솔 계정 필요 |
+| 트립닷컴(eBooking) 연동 `cmh4nymjo1stbcdwp5smdvskp` | `en/channels/tripdotcom.mdx` | 화면이 `ebooking.trip.com` 이다. 같음 |
+| 연동서비스 연결 `cme8357y3002n0z0hdnvpgox0` | `en/faq/integrations/vcloud.mdx` | VCLOUD 콘솔을 오가고 `Connect` 를 실제로 눌러야 한다. 깨끗한 테스트 연결 필요 |
+
+### 제품 쪽으로 넘길 것
+
+1. **영어 그리드가 50,000 을 `+5만` 으로 찍는다.** 모달 안에서는 `₩ +50,000` 으로 제대로 나온다.
+   10,000 이상 값이면 조정행, 요금행 어디서나 재현된다. 영어 문서로 한글이 새는 경로다.
+   촬영 중에는 `install_guard()` 가 표기만 영어 자릿수로 되돌린다(값은 안 건드린다).
+2. **Rate period 행에 업장이 지은 한국어 기간명(`일요일`, `토요일`)이 그대로 뜬다.** 데이터라
+   번역 대상은 아니지만 영어 데모에서는 `hide_row("Rate period")` 로 가리고 찍었다.
+3. 기존 영어 번역 "Click Edit to save it as a draft." 는 낡았다. 지금 버튼은 `Temporary change` 다.
+   새 데모에는 고쳐 넣었고 i18n 쪽도 같이 봐야 한다.
+4. 그리드 셀의 **좌우 드래그 복사는 CDP 마우스 이벤트로 재현이 안 된다**(HTML5 drag 로 보인다).
+   `Input.dispatchMouseEvent` 로는 값이 안 번진다. 요금 변경 데모는 드래그 대신 방식 드롭다운
+   (`Adjust by percent`)으로 구성했다. 문서 본문의 드래그 설명은 글로만 남아 있다.
+
+---
+
 ## 3. 남은 것
 
 ### Dean 이 해줘야 하는 것
