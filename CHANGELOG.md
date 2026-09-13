@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## 2026-09-13
+- 영어 페이지 Supademo 임베드 13건을 고정 높이에서 데모별 실제 비율로 교체, 레터박스 여백 제거하고 반응형으로 (en/**/*.mdx)
 - 영어 페이지 이미지 7장을 새 파일명으로 옮겨 Mintlify 의 낡은 치수 캐시를 깼다 (images/en-legend-*-2.png, images/en-booking-*-2.png)
 - 위 7장의 참조를 새 이름으로 교체 (en/distributions/understanding.mdx, en/bookings/bookings.mdx)
 - 라이브 선언 치수와 레포 실제 치수를 대조하는 검사기 추가 (scripts/check_image_dims.py)
