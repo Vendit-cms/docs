@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## 2026-09-13
+- 한국어 야놀자 지연 FAQ 의 알림 연락처 이미지를 새 파일명으로 옮겨 Mintlify 의 낡은 치수 캐시를 깼다 (images/설정_숙박업소_알림연락처-2.png, ko/faq/issue/yanolja-booking-delay.mdx)
 - 채널사가 만든 화면 50장을 범위 밖으로 확정, 한국어 사진 유지하고 본문 번역만 한다 (scripts/images_manifest.py, CLAUDE.md)
 - 알림톡 원문 channel-auto-disconnect-noti.png 을 재현 불가로 분류, 크롬 확장 메뉴 2장은 브라우저 UI로 분리 (scripts/images_manifest.py)
 - 완료 판정이 접두사 "영어" 로 재캡처 대기까지 세던 것 수정 (scripts/images_manifest.py)
