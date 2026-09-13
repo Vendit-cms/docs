@@ -18,17 +18,17 @@ CHANNEL = re.compile(
 # VCMS 자체 화면인데 파일명(채널_*)이나 페이지 위치(faq/issue) 때문에 채널사 화면으로 잘못 세던 것.
 # 2026-09-12 썸네일로 하나씩 확인했다. 우리가 찍는다.
 VCMS_OWN = {
-    "채널_연결완료-2.png", "채널_연결가능-1.png", "채널_연결-1.png", "채널_숙소정보_연결된숙소없음.png", "채널_숙소연결-1.png",
+    "채널_연결완료-2.png", "채널_연결가능-1.png", "채널_연결-1.png", "channel-property-info-none-connected.png", "channel-property-connect-1.png",
     "채널_숙소정보.png", "채널_예약수수료율.png", "채널_채널전송가.png", "채널_채널상품.png", "채널_채널상품_정보수정.png",
     "채널_채널상품_상품숨김.png", "채널_2-3.png", "채널_3-2.png", "채널_17(1).png", "채널_13(1).png", "채널_14(1).png",
     "채널_22(2).png", "채널_15(2).png", "채널_수수료_2-1.png", "채널_수수료_3-1.png", "채널_17.png", "채널_22.png", "채널_23.png",
-    "image(67).png", "야놀자시스템오류모달-1.png", "설정_숙박업소_알림연락처-2.png", "notification.png",
+    "image(67).png", "yanolja-system-error-modal-1.png", "설정_숙박업소_알림연락처-2.png", "notification.png",
 }
 
 # 연결된 채널이 있어야 찍히는 화면. 2026-09-13 에 20장을 대구 아르코(연결 채널 6개)에서 조회만으로 찍었다.
 # 남은 두 장은 실제로 연결 버튼을 눌러야 나오는 단계라, 조회 전용 권한으로는 못 만든다.
 CHANNEL_CONNECTED = {
-    "채널_숙소정보_연결된숙소없음.png", "채널_숙소연결-1.png",
+    "channel-property-info-none-connected.png", "channel-property-connect-1.png",
 }
 
 # 채널 FAQ 페이지. 이미지가 image-34.png 처럼 이름만으로는 채널 화면인지 모른다.
@@ -37,17 +37,17 @@ CHANNEL_PAGE = re.compile(r"^(airbnb|yanolja|agoda|expedia|naver|tripcom|yeogi)"
 # 다시 못 찍는 이유. 확인한 것만 적는다.
 BLOCKED = {
     "edit-roomtype-confirm.png": "CMS 관리 객실타입 + 범위를 벗어난 연결 상품이 필요하다",
-    "일괄변경_4.png": "임시 변경 바는 일괄변경이 아니라 셀 직접 수정 플로우 것이다",
-    "일괄변경_5.png": "임시 변경 바는 일괄변경이 아니라 셀 직접 수정 플로우 것이다",
+    "bulk-edit-4.png": "임시 변경 바는 일괄변경이 아니라 셀 직접 수정 플로우 것이다",
+    "bulk-edit-5.png": "임시 변경 바는 일괄변경이 아니라 셀 직접 수정 플로우 것이다",
     "Inviting-1.png": "대기 중인 초대가 실재해야 한다",
     "booking_scaleFactor.png": "배수가 걸린 예약 두 건을 나란히 놓은 합성이다",
     "create-pkg-inclusions.png": "현재 빌드 상품 모달에 서비스 선택이 없다. 서비스는 요금에 붙는다(en-rate-inclusions). 문서가 낡았다",
     "cancel-booking-noti.png": "카카오 알림톡 원문이다. 한국어로만 발송된다",
     "channel-auto-disconnect-noti.png": "카카오 알림톡 원문이다. 한국어로만 발송된다",
-    "연동서비스_2.png": "찍을 필요 없음. VCLOUD 는 점주가 설정 못 하게 막아둔 게 의도다(Dean, 2026-09-12). 한국어 가이드도 같은 관리자 매뉴얼 절을 갖고 있다",
-    "연동서비스_4.png": "찍을 필요 없음. VCLOUD 는 점주가 설정 못 하게 막아둔 게 의도다(Dean, 2026-09-12)",
+    "integration-vcloud-2.png": "찍을 필요 없음. VCLOUD 는 점주가 설정 못 하게 막아둔 게 의도다(Dean, 2026-09-12). 한국어 가이드도 같은 관리자 매뉴얼 절을 갖고 있다",
+    "integration-vcloud-4.png": "찍을 필요 없음. VCLOUD 는 점주가 설정 못 하게 막아둔 게 의도다(Dean, 2026-09-12)",
     "notification.png": "채널 상품 알림이 있어야 한다. VENDIT HOTEL 은 알림 0건이고, dev 는 여는 순간 읽음 처리될 수 있어서 안 열었다(2026-09-12)",
-    "야놀자시스템오류모달-1.png": "야놀자 장애 때만 뜨는 모달이라 재현 불가",
+    "yanolja-system-error-modal-1.png": "야놀자 장애 때만 뜨는 모달이라 재현 불가",
     "faq-no-history.png": "수집 시점에 이미 취소된 예약이 있어야 한다. VENDIT HOTEL 기본 조회 기간 Canceled 0건(2026-09-11)",
 }
 
