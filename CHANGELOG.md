@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-09-14
+- 채널 캡처 9장 재촬영. 사이드바가 통째로 비어 있던 걸 고쳤다 (images/en-channel-*.png)
+- 내부 메뉴 숨김이 부모를 3단계 무조건 올라가 nav 를 지우던 것 수정 (scripts/capture_redacted.py)
+- 블러 좌표를 덜 그려진 DOM 에서 재던 경합 수정, settle() 추가 (scripts/capture_redacted.py)
+- 입력칸 값이 로그에 찍히던 것 차단, 식별자 모양이면 <가림> 으로 (scripts/capture_redacted.py)
+- 사이드바 빈 캡처를 기계로 잡는 검사기 추가 (scripts/check_captures.py)
+
 ## 2026-09-13
 - 영어 페이지가 참조하던 한글 이름 이미지 32개를 영어 이름 사본으로 교체, 한국어 원본은 ko 가 계속 쓴다 (images/, en/**/*.mdx)
 - 한국어 야놀자 지연 FAQ 의 알림 연락처 이미지를 새 파일명으로 옮겨 Mintlify 의 낡은 치수 캐시를 깼다 (images/설정_숙박업소_알림연락처-2.png, ko/faq/issue/yanolja-booking-delay.mdx)

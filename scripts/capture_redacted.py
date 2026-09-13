@@ -52,10 +52,14 @@ FIX_MAN = (
     'const c=conv(t);if(c!==t){n.nodeValue=c;fixed.push(c.trim());}}return fixed;})()')
 
 HIDE_INTERNAL = '''(()=>{let n=0;
+ // 3단계를 무조건 올라가면 안 된다. 2026-09-14 에 대구 아르코에서 사이드바 nav 전체를 지웠고
+ // 그대로 배포됐다(en-channel-*.png 9장). DOM 중첩은 업장마다 다르다.
+ // 부모가 "VENDIT only" 말고 아무것도 안 가진 동안만 올라간다. 형제가 있으면 거기서 멈춘다.
  for(const e of document.querySelectorAll("*")){
   if(e.childElementCount)continue;
   if(/^VENDIT only$/.test((e.innerText||"").trim())){
-    let t=e;for(let i=0;i<3&&t.parentElement;i++)t=t.parentElement;
+    let t=e;
+    while(t.parentElement&&/^VENDIT only$/.test((t.parentElement.innerText||"").trim()))t=t.parentElement;
     t.style.visibility="hidden";n++;}}
  return n;})()'''
 
@@ -146,12 +150,35 @@ FIND = r'''(()=>{
    if(!cred&&!han.test(v)&&!re.test(v))continue;
    const r=el.getBoundingClientRect();
    if(!vis(el)||r.width<8||r.height<8)continue;
-   push(r,"input["+(el.type||"text")+"] "+(cred?"":v.slice(0,24)),el);
+   const safe=!cred&&!re.test(v);
+   push(r,"input["+(el.type||"text")+"] "+(safe?v.slice(0,24):"<가림>"),el);
  }
  return out;})()'''
 
 
+SETTLE = ('(()=>[document.body.innerText.length,'
+          'document.querySelectorAll("*").length])()')
+
+
+async def settle(cdp, tries=25, gap=0.4):
+    """DOM 이 멈출 때까지 기다린다.
+
+    이게 없으면 블러 좌표를 덜 그려진 화면에서 계산하고, 그 다음 순간 렌더된 글씨가
+    그대로 찍힌다. 2026-09-14 에 실제로 났다. 객실 타입명 4개와 ULID 4개가
+    안 가려진 채 나왔고 블러는 1건만 잡혔다. 찍기 직전에 한 번 더 재는 게 아니라
+    **멈춘 걸 확인하고** 재야 한다.
+    """
+    prev = None
+    for _ in range(tries):
+        cur = await cdp.js(SETTLE)
+        if cur == prev:
+            return cur
+        prev = cur
+        await asyncio.sleep(gap)
+    return prev
+
 async def main():
+
     out_path = sys.argv[1]
     do_blur = "--no-blur" not in sys.argv
     async with websockets.connect(C.page_ws(), max_size=None) as ws:
@@ -160,6 +187,7 @@ async def main():
         await cdp.send("Runtime.enable")
         await cdp.send("Page.bringToFront")
         await asyncio.sleep(2.5)
+        await settle(cdp)
         hidden = await cdp.js(HIDE_INTERNAL)
         # `만` 은 계정 데이터가 아니라 통화 단위 축약이다. 가리면 요금값이 사라지니
         # 가리기 전에 영어 자릿수로 바꿔놓는다. 안 바꾸면 아래 한글 규칙이 `+3만` 을 통째로 먹는다.

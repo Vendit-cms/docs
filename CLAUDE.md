@@ -63,6 +63,8 @@ python3 scripts/demo_glossary_check.py      # Supademo 라이브 임베드 페�
   가리는 건 `scripts/capture_redacted.py` 가 한다. 규칙과 실패 사례는 그 파일 맨 위에 적어놨다.
   요약: 영어 UI 에 한글이 보이면 계정 데이터니 가린다. `만` 은 통화 축약이라 가리지 말고 숫자로 바꾼다.
   찍고 나면 **눈으로 확인해라** - 규칙이 못 잡는 식별자가 실제로 두 번 빠져나갔다.
+- **찍고 나면 `python3 scripts/check_captures.py` 를 돌려라.** 사이드바가 통째로 빈 캡처 9장이
+  그대로 배포된 적이 있다(2026-09-13). 모달만 보면 안 보인다.
 - 작업 끝나면 VENDIT HOTEL UI 언어를 한국어로 되돌린다.
 
 ## 이미지 정책
