@@ -36,6 +36,9 @@ CHANNEL_PAGE = re.compile(r"^(airbnb|yanolja|agoda|expedia|naver|tripcom|yeogi)"
 
 # 다시 못 찍는 이유. 확인한 것만 적는다.
 BLOCKED = {
+    "260820-rate-drag-2.png": "셀 드래그 복사는 CDP 로 재현이 안 된다. mousePressed/mouseMoved/mouseReleased 를 쏴도 복사 메뉴가 안 뜬다(2026-09-14 재확인)",
+    "260820-timetable-drag.png": "같은 이유. 입퇴실 시간 드래그도 CDP 로 안 된다",
+    "260820-scale-factor-disabled.png": "객실이 1개인 객실 타입이 있어야 예약 배수가 비활성으로 뜬다. VENDIT HOTEL 최소 객실 타입이 2개다",
     "edit-roomtype-confirm.png": "CMS 관리 객실타입 + 범위를 벗어난 연결 상품이 필요하다",
     "bulk-edit-4.png": "임시 변경 바는 일괄변경이 아니라 셀 직접 수정 플로우 것이다",
     "bulk-edit-5.png": "임시 변경 바는 일괄변경이 아니라 셀 직접 수정 플로우 것이다",
@@ -87,10 +90,12 @@ def status(name, page):
         return "영어 캡처 완료"
     if name.startswith("channels/"):
         return "채널 로고 (언어 무관)"
-    if "/release-notes/" in page:
-        return "한국어 재사용 (Dean 결정, 2026-09-09)"
+    # BLOCKED 를 릴리즈노트 규칙보다 먼저 본다. 안 그러면 못 찍는 이유가
+    # "Dean 결정" 으로 덮여서 왜 안 됐는지 기록이 사라진다.
     if name in BLOCKED:
         return f"재현 불가 — {BLOCKED[name]}"
+    if "/release-notes/" in page:
+        return "한국어 재사용 (Dean 결정, 2026-09-09)"
     if name in NEEDS_DEAN:
         return f"Dean 확인 필요 — {NEEDS_DEAN[name]}"
     if name in CHANNEL_CONNECTED:

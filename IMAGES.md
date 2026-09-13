@@ -5,7 +5,7 @@
 `en-` 로 시작하는 파일은 영어 UI 에서 새로 찍은 것이다. 나머지는 한국어 원본을 그대로 쓴다.
 `images/` 는 한국어 문서와 공유하므로 원본을 덮으면 한국어까지 바뀐다. 그래서 새 파일로 넣는다.
 
-참조 274건 중 257건 정리 완료, 17건 남음.
+참조 274건 중 254건 정리 완료, 20건 남음.
 
 ## `en/accommodation/create-accommodation.mdx`
 
@@ -574,21 +574,21 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `260807-search-accommodation.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260807-bookings-card-view-update.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260807-edit-pkg-modal.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260807-edit-pkg-rate.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `en-260807-search-accommodation.png` | 영어 캡처 완료 |
+| `en-260807-bookings-card-view.png` | 영어 캡처 완료 |
+| `en-260807-edit-pkg-modal.png` | 영어 캡처 완료 |
+| `en-260807-edit-pkg-rate.png` | 영어 캡처 완료 |
 
 ## `en/release-notes/2026-08-20.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `260820-rate-adjustment-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260820-rate-drag-2.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260820-rate-scale-factor.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260820-timetable-drag.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260820-timetable-shown.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260820-scale-factor-disabled.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `en-260820-rate-adjustment.png` | 영어 캡처 완료 |
+| `260820-rate-drag-2.png` | 재현 불가 — 셀 드래그 복사는 CDP 로 재현이 안 된다. mousePressed/mouseMoved/mouseReleased 를 쏴도 복사 메뉴가 안 뜬다(2026-09-14 재확인) |
+| `en-260820-rate-scale-factor.png` | 영어 캡처 완료 |
+| `260820-timetable-drag.png` | 재현 불가 — 같은 이유. 입퇴실 시간 드래그도 CDP 로 안 된다 |
+| `en-260820-timetable-shown.png` | 영어 캡처 완료 |
+| `260820-scale-factor-disabled.png` | 재현 불가 — 객실이 1개인 객실 타입이 있어야 예약 배수가 비활성으로 뜬다. VENDIT HOTEL 최소 객실 타입이 2개다 |
 
 ## `en/release-notes/2026-09-03.mdx`
 

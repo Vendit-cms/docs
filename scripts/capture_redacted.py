@@ -121,6 +121,20 @@ FIND = r'''(()=>{
    const inModal=!!(el&&el.closest&&el.closest("[role=dialog],dialog[open]"));
    if(modal&&!inModal){for(const p of clipOut(r,modal))emit(p,why);return;}
    emit(r,why);};
+ const clipper=(el)=>{
+   // 스크롤 컨테이너 밖으로 밀려난 항목은 화면에 없다. 그런데 레이아웃 박스는 남아서
+   // 그 좌표로 블러를 찍으면 뒤에 있는 사이드바 글씨를 뭉갠다(2026-09-14 실측).
+   let p=el&&el.parentElement;
+   while(p&&p!==document.body){
+     const s=getComputedStyle(p);
+     if(/(auto|scroll|hidden)/.test(s.overflowY+s.overflowX)&&
+        (p.scrollHeight>p.clientHeight+2||p.scrollWidth>p.clientWidth+2))return p.getBoundingClientRect();
+     p=p.parentElement;}
+   return null;};
+ const onscreen=(r,el)=>{
+   const c=clipper(el);
+   if(!c)return true;
+   return !(r.bottom<=c.top||r.top>=c.bottom||r.right<=c.left||r.left>=c.right);};
  const rect=(n)=>{const g=document.createRange();g.selectNodeContents(n);
                   return g.getBoundingClientRect();};
  const vis=(p)=>{const s=getComputedStyle(p);
@@ -132,7 +146,7 @@ FIND = r'''(()=>{
  for(let i=0;i<texts.length;i++){
    const [node,t]=texts[i];
    if(re.test(t)||han.test(t)){const r=rect(node);
-     if(r.width>3&&r.height>3)push(r,t.slice(0,32),node.parentElement);continue;}
+     if(r.width>3&&r.height>3&&onscreen(r,node.parentElement))push(r,t.slice(0,32),node.parentElement);continue;}
    if(/^Last sync/.test(t)&&i>0){const [pn,pt]=texts[i-1];const r=rect(pn);
      if(r.width>3&&r.height>3)push(r,"acct:"+pt.slice(0,32),pn.parentElement);}
  }

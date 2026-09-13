@@ -1,6 +1,10 @@
 # CHANGELOG
 
 ## 2026-09-14
+- 8월 20일 릴리즈노트 사진 3장, 8월 7일 4장을 영어 화면으로 교체 (images/en-260820-*.png, images/en-260807-*.png)
+- 드래그 복사 2장과 예약 배수 비활성 1장은 재현 불가로 기록 (scripts/images_manifest.py)
+- 스크롤로 가려진 항목 좌표에 블러가 찍혀 사이드바를 뭉개던 것 수정 (scripts/capture_redacted.py)
+- 못 찍는 이유가 릴리즈노트 규칙에 덮이던 순서 수정 (scripts/images_manifest.py)
 - 9월 3일 릴리즈노트 사진 11장을 영어 화면으로 교체, 한국어 말풍선을 영어로 다시 그렸다 (images/en-260903-*.png, en/release-notes/2026-09-03.mdx)
 - 5월 15일 채널 연결 끊김 사진 영어판 추가, 숙소명만 가렸다 (images/en-distribution-channel-disconnected.png)
 - 보라 강조 상자와 말풍선을 그리는 도구 추가 (scripts/annotate.py)
