@@ -25,12 +25,10 @@ VCMS_OWN = {
     "image(67).png", "야놀자시스템오류모달-1.png", "설정_숙박업소_알림연락처.png", "notification.png",
 }
 
-# 연결된 채널이 있어야 찍히는 화면. VENDIT HOTEL 은 연결 0개, dev 업소들은 실제 업체 이름, 계정이 보인다.
+# 연결된 채널이 있어야 찍히는 화면. 2026-09-13 에 20장을 대구 아르코(연결 채널 6개)에서 조회만으로 찍었다.
+# 남은 두 장은 실제로 연결 버튼을 눌러야 나오는 단계라, 조회 전용 권한으로는 못 만든다.
 CHANNEL_CONNECTED = {
-    "채널_연결완료-2.png", "채널_연결-1.png", "채널_숙소정보_연결된숙소없음.png", "채널_숙소연결-1.png", "채널_숙소정보.png",
-    "채널_예약수수료율.png", "채널_채널전송가.png", "채널_채널상품.png", "채널_채널상품_정보수정.png", "채널_채널상품_상품숨김.png",
-    "채널_2-3.png", "채널_3-2.png", "채널_17(1).png", "채널_13(1).png", "채널_14(1).png", "채널_22(2).png", "채널_15(2).png",
-    "채널_수수료_2-1.png", "채널_수수료_3-1.png", "채널_17.png", "채널_22.png", "채널_23.png",
+    "채널_숙소정보_연결된숙소없음.png", "채널_숙소연결-1.png",
 }
 
 # 채널 FAQ 페이지. 이미지가 image-34.png 처럼 이름만으로는 채널 화면인지 모른다.
@@ -90,7 +88,8 @@ def status(name, page):
     if name in NEEDS_DEAN:
         return f"Dean 확인 필요 — {NEEDS_DEAN[name]}"
     if name in CHANNEL_CONNECTED:
-        return "Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다"
+        return ("재현 불가 — 채널 연결 플로우 중간 단계라 실제로 연결을 눌러야 나온다. "
+                "운영 접근은 조회만 허용이라 못 찍는다(Dean, 2026-09-13)")
     if name in VCMS_OWN:
         return "한국어 유지 — 영어 재캡처 필요"
     if CHANNEL.search(name) or "/channels/" in page or "/faq/issue/" in page \

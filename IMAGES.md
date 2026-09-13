@@ -5,7 +5,7 @@
 `en-` 로 시작하는 파일은 영어 UI 에서 새로 찍은 것이다. 나머지는 한국어 원본을 그대로 쓴다.
 `images/` 는 한국어 문서와 공유하므로 원본을 덮으면 한국어까지 바뀐다. 그래서 새 파일로 넣는다.
 
-참조 275건 중 188건 정리 완료, 87건 남음.
+참조 274건 중 207건 정리 완료, 67건 남음.
 
 ## `en/accommodation/create-accommodation.mdx`
 
@@ -87,17 +87,17 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `채널_연결완료-2.png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
+| `en-channel-connected-list.png` | 영어 캡처 완료 |
 | `en-channels-available.png` | 영어 캡처 완료 |
-| `채널_연결-1.png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
-| `채널_숙소정보_연결된숙소없음.png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
-| `채널_숙소연결-1.png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
-| `채널_숙소정보.png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
-| `채널_예약수수료율.png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
-| `채널_채널전송가.png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
-| `채널_채널상품.png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
-| `채널_채널상품_정보수정.png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
-| `채널_채널상품_상품숨김.png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
+| `en-channel-connect-form.png` | 영어 캡처 완료 |
+| `채널_숙소정보_연결된숙소없음.png` | 재현 불가 — 채널 연결 플로우 중간 단계라 실제로 연결을 눌러야 나온다. 운영 접근은 조회만 허용이라 못 찍는다(Dean, 2026-09-13) |
+| `채널_숙소연결-1.png` | 재현 불가 — 채널 연결 플로우 중간 단계라 실제로 연결을 눌러야 나온다. 운영 접근은 조회만 허용이라 못 찍는다(Dean, 2026-09-13) |
+| `en-channel-property-info.png` | 영어 캡처 완료 |
+| `en-channel-commission-modal.png` | 영어 캡처 완료 |
+| `en-channel-final-rate-modal.png` | 영어 캡처 완료 |
+| `en-channel-packages.png` | 영어 캡처 완료 |
+| `en-channel-package-edit.png` | 영어 캡처 완료 |
+| `en-channel-package-visibility.png` | 영어 캡처 완료 |
 
 ## `en/channels/expedia.mdx`
 
@@ -266,33 +266,32 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `채널_2-3.png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
-| `채널_3-2.png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
+| `en-channel-property-info.png` | 영어 캡처 완료 |
+| `en-channel-final-rate-modal.png` | 영어 캡처 완료 |
 
 ## `en/faq/inventory-rate/channel-inventory-rate-setting.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `채널_17(1).png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
-| `채널_13(1).png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
-| `채널_14(1).png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
-| `채널_22(2).png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
-| `채널_15(2).png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
+| `en-channel-packages.png` | 영어 캡처 완료 |
+| `en-channel-package-visibility.png` | 영어 캡처 완료 |
+| `en-channel-package-select.png` | 영어 캡처 완료 |
+| `en-channel-package-edit.png` | 영어 캡처 완료 |
 
 ## `en/faq/inventory-rate/channels-commission-setting.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `채널_수수료_2-1.png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
-| `채널_수수료_3-1.png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
+| `en-channel-property-info.png` | 영어 캡처 완료 |
+| `en-channel-commission-modal.png` | 영어 캡처 완료 |
 
 ## `en/faq/inventory-rate/limit-inventory-by-channel.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `채널_17.png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
-| `채널_22.png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
-| `채널_23.png` | Dean 확인 필요 — 연결된 채널 화면. VENDIT HOTEL 은 연결 0개, dev 는 실제 업체 이름과 계정이 보여서 공개 문서에 못 쓴다. 깨끗한 테스트 연결이 필요하다 |
+| `en-channel-packages.png` | 영어 캡처 완료 |
+| `en-channel-package-select.png` | 영어 캡처 완료 |
+| `en-channel-package-edit.png` | 영어 캡처 완료 |
 
 ## `en/faq/inventory-rate/timetables.mdx`
 

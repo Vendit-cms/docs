@@ -1,6 +1,9 @@
 # CHANGELOG
 
 ## 2026-09-13
+- 채널 화면 영어 캡처 9장 추가, 한국어 원본 참조 20건 교체 (images/en-channel-*.png, en/channels/channel-setting.mdx, en/faq/inventory-rate/*.mdx)
+- 업장 식별자를 가리고 찍는 캡처 스크립트 추가 (scripts/capture_redacted.py)
+- 연결 플로우 2장은 조회 전용 권한으로 재현 불가라 사유와 함께 한국어 유지 (scripts/images_manifest.py)
 - 영어 페이지 Supademo 임베드 13건을 고정 높이에서 데모별 실제 비율로 교체, 레터박스 여백 제거하고 반응형으로 (en/**/*.mdx)
 - 영어 페이지 이미지 7장을 새 파일명으로 옮겨 Mintlify 의 낡은 치수 캐시를 깼다 (images/en-legend-*-2.png, images/en-booking-*-2.png)
 - 위 7장의 참조를 새 이름으로 교체 (en/distributions/understanding.mdx, en/bookings/bookings.mdx)
