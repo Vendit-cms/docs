@@ -25,6 +25,12 @@
   NFC 로 쓰면 눈으로는 똑같은데 배포 사이트에서 404 난다.
 - `images/Camfit-1.png` 와 `images/camfit-1.png` 가 대소문자로 충돌한다.
   `git update-index --skip-worktree` 걸려 있다.
+- **이미지를 같은 이름으로 덮으면 Mintlify 가 옛 치수를 계속 쓴다.** 새 바이트는 내려주면서
+  `width`/`height` 와 `style="aspect-ratio:"` 는 캐시된 값이라 `class="object-contain"` 이
+  그 낡은 박스 안에 레터박싱한다. 2026-09-13 에 `en-legend-*` 4장이 7680x3520(가로 2.18:1)인데
+  900x974(세로 0.92:1) 박스에 갇혀 화면 절반이 빈칸이었다. `#47` 에 올린 판을 `#48` 이 덮은 게 원인이고,
+  **그 뒤로 배포를 두 번 더 해도 안 풀렸다.** 고치는 법은 파일명을 바꾸는 것뿐이다.
+  점검은 `python3 scripts/check_image_dims.py`(라이브 선언값 vs 레포 실제값, 불일치면 exit 1).
 
 ## 용어는 추측하지 마라
 
