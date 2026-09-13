@@ -49,9 +49,9 @@
 | 이미지 | 상태 |
 | --- | --- |
 | `en-bookings-default.png` | 영어 캡처 완료 |
-| `en-booking-list-view.png` | 영어 캡처 완료 |
-| `en-booking-card-view.png` | 영어 캡처 완료 |
-| `en-booking-csv-download.png` | 영어 캡처 완료 |
+| `en-booking-list-view-2.png` | 영어 캡처 완료 |
+| `en-booking-card-view-2.png` | 영어 캡처 완료 |
+| `en-booking-csv-download-2.png` | 영어 캡처 완료 |
 
 ## `en/channels/agoda.mdx`
 
@@ -160,12 +160,12 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `en-legend-sell-status.png` | 영어 캡처 완료 |
+| `en-legend-sell-status-2.png` | 영어 캡처 완료 |
 | `en-legend-sold-inventory.png` | 영어 캡처 완료 |
 | `en-legend-rate-adjustment.png` | 영어 캡처 완료 |
-| `en-legend-rate-status.png` | 영어 캡처 완료 |
-| `en-legend-availability.png` | 영어 캡처 완료 |
-| `en-legend-change-status.png` | 영어 캡처 완료 |
+| `en-legend-rate-status-2.png` | 영어 캡처 완료 |
+| `en-legend-availability-2.png` | 영어 캡처 완료 |
+| `en-legend-change-status-2.png` | 영어 캡처 완료 |
 
 ## `en/distributions/view-setting.mdx`
 

@@ -1,6 +1,11 @@
 # CHANGELOG
 
 ## 2026-09-13
+- 영어 페이지 이미지 7장을 새 파일명으로 옮겨 Mintlify 의 낡은 치수 캐시를 깼다 (images/en-legend-*-2.png, images/en-booking-*-2.png)
+- 위 7장의 참조를 새 이름으로 교체 (en/distributions/understanding.mdx, en/bookings/bookings.mdx)
+- 라이브 선언 치수와 레포 실제 치수를 대조하는 검사기 추가 (scripts/check_image_dims.py)
+- Mintlify 이미지 치수 캐시 함정을 레포 함정 절에 기록 (CLAUDE.md)
+- IMAGES.md 재생성 (IMAGES.md)
 - 영어 Supademo 데모 4편 신규 촬영, 영어 페이지의 한국어 데모 교체 (en/distributions/usage.mdx, en/faq/inventory-rate/move-room-to-other-type.mdx)
 - 전체 객실 요금조절 cmtz313ow0sv8qme9m0s845be, 객실타입 요금조절 cmtz35id90swnqme9v8xtizqs, 요금 변경 cmtz49f960tajqme9fiwfjexr, 객실 타입 이동 cmtz4k5800tcwqme9w39nmeeb
 - 입/퇴실 데모에 보기 설정으로 행 숨기는 구간 5스텝 추가 (cmtyd1bg70i80qme9d53qqrer, 14 -> 19스텝)
