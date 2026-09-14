@@ -5,7 +5,7 @@
 `en-` 로 시작하는 파일은 영어 UI 에서 새로 찍은 것이다. 나머지는 한국어 원본을 그대로 쓴다.
 `images/` 는 한국어 문서와 공유하므로 원본을 덮으면 한국어까지 바뀐다. 그래서 새 파일로 넣는다.
 
-참조 274건 중 206건 정리 완료, 68건 남음.
+참조 274건 중 223건 정리 완료, 51건 남음.
 
 ## `en/accommodation/create-accommodation.mdx`
 
@@ -428,19 +428,19 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `change-scope-desktop.png` | 영어 재캡처 필요 |
-| `change-scope-mobile.png` | 영어 재캡처 필요 |
+| `change-scope-desktop.png` | 한국어 보존 — 현재 빌드는 상위 토글을 켜면 하위로 바로 내려간다. '하위 변경 항목' 팝오버가 없다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
+| `change-scope-mobile.png` | 한국어 보존 — 같은 기능. 데스크톱에서 확인 단계가 사라졌다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
 | `fixed-rate-protection.png` | 영어 재캡처 필요 |
-| `package-fixed-rate-setting.png` | 영어 재캡처 필요 |
+| `package-fixed-rate-setting.png` | 한국어 보존 — 상품 생성 단계가 3개(기본 정보/요금 정보/기간별 요금 설정)에서 2개(Basic information/Rate plan)로 줄었다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
 | `rate-period-settings.png` | 영어 재캡처 필요 |
 
 ## `en/release-notes/2026-01-14.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `image-17.png` | 영어 재캡처 필요 |
-| `image-12.png` | 영어 재캡처 필요 |
-| `image-11.png` | 영어 재캡처 필요 |
+| `image-17.png` | 한국어 보존 — 요금 조절 모달이 Rate adjustment 로 전면 개편됐다. 평균 요금·초기화/저장 대신 OCC 배지·Amount/Percent·객실 타입 그룹. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
+| `image-12.png` | 한국어 보존 — 판매 중지 확인 모달(개별 설정 유지)이 없다. 임시 변경 바로 바로 간다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
+| `image-11.png` | 한국어 보존 — 판매 재개 확인 모달도 같이 없어졌다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
 | `image-14.png` | 재현 불가 — VCMS 아고다 연동 로그인 화면인데 아고다 채널 연결 버튼을 눌러야 나온다. 운영에서 채널 연결은 안 누른다 |
 | `image-16.png` | 한국어 유지 — 크롬 브라우저 확장 프로그램 메뉴다. VCMS 화면이 아니다 |
 
@@ -448,8 +448,8 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `image-25.png` | 영어 재캡처 필요 |
-| `image-26.png` | 영어 재캡처 필요 |
+| `image-25.png` | 한국어 보존 — 그리드 행 구성이 바뀌었다. 전체/판매 완료 → Availability/Sold/Adjustment/Check-in/out. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
+| `image-26.png` | 한국어 보존 — 채널 상품 정보 수정 모달이 없다. 수수료·전송가는 채널 > 숙소 정보로 옮겼다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
 
 ## `en/release-notes/2026-02-27.mdx`
 
@@ -458,17 +458,17 @@
 | `image-27.png` | 영어 재캡처 필요 |
 | `image-29.png` | 영어 재캡처 필요 |
 | `image-30.png` | 영어 재캡처 필요 |
-| `image-28.png` | 영어 재캡처 필요 |
+| `image-28.png` | 재현 불가 — 잘린 업장 이름을 툴팁으로 펼친 사진이다. 그 이름이 바로 가려야 하는 정보라 영어로 다시 찍어도 쓸 수 없다 |
 
 ## `en/release-notes/2026-03-06.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `yanolja-channel-package-1.png` | 영어 재캡처 필요 |
-| `agoda-derived-1.png` | 영어 재캡처 필요 |
-| `agoda-channel-package-1.png` | 영어 재캡처 필요 |
-| `yeogi-channel-pacakge-1.png` | 영어 재캡처 필요 |
-| `no-property-connected-label.png` | 영어 재캡처 필요 |
+| `yanolja-channel-package-1.png` | 한국어 보존 — 채널 상품 정보 수정 모달이 없다(그리드 행·연필·링크·채널 상품 탭 다섯 경로 확인). 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
+| `agoda-derived-1.png` | 한국어 보존 — '이미 예약된 순 객실 박수' '예약 가능한 잔여 객실 박수' 행이 현재 그리드에 없다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
+| `agoda-channel-package-1.png` | 한국어 보존 — 같은 모달. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
+| `yeogi-channel-pacakge-1.png` | 한국어 보존 — 같은 모달. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
+| `no-property-connected-label.png` | 재현 불가 — '연결한 숙소 없음' 배지 상태를 만들 수 없다. VENDIT HOTEL 은 연결 0, 대구 아르코는 6채널 전부 숙소가 붙어 있다 |
 
 ## `en/release-notes/2026-03-16.mdx`
 
@@ -482,10 +482,10 @@
 | --- | --- |
 | `airbnb-7.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 | `expedia-7.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
-| `Banner-Agoda-Referral-1.png` | 영어 재캡처 필요 |
+| `Banner-Agoda-Referral-1.png` | 한국어 보존 — 아고다 입점 배너가 현재 빌드에 없다(채널·판매관리·숙박업소 목록 확인). 캠페인 배너라 내려간 것으로 본다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
 | `260423-Import-Channel-Pkg-1.png` | 영어 재캡처 필요 |
 | `260423-Channel-2.png` | 영어 재캡처 필요 |
-| `Update-Note-Subscription-1.png` | 영어 재캡처 필요 |
+| `Update-Note-Subscription-1.png` | 재현 불가 — 유료 구독 상태 화면이다. 쓸 수 있는 업장 둘 다 무료 체험이고 구독 버튼은 안 누른다 |
 
 ## `en/release-notes/2026-04-28.mdx`
 
@@ -497,7 +497,7 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `Yanolja-Hardblock-1.png` | 영어 재캡처 필요 |
+| `Yanolja-Hardblock-1.png` | 한국어 보존 — 예약 표가 전면 개편됐다. 매출액 합계·제휴점 예약번호·상세보기·페이지네이션이 없고 카드/목록 전환이 생겼다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
 
 ## `en/release-notes/2026-05-15.mdx`
 
@@ -523,7 +523,7 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `260617-Booking-Multiplier-Setting-2.png` | 영어 재캡처 필요 |
+| `260617-Booking-Multiplier-Setting-2.png` | 한국어 보존 — 상품 생성 모달과 예약 상세가 둘 다 바뀐 합성이다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
 | `260617-Booking-OTA-Example-2.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 | `260615-Rate-Setting.png` | 영어 재캡처 필요 |
 | `260615-Roomtype-Setting.png` | 영어 재캡처 필요 |
@@ -554,15 +554,15 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `260724-distribution-free-trial-subscribe-2.png` | 영어 재캡처 필요 |
-| `260724-distribution-free-trial-subscribe-1-1.png` | 영어 재캡처 필요 |
-| `260724-subscription-free-plan-subscribe-1-1.png` | 영어 재캡처 필요 |
-| `260724-subscription-free-plan-subscribe-2-1.png` | 영어 재캡처 필요 |
-| `260724-subscription-paid-plan-manage-1-1.png` | 영어 재캡처 필요 |
-| `260724-subscription-billing-date-change-1.png` | 영어 재캡처 필요 |
-| `260724-subscription-paid-plan-manage-3-1.png` | 영어 재캡처 필요 |
-| `260724-subscription-payment-history-1-1.png` | 영어 재캡처 필요 |
-| `260724-subscription-payment-history-2.png` | 영어 재캡처 필요 |
+| `260724-distribution-free-trial-subscribe-2.png` | 재현 불가 — 서비스 구독 모달이다. 구독 신청 버튼을 눌러야 나온다 |
+| `260724-distribution-free-trial-subscribe-1-1.png` | 한국어 보존 — 판매관리 우상단 '무료 체험' 버튼이 제목 옆 배지로 바뀌었다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
+| `260724-subscription-free-plan-subscribe-1-1.png` | 한국어 보존 — 구독 페이지 섹션이 기본 제공/이용 가능한 서비스 두 개에서 하나로 합쳐졌다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
+| `260724-subscription-free-plan-subscribe-2-1.png` | 재현 불가 — 구독 구성 선택 모달. 같은 이유 |
+| `260724-subscription-paid-plan-manage-1-1.png` | 재현 불가 — 유료 구독 상태가 필요하다 |
+| `260724-subscription-billing-date-change-1.png` | 재현 불가 — 결제일 변경 모달. 결제 버튼은 안 누른다 |
+| `260724-subscription-paid-plan-manage-3-1.png` | 재현 불가 — 구독 변경 모달. 같은 이유 |
+| `260724-subscription-payment-history-1-1.png` | 재현 불가 — 결제 내역이 있어야 한다. 두 업장 다 0건(2026-09-14 확인) |
+| `260724-subscription-payment-history-2.png` | 재현 불가 — 결제 상세 모달. 같은 이유 |
 
 ## `en/release-notes/2026-07-27.mdx`
 
