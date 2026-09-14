@@ -1,0 +1,204 @@
+{
+  "domainURL": "https://www.vcms.io/accommodations/ULID:47dc4cd2/inventories?date=2026-09-12",
+  "embeddedIn": [
+    "en/distributions/usage.mdx",
+    "en/faq/inventory-rate/daily-chek-in-out-time.mdx"
+  ],
+  "id": "cmtyd1bg70i80qme9d53qqrer",
+  "published": true,
+  "stepCount": 19,
+  "steps": [
+    {
+      "hotspots": [
+        {
+          "html": "ee29f4bd47c2",
+          "style": "Circle",
+          "text": "You can change check-in and check-out times on the date you want."
+        }
+      ],
+      "media": "9rN5okjd4Pzo_DdnvBb9M.jpg",
+      "n": 1
+    },
+    {
+      "hotspots": [
+        {
+          "html": "52ccc3548c9d",
+          "style": "Area",
+          "text": "Bulk update applies the same time to every channel package connected to that room type."
+        }
+      ],
+      "media": "QuJVVaGLr7Iykl7LHWigM.jpg",
+      "n": 2
+    },
+    {
+      "hotspots": [
+        {
+          "html": "6f3ee2216923",
+          "style": "Area",
+          "text": "Individual update sets the time for one package at a time."
+        }
+      ],
+      "media": "MoHJ-jihFLgXSD1qNbxfn.jpg",
+      "n": 3
+    },
+    {
+      "hotspots": [
+        {
+          "html": "fe7d28b910d2",
+          "style": "Circle",
+          "text": "Please select the time you would like to change."
+        }
+      ],
+      "media": "l1uhTR7qIIgAq6HobpB-p.jpg",
+      "n": 4
+    },
+    {
+      "hotspots": [
+        {
+          "html": "be25653e5055",
+          "style": "Area",
+          "text": "Pick the new check-in time from the list."
+        }
+      ],
+      "media": "EIdInGJqSORBhL4Wn5DhO.jpg",
+      "n": 5
+    },
+    {
+      "hotspots": [
+        {
+          "html": "9d916c078a75",
+          "style": "Area",
+          "text": "Press Save once you have finished changing the time."
+        }
+      ],
+      "media": "adROpAXFDZcA-mQUnUKup.jpg",
+      "n": 6
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Circle",
+          "text": "Press the save button to apply the changed check-in/check-out times."
+        }
+      ],
+      "media": "u9ehgMihhd5Q6muMB2Ryn.jpg",
+      "n": 7
+    },
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 8
+    },
+    {
+      "hotspots": [
+        {
+          "html": "4a376296025e",
+          "style": "Circle",
+          "text": "Before you pick a time between 01:00 and 09:00, check the Yanolja note."
+        }
+      ],
+      "media": "be5uByD0wj4cPgRNSr9rz.jpg",
+      "n": 9
+    },
+    {
+      "hotspots": [
+        {
+          "html": "fe7d28b910d2",
+          "style": "Circle",
+          "text": "Open the check-in time list again."
+        }
+      ],
+      "media": "llxkCGU6_Gnpp0rqhdNnM.jpg",
+      "n": 10
+    },
+    {
+      "hotspots": [
+        {
+          "html": "b10d514eedf8",
+          "style": "Area",
+          "text": "Select a time between 01:00 and 09:00."
+        }
+      ],
+      "media": "iNpOSujZlnCsbt5WQRIYR.jpg",
+      "n": 11
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Circle",
+          "text": "If you have linked a Yanolja motel, hotel, or guest house, a time between 01:00 and 09:00 is applied as 10:00."
+        }
+      ],
+      "media": "2bwcJkzu0TlqxtMUSRx_n.jpg",
+      "n": 12
+    },
+    {
+      "hotspots": [
+        {
+          "html": "2db539265a6c",
+          "style": "Area",
+          "text": "Incorrect time settings can be reverted to the previous value."
+        }
+      ],
+      "media": "c2MPq42TsqIgakEiZJcdP.jpg",
+      "n": 13
+    },
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 14
+    },
+    {
+      "hotspots": [
+        {
+          "html": "7f7afdb679ba",
+          "style": "Circle",
+          "text": "Please press the settings button."
+        }
+      ],
+      "media": "6lcUredxh5rCHaQgdkqhG.jpg",
+      "n": 15
+    },
+    {
+      "hotspots": [],
+      "media": "62Sz1GdaNfWV_arMde9v6.mp4",
+      "n": 16
+    },
+    {
+      "hotspots": [
+        {
+          "html": "6718b4bf4f8b",
+          "style": "Circle",
+          "text": "Hide the check-in and check-out times."
+        }
+      ],
+      "media": "x4WQRuKtn-BX1alYPno0U.jpg",
+      "n": 17
+    },
+    {
+      "hotspots": [
+        {
+          "html": "59746a77e137",
+          "style": "Area",
+          "text": "Please press the save button."
+        }
+      ],
+      "media": "c53YIT0TEhCyRfooC_5TW.jpg",
+      "n": 18
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Circle",
+          "text": "The check-in and check-out time rows are now hidden."
+        }
+      ],
+      "media": "OwqLKIE1-Gmt0KGQgCXPL.jpg",
+      "n": 19
+    }
+  ],
+  "title": "Change of check-in/check-out times"
+}

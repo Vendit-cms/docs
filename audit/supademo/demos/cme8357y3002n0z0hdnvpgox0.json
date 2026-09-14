@@ -1,0 +1,150 @@
+{
+  "domainURL": "",
+  "embeddedIn": [
+    "en/faq/integrations/vcloud.mdx",
+    "ko/faq/integrations/vcloud.mdx"
+  ],
+  "id": "cme8357y3002n0z0hdnvpgox0",
+  "published": true,
+  "stepCount": 13,
+  "steps": [
+    {
+      "hotspots": [
+        {
+          "html": "7c8154c38add",
+          "style": "Circle",
+          "text": "좌측 네비게이션 바에서 설정 > 연동서비스를 선택해 주세요."
+        }
+      ],
+      "media": "BWtANs4iUR8dDLWSw_1PO.jpg",
+      "n": 1
+    },
+    {
+      "hotspots": [
+        {
+          "html": "52ccc3548c9d",
+          "style": "Circle",
+          "text": "연동 버튼을 눌러주세요."
+        }
+      ],
+      "media": "z9BRobt0kQL0iyjNthDAW.jpg",
+      "n": 2
+    },
+    {
+      "hotspots": [
+        {
+          "html": "6c21a49fc04e",
+          "style": "Circle",
+          "text": "연결할 VCLOUD 숙박업소로 이동해 주세요."
+        }
+      ],
+      "media": "_ZZcwM71J12gmbpb8Gpdd.jpg",
+      "n": 3
+    },
+    {
+      "hotspots": [
+        {
+          "html": "ff486a22fc4b",
+          "style": "Circle",
+          "text": "설정 버튼을 눌러주세요."
+        }
+      ],
+      "media": "kpIm2_yCsV8vH7ksmul_D.jpg",
+      "n": 4
+    },
+    {
+      "hotspots": [
+        {
+          "html": "250c1e0f536d",
+          "style": "Circle",
+          "text": "서비스 연동 메뉴를 선택해 주세요."
+        }
+      ],
+      "media": "KiV6WIYoGf7CjyyoY7VAk.jpg",
+      "n": 5
+    },
+    {
+      "hotspots": [
+        {
+          "html": "ef1374ddf611",
+          "style": "Circle",
+          "text": "VCMS 서비스가 연동됨인지 확인해 주세요. 연동이 되어있지 않은 경우, 연동하기 버튼을 눌러 연동 설정을 완료해 주세요. 해당 설정은 VCLOUD 정보에 접근을 위함입니다."
+        }
+      ],
+      "media": "2exYXYPgGRe222MUcLZ7v.jpg",
+      "n": 6
+    },
+    {
+      "hotspots": [
+        {
+          "html": "12bc0944c5d5",
+          "style": "Circle",
+          "text": "VCLOUD 숙박업소 ID를 복사해서 입력해 주세요."
+        }
+      ],
+      "media": "l3dwNVhhpHCdbvYKNRGTx.jpg",
+      "n": 7
+    },
+    {
+      "hotspots": [],
+      "media": "8-QNl8Vb5HH5j9Q1rd01M.mp4",
+      "n": 8
+    },
+    {
+      "hotspots": [
+        {
+          "html": "6f3ee2216923",
+          "style": "Circle",
+          "text": "연동 버튼을 눌러주시면, 연동 설정으로 이동합니다."
+        }
+      ],
+      "media": "ZGs6l0U7Nd3W_rf9YzQD6.jpg",
+      "n": 9
+    },
+    {
+      "hotspots": [
+        {
+          "html": "8f20f00a7065",
+          "style": "Circle",
+          "text": "VCMS 객실 타입과 연결할 VCLOUD 객실 타입을 연결해 주세요."
+        }
+      ],
+      "media": "SzD9VHHRGz7A1Ayuiptd4.jpg",
+      "n": 10
+    },
+    {
+      "hotspots": [
+        {
+          "html": "2db682beb4ee",
+          "style": "Circle",
+          "text": "객실 타입 연결이 완료되면 매핑 저장 버튼을 눌러주세요."
+        }
+      ],
+      "media": "bXpgigyqM1C5GcyUrvaLE.jpg",
+      "n": 11
+    },
+    {
+      "hotspots": [
+        {
+          "html": "7641601fb7dc",
+          "style": "Area",
+          "text": "VCLOUD에 존재하지만 VCMS에는 없는 예약 정보를 연동할 수 있습니다."
+        }
+      ],
+      "media": "5dQzTL6b5sStWge5A0h53.jpg",
+      "n": 12
+    },
+    {
+      "hotspots": [
+        {
+          "html": "f62f72dda3c0",
+          "style": "Circle",
+          "text": "선택한 예약을 동기화하면, VCMS 연동서비스 예약을 생성할 수 있어요."
+        }
+      ],
+      "media": "_PlRBTbMq_JokrF0B5hvU.jpg",
+      "n": 13
+    }
+  ],
+  "title": "연동서비스 연결 방법"
+}

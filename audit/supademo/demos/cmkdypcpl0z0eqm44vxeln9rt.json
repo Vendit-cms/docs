@@ -1,0 +1,40 @@
+{
+  "domainURL": "https://www.vcms.io/accommodations/ULID:b66f3227/bookings",
+  "embeddedIn": [
+    "en/release-notes/2026-01-14.mdx",
+    "ko/release-notes/2026-01-14.mdx"
+  ],
+  "id": "cmkdypcpl0z0eqm44vxeln9rt",
+  "published": true,
+  "stepCount": 3,
+  "steps": [
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 1
+    },
+    {
+      "hotspots": [
+        {
+          "html": "5ae26554863d",
+          "style": "Circle",
+          "text": "예약 내역에서 \"CSV 다운로드\" 버튼을 눌러주세요."
+        }
+      ],
+      "media": "_4FILkIc3gKqnUSnLe27d.jpg",
+      "n": 2
+    },
+    {
+      "hotspots": [
+        {
+          "html": "52ccc3548c9d",
+          "style": "Circle",
+          "text": "\"다운로드\" 버튼을 눌러 날짜 기간에 맞는 예약 내역을 CSV 파일로 다운로드할 수 있습니다."
+        }
+      ],
+      "media": "u4v-PKOgVaOBBSEhIvs_T.jpg",
+      "n": 3
+    }
+  ],
+  "title": "VCMS 예약내역 다운로드"
+}

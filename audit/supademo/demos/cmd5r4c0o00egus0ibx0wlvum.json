@@ -1,0 +1,49 @@
+{
+  "domainURL": "https://development.vcms.io/accommodations/ULID:268fc673/inventories",
+  "embeddedIn": [
+    "ko/distributions/usage.mdx"
+  ],
+  "id": "cmd5r4c0o00egus0ibx0wlvum",
+  "published": true,
+  "stepCount": 5,
+  "steps": [
+    {
+      "hotspots": [],
+      "media": "video.m3u8",
+      "n": 1
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Circle",
+          "text": "끌어서 잔여 재고를 한번에 변경해 보세요!"
+        }
+      ],
+      "media": "aUC4Pr6qa2awX7ZduXGRw.jpg",
+      "n": 2
+    },
+    {
+      "hotspots": [],
+      "media": "video.m3u8",
+      "n": 3
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Circle",
+          "text": "저장을 눌러 변경 사항을\n채널에 적용해 주세요."
+        }
+      ],
+      "media": "T1_mSTF7Z4vfxjSqrNMzC.jpg",
+      "n": 4
+    },
+    {
+      "hotspots": [],
+      "media": "video.m3u8",
+      "n": 5
+    }
+  ],
+  "title": "VCMS 잔여 재고 변경"
+}

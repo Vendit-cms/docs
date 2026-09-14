@@ -1,0 +1,138 @@
+{
+  "domainURL": "https://apps.expediapartnercentral.com/supply/home?htid=127840544",
+  "embeddedIn": [
+    "en/channels/expedia.mdx",
+    "ko/channels/expedia.mdx"
+  ],
+  "id": "cmtmbyzmu0clbqmh5qu1b8n5l",
+  "published": true,
+  "stepCount": 13,
+  "steps": [
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 1
+    },
+    {
+      "hotspots": [
+        {
+          "html": "0d0ef2eea930",
+          "style": "Area",
+          "text": "객실 및 요금 메뉴를 선택해 주세요."
+        }
+      ],
+      "media": "uj-hIi5YFAz9H9RjAkFKB.jpg",
+      "n": 2
+    },
+    {
+      "hotspots": [
+        {
+          "html": "0cdfe7c77d1f",
+          "style": "Circle",
+          "text": "요금 및 제한 사항 대량 업데이트 메뉴를 눌러주세요."
+        }
+      ],
+      "media": "dXFRQhf6c_RdIXoQQ0YJr.jpg",
+      "n": 3
+    },
+    {
+      "hotspots": [
+        {
+          "html": "086788f29221",
+          "style": "Area",
+          "text": "적용할 날짜의 시작일을 선택해 주세요."
+        }
+      ],
+      "media": "4APmFJ6LbfAENgVxxnYw8.jpg",
+      "n": 4
+    },
+    {
+      "hotspots": [
+        {
+          "html": "f5e8a23fc96e",
+          "style": "Area",
+          "text": "적용할 날짜의 종료일을 선택해 주세요."
+        }
+      ],
+      "media": "hbmoq0MKeqRVlXUxZ49rz.jpg",
+      "n": 5
+    },
+    {
+      "hotspots": [
+        {
+          "html": "29854c3fab32",
+          "style": "Area",
+          "text": "달력에 추가 버튼을 눌러주세요."
+        }
+      ],
+      "media": "xMO9uTKESBFPRFVlVVTMR.jpg",
+      "n": 6
+    },
+    {
+      "hotspots": [
+        {
+          "html": "d569ac7fe917",
+          "style": "Area",
+          "text": "다음 섹션 버튼을 눌러주세요."
+        }
+      ],
+      "media": "gXww6Vz4XoCNz7KiP1HDw.jpg",
+      "n": 7
+    },
+    {
+      "hotspots": [
+        {
+          "html": "0febdef73404",
+          "style": "Area",
+          "text": "적용할 요금제를 선택해 주세요."
+        }
+      ],
+      "media": "suGe-CMSSWI2NOknXFz1d.jpg",
+      "n": 8
+    },
+    {
+      "hotspots": [],
+      "media": "CcOMNLepi5A1z4bchSnKe.mp4",
+      "n": 9
+    },
+    {
+      "hotspots": [
+        {
+          "html": "b3cbc4e02cb0",
+          "style": "Area",
+          "text": "다음 섹션을 눌러주세요."
+        }
+      ],
+      "media": "4_YkZAvfR1s00ePu5cH-K.jpg",
+      "n": 10
+    },
+    {
+      "hotspots": [
+        {
+          "html": "f7b5b94a212c",
+          "style": "Area",
+          "text": "업데이트할 정보를 선택하고 요금을 입력해 주세요."
+        }
+      ],
+      "media": "IGywjsskTIVblCqo97cHg.jpg",
+      "n": 11
+    },
+    {
+      "hotspots": [
+        {
+          "html": "a0a1d2cbe51f",
+          "style": "Area",
+          "text": "업데이트 미리보기 눌러 변경되는 정보를 확인하고 적용 여부를 결정해 주세요."
+        }
+      ],
+      "media": "jjScWgzgunKxLEULl_6gz.jpg",
+      "n": 12
+    },
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 13
+    }
+  ],
+  "title": "익스피디아, 요금 및 제한 사항 대량 업데이트"
+}

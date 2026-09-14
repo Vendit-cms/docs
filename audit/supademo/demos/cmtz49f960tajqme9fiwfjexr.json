@@ -1,0 +1,83 @@
+{
+  "domainURL": "https://www.vcms.io/accommodations/ULID:47dc4cd2/inventories?date=2026-09-13",
+  "embeddedIn": [
+    "en/distributions/usage.mdx"
+  ],
+  "id": "cmtz49f960tajqme9fiwfjexr",
+  "published": true,
+  "stepCount": 7,
+  "steps": [
+    {
+      "hotspots": [
+        {
+          "html": "70075bd37ae9",
+          "style": "Area",
+          "text": "Click the package rate area on the date you want."
+        }
+      ],
+      "media": "RjizXprVodO1IDGWv7TTg.jpg",
+      "n": 1
+    },
+    {
+      "hotspots": [
+        {
+          "html": "75066183a061",
+          "style": "Circle",
+          "text": "Please select a surcharge/discount method."
+        }
+      ],
+      "media": "ufxAHfLIz7NdfFe9XIHeo.jpg",
+      "n": 2
+    },
+    {
+      "hotspots": [
+        {
+          "html": "f206f502d1d0",
+          "style": "Area",
+          "text": "Adjust by percent raises or lowers the package rate by a set percentage."
+        }
+      ],
+      "media": "iWVCz8DL9-2kigck8AKGN.jpg",
+      "n": 3
+    },
+    {
+      "hotspots": [
+        {
+          "html": "52ccc3548c9d",
+          "style": "Area",
+          "text": "You can adjust it by ratio, and then further adjust it by amount if necessary."
+        }
+      ],
+      "media": "01PdjVQYcTuw0ig9mHFTy.jpg",
+      "n": 4
+    },
+    {
+      "hotspots": [],
+      "media": "nIuo_CiAGDrheKKSiXgsP.mp4",
+      "n": 5
+    },
+    {
+      "hotspots": [
+        {
+          "html": "6f3ee2216923",
+          "style": "Area",
+          "text": "You see the final price before it applies. Press Save to keep it as a draft."
+        }
+      ],
+      "media": "Wc4zwpdREAX92XuRpT051.jpg",
+      "n": 6
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Circle",
+          "text": "Please save to apply the changes to the channel."
+        }
+      ],
+      "media": "aMbn7IzN5dlHO6L4tBU82.jpg",
+      "n": 7
+    }
+  ],
+  "title": "Changing a rate"
+}

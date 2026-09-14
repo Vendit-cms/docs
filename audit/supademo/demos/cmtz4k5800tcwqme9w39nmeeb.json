@@ -1,0 +1,78 @@
+{
+  "domainURL": "https://www.vcms.io/accommodations/ULID:47dc4cd2/setting/roomTypes",
+  "embeddedIn": [
+    "en/faq/inventory-rate/move-room-to-other-type.mdx"
+  ],
+  "id": "cmtz4k5800tcwqme9w39nmeeb",
+  "published": true,
+  "stepCount": 6,
+  "steps": [
+    {
+      "hotspots": [
+        {
+          "html": "8f5cce578708",
+          "style": "Circle",
+          "text": "Open the room type you want to move rooms out of."
+        }
+      ],
+      "media": "lQEnjLIlGbC8N6wF3KnFu.jpg",
+      "n": 1
+    },
+    {
+      "hotspots": [
+        {
+          "html": "bd33abe8fdc5",
+          "style": "Circle",
+          "text": "Please press the X button to reduce the number of rooms."
+        }
+      ],
+      "media": "uCJMZQQCSDSDas6E0FAQn.jpg",
+      "n": 2
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Circle",
+          "text": "Pressing the save button reduces the number of rooms of that room type. You can move that many rooms into other room types."
+        }
+      ],
+      "media": "dm6PS63-ExkTDFu29zuMo.jpg",
+      "n": 3
+    },
+    {
+      "hotspots": [
+        {
+          "html": "f37f4e946773",
+          "style": "Area",
+          "text": "Please select the room type to add."
+        }
+      ],
+      "media": "pMH9-iLpcfQogvmYq5lZk.jpg",
+      "n": 4
+    },
+    {
+      "hotspots": [
+        {
+          "html": "42531b14f64c",
+          "style": "Area",
+          "text": "You can add as many rooms as you want. If the total number of rooms currently paid for is exceeded, additional payment is required."
+        }
+      ],
+      "media": "L5vnNQGS7M_WT1Ai6rXsi.jpg",
+      "n": 5
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Circle",
+          "text": "Once you have finished adding the room, please press the save button."
+        }
+      ],
+      "media": "R2fU0UgfYKSejbzSbHIKM.jpg",
+      "n": 6
+    }
+  ],
+  "title": "Moving a room to another room type"
+}

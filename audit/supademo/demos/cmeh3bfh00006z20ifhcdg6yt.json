@@ -1,0 +1,226 @@
+{
+  "domainURL": "",
+  "embeddedIn": [
+    "ko/distributions/usage.mdx",
+    "ko/faq/inventory-rate/daily-chek-in-out-time.mdx"
+  ],
+  "id": "cmeh3bfh00006z20ifhcdg6yt",
+  "published": true,
+  "stepCount": 21,
+  "steps": [
+    {
+      "hotspots": [
+        {
+          "html": "c3eb475787ef",
+          "style": "Circle",
+          "text": "원하는 일자의 입/퇴실 시간을 상품 단위로 **개별 변경**할 수 있어요."
+        }
+      ],
+      "media": "-WCW-vmh5Avjl43F0R9ob.jpg",
+      "n": 1
+    },
+    {
+      "hotspots": [
+        {
+          "html": "b2603c6e6947",
+          "style": "Circle",
+          "text": "원하는 상품에 연결된 채널 상품의 입/퇴실 시간을 한번에 변경할 수 있어요."
+        }
+      ],
+      "media": "8yfIEAp8NJZm4LydtMrF1.jpg",
+      "n": 2
+    },
+    {
+      "hotspots": [
+        {
+          "html": "026187ffc02a",
+          "style": "Circle",
+          "text": "변경을 원하는 시간을 선택해 주세요."
+        }
+      ],
+      "media": "mDGKf5I4aZXWUo0LWzwLg.jpg",
+      "n": 3
+    },
+    {
+      "hotspots": [
+        {
+          "html": "52ccc3548c9d",
+          "style": "Circle",
+          "text": "시간 변경이 끝나면 임시 저장 버튼을 눌러 주세요."
+        }
+      ],
+      "media": "GRnEJu4x9Jno7JwttdtlI.jpg",
+      "n": 4
+    },
+    {
+      "hotspots": [
+        {
+          "html": "67200c036406",
+          "style": "Circle",
+          "text": "원하는 일자의 입/퇴실 시간을 상품 단위로 **일괄 변경**할 수 있어요."
+        }
+      ],
+      "media": "khlNmqxqOGPe3EMOKyzLW.jpg",
+      "n": 5
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e1c392c59131",
+          "style": "Area",
+          "text": "일괄 변경을 선택해 주세요."
+        }
+      ],
+      "media": "WcdTGnccr1X8YJmphEMdS.jpg",
+      "n": 6
+    },
+    {
+      "hotspots": [
+        {
+          "html": "1b888bb9b05f",
+          "style": "Circle",
+          "text": "입/퇴실 시간을 변경하면 모든 상품에 일괄 적용돼요."
+        }
+      ],
+      "media": "mZEsUcUqegPdryMKq4QEJ.jpg",
+      "n": 7
+    },
+    {
+      "hotspots": [
+        {
+          "html": "bfc84f2fe530",
+          "style": "Circle",
+          "text": "변경을 원하는 시간을 선택해 주세요."
+        }
+      ],
+      "media": "KcKHUnay36i1FeeDaGSbf.jpg",
+      "n": 8
+    },
+    {
+      "hotspots": [
+        {
+          "html": "6f3ee2216923",
+          "style": "Circle",
+          "text": "시간 변경이 끝나면 임시 저장 버튼을 눌러 주세요."
+        }
+      ],
+      "media": "vaoFxrwOKhGHD6CNl-CGG.jpg",
+      "n": 9
+    },
+    {
+      "hotspots": [
+        {
+          "html": "9d916c078a75",
+          "style": "Circle",
+          "text": "저장 버튼을 누르면 변경된 입/퇴실 시간이 적용됩니다."
+        }
+      ],
+      "media": "Q5PSW-ohkuzlZgHeBtO3B.jpg",
+      "n": 10
+    },
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 11
+    },
+    {
+      "hotspots": [
+        {
+          "html": "6129e2cacf60",
+          "style": "Circle",
+          "text": "입/퇴실 시간을 01:00 - 09:00 사이를 선택할 경우, 야놀자 주의사항을 확인하실 수 있어요."
+        }
+      ],
+      "media": "Ah5fiyiN3lruWsdMYwuTK.jpg",
+      "n": 12
+    },
+    {
+      "hotspots": [
+        {
+          "html": "5d89faa893e6",
+          "style": "Area",
+          "text": "야놀자 모텔, 호텔, 게스트하우스를 연동하고 계신 경우, 01:00 - 09:00 선택 시 입/퇴실 시간은 10:00 로 적용됩니다."
+        }
+      ],
+      "media": "pWNsuOBazD-pGQ8Mli9J8.jpg",
+      "n": 13
+    },
+    {
+      "hotspots": [
+        {
+          "html": "2db539265a6c",
+          "style": "Circle",
+          "text": "잘못된 시간 설정은 변경 전 값으로 되돌리기 할 수 있어요!"
+        }
+      ],
+      "media": "MSvdA0kneWbxhNxlaJ2N8.jpg",
+      "n": 14
+    },
+    {
+      "hotspots": [
+        {
+          "html": "59746a77e137",
+          "style": "Circle",
+          "text": "저장 버튼을 누를 경우, 시간이 01:00 변경됩니다. (단, 야놀자는 10:00 적용)"
+        }
+      ],
+      "media": "pikOFtsV6ieYK1smCCaFC.jpg",
+      "n": 15
+    },
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 16
+    },
+    {
+      "hotspots": [
+        {
+          "html": "1c4feac7c2dc",
+          "style": "Circle",
+          "text": "설정 버튼을 눌러주세요."
+        }
+      ],
+      "media": "edAFGVDuNS3JJxQv_zb-3.jpg",
+      "n": 17
+    },
+    {
+      "hotspots": [
+        {
+          "html": "756f6bdb5f34",
+          "style": "Circle",
+          "text": "입/퇴실 시간을 숨김 처리해 주세요."
+        }
+      ],
+      "media": "59LyhMbO8WqP_NHD57T27.jpg",
+      "n": 18
+    },
+    {
+      "hotspots": [
+        {
+          "html": "1f67972ce8b9",
+          "style": "Circle",
+          "text": "저장 버튼을 눌러 주세요."
+        }
+      ],
+      "media": "ObOyxBD3gbKdIBMHy7mXw.jpg",
+      "n": 19
+    },
+    {
+      "hotspots": [
+        {
+          "html": "1c4feac7c2dc",
+          "style": "Circle",
+          "text": "입/퇴실 시간 설정 화면이 숨김처리 된 것을 확인하실 수 있어요."
+        }
+      ],
+      "media": "vNM5Uek1QjhI7BqrpC15S.jpg",
+      "n": 20
+    },
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 21
+    }
+  ],
+  "title": "입/퇴실 시간 변경"
+}

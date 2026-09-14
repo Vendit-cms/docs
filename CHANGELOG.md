@@ -1,6 +1,8 @@
 # CHANGELOG
 
 ## 2026-09-15
+- 문서에 임베드된 Supademo 데모 23 편 스냅샷, git diff 가 변경 이력이 된다 (scripts/supademo_audit.py)
+- 스냅샷 첫 기록 (audit/supademo/)
 - 배포된 예약 목록 캡처에서 투숙객 이름 가림 (images/en-booking-status-filter.png)
 - 예약 목록 Guest name 열을 통째로 가리는 규칙 추가 - 로마자 이름은 기존 규칙에 안 걸렸다 (scripts/capture_redacted.py)
 
