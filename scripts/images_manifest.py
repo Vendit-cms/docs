@@ -57,12 +57,57 @@ BLOCKED = {
     "integration-vcloud-4.png": "찍을 필요 없음. VCLOUD 는 점주가 설정 못 하게 막아둔 게 의도다(Dean, 2026-09-12)",
     "notification.png": "채널 상품 알림이 있어야 한다. VENDIT HOTEL 은 알림 0건이고, dev 는 여는 순간 읽음 처리될 수 있어서 안 열었다(2026-09-12)",
     "yanolja-system-error-modal-1.png": "야놀자 장애 때만 뜨는 모달이라 재현 불가",
+    "liveanywhere-min-nights-2.png": "최소 박수 개념을 설명하려고 그린 월 달력 도해다. VCMS 화면 캡처가 아니라 디자인 작업이다",
+    "260609-Booking.png": "데스크톱 예약 상세와 폰 프레임을 나란히 얹은 합성이다. 화면 하나가 아니다",
+    "image-14.png": "VCMS 아고다 연동 로그인 화면인데 아고다 채널 연결 버튼을 눌러야 나온다. 운영에서 채널 연결은 안 누른다",
+    "image-28.png": "잘린 업장 이름을 툴팁으로 펼친 사진이다. 그 이름이 바로 가려야 하는 정보라 영어로 다시 찍어도 쓸 수 없다",
+    "no-property-connected-label.png": "'연결한 숙소 없음' 배지 상태를 만들 수 없다. VENDIT HOTEL 은 연결 0, 대구 아르코는 6채널 전부 숙소가 붙어 있다",
+    "Update-Note-Subscription-1.png": "유료 구독 상태 화면이다. 쓸 수 있는 업장 둘 다 무료 체험이고 구독 버튼은 안 누른다",
+    "260724-distribution-free-trial-subscribe-2.png": "서비스 구독 모달이다. 구독 신청 버튼을 눌러야 나온다",
+    "260724-subscription-free-plan-subscribe-2-1.png": "구독 구성 선택 모달. 같은 이유",
+    "260724-subscription-paid-plan-manage-1-1.png": "유료 구독 상태가 필요하다",
+    "260724-subscription-billing-date-change-1.png": "결제일 변경 모달. 결제 버튼은 안 누른다",
+    "260724-subscription-paid-plan-manage-3-1.png": "구독 변경 모달. 같은 이유",
+    "260724-subscription-payment-history-1-1.png": "결제 내역이 있어야 한다. 두 업장 다 0건(2026-09-14 확인)",
+    "260724-subscription-payment-history-2.png": "결제 상세 모달. 같은 이유",
     "faq-no-history.png": "수집 시점에 이미 취소된 예약이 있어야 한다. VENDIT HOTEL 기본 조회 기간 Canceled 0건(2026-09-11)",
+}
+
+# 2026-09-14 대조 결과. 현재 빌드와 화면이 달라서 지금 다시 찍으면 그 릴리즈가 실제로
+# 어떻게 생겼는지가 사라진다. Dean 결정: 과거 사진을 히스토리로 보존한다.
+PRESERVE = {
+    "change-scope-desktop.png": "현재 빌드는 상위 토글을 켜면 하위로 바로 내려간다. '하위 변경 항목' 팝오버가 없다",
+    "change-scope-mobile.png": "같은 기능. 데스크톱에서 확인 단계가 사라졌다",
+    "image-12.png": "판매 중지 확인 모달(개별 설정 유지)이 없다. 임시 변경 바로 바로 간다",
+    "image-11.png": "판매 재개 확인 모달도 같이 없어졌다",
+    "image-17.png": "요금 조절 모달이 Rate adjustment 로 전면 개편됐다. 평균 요금·초기화/저장 대신 OCC 배지·Amount/Percent·객실 타입 그룹",
+    "image-25.png": "그리드 행 구성이 바뀌었다. 전체/판매 완료 → Availability/Sold/Adjustment/Check-in/out",
+    "image-26.png": "채널 상품 정보 수정 모달이 없다. 수수료·전송가는 채널 > 숙소 정보로 옮겼다",
+    "agoda-derived-1.png": "'이미 예약된 순 객실 박수' '예약 가능한 잔여 객실 박수' 행이 현재 그리드에 없다",
+    "yanolja-channel-package-1.png": "채널 상품 정보 수정 모달이 없다(그리드 행·연필·링크·채널 상품 탭 다섯 경로 확인)",
+    "agoda-channel-package-1.png": "같은 모달",
+    "yeogi-channel-pacakge-1.png": "같은 모달",
+    "Yanolja-Hardblock-1.png": "예약 표가 전면 개편됐다. 매출액 합계·제휴점 예약번호·상세보기·페이지네이션이 없고 카드/목록 전환이 생겼다",
+    "package-fixed-rate-setting.png": "상품 생성 단계가 3개(기본 정보/요금 정보/기간별 요금 설정)에서 2개(Basic information/Rate plan)로 줄었다",
+    "260617-Booking-Multiplier-Setting-2.png": "상품 생성 모달과 예약 상세가 둘 다 바뀐 합성이다",
+    "Banner-Agoda-Referral-1.png": "아고다 입점 배너가 현재 빌드에 없다(채널·판매관리·숙박업소 목록 확인). 캠페인 배너라 내려간 것으로 본다",
+    "260724-distribution-free-trial-subscribe-1-1.png": "판매관리 우상단 '무료 체험' 버튼이 제목 옆 배지로 바뀌었다",
+    "260724-subscription-free-plan-subscribe-1-1.png": "구독 페이지 섹션이 기본 제공/이용 가능한 서비스 두 개에서 하나로 합쳐졌다",
+}
+
+# 릴리즈노트 본문에 박힌 채널 로고. images/ 루트에 있어서 channels/ 접두사 규칙에 안 걸린다.
+CHANNEL_LOGOS = {
+    "camfit.png", "Camperest-1.png", "banlife-stay.png", "liveanywhere-2.png",
+}
+
+# 릴리즈노트 안의 채널사 화면. 파일명만으로는 CHANNEL 정규식에 안 걸린다.
+CHANNEL_SCREEN = {
+    "260617-Booking-OTA-Example-2.png",
 }
 
 # 크롬 브라우저 자체 UI. VCMS 화면이 아니라 확장 프로그램 메뉴다.
 BROWSER_UI = {
-    "chrome-extension.png", "chrome-extension-1.png",
+    "chrome-extension.png", "chrome-extension-1.png", "image-16.png",
 }
 
 # 찍을 수는 있는데 Dean 이 정해야 하는 것.
@@ -94,14 +139,16 @@ def scan():
 def status(name, page):
     if name.startswith("en-"):
         return "영어 캡처 완료"
-    if name.startswith("channels/"):
+    if name.startswith("channels/") or name in CHANNEL_LOGOS:
         return "채널 로고 (언어 무관)"
-    # BLOCKED 를 릴리즈노트 규칙보다 먼저 본다. 안 그러면 못 찍는 이유가
-    # "Dean 결정" 으로 덮여서 왜 안 됐는지 기록이 사라진다.
+    # 릴리즈노트 규칙이 여기 있었다. 그 자리에 있으면 뒤의 채널/로고/브라우저 판정이
+    # 전부 "Dean 결정" 으로 덮여서, 범위 밖인 사진과 아직 안 찍은 사진이 한 칸에 섞였다.
+    # 2026-09-09 결정은 Dean 이 "업데이트쪽도 수정가능한부분은 사진 교체" 로 뒤집었다(2026-09-13).
     if name in BLOCKED:
         return f"재현 불가 — {BLOCKED[name]}"
-    if "/release-notes/" in page:
-        return "한국어 재사용 (Dean 결정, 2026-09-09)"
+    if name in PRESERVE:
+        return (f"한국어 보존 — {PRESERVE[name]}. "
+                "지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14)")
     if name in NEEDS_DEAN:
         return f"Dean 확인 필요 — {NEEDS_DEAN[name]}"
     if name in CHANNEL_CONNECTED:
@@ -111,8 +158,8 @@ def status(name, page):
         return "영어 재캡처 필요"
     if name in BROWSER_UI:
         return "한국어 유지 — 크롬 브라우저 확장 프로그램 메뉴다. VCMS 화면이 아니다"
-    if CHANNEL.search(name) or "/channels/" in page or "/faq/issue/" in page \
-            or CHANNEL_PAGE.search(os.path.basename(page)):
+    if name in CHANNEL_SCREEN or CHANNEL.search(name) or "/channels/" in page \
+            or "/faq/issue/" in page or CHANNEL_PAGE.search(os.path.basename(page)):
         return ("한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. "
                 "본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13)")
     return "영어 재캡처 필요"
@@ -137,7 +184,7 @@ def main():
         for n in names:
             st = status(n, page)
             total += 1
-            if st.startswith(("영어 캡처 완료", "한국어 재사용", "한국어 유지 —", "채널 로고")):
+            if st.startswith(("영어 캡처 완료", "한국어 유지 —", "한국어 보존 —", "채널 로고")):
                 done += 1
             body.append(f"| `{n}` | {st} |")
         body.append("")
