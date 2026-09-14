@@ -5,7 +5,7 @@
 `en-` 로 시작하는 파일은 영어 UI 에서 새로 찍은 것이다. 나머지는 한국어 원본을 그대로 쓴다.
 `images/` 는 한국어 문서와 공유하므로 원본을 덮으면 한국어까지 바뀐다. 그래서 새 파일로 넣는다.
 
-참조 274건 중 254건 정리 완료, 20건 남음.
+참조 274건 중 248건 정리 완료, 26건 남음.
 
 ## `en/accommodation/create-accommodation.mdx`
 
@@ -504,13 +504,13 @@
 | 이미지 | 상태 |
 | --- | --- |
 | `en-distribution-channel-disconnected.png` | 영어 캡처 완료 |
-| `260515-High-Price.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260515-Roomtype-Max-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260515-Mobile-Channel.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260515-Mobile-Channel-Mapping.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260515-Billing.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260515-Billing-Cancel.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260515-Language.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `260515-High-Price.png` | 재현 불가 — 1억 넘는 요금이 설정된 상품이 있어야 한다. 임시 변경으로 만들면 그리드가 +130,00... 으로 잘린다. 억 축약은 셀 폭 때문에 있는 것이다 |
+| `en-260515-roomtype-max.png` | 영어 캡처 완료 |
+| `260515-Mobile-Channel.png` | 재현 불가 — 폰 프레임에 스크린샷 3장을 얹은 합성이다. 화면 하나가 아니라 디자인 작업이다 |
+| `260515-Mobile-Channel-Mapping.png` | 재현 불가 — 같은 합성. 폰 프레임 3장 |
+| `en-260515-subscription.png` | 영어 캡처 완료 |
+| `260515-Billing-Cancel.png` | 재현 불가 — 구독 취소 버튼을 눌러야 나온다. 구독/결제 버튼은 안 누른다 |
+| `en-260515-language.png` | 영어 캡처 완료 |
 
 ## `en/release-notes/2026-06-09.mdx`
 
@@ -547,8 +547,8 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `260707-Inventory-Bulk-Update-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260707-Inventory-Bulk-Update-2.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `260707-Inventory-Bulk-Update-1.png` | 재현 불가 — 셀 드래그 복사는 CDP 로 재현이 안 된다(2026-09-14 재확인) |
+| `260707-Inventory-Bulk-Update-2.png` | 재현 불가 — 같은 이유. 주말만 드래그도 CDP 로 안 된다 |
 
 ## `en/release-notes/2026-07-24.mdx`
 

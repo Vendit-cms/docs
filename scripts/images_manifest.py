@@ -36,6 +36,12 @@ CHANNEL_PAGE = re.compile(r"^(airbnb|yanolja|agoda|expedia|naver|tripcom|yeogi)"
 
 # 다시 못 찍는 이유. 확인한 것만 적는다.
 BLOCKED = {
+    "260515-High-Price.png": "1억 넘는 요금이 설정된 상품이 있어야 한다. 임시 변경으로 만들면 그리드가 +130,00... 으로 잘린다. 억 축약은 셀 폭 때문에 있는 것이다",
+    "260515-Mobile-Channel.png": "폰 프레임에 스크린샷 3장을 얹은 합성이다. 화면 하나가 아니라 디자인 작업이다",
+    "260515-Mobile-Channel-Mapping.png": "같은 합성. 폰 프레임 3장",
+    "260515-Billing-Cancel.png": "구독 취소 버튼을 눌러야 나온다. 구독/결제 버튼은 안 누른다",
+    "260707-Inventory-Bulk-Update-1.png": "셀 드래그 복사는 CDP 로 재현이 안 된다(2026-09-14 재확인)",
+    "260707-Inventory-Bulk-Update-2.png": "같은 이유. 주말만 드래그도 CDP 로 안 된다",
     "260820-rate-drag-2.png": "셀 드래그 복사는 CDP 로 재현이 안 된다. mousePressed/mouseMoved/mouseReleased 를 쏴도 복사 메뉴가 안 뜬다(2026-09-14 재확인)",
     "260820-timetable-drag.png": "같은 이유. 입퇴실 시간 드래그도 CDP 로 안 된다",
     "260820-scale-factor-disabled.png": "객실이 1개인 객실 타입이 있어야 예약 배수가 비활성으로 뜬다. VENDIT HOTEL 최소 객실 타입이 2개다",

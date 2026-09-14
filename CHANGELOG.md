@@ -1,6 +1,9 @@
 # CHANGELOG
 
 ## 2026-09-14
+- 5월 15일 릴리즈노트 사진 3장 영어로 교체, 언어 선택, 객실 타입 최대값, 구독 안내 (images/en-260515-*.png)
+- 1월 14일 슈파데모 임베드를 고정 415px 에서 비율 1.73 으로 교체 (en/release-notes/2026-01-14.mdx)
+- 못 찍는 6장 사유 기록: 억 축약, 폰 합성 2장, 구독 취소, 드래그 2장 (scripts/images_manifest.py)
 - 8월 20일 릴리즈노트 사진 3장, 8월 7일 4장을 영어 화면으로 교체 (images/en-260820-*.png, images/en-260807-*.png)
 - 드래그 복사 2장과 예약 배수 비활성 1장은 재현 불가로 기록 (scripts/images_manifest.py)
 - 스크롤로 가려진 항목 좌표에 블러가 찍혀 사이드바를 뭉개던 것 수정 (scripts/capture_redacted.py)

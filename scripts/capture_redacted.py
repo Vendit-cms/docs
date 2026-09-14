@@ -45,9 +45,11 @@ import websockets  # noqa: E402
 FIX_MAN = (
     # 영어 그리드가 30,000 을 `+3만` 으로 찍는다. 통화별 축약이라 원화 업장이면 영어 UI 에도 한글이 박힌다.
     # 값은 그대로 두고 표기만 영어 자릿수로 되돌린다.
+    # 억은 건드리지 마라. 1.3억을 130,000,000 으로 펴면 셀 폭을 넘어서 잘린다(2026-09-14 실측).
+    # 축약이 있는 이유가 그것이다. 억은 영어 화면에도 그대로 남는다.
     '(()=>{const fixed=[];const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;'
-    'const conv=(s)=>s.replace(/([+−-]?)(\\d+(?:\\.\\d+)?)만/g,'
-    '(m,sg,num)=>sg+Math.round(parseFloat(num)*10000).toLocaleString("en-US"));'
+    'const conv=(s)=>s.replace(/([+\u2212-]?)(\\d+(?:\\.\\d+)?)(\uc5b5|\ub9cc)/g,'
+    '(m,sg,num,unit)=>sg+Math.round(parseFloat(num)*(unit==="\uc5b5"?100000000:10000)).toLocaleString("en-US"));'
     'while(n=w.nextNode()){const t=n.nodeValue||"";if(t.indexOf("만")<0)continue;'
     'const c=conv(t);if(c!==t){n.nodeValue=c;fixed.push(c.trim());}}return fixed;})()')
 
