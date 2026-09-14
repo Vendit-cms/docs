@@ -169,6 +169,21 @@ FIND = r'''(()=>{
    const safe=!cred&&!re.test(v);
    push(r,"input["+(el.type||"text")+"] "+(safe?v.slice(0,24):"<가림>"),el);
  }
+ // 예약 목록의 Guest name 칸은 로마자 이름이라 위 규칙 어디에도 안 걸린다.
+ // 2026-09-14 에 투숙객 이름 하나가 그대로 공개 문서에 나갔다. 열을 통째로 가린다.
+ const guestHdr=[...document.querySelectorAll("th,[role=columnheader]")]
+   .find(h=>/^(Guest name|\uc608\uc57d\uc790)/.test((h.innerText||"").trim()));
+ if(guestHdr){
+   const hr=guestHdr.getBoundingClientRect();
+   if(hr.width>8){
+     for(const cell of document.querySelectorAll("td,[role=cell],[role=gridcell]")){
+       const cr=cell.getBoundingClientRect();
+       if(cr.width<8||cr.height<8)continue;
+       if(cr.left>=hr.right-2||cr.right<=hr.left+2)continue;
+       if(cr.top<hr.bottom-2)continue;
+       if(!(cell.innerText||"").trim())continue;
+       if(!onscreen(cr,cell))continue;
+       push(cr,"guest-col",cell);}}}
  return out;})()'''
 
 

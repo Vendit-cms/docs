@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026-09-15
+- 배포된 예약 목록 캡처에서 투숙객 이름 가림 (images/en-booking-status-filter.png)
+- 예약 목록 Guest name 열을 통째로 가리는 규칙 추가 - 로마자 이름은 기존 규칙에 안 걸렸다 (scripts/capture_redacted.py)
+
 ## 2026-09-14
 - 릴리즈노트 영어 캡처 12 장 (images/en-fixed-rate-protection.png 외 11 장)
 - 현재 빌드와 다른 릴리즈노트 사진 17 장을 히스토리로 보존 처리, 재현 불가 10 장 기록 (scripts/images_manifest.py)
