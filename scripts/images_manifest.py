@@ -57,12 +57,25 @@ BLOCKED = {
     "integration-vcloud-4.png": "찍을 필요 없음. VCLOUD 는 점주가 설정 못 하게 막아둔 게 의도다(Dean, 2026-09-12)",
     "notification.png": "채널 상품 알림이 있어야 한다. VENDIT HOTEL 은 알림 0건이고, dev 는 여는 순간 읽음 처리될 수 있어서 안 열었다(2026-09-12)",
     "yanolja-system-error-modal-1.png": "야놀자 장애 때만 뜨는 모달이라 재현 불가",
+    "liveanywhere-min-nights-2.png": "최소 박수 개념을 설명하려고 그린 월 달력 도해다. VCMS 화면 캡처가 아니라 디자인 작업이다",
+    "260609-Booking.png": "데스크톱 예약 상세와 폰 프레임을 나란히 얹은 합성이다. 화면 하나가 아니다",
+    "image-14.png": "VCMS 아고다 연동 로그인 화면인데 아고다 채널 연결 버튼을 눌러야 나온다. 운영에서 채널 연결은 안 누른다",
     "faq-no-history.png": "수집 시점에 이미 취소된 예약이 있어야 한다. VENDIT HOTEL 기본 조회 기간 Canceled 0건(2026-09-11)",
+}
+
+# 릴리즈노트 본문에 박힌 채널 로고. images/ 루트에 있어서 channels/ 접두사 규칙에 안 걸린다.
+CHANNEL_LOGOS = {
+    "camfit.png", "Camperest-1.png", "banlife-stay.png", "liveanywhere-2.png",
+}
+
+# 릴리즈노트 안의 채널사 화면. 파일명만으로는 CHANNEL 정규식에 안 걸린다.
+CHANNEL_SCREEN = {
+    "260617-Booking-OTA-Example-2.png",
 }
 
 # 크롬 브라우저 자체 UI. VCMS 화면이 아니라 확장 프로그램 메뉴다.
 BROWSER_UI = {
-    "chrome-extension.png", "chrome-extension-1.png",
+    "chrome-extension.png", "chrome-extension-1.png", "image-16.png",
 }
 
 # 찍을 수는 있는데 Dean 이 정해야 하는 것.
@@ -94,14 +107,13 @@ def scan():
 def status(name, page):
     if name.startswith("en-"):
         return "영어 캡처 완료"
-    if name.startswith("channels/"):
+    if name.startswith("channels/") or name in CHANNEL_LOGOS:
         return "채널 로고 (언어 무관)"
-    # BLOCKED 를 릴리즈노트 규칙보다 먼저 본다. 안 그러면 못 찍는 이유가
-    # "Dean 결정" 으로 덮여서 왜 안 됐는지 기록이 사라진다.
+    # 릴리즈노트 규칙이 여기 있었다. 그 자리에 있으면 뒤의 채널/로고/브라우저 판정이
+    # 전부 "Dean 결정" 으로 덮여서, 범위 밖인 사진과 아직 안 찍은 사진이 한 칸에 섞였다.
+    # 2026-09-09 결정은 Dean 이 "업데이트쪽도 수정가능한부분은 사진 교체" 로 뒤집었다(2026-09-13).
     if name in BLOCKED:
         return f"재현 불가 — {BLOCKED[name]}"
-    if "/release-notes/" in page:
-        return "한국어 재사용 (Dean 결정, 2026-09-09)"
     if name in NEEDS_DEAN:
         return f"Dean 확인 필요 — {NEEDS_DEAN[name]}"
     if name in CHANNEL_CONNECTED:
@@ -111,8 +123,8 @@ def status(name, page):
         return "영어 재캡처 필요"
     if name in BROWSER_UI:
         return "한국어 유지 — 크롬 브라우저 확장 프로그램 메뉴다. VCMS 화면이 아니다"
-    if CHANNEL.search(name) or "/channels/" in page or "/faq/issue/" in page \
-            or CHANNEL_PAGE.search(os.path.basename(page)):
+    if name in CHANNEL_SCREEN or CHANNEL.search(name) or "/channels/" in page \
+            or "/faq/issue/" in page or CHANNEL_PAGE.search(os.path.basename(page)):
         return ("한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. "
                 "본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13)")
     return "영어 재캡처 필요"
@@ -137,7 +149,7 @@ def main():
         for n in names:
             st = status(n, page)
             total += 1
-            if st.startswith(("영어 캡처 완료", "한국어 재사용", "한국어 유지 —", "채널 로고")):
+            if st.startswith(("영어 캡처 완료", "한국어 유지 —", "채널 로고")):
                 done += 1
             body.append(f"| `{n}` | {st} |")
         body.append("")
