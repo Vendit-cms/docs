@@ -5,7 +5,7 @@
 `en-` 로 시작하는 파일은 영어 UI 에서 새로 찍은 것이다. 나머지는 한국어 원본을 그대로 쓴다.
 `images/` 는 한국어 문서와 공유하므로 원본을 덮으면 한국어까지 바뀐다. 그래서 새 파일로 넣는다.
 
-참조 274건 중 207건 정리 완료, 67건 남음.
+참조 274건 중 248건 정리 완료, 26건 남음.
 
 ## `en/accommodation/create-accommodation.mdx`
 
@@ -57,31 +57,31 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `image(55).png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image(56).png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image(57).png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image(58).png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `image(55).png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `image(56).png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `image(57).png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `image(58).png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/channels/airbnb.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `airbnb-host-mode-4.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `chrome-extension.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `airbnb-sign-in-1.png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `airbnb-host-mode-4.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `chrome-extension.png` | 한국어 유지 — 크롬 브라우저 확장 프로그램 메뉴다. VCMS 화면이 아니다 |
+| `airbnb-sign-in-1.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/channels/camfit.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `camfit-1-1.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `camfit-2.png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `camfit-1-1.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `camfit-2.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/channels/camperest.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `camperest_01.png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `camperest_01.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/channels/channel-setting.mdx`
 
@@ -90,8 +90,8 @@
 | `en-channel-connected-list.png` | 영어 캡처 완료 |
 | `en-channels-available.png` | 영어 캡처 완료 |
 | `en-channel-connect-form.png` | 영어 캡처 완료 |
-| `채널_숙소정보_연결된숙소없음.png` | 재현 불가 — 채널 연결 플로우 중간 단계라 실제로 연결을 눌러야 나온다. 운영 접근은 조회만 허용이라 못 찍는다(Dean, 2026-09-13) |
-| `채널_숙소연결-1.png` | 재현 불가 — 채널 연결 플로우 중간 단계라 실제로 연결을 눌러야 나온다. 운영 접근은 조회만 허용이라 못 찍는다(Dean, 2026-09-13) |
+| `channel-property-info-none-connected.png` | 재현 불가 — 채널 연결 플로우 중간 단계라 실제로 연결을 눌러야 나온다. 운영 접근은 조회만 허용이라 못 찍는다(Dean, 2026-09-13) |
+| `channel-property-connect-1.png` | 재현 불가 — 채널 연결 플로우 중간 단계라 실제로 연결을 눌러야 나온다. 운영 접근은 조회만 허용이라 못 찍는다(Dean, 2026-09-13) |
 | `en-channel-property-info.png` | 영어 캡처 완료 |
 | `en-channel-commission-modal.png` | 영어 캡처 완료 |
 | `en-channel-final-rate-modal.png` | 영어 캡처 완료 |
@@ -103,44 +103,44 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `익스피디아-4.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `크롬확장프로그램-다시연결-7.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `익스피디아-6.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `expedia-partner-center-obp.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `expedia-partner-center.png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `expedia-partner-central-4.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `chrome-extension-reconnect-7.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `expedia-reconnect-notification-6.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `expedia-partner-center-obp.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `expedia-partner-center.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/channels/liveanywhere.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `리브애니웨어-최소박수미달-1.png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `liveanywhere-min-nights-1.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/channels/naver.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `naver-2FA-deactivate-1.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `naver-2FA-deactivate-3.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `naver-2FA-deactivate-2-1.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `naver-2FA-deactivate-web.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `naver-connect.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image-5.png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `naver-2FA-deactivate-1.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `naver-2FA-deactivate-3.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `naver-2FA-deactivate-2-1.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `naver-2FA-deactivate-web.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `naver-connect.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `image-5.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/channels/tripbtoz.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `트립비토즈-1.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `트립비토즈-2.png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `tripbtoz-1.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `tripbtoz-2.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/channels/tripdotcom.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `image(59).png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image(61).png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image(63).png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image(64).png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `image(59).png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `image(61).png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `image(63).png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `image(64).png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/channels/yanolja.mdx`
 
@@ -154,7 +154,7 @@
 | --- | --- |
 | `en-distribution-syncing.png` | 영어 캡처 완료 |
 | `Distribution-Booking-Sync-Only.png` | Dean 확인 필요 — 영어 배너가 {date} 를 그대로 찍는다. dev 번들 en.json 이 낡았고 vcms-i18n main 은 {launchedAt} 로 고쳐져 있다. en-distribution-booking-sync-only.png 준비됨, 배포 후 교체 |
-| `260727-channel-example.png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `260727-channel-example.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/distributions/understanding.mdx`
 
@@ -190,10 +190,10 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `image-34.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `KakaoTalk_Photo_2026-04-21-18-18-23-001-3.jpeg` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image-(1).png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `KakaoTalk_Photo_2026-04-21-18-18-23-002-2.jpeg` | 채널사 화면 — Dean 이 직접 촬영 |
+| `image-34.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `KakaoTalk_Photo_2026-04-21-18-18-23-001-3.jpeg` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `image-(1).png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `KakaoTalk_Photo_2026-04-21-18-18-23-002-2.jpeg` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/faq/channels/available-channels.mdx`
 
@@ -224,18 +224,18 @@
 | 이미지 | 상태 |
 | --- | --- |
 | `en-integrations.png` | 영어 캡처 완료 |
-| `연동서비스_2.png` | 재현 불가 — 찍을 필요 없음. VCLOUD 는 점주가 설정 못 하게 막아둔 게 의도다(Dean, 2026-09-12). 한국어 가이드도 같은 관리자 매뉴얼 절을 갖고 있다 |
+| `integration-vcloud-2.png` | 재현 불가 — 찍을 필요 없음. VCLOUD 는 점주가 설정 못 하게 막아둔 게 의도다(Dean, 2026-09-12). 한국어 가이드도 같은 관리자 매뉴얼 절을 갖고 있다 |
 | `en-vcloud-failed.png` | 영어 캡처 완료 |
-| `연동서비스_4.png` | 재현 불가 — 찍을 필요 없음. VCLOUD 는 점주가 설정 못 하게 막아둔 게 의도다(Dean, 2026-09-12) |
+| `integration-vcloud-4.png` | 재현 불가 — 찍을 필요 없음. VCLOUD 는 점주가 설정 못 하게 막아둔 게 의도다(Dean, 2026-09-12) |
 
 ## `en/faq/inventory-rate/airbnb-promotion-reset.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `image-34.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `KakaoTalk_Photo_2026-04-21-18-18-23-001-3.jpeg` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image-(1).png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `KakaoTalk_Photo_2026-04-21-18-18-23-002-2.jpeg` | 채널사 화면 — Dean 이 직접 촬영 |
+| `image-34.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `KakaoTalk_Photo_2026-04-21-18-18-23-001-3.jpeg` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `image-(1).png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `KakaoTalk_Photo_2026-04-21-18-18-23-002-2.jpeg` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/faq/inventory-rate/bulk-edit-period-inventory.mdx`
 
@@ -244,8 +244,8 @@
 | `en-bulk-update-button.png` | 영어 캡처 완료 |
 | `en-bulk-update-modal.png` | 영어 캡처 완료 |
 | `en-bulk-update-added.png` | 영어 캡처 완료 |
-| `일괄변경_4.png` | 재현 불가 — 임시 변경 바는 일괄변경이 아니라 셀 직접 수정 플로우 것이다 |
-| `일괄변경_5.png` | 재현 불가 — 임시 변경 바는 일괄변경이 아니라 셀 직접 수정 플로우 것이다 |
+| `bulk-edit-4.png` | 재현 불가 — 임시 변경 바는 일괄변경이 아니라 셀 직접 수정 플로우 것이다 |
+| `bulk-edit-5.png` | 재현 불가 — 임시 변경 바는 일괄변경이 아니라 셀 직접 수정 플로우 것이다 |
 
 ## `en/faq/inventory-rate/bulk-period-rate-adjustment.mdx`
 
@@ -305,27 +305,27 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `image(65).png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image(66).png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `image(65).png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `image(66).png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/faq/issue/airbnb-disconnected.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `airbnb-sign-in-2.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `expedia-partner-center-1.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `chrome-extension-1.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image-35.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image-36.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image-37.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image-39.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image-38.png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `airbnb-sign-in-2.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `expedia-partner-center-1.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `chrome-extension-1.png` | 한국어 유지 — 크롬 브라우저 확장 프로그램 메뉴다. VCMS 화면이 아니다 |
+| `image-35.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `image-36.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `image-37.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `image-39.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `image-38.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/faq/issue/channel-auto-disconnected.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `channel-auto-disconnect-noti.png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `channel-auto-disconnect-noti.png` | 재현 불가 — 카카오 알림톡 원문이다. 한국어로만 발송된다 |
 
 ## `en/faq/issue/vcloud-booking-not-synced.mdx`
 
@@ -337,11 +337,11 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `blocked.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `야놀자시스템오류모달-1.png` | 재현 불가 — 야놀자 장애 때만 뜨는 모달이라 재현 불가 |
+| `blocked.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `yanolja-system-error-modal-1.png` | 재현 불가 — 야놀자 장애 때만 뜨는 모달이라 재현 불가 |
 | `en-accommodation-info.png` | 영어 캡처 완료 |
-| `image-10.png` | 채널사 화면 — Dean 이 직접 촬영 |
-| `image-9.png` | 채널사 화면 — Dean 이 직접 촬영 |
+| `image-10.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `image-9.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/inventory-rate/inclusion.mdx`
 
@@ -428,11 +428,11 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `하위항목변경.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `하위변경항목.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `고정요금.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `상품고정요금설정.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `기간별요금설정.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `change-scope-desktop.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `change-scope-mobile.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `fixed-rate-protection.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `package-fixed-rate-setting.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `rate-period-settings.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
 
 ## `en/release-notes/2026-01-14.mdx`
 
@@ -468,7 +468,7 @@
 | `agoda-derived-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
 | `agoda-channel-package-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
 | `yeogi-channel-pacakge-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `연결된-숙소-없음-표기.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `no-property-connected-label.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
 
 ## `en/release-notes/2026-03-16.mdx`
 
@@ -480,8 +480,8 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `에어비앤비-7.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `익스피디아-7.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `airbnb-7.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `expedia-7.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
 | `Banner-Agoda-Referral-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
 | `260423-Import-Channel-Pkg-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
 | `260423-Channel-2.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
@@ -503,21 +503,21 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `260515-Disconnected-Channel.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260515-High-Price.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260515-Roomtype-Max-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260515-Mobile-Channel.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260515-Mobile-Channel-Mapping.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260515-Billing.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260515-Billing-Cancel.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260515-Language.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `en-distribution-channel-disconnected.png` | 영어 캡처 완료 |
+| `260515-High-Price.png` | 재현 불가 — 1억 넘는 요금이 설정된 상품이 있어야 한다. 임시 변경으로 만들면 그리드가 +130,00... 으로 잘린다. 억 축약은 셀 폭 때문에 있는 것이다 |
+| `en-260515-roomtype-max.png` | 영어 캡처 완료 |
+| `260515-Mobile-Channel.png` | 재현 불가 — 폰 프레임에 스크린샷 3장을 얹은 합성이다. 화면 하나가 아니라 디자인 작업이다 |
+| `260515-Mobile-Channel-Mapping.png` | 재현 불가 — 같은 합성. 폰 프레임 3장 |
+| `en-260515-subscription.png` | 영어 캡처 완료 |
+| `260515-Billing-Cancel.png` | 재현 불가 — 구독 취소 버튼을 눌러야 나온다. 구독/결제 버튼은 안 누른다 |
+| `en-260515-language.png` | 영어 캡처 완료 |
 
 ## `en/release-notes/2026-06-09.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
 | `liveanywhere-2.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `리브애니웨어-최소박수미달-2.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `liveanywhere-min-nights-2.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
 
 ## `en/release-notes/2026-06-17.mdx`
 
@@ -534,7 +534,7 @@
 | 이미지 | 상태 |
 | --- | --- |
 | `Camperest-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `반려생활_stay.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `banlife-stay.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
 
 ## `en/release-notes/2026-07-02.mdx`
 
@@ -547,22 +547,22 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `260707-Inventory-Bulk-Update-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260707-Inventory-Bulk-Update-2.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `260707-Inventory-Bulk-Update-1.png` | 재현 불가 — 셀 드래그 복사는 CDP 로 재현이 안 된다(2026-09-14 재확인) |
+| `260707-Inventory-Bulk-Update-2.png` | 재현 불가 — 같은 이유. 주말만 드래그도 CDP 로 안 된다 |
 
 ## `en/release-notes/2026-07-24.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `260724-판매관리-무료체험-서비스구독신청-2.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260724-판매관리-무료체험-서비스구독신청-1-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260724-구독-무료플랜-서비스구독-1-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260724-구독-무료플랜-서비스구독-2-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260724-구독-유료플랜-구독관리-1-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260724-구독-결제일변경-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260724-구독-유료플랜-구독관리-3-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260724-구독-결제내역-1-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260724-구독-결제내역-2.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `260724-distribution-free-trial-subscribe-2.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `260724-distribution-free-trial-subscribe-1-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `260724-subscription-free-plan-subscribe-1-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `260724-subscription-free-plan-subscribe-2-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `260724-subscription-paid-plan-manage-1-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `260724-subscription-billing-date-change-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `260724-subscription-paid-plan-manage-3-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `260724-subscription-payment-history-1-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `260724-subscription-payment-history-2.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
 
 ## `en/release-notes/2026-07-27.mdx`
 
@@ -574,35 +574,35 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `260807-search-accommodation.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260807-bookings-card-view-update.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260807-edit-pkg-modal.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260807-edit-pkg-rate.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `en-260807-search-accommodation.png` | 영어 캡처 완료 |
+| `en-260807-bookings-card-view.png` | 영어 캡처 완료 |
+| `en-260807-edit-pkg-modal.png` | 영어 캡처 완료 |
+| `en-260807-edit-pkg-rate.png` | 영어 캡처 완료 |
 
 ## `en/release-notes/2026-08-20.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `260820-rate-adjustment-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260820-rate-drag-2.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260820-rate-scale-factor.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260820-timetable-drag.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260820-timetable-shown.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260820-scale-factor-disabled.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `en-260820-rate-adjustment.png` | 영어 캡처 완료 |
+| `260820-rate-drag-2.png` | 재현 불가 — 셀 드래그 복사는 CDP 로 재현이 안 된다. mousePressed/mouseMoved/mouseReleased 를 쏴도 복사 메뉴가 안 뜬다(2026-09-14 재확인) |
+| `en-260820-rate-scale-factor.png` | 영어 캡처 완료 |
+| `260820-timetable-drag.png` | 재현 불가 — 같은 이유. 입퇴실 시간 드래그도 CDP 로 안 된다 |
+| `en-260820-timetable-shown.png` | 영어 캡처 완료 |
+| `260820-scale-factor-disabled.png` | 재현 불가 — 객실이 1개인 객실 타입이 있어야 예약 배수가 비활성으로 뜬다. VENDIT HOTEL 최소 객실 타입이 2개다 |
 
 ## `en/release-notes/2026-09-03.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `260903-bulk-update-rate-plan-modal-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-bulk-update-rate-plan-button-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-single-pkg-import-rate-plan-button-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-add-multi-period.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-add-multi-period-modal.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-single-pkg-add-period.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-multi-order-align.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-single-pkg-order-align-1.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-pkg-expand-collapse-button.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-roomtype-filter-multi-select.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
-| `260903-temporary-update-undo.png` | 한국어 재사용 (Dean 결정, 2026-09-09) |
+| `en-260903-bulk-apply-modal.png` | 영어 캡처 완료 |
+| `en-260903-bulk-apply-button.png` | 영어 캡처 완료 |
+| `en-260903-import-rate-plan.png` | 영어 캡처 완료 |
+| `en-260903-add-multi-period.png` | 영어 캡처 완료 |
+| `en-260903-add-multi-period-modal.png` | 영어 캡처 완료 |
+| `en-260903-single-add-period.png` | 영어 캡처 완료 |
+| `en-260903-bulk-align-button.png` | 영어 캡처 완료 |
+| `en-260903-single-align-order.png` | 영어 캡처 완료 |
+| `en-260903-expand-collapse.png` | 영어 캡처 완료 |
+| `en-260903-roomtype-filter-multi.png` | 영어 캡처 완료 |
+| `en-260903-temporary-change-bar.png` | 영어 캡처 완료 |
 

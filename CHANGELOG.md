@@ -1,6 +1,28 @@
 # CHANGELOG
 
+## 2026-09-14
+- 5월 15일 릴리즈노트 사진 3장 영어로 교체, 언어 선택, 객실 타입 최대값, 구독 안내 (images/en-260515-*.png)
+- 1월 14일 슈파데모 임베드를 고정 415px 에서 비율 1.73 으로 교체 (en/release-notes/2026-01-14.mdx)
+- 못 찍는 6장 사유 기록: 억 축약, 폰 합성 2장, 구독 취소, 드래그 2장 (scripts/images_manifest.py)
+- 8월 20일 릴리즈노트 사진 3장, 8월 7일 4장을 영어 화면으로 교체 (images/en-260820-*.png, images/en-260807-*.png)
+- 드래그 복사 2장과 예약 배수 비활성 1장은 재현 불가로 기록 (scripts/images_manifest.py)
+- 스크롤로 가려진 항목 좌표에 블러가 찍혀 사이드바를 뭉개던 것 수정 (scripts/capture_redacted.py)
+- 못 찍는 이유가 릴리즈노트 규칙에 덮이던 순서 수정 (scripts/images_manifest.py)
+- 9월 3일 릴리즈노트 사진 11장을 영어 화면으로 교체, 한국어 말풍선을 영어로 다시 그렸다 (images/en-260903-*.png, en/release-notes/2026-09-03.mdx)
+- 5월 15일 채널 연결 끊김 사진 영어판 추가, 숙소명만 가렸다 (images/en-distribution-channel-disconnected.png)
+- 보라 강조 상자와 말풍선을 그리는 도구 추가 (scripts/annotate.py)
+- 채널 캡처 9장 재촬영. 사이드바가 통째로 비어 있던 걸 고쳤다 (images/en-channel-*.png)
+- 내부 메뉴 숨김이 부모를 3단계 무조건 올라가 nav 를 지우던 것 수정 (scripts/capture_redacted.py)
+- 블러 좌표를 덜 그려진 DOM 에서 재던 경합 수정, settle() 추가 (scripts/capture_redacted.py)
+- 입력칸 값이 로그에 찍히던 것 차단, 식별자 모양이면 <가림> 으로 (scripts/capture_redacted.py)
+- 사이드바 빈 캡처를 기계로 잡는 검사기 추가 (scripts/check_captures.py)
+
 ## 2026-09-13
+- 영어 페이지가 참조하던 한글 이름 이미지 32개를 영어 이름 사본으로 교체, 한국어 원본은 ko 가 계속 쓴다 (images/, en/**/*.mdx)
+- 한국어 야놀자 지연 FAQ 의 알림 연락처 이미지를 새 파일명으로 옮겨 Mintlify 의 낡은 치수 캐시를 깼다 (images/설정_숙박업소_알림연락처-2.png, ko/faq/issue/yanolja-booking-delay.mdx)
+- 채널사가 만든 화면 50장을 범위 밖으로 확정, 한국어 사진 유지하고 본문 번역만 한다 (scripts/images_manifest.py, CLAUDE.md)
+- 알림톡 원문 channel-auto-disconnect-noti.png 을 재현 불가로 분류, 크롬 확장 메뉴 2장은 브라우저 UI로 분리 (scripts/images_manifest.py)
+- 완료 판정이 접두사 "영어" 로 재캡처 대기까지 세던 것 수정 (scripts/images_manifest.py)
 - 채널 화면 영어 캡처 9장 추가, 한국어 원본 참조 20건 교체 (images/en-channel-*.png, en/channels/channel-setting.mdx, en/faq/inventory-rate/*.mdx)
 - 업장 식별자를 가리고 찍는 캡처 스크립트 추가 (scripts/capture_redacted.py)
 - 연결 플로우 2장은 조회 전용 권한으로 재현 불가라 사유와 함께 한국어 유지 (scripts/images_manifest.py)
