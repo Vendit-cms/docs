@@ -1,6 +1,10 @@
 # CHANGELOG
 
 ## 2026-09-14
+- 릴리즈노트 영어 캡처 12 장 (images/en-fixed-rate-protection.png 외 11 장)
+- 현재 빌드와 다른 릴리즈노트 사진 17 장을 히스토리로 보존 처리, 재현 불가 10 장 기록 (scripts/images_manifest.py)
+- 말풍선을 상자 위아래에도 붙일 수 있게, 상자 없이 말풍선만 그릴 수 있게 (scripts/annotate.py)
+- 사이드바가 원래 없는 잘라낸 캡처 6 장을 검사 제외 (scripts/check_captures.py)
 - 5월 15일 릴리즈노트 사진 3장 영어로 교체, 언어 선택, 객실 타입 최대값, 구독 안내 (images/en-260515-*.png)
 - 1월 14일 슈파데모 임베드를 고정 415px 에서 비율 1.73 으로 교체 (en/release-notes/2026-01-14.mdx)
 - 못 찍는 6장 사유 기록: 억 축약, 폰 합성 2장, 구독 취소, 드래그 2장 (scripts/images_manifest.py)

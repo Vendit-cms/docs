@@ -38,10 +38,10 @@ def _font(size):
 
 def annotate(src, dst, box=None, text=None, side="auto", scale=None,
              pad=28, gap=34, radius=18, width=None, font_size=None,
-             inset=-8):
+             inset=-8, showbox=True):
     """box 에 보라 상자를, 그 옆에 text 말풍선을 그린다.
 
-    side 는 말풍선이 붙는 쪽이다. right 면 상자 오른쪽, left 면 왼쪽.
+    side 는 말풍선이 붙는 쪽이다. right·left 는 좌우, below·above 는 위아래다.
     scale 을 주면 상자 두께와 글자 크기가 이미지 크기에 맞춰 따라간다.
     """
     im = Image.open(src).convert("RGB")
@@ -55,8 +55,9 @@ def annotate(src, dst, box=None, text=None, side="auto", scale=None,
         # 글씨에 딱 붙으면 테두리가 글자를 먹는다. 조금 벌려 그린다.
         m = inset * scale
         box = [box[0] + m, box[1] + m, box[2] - m, box[3] - m]
-        d.rounded_rectangle(box, radius=round(radius * scale),
-                            outline=PURPLE, width=width)
+        if showbox:
+            d.rounded_rectangle(box, radius=round(radius * scale),
+                                outline=PURPLE, width=width)
     if not text:
         im.save(dst)
         return dst
@@ -71,6 +72,30 @@ def annotate(src, dst, box=None, text=None, side="auto", scale=None,
         # 오른쪽에 안 들어가면 왼쪽으로 넘긴다. 잘린 말풍선이 여러 번 나왔다.
         room = im.width - (box[2] if box else 0) - gap * scale
         side = "right" if room >= bw_probe else "left"
+    if side in ("below", "above"):
+        # 한국어 원본은 상자 아래에 말풍선을 두고 꼬리를 위로 세운 게 많다.
+        cx = (box[0] + box[2]) / 2 if box else im.width / 2
+        bx = cx - bw / 2
+        if side == "below":
+            by = (box[3] if box else 0) + gap * scale
+            ty = by
+            tail = [(cx - 12 * scale, ty), (cx + 12 * scale, ty),
+                    (cx, ty - 16 * scale)]
+        else:
+            by = (box[1] if box else im.height) - gap * scale - bh
+            ty = by + bh
+            tail = [(cx - 12 * scale, ty), (cx + 12 * scale, ty),
+                    (cx, ty + 16 * scale)]
+        edge = 12 * scale
+        bx = min(max(bx, edge), im.width - bw - edge)
+        by = min(max(by, edge), im.height - bh - edge)
+        d.rounded_rectangle([bx, by, bx + bw, by + bh],
+                            radius=round(10 * scale), fill=BUBBLE)
+        d.polygon(tail, fill=BUBBLE)
+        d.text((bx + pad * scale, by + bh / 2), text, font=f, fill=TEXT,
+               anchor="lm")
+        im.save(dst)
+        return dst
     if side == "right":
         bx = (box[2] if box else 0) + gap * scale
         tail = [(bx, cy - 12 * scale), (bx, cy + 12 * scale),

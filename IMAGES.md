@@ -5,7 +5,7 @@
 `en-` 로 시작하는 파일은 영어 UI 에서 새로 찍은 것이다. 나머지는 한국어 원본을 그대로 쓴다.
 `images/` 는 한국어 문서와 공유하므로 원본을 덮으면 한국어까지 바뀐다. 그래서 새 파일로 넣는다.
 
-참조 274건 중 223건 정리 완료, 51건 남음.
+참조 274건 중 235건 정리 완료, 39건 남음.
 
 ## `en/accommodation/create-accommodation.mdx`
 
@@ -430,9 +430,9 @@
 | --- | --- |
 | `change-scope-desktop.png` | 한국어 보존 — 현재 빌드는 상위 토글을 켜면 하위로 바로 내려간다. '하위 변경 항목' 팝오버가 없다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
 | `change-scope-mobile.png` | 한국어 보존 — 같은 기능. 데스크톱에서 확인 단계가 사라졌다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
-| `fixed-rate-protection.png` | 영어 재캡처 필요 |
+| `en-fixed-rate-protection.png` | 영어 캡처 완료 |
 | `package-fixed-rate-setting.png` | 한국어 보존 — 상품 생성 단계가 3개(기본 정보/요금 정보/기간별 요금 설정)에서 2개(Basic information/Rate plan)로 줄었다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
-| `rate-period-settings.png` | 영어 재캡처 필요 |
+| `en-rate-period-settings.png` | 영어 캡처 완료 |
 
 ## `en/release-notes/2026-01-14.mdx`
 
@@ -455,9 +455,9 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `image-27.png` | 영어 재캡처 필요 |
-| `image-29.png` | 영어 재캡처 필요 |
-| `image-30.png` | 영어 재캡처 필요 |
+| `en-booking-date-filters.png` | 영어 캡처 완료 |
+| `en-bulk-update-selection.png` | 영어 캡처 완료 |
+| `en-bulk-update-date-range.png` | 영어 캡처 완료 |
 | `image-28.png` | 재현 불가 — 잘린 업장 이름을 툴팁으로 펼친 사진이다. 그 이름이 바로 가려야 하는 정보라 영어로 다시 찍어도 쓸 수 없다 |
 
 ## `en/release-notes/2026-03-06.mdx`
@@ -474,7 +474,7 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `CMS-Channel-Talk.png` | 영어 재캡처 필요 |
+| `en-cms-channel-talk.png` | 영어 캡처 완료 |
 
 ## `en/release-notes/2026-04-24.mdx`
 
@@ -483,8 +483,8 @@
 | `airbnb-7.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 | `expedia-7.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 | `Banner-Agoda-Referral-1.png` | 한국어 보존 — 아고다 입점 배너가 현재 빌드에 없다(채널·판매관리·숙박업소 목록 확인). 캠페인 배너라 내려간 것으로 본다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
-| `260423-Import-Channel-Pkg-1.png` | 영어 재캡처 필요 |
-| `260423-Channel-2.png` | 영어 재캡처 필요 |
+| `en-import-channel-packages.png` | 영어 캡처 완료 |
+| `en-rebuilt-channel-page.png` | 영어 캡처 완료 |
 | `Update-Note-Subscription-1.png` | 재현 불가 — 유료 구독 상태 화면이다. 쓸 수 있는 업장 둘 다 무료 체험이고 구독 버튼은 안 누른다 |
 
 ## `en/release-notes/2026-04-28.mdx`
@@ -525,8 +525,8 @@
 | --- | --- |
 | `260617-Booking-Multiplier-Setting-2.png` | 한국어 보존 — 상품 생성 모달과 예약 상세가 둘 다 바뀐 합성이다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
 | `260617-Booking-OTA-Example-2.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
-| `260615-Rate-Setting.png` | 영어 재캡처 필요 |
-| `260615-Roomtype-Setting.png` | 영어 재캡처 필요 |
+| `en-rate-setting.png` | 영어 캡처 완료 |
+| `en-room-type-settings.png` | 영어 캡처 완료 |
 | `260609-Booking.png` | 재현 불가 — 데스크톱 예약 상세와 폰 프레임을 나란히 얹은 합성이다. 화면 하나가 아니다 |
 
 ## `en/release-notes/2026-06-29.mdx`
@@ -540,8 +540,8 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `260630-Inventory-Settings.png` | 영어 재캡처 필요 |
-| `260630-Booking-Status-1.png` | 영어 재캡처 필요 |
+| `en-inventory-settings.png` | 영어 캡처 완료 |
+| `en-booking-status-filter.png` | 영어 캡처 완료 |
 
 ## `en/release-notes/2026-07-07.mdx`
 

@@ -21,6 +21,13 @@ SKIP = {
     "en-legend-availability-2.png", "en-legend-change-status-2.png",
     "en-legend-rate-adjustment.png", "en-legend-rate-status-2.png",
     "en-legend-sell-status-2.png",
+    # 2026-09-14 릴리즈노트 재촬영. 사이드바가 원래 안 들어가는 것들.
+    "en-fixed-rate-protection.png",     # 그리드 셀 몇 개만 잘라낸 조각
+    "en-room-type-settings.png",        # 모달 두 장을 화살표로 이은 합성
+    "en-rate-period-settings.png",      # 모달만 잘라냄
+    "en-booking-date-filters.png",      # 드롭다운 조각
+    "en-bulk-update-selection.png",     # 모달 안 조각
+    "en-bulk-update-date-range.png",    # 모달 안 조각
 }
 CROP = "330x1200+20+420"   # 사이드바 메뉴가 있어야 할 자리
 FLOOR = 2.0                # 이 아래면 빈 것으로 본다
