@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026-09-16
+- 상품 삭제 안내 캡처를 영어로 교체, 채널 매핑된 상품의 잠긴 휴지통과 툴팁 (images/en-pkg-delete.png)
+- 다 찍은 pkg_delete.png 를 확인 대기 목록에서 제거, sync-banner 사유가 틀렸던 것 정정 (scripts/images_manifest.py)
+
 ## 2026-09-15
 - 문서에 임베드된 Supademo 데모 23 편 스냅샷, git diff 가 변경 이력이 된다 (scripts/supademo_audit.py)
 - 스냅샷 첫 기록 (audit/supademo/)

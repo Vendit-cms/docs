@@ -112,8 +112,7 @@ BROWSER_UI = {
 
 # 찍을 수는 있는데 Dean 이 정해야 하는 것.
 NEEDS_DEAN = {
-    "Distribution-Booking-Sync-Only.png": "영어 배너가 {date} 를 그대로 찍는다. dev 번들 en.json 이 낡았고 vcms-i18n main 은 {launchedAt} 로 고쳐져 있다. en-distribution-booking-sync-only.png 준비됨, 배포 후 교체",
-    "pkg_delete.png": "현재 빌드는 휴지통이 비활성으로 안 바뀐다. 눌러서 뜨는 대화상자를 찍어야 하는데 운영 삭제 버튼이라 자동 모드가 막았다",
+    "Distribution-Booking-Sync-Only.png": "영어 배너가 {date} 를 그대로 찍는다. 값이 안 꽂히는 문제다. 2026-09-16 에 vcms-i18n origin/main 의 locales/latest/en.json 을 다시 열어봤는데 launchedAt 은 0건이고 app.sync-banner.description.* 는 여전히 {date} 다. 배포를 기다리면 풀린다고 적어놨던 건 틀렸다. 원인부터 다시 봐야 한다. en-distribution-booking-sync-only.png 는 준비돼 있다",
 }
 
 
