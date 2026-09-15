@@ -1,0 +1,56 @@
+{
+  "domainURL": "https://www.vcms.io/accommodations/ULID:47dc4cd2/inventories?date=2026-09-13",
+  "embeddedIn": [
+    "en/distributions/usage.mdx"
+  ],
+  "id": "cmtz35id90swnqme9v8xtizqs",
+  "published": true,
+  "stepCount": 4,
+  "steps": [
+    {
+      "hotspots": [
+        {
+          "html": "be5a3a6f6850",
+          "style": "Circle",
+          "text": "Click the rate adjustment area for that room type on the date you want."
+        }
+      ],
+      "media": "ZizfGSlCUmi8HUIrR5uvZ.jpg",
+      "n": 1
+    },
+    {
+      "hotspots": [
+        {
+          "html": "52ccc3548c9d",
+          "style": "Area",
+          "text": "Please enter the surcharge or discount amount."
+        }
+      ],
+      "media": "C6QC3aWno6kwvD0ORrBhB.jpg",
+      "n": 2
+    },
+    {
+      "hotspots": [
+        {
+          "html": "6f3ee2216923",
+          "style": "Area",
+          "text": "Click Temporary change to save it as a draft."
+        }
+      ],
+      "media": "Xl0HDc8Anrz-MTEV3mauo.jpg",
+      "n": 3
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Circle",
+          "text": "Please press Save to apply the changes to the channel."
+        }
+      ],
+      "media": "Bs6Rw0l2ZhP3QFANNBBdH.jpg",
+      "n": 4
+    }
+  ],
+  "title": "Adjusting rates for one room type"
+}

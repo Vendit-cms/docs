@@ -1,0 +1,73 @@
+{
+  "domainURL": "https://www.vcms.io/accommodations/ULID:47dc4cd2/payment",
+  "embeddedIn": [
+    "en/faq/billing/default-card-setting.mdx",
+    "ko/faq/billing/default-card-setting.mdx"
+  ],
+  "id": "cmrw313oa1mliqmblyaawbzpv",
+  "published": true,
+  "stepCount": 6,
+  "steps": [
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 1
+    },
+    {
+      "hotspots": [
+        {
+          "html": "fc53ce4551a4",
+          "style": "Area",
+          "text": "결제 카드 등록 버튼을 눌러주세요."
+        }
+      ],
+      "media": "MB5OKShz0sFhXb_CvEUgT.jpg",
+      "n": 2
+    },
+    {
+      "hotspots": [
+        {
+          "html": "3206c315e830",
+          "style": "Circle",
+          "text": "변경할 카드의 수정 버튼을 눌러주세요."
+        }
+      ],
+      "media": "45FHhlBctOz6V-j_3iWEP.jpg",
+      "n": 3
+    },
+    {
+      "hotspots": [
+        {
+          "html": "52ccc3548c9d",
+          "style": "Area",
+          "text": "기본 카드 설정을 선택해 주세요."
+        }
+      ],
+      "media": "tjvv5G0PkS-NShtRbjHpj.jpg",
+      "n": 4
+    },
+    {
+      "hotspots": [
+        {
+          "html": "6f3ee2216923",
+          "style": "Area",
+          "text": "저장 버튼을 눌러주세요."
+        }
+      ],
+      "media": "oQApHvzcaz7DmkrCPwl_e.jpg",
+      "n": 5
+    },
+    {
+      "hotspots": [
+        {
+          "html": "cbdc822ef048",
+          "style": "Circle",
+          "text": "기본 카드가 변경된 것을 확인해 주세요."
+        }
+      ],
+      "media": "njLUYcu-WAPoV1uibOa6D.jpg",
+      "n": 6
+    }
+  ],
+  "title": "기본 카드 설정"
+}

@@ -1,0 +1,72 @@
+{
+  "domainURL": "https://ycs.agoda.com/mldc/ko-kr/app/reporting/dashboard/240377",
+  "embeddedIn": [
+    "en/channels/agoda.mdx",
+    "ko/channels/agoda.mdx"
+  ],
+  "id": "cme6nz0yt250eh3pyiouju82z",
+  "published": true,
+  "stepCount": 7,
+  "steps": [
+    {
+      "hotspots": [
+        {
+          "html": "1b40f7165302",
+          "style": "Circle",
+          "text": "요금 & 예약 설정 관리 메뉴에서 \"커넥티비티 설정\" 을 선택해 주세요."
+        }
+      ],
+      "media": "XEkXX0ShLD7etvuJJBsnD.jpg",
+      "n": 1
+    },
+    {
+      "hotspots": [
+        {
+          "html": "cd5dc8d2e2b7",
+          "style": "Circle",
+          "text": "채널매니저 VENDIT로 선택해 주세요."
+        }
+      ],
+      "media": "Nu8wcWOEx-nb9xzM2CLEh.jpg",
+      "n": 2
+    },
+    {
+      "hotspots": [
+        {
+          "html": "0bcd88fffb9b",
+          "style": "Circle",
+          "text": "검색창에서 VENDIT를 검색해 주세요."
+        }
+      ],
+      "media": "5oNpEp7aLNh-o5qNmueEi.jpg",
+      "n": 3
+    },
+    {
+      "hotspots": [],
+      "media": "0ljdMth6eoQVStljGljdV.mp4",
+      "n": 4
+    },
+    {
+      "hotspots": [
+        {
+          "html": "23f7e79ccc33",
+          "style": "Circle",
+          "text": "VENDIT를 선택한 뒤 저장해 주세요."
+        }
+      ],
+      "media": "ErKKLSarvTWDwEcydim1H.jpg",
+      "n": 5
+    },
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 6
+    },
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 7
+    }
+  ],
+  "title": "아고다(YCS) 커넥티비티 연동 설정"
+}

@@ -1,0 +1,137 @@
+{
+  "domainURL": "https://www.vcms.io/accommodations/ULID:47dc4cd2/inventories",
+  "embeddedIn": [
+    "ko/faq/inventory-rate/move-room-to-other-type.mdx"
+  ],
+  "id": "cmhmy4bnm0guhdqxasfsp3bn5",
+  "published": true,
+  "stepCount": 13,
+  "steps": [
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 1
+    },
+    {
+      "hotspots": [
+        {
+          "html": "4e24cdd479c3",
+          "style": "Circle",
+          "text": "설정 > 객실 타입을 선택해 주세요."
+        }
+      ],
+      "media": "G9nZfREF8EfIylKwelNcP.jpg",
+      "n": 2
+    },
+    {
+      "hotspots": [
+        {
+          "html": "52ccc3548c9d",
+          "style": "Area",
+          "text": "옮기고 싶은 객실의 객실 타입을 선택해 주세요."
+        }
+      ],
+      "media": "eEJnT-OjqHA1TMPs15jrA.jpg",
+      "n": 3
+    },
+    {
+      "hotspots": [],
+      "media": "kEsdktG4tVv0sfFv2jEcn.mp4",
+      "n": 4
+    },
+    {
+      "hotspots": [
+        {
+          "html": "2d79d2c28761",
+          "style": "Circle",
+          "text": "X 버튼을 눌러 객실 수를 줄여주세요."
+        }
+      ],
+      "media": "h0ii-1Iv7ro-vdvityb3d.jpg",
+      "n": 5
+    },
+    {
+      "hotspots": [
+        {
+          "html": "6f3ee2216923",
+          "style": "Area",
+          "text": "줄어든 객실 수 만큼 다른 객실 타입을 옮길 수 있어요."
+        }
+      ],
+      "media": "TrvU0C0AXMAxTU_Uil3uU.jpg",
+      "n": 6
+    },
+    {
+      "hotspots": [
+        {
+          "html": "9d916c078a75",
+          "style": "Circle",
+          "text": "저장 버튼을 누르면 해당 객실 타입의 객실 수가 줄어듭니다."
+        }
+      ],
+      "media": "TrvU0C0AXMAxTU_Uil3uU.jpg",
+      "n": 7
+    },
+    {
+      "hotspots": [
+        {
+          "html": "2db539265a6c",
+          "style": "Circle",
+          "text": "저장 버튼을 눌러 주세요."
+        }
+      ],
+      "media": "XqSqGWUXbzsAPrY2F7u2h.jpg",
+      "n": 8
+    },
+    {
+      "hotspots": [
+        {
+          "html": "59746a77e137",
+          "style": "Area",
+          "text": "객실을 추가할 객실 타입을 선택해 주세요."
+        }
+      ],
+      "media": "08SPXgoX7SqVOjp1vcmwJ.jpg",
+      "n": 9
+    },
+    {
+      "hotspots": [
+        {
+          "html": "1f67972ce8b9",
+          "style": "Circle",
+          "text": "원하는 객실 수 만큼 추가할 수 있습니다.\n현재 결제된 총 객실 수를 초과할 경우, 추가 결제가 필요합니다."
+        }
+      ],
+      "media": "-O4ijVfHTDtwUPINUMhxn.jpg",
+      "n": 10
+    },
+    {
+      "hotspots": [
+        {
+          "html": "3d41d9589558",
+          "style": "Circle",
+          "text": "객실 추가가 완료되면,\n저장 버튼을 눌러주세요."
+        }
+      ],
+      "media": "LEEPKz_wQPsu_N0tT8PZQ.jpg",
+      "n": 11
+    },
+    {
+      "hotspots": [
+        {
+          "html": "9c770d65e30e",
+          "style": "Circle",
+          "text": "저장 버튼을 눌러주세요."
+        }
+      ],
+      "media": "g3PTZMZw_lqU_wL0a-BaS.jpg",
+      "n": 12
+    },
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 13
+    }
+  ],
+  "title": "객실을 다른 타입으로 옮기는 방법 안내"
+}

@@ -1,0 +1,75 @@
+{
+  "domainURL": "https://development.vcms.io/accommodations/ULID:268fc673/inventories",
+  "embeddedIn": [
+    "ko/distributions/usage.mdx"
+  ],
+  "id": "cmd5vezlh003twz0ibhv8ztfd",
+  "published": true,
+  "stepCount": 9,
+  "steps": [
+    {
+      "hotspots": [],
+      "media": "video.m3u8",
+      "n": 1
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Circle",
+          "text": "할증/할인 방식을 선택해 주세요."
+        }
+      ],
+      "media": "P_4CIJPWuCuIm_E66kmTl.jpg",
+      "n": 2
+    },
+    {
+      "hotspots": [],
+      "media": "video.m3u8",
+      "n": 3
+    },
+    {
+      "hotspots": [],
+      "media": "video.m3u8",
+      "n": 4
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Circle",
+          "text": "비율로 조절 후 필요에 따라 금액으로\n추가 조절할 수 있어요."
+        }
+      ],
+      "media": "if3v6Y98OFFTgAL5q9Yy6.jpg",
+      "n": 5
+    },
+    {
+      "hotspots": [],
+      "media": "video.m3u8",
+      "n": 6
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Circle",
+          "text": "저장하여 변경 사항을\n채널에 적용해 주세요."
+        }
+      ],
+      "media": "Gd1dfy1zhMNh2Y6Ohkdci.jpg",
+      "n": 7
+    },
+    {
+      "hotspots": [],
+      "media": "video.m3u8",
+      "n": 8
+    },
+    {
+      "hotspots": [],
+      "media": "video.m3u8",
+      "n": 9
+    }
+  ],
+  "title": "VCMS 요금 변경"
+}

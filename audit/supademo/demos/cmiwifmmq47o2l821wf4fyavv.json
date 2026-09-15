@@ -1,0 +1,133 @@
+{
+  "domainURL": "https://www.vcms.io/accommodations/ULID:47dc4cd2/inventories",
+  "embeddedIn": [
+    "en/faq/booking/use-on-mobile.mdx",
+    "ko/faq/booking/use-on-mobile.mdx"
+  ],
+  "id": "cmiwifmmq47o2l821wf4fyavv",
+  "published": true,
+  "stepCount": 12,
+  "steps": [
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 1
+    },
+    {
+      "hotspots": [
+        {
+          "html": "5b142f845c22",
+          "style": "Area",
+          "text": "변경을 원하는 날짜를 선택해 주세요."
+        }
+      ],
+      "media": "n2t7V73lTA4qgBLGewuKZ.jpg",
+      "n": 2
+    },
+    {
+      "hotspots": [
+        {
+          "html": "b0e892b8ce16",
+          "style": "Circle",
+          "text": "재고를 변경할 날짜를 선택합니다."
+        }
+      ],
+      "media": "OdQORIiJNEDJvtkjP_jh3.jpg",
+      "n": 3
+    },
+    {
+      "hotspots": [
+        {
+          "html": "8e3202d34ff1",
+          "style": "Circle",
+          "text": "선택된 날짜의 전체 객실을 \"판매 중지\" 해보겠습니다."
+        }
+      ],
+      "media": "9JoZu2yhf3PwO411NMEoE.jpg",
+      "n": 4
+    },
+    {
+      "hotspots": [
+        {
+          "html": "52ccc3548c9d",
+          "style": "Circle",
+          "text": "저장 버튼을 누르지 않으면 변경 사항이 적용되지 않습니다."
+        }
+      ],
+      "media": "gte9DlSs6GH1MxLC8biQH.jpg",
+      "n": 5
+    },
+    {
+      "hotspots": [
+        {
+          "html": "406d22ee7462",
+          "style": "Circle",
+          "text": "변경 사항이 적용되어 모든 객실이 판매 중지 되었습니다."
+        }
+      ],
+      "media": "xdpTa8E2u8eU5fQAT7E8e.jpg",
+      "n": 6
+    },
+    {
+      "hotspots": [
+        {
+          "html": "398024dfe6ff",
+          "style": "Circle",
+          "text": "이번에는 요금을 변경해 보겠습니다."
+        }
+      ],
+      "media": "6rdLQzdY8-TesRLMF7u6b.jpg",
+      "n": 7
+    },
+    {
+      "hotspots": [
+        {
+          "html": "6320232bb3f9",
+          "style": "Circle",
+          "text": "변경할 금액을 선택해 주세요."
+        }
+      ],
+      "media": "nLyS0yx1OZGfAtht6WDlz.jpg",
+      "n": 8
+    },
+    {
+      "hotspots": [
+        {
+          "html": "6f3ee2216923",
+          "style": "Circle",
+          "text": "금액을 변경합니다."
+        }
+      ],
+      "media": "yfbK3bZNKSJqAKtSNCKeI.jpg",
+      "n": 9
+    },
+    {
+      "hotspots": [
+        {
+          "html": "9d916c078a75",
+          "style": "Circle",
+          "text": "적용이 완료되면 변경 버튼을 눌러주세요."
+        }
+      ],
+      "media": "lzr7I3cclMFfPpAM17kRM.jpg",
+      "n": 10
+    },
+    {
+      "hotspots": [
+        {
+          "html": "2db539265a6c",
+          "style": "Circle",
+          "text": "저장 버튼을 눌러 주세요."
+        }
+      ],
+      "media": "eur6VmirTJ0uUaCwmJhOU.jpg",
+      "n": 11
+    },
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 12
+    }
+  ],
+  "title": "📱(모바일) 판매 관리 화면"
+}

@@ -1,0 +1,122 @@
+{
+  "domainURL": "",
+  "embeddedIn": [
+    "en/faq/account/use-on-mobile.mdx",
+    "en/faq/usage/use-on-mobile.mdx",
+    "ko/faq/account/use-on-mobile.mdx",
+    "ko/faq/usage/use-on-mobile.mdx"
+  ],
+  "id": "cmt0rk8ud002kvw0j11j4xlb9",
+  "published": true,
+  "stepCount": 13,
+  "steps": [
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 1
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Area",
+          "text": "변경을 원하는 날짜를 선택해 주세요."
+        }
+      ],
+      "media": "RXe56XWoq2Rl_7Y7sC07U.jpg",
+      "n": 2
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Circle",
+          "text": "재고를 변경할 날짜를 선택합니다."
+        }
+      ],
+      "media": "aMMBvIPj76CFcgriLTjuz.jpg",
+      "n": 3
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Area",
+          "text": "원하는 재고 정보를 변경해 주세요."
+        }
+      ],
+      "media": "77wDeZXB7CWf_-p6ptPpY.jpg",
+      "n": 4
+    },
+    {
+      "hotspots": [],
+      "media": "video.m3u8",
+      "n": 5
+    },
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 6
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Area",
+          "text": "변경할 요금을 선택해 주세요."
+        }
+      ],
+      "media": "NHPQmL2bfnuGhLwLpsHhu.jpg",
+      "n": 7
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Area",
+          "text": "요금을 변경할 상품을 선택해 주세요."
+        }
+      ],
+      "media": "tYL7WtKn-BKkFYVcsblGH.jpg",
+      "n": 8
+    },
+    {
+      "hotspots": [],
+      "media": "video.m3u8",
+      "n": 9
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Area",
+          "text": "원하는 요금으로 조절해 주세요."
+        }
+      ],
+      "media": "WxpDQac6aE38vgjizewPC.jpg",
+      "n": 10
+    },
+    {
+      "hotspots": [],
+      "media": "video.m3u8",
+      "n": 11
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Area",
+          "text": "변경 후 저장 버튼을 눌러주세요."
+        }
+      ],
+      "media": "uDAzEdKvqVZs3emrjMexD.jpg",
+      "n": 12
+    },
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 13
+    }
+  ],
+  "title": "(모바일) 판매 관리"
+}

@@ -1,0 +1,62 @@
+{
+  "domainURL": "https://www.vcms.io/accommodations/ULID:47dc4cd2/payment",
+  "embeddedIn": [
+    "en/faq/billing/add-payment-card.mdx",
+    "ko/faq/billing/add-payment-card.mdx"
+  ],
+  "id": "cmrw1o4xe1ktaqmbljgwzc9ow",
+  "published": true,
+  "stepCount": 5,
+  "steps": [
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 1
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Circle",
+          "text": "구독 메뉴를 선택해 주세요."
+        }
+      ],
+      "media": "McOSlEWn4ssXjrk7riocf.jpg",
+      "n": 2
+    },
+    {
+      "hotspots": [
+        {
+          "html": "8a23f60b609e",
+          "style": "Area",
+          "text": "결제 카드 등록 버튼을 눌러주세요."
+        }
+      ],
+      "media": "McOSlEWn4ssXjrk7riocf.jpg",
+      "n": 3
+    },
+    {
+      "hotspots": [
+        {
+          "html": "5d4507785e15",
+          "style": "Area",
+          "text": "개인 카드 등록 시, 카드번호, 유효기간, 본인 인증이 필요해요!"
+        }
+      ],
+      "media": "7XlNdo7PMzV1JgNVbC1Xe.jpg",
+      "n": 4
+    },
+    {
+      "hotspots": [
+        {
+          "html": "5d4507785e15",
+          "style": "Area",
+          "text": "법인 카드 등록 시 별도의 인증절차는 없이 카드번호, 유효기간, 사업자 등록번호 입력이 필요해요!"
+        }
+      ],
+      "media": "7XlNdo7PMzV1JgNVbC1Xe.jpg",
+      "n": 5
+    }
+  ],
+  "title": "결제 카드 등록"
+}
