@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## 2026-09-16
+- 영어 이용약관을 한국어 정본 전문 번역으로 교체, 요약본이라 제8조 회사의 의무가 없고 제8조부터 조 번호가 한 칸씩 밀려 있었다 (en/reference/terms-conditions.mdx)
 - 캠핏 안내문에서 내가 지웠던 작은따옴표 2개 복원, 볼드는 닫는 ** 위치만 옮겨 살렸다 (ko/channels/camfit.mdx)
 - 캠핏 제휴 옵션 절을 영어로 번역, ko 에만 있던 것 (en/channels/camfit.mdx)
 - 상품 삭제 안내 캡처를 영어로 교체, 채널 매핑된 상품의 잠긴 휴지통과 툴팁 (images/en-pkg-delete.png)
