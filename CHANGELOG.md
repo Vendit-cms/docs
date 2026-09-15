@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## 2026-09-16
+- 캠핏 제휴 옵션 절을 영어로 번역, ko 에만 있던 것 (en/channels/camfit.mdx)
 - 상품 삭제 안내 캡처를 영어로 교체, 채널 매핑된 상품의 잠긴 휴지통과 툴팁 (images/en-pkg-delete.png)
 - 다 찍은 pkg_delete.png 를 확인 대기 목록에서 제거, sync-banner 사유가 틀렸던 것 정정 (scripts/images_manifest.py)
 
