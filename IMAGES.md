@@ -5,7 +5,7 @@
 `en-` 로 시작하는 파일은 영어 UI 에서 새로 찍은 것이다. 나머지는 한국어 원본을 그대로 쓴다.
 `images/` 는 한국어 문서와 공유하므로 원본을 덮으면 한국어까지 바뀐다. 그래서 새 파일로 넣는다.
 
-참조 274건 중 235건 정리 완료, 39건 남음.
+참조 274건 중 236건 정리 완료, 38건 남음.
 
 ## `en/accommodation/create-accommodation.mdx`
 
@@ -153,7 +153,7 @@
 | 이미지 | 상태 |
 | --- | --- |
 | `en-distribution-syncing.png` | 영어 캡처 완료 |
-| `Distribution-Booking-Sync-Only.png` | Dean 확인 필요 — 영어 배너가 {date} 를 그대로 찍는다. dev 번들 en.json 이 낡았고 vcms-i18n main 은 {launchedAt} 로 고쳐져 있다. en-distribution-booking-sync-only.png 준비됨, 배포 후 교체 |
+| `Distribution-Booking-Sync-Only.png` | Dean 확인 필요 — 영어 배너가 {date} 를 그대로 찍는다. 값이 안 꽂히는 문제다. 2026-09-16 에 vcms-i18n origin/main 의 locales/latest/en.json 을 다시 열어봤는데 launchedAt 은 0건이고 app.sync-banner.description.* 는 여전히 {date} 다. 배포를 기다리면 풀린다고 적어놨던 건 틀렸다. 원인부터 다시 봐야 한다. en-distribution-booking-sync-only.png 는 준비돼 있다 |
 | `260727-channel-example.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/distributions/understanding.mdx`
@@ -381,7 +381,7 @@
 | `en-pkg-bulk-rate-plan-modal.png` | 영어 캡처 완료 |
 | `en-pkg-bulk-rate-plan-button.png` | 영어 캡처 완료 |
 | `en-pkg-import-rate-plan.png` | 영어 캡처 완료 |
-| `pkg_delete.png` | Dean 확인 필요 — 현재 빌드는 휴지통이 비활성으로 안 바뀐다. 눌러서 뜨는 대화상자를 찍어야 하는데 운영 삭제 버튼이라 자동 모드가 막았다 |
+| `en-pkg-delete.png` | 영어 캡처 완료 |
 
 ## `en/inventory-rate/period.mdx`
 
