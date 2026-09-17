@@ -13,7 +13,7 @@
 | `cmtyd1bg70i80qme9d53qqrer` | Change of check-in/check-out times | 19 | 예 | `en/distributions/usage.mdx` `en/faq/inventory-rate/daily-chek-in-out-time.mdx` |
 | `cmtz49f960tajqme9fiwfjexr` | Changing a rate | 7 | 예 | `en/distributions/usage.mdx` |
 | `cmtz4k5800tcwqme9w39nmeeb` | Moving a room to another room type | 6 | 예 | `en/faq/inventory-rate/move-room-to-other-type.mdx` |
-| `cmtyc75ri0hrxqme9293l1cf5` | VCMS availability change | 5 | 예 | `en/distributions/usage.mdx` |
+| `cmu5rlz6200ccqm5s2fajlfe6` | VCMS availability change | 4 | 예 | `en/distributions/usage.mdx` |
 | `cmd5uuktb001kwz0hhjb2ae67` | VCMS 객실 타입별 요금 조절 | 8 | 예 | `ko/distributions/usage.mdx` |
 | `cmkdypcpl0z0eqm44vxeln9rt` | VCMS 예약내역 다운로드 | 3 | 예 | `en/release-notes/2026-01-14.mdx` `ko/release-notes/2026-01-14.mdx` |
 | `cmd5vezlh003twz0ibhv8ztfd` | VCMS 요금 변경 | 9 | 예 | `ko/distributions/usage.mdx` |
