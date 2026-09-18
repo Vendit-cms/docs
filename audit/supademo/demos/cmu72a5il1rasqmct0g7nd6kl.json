@@ -1,0 +1,60 @@
+{
+  "domainURL": "https://www.vcms.io/accommodations/ULID:47dc4cd2/inventories",
+  "embeddedIn": [
+    "en/distributions/usage.mdx"
+  ],
+  "id": "cmu72a5il1rasqmct0g7nd6kl",
+  "published": true,
+  "stepCount": 4,
+  "steps": [
+    {
+      "hotspots": [
+        {
+          "html": "52ccc3548c9d",
+          "style": "Circle",
+          "text": "Turn on Stop sell for the date you want and that room type stops selling on the channel."
+        }
+      ],
+      "media": "LBvZJ4H-qDgnNxfVZM0iQ.jpg",
+      "n": 1,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "6f3ee2216923",
+          "style": "Circle",
+          "text": "Use the All rooms row to stop selling every room type on that date."
+        }
+      ],
+      "media": "TGkyN8W0fIEqh3QK5ig2e.jpg",
+      "n": 2,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "9d916c078a75",
+          "style": "Area",
+          "text": "Press Save to apply the changes to the channel."
+        }
+      ],
+      "media": "lVA6WgssB7O-np3PcxuLj.jpg",
+      "n": 3,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "3f698f9cf8ea",
+          "style": "Circle",
+          "text": "Saved changes are pushed to the channels together."
+        }
+      ],
+      "media": "hCvteH8_QQm2z7gP-Qmfk.jpg",
+      "n": 4,
+      "sec": null
+    }
+  ],
+  "title": "VCMS stop sell change"
+}
