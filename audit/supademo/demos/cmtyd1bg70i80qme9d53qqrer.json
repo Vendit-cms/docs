@@ -23,7 +23,7 @@
     {
       "hotspots": [
         {
-          "html": "52ccc3548c9d",
+          "html": "9c770d65e30e",
           "style": "Area",
           "text": "Bulk update applies the same time to every channel package connected to that room type."
         }
@@ -35,7 +35,7 @@
     {
       "hotspots": [
         {
-          "html": "6f3ee2216923",
+          "html": "b8a38ab0bd14",
           "style": "Area",
           "text": "Individual update sets the time for one package at a time."
         }
@@ -71,7 +71,7 @@
     {
       "hotspots": [
         {
-          "html": "9d916c078a75",
+          "html": "9c57e5a9707a",
           "style": "Area",
           "text": "Press Save once you have finished changing the time."
         }
@@ -149,7 +149,7 @@
     {
       "hotspots": [
         {
-          "html": "2db539265a6c",
+          "html": "710d47350209",
           "style": "Area",
           "text": "Incorrect time settings can be reverted to the previous value."
         }
@@ -197,7 +197,7 @@
     {
       "hotspots": [
         {
-          "html": "59746a77e137",
+          "html": "cacb3ebb9dae",
           "style": "Area",
           "text": "Please press the save button."
         }

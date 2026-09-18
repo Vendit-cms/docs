@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2026-09-19
+- 한국어 판매 상태 데모를 새로 찍었다. 한국어도 판매 상태와 잔여 재고가 같은 데모를 쓰고 있었다. 영어판과 같은 4스텝 구성 (ko/distributions/usage.mdx, audit/supademo/)
+
 ## 2026-09-18
 - 영어 판매 상태 데모를 새로 찍었다. 판매 상태와 잔여 재고 두 자리가 같은 데모를 쓰고 있었다. 잔여 재고 데모와 같은 4스텝 구성이고 영상 스텝은 없다 (en/distributions/usage.mdx, audit/supademo/)
 - 영어 잔여 재고 데모 재촬영, 저장을 눌러서 적용된 화면과 컨페티까지 들어갔다. 영상 스텝은 안 쓴다 (en/distributions/usage.mdx)

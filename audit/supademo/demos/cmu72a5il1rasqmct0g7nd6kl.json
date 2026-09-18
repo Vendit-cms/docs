@@ -10,7 +10,7 @@
     {
       "hotspots": [
         {
-          "html": "52ccc3548c9d",
+          "html": "9c770d65e30e",
           "style": "Circle",
           "text": "Turn on Stop sell for the date you want and that room type stops selling on the channel."
         }
@@ -22,7 +22,7 @@
     {
       "hotspots": [
         {
-          "html": "6f3ee2216923",
+          "html": "b8a38ab0bd14",
           "style": "Circle",
           "text": "Use the All rooms row to stop selling every room type on that date."
         }
@@ -34,7 +34,7 @@
     {
       "hotspots": [
         {
-          "html": "9d916c078a75",
+          "html": "9c57e5a9707a",
           "style": "Area",
           "text": "Press Save to apply the changes to the channel."
         }

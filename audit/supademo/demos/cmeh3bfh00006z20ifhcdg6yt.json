@@ -47,7 +47,7 @@
     {
       "hotspots": [
         {
-          "html": "b8a38ab0bd14",
+          "html": "9c770d65e30e",
           "style": "Circle",
           "text": "시간 변경이 끝나면 임시 저장 버튼을 눌러 주세요."
         }
@@ -107,7 +107,7 @@
     {
       "hotspots": [
         {
-          "html": "9c57e5a9707a",
+          "html": "b8a38ab0bd14",
           "style": "Circle",
           "text": "시간 변경이 끝나면 임시 저장 버튼을 눌러 주세요."
         }
@@ -119,7 +119,7 @@
     {
       "hotspots": [
         {
-          "html": "710d47350209",
+          "html": "9c57e5a9707a",
           "style": "Circle",
           "text": "저장 버튼을 누르면 변경된 입/퇴실 시간이 적용됩니다."
         }
@@ -161,7 +161,7 @@
     {
       "hotspots": [
         {
-          "html": "cacb3ebb9dae",
+          "html": "710d47350209",
           "style": "Circle",
           "text": "잘못된 시간 설정은 변경 전 값으로 되돌리기 할 수 있어요!"
         }
@@ -173,7 +173,7 @@
     {
       "hotspots": [
         {
-          "html": "7adeaf9a3b6d",
+          "html": "cacb3ebb9dae",
           "style": "Circle",
           "text": "저장 버튼을 누를 경우, 시간이 01:00 변경됩니다. (단, 야놀자는 10:00 적용)"
         }
@@ -215,7 +215,7 @@
     {
       "hotspots": [
         {
-          "html": "13c47a07a3db",
+          "html": "7adeaf9a3b6d",
           "style": "Circle",
           "text": "저장 버튼을 눌러 주세요."
         }
