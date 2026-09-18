@@ -1,0 +1,60 @@
+{
+  "domainURL": "https://www.vcms.io/accommodations/ULID:47dc4cd2/inventories",
+  "embeddedIn": [
+    "ko/distributions/usage.mdx"
+  ],
+  "id": "cmu761pkp1x92qmct4lfhx3le",
+  "published": true,
+  "stepCount": 4,
+  "steps": [
+    {
+      "hotspots": [
+        {
+          "html": "52ccc3548c9d",
+          "style": "Circle",
+          "text": "판매 중지를 켜서 그 날짜의 판매를 막아 보세요!"
+        }
+      ],
+      "media": "7fo7uptcavvyP1HF11oK-.jpg",
+      "n": 1,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "6f3ee2216923",
+          "style": "Circle",
+          "text": "전체 객실에서 켜면 그 날짜의\n모든 객실 타입이 한번에 닫혀요."
+        }
+      ],
+      "media": "n--lrKEBjeXal2kjSDPKM.jpg",
+      "n": 2,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "9d916c078a75",
+          "style": "Area",
+          "text": "저장을 눌러 변경 사항을\n채널에 적용해 주세요."
+        }
+      ],
+      "media": "nh1KHeLCptsBsXgGtCmLI.jpg",
+      "n": 3,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "9a453408c6eb",
+          "style": "Circle",
+          "text": "저장한 변경 사항은 채널에 함께 반영돼요."
+        }
+      ],
+      "media": "vAfWSk29J3DM1BrYRm81m.jpg",
+      "n": 4,
+      "sec": null
+    }
+  ],
+  "title": "VCMS 판매 상태 변경"
+}

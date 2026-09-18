@@ -14,11 +14,13 @@
 | `cmtz49f960tajqme9fiwfjexr` | Changing a rate | 7 | 예 | `en/distributions/usage.mdx` |
 | `cmtz4k5800tcwqme9w39nmeeb` | Moving a room to another room type | 6 | 예 | `en/faq/inventory-rate/move-room-to-other-type.mdx` |
 | `cmu5rlz6200ccqm5s2fajlfe6` | VCMS availability change | 4 | 예 | `en/distributions/usage.mdx` |
+| `cmu72a5il1rasqmct0g7nd6kl` | VCMS stop sell change | 4 | 예 | `en/distributions/usage.mdx` |
 | `cmd5uuktb001kwz0hhjb2ae67` | VCMS 객실 타입별 요금 조절 | 8 | 예 | `ko/distributions/usage.mdx` |
 | `cmkdypcpl0z0eqm44vxeln9rt` | VCMS 예약내역 다운로드 | 3 | 예 | `en/release-notes/2026-01-14.mdx` `ko/release-notes/2026-01-14.mdx` |
 | `cmd5vezlh003twz0ibhv8ztfd` | VCMS 요금 변경 | 9 | 예 | `ko/distributions/usage.mdx` |
 | `cmd5ud8pr010nus0iry8westh` | VCMS 일자별 요금 조절 | 8 | 예 | `ko/distributions/usage.mdx` |
 | `cmd5r4c0o00egus0ibx0wlvum` | VCMS 잔여 재고 변경 | 5 | 예 | `ko/distributions/usage.mdx` |
+| `cmu761pkp1x92qmct4lfhx3le` | VCMS 판매 상태 변경 | 4 | 예 | `ko/distributions/usage.mdx` |
 | `cmhmy4bnm0guhdqxasfsp3bn5` | 객실을 다른 타입으로 옮기는 방법 안내 | 13 | 예 | `ko/faq/inventory-rate/move-room-to-other-type.mdx` |
 | `cmrw1o4xe1ktaqmbljgwzc9ow` | 결제 카드 등록 | 5 | 예 | `en/faq/billing/add-payment-card.mdx` `ko/faq/billing/add-payment-card.mdx` |
 | `cmrw313oa1mliqmblyaawbzpv` | 기본 카드 설정 | 6 | 예 | `en/faq/billing/default-card-setting.mdx` `ko/faq/billing/default-card-setting.mdx` |
@@ -30,4 +32,4 @@
 | `cmiwq6u664c4al8218tia6h1g` | 📱 (모바일) 예약 내역 화면 | 7 | 예 | `en/faq/booking/use-on-mobile.mdx` `ko/faq/booking/use-on-mobile.mdx` |
 | `cmiwifmmq47o2l821wf4fyavv` | 📱(모바일) 판매 관리 화면 | 12 | 예 | `en/faq/booking/use-on-mobile.mdx` `ko/faq/booking/use-on-mobile.mdx` |
 
-합계 23편.
+합계 25편.

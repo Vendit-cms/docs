@@ -1,9 +1,9 @@
 {
-  "domainURL": "https://www.vcms.io/accommodations/ULID:47dc4cd2/inventories?date=2026-09-17",
+  "domainURL": "https://www.vcms.io/accommodations/ULID:47dc4cd2/inventories",
   "embeddedIn": [
     "en/distributions/usage.mdx"
   ],
-  "id": "cmu5rlz6200ccqm5s2fajlfe6",
+  "id": "cmu72a5il1rasqmct0g7nd6kl",
   "published": true,
   "stepCount": 4,
   "steps": [
@@ -12,10 +12,10 @@
         {
           "html": "9c770d65e30e",
           "style": "Circle",
-          "text": "Click the availability cell for the date you want and type how many rooms to sell on the channel."
+          "text": "Turn on Stop sell for the date you want and that room type stops selling on the channel."
         }
       ],
-      "media": "L_CRCSeMhHqp_GK7VjnOO.jpg",
+      "media": "LBvZJ4H-qDgnNxfVZM0iQ.jpg",
       "n": 1,
       "sec": null
     },
@@ -24,10 +24,10 @@
         {
           "html": "b8a38ab0bd14",
           "style": "Circle",
-          "text": "Drag to change availability for several dates at once."
+          "text": "Use the All rooms row to stop selling every room type on that date."
         }
       ],
-      "media": "hfOkHcm_xZZjUWf3Me6XH.jpg",
+      "media": "TGkyN8W0fIEqh3QK5ig2e.jpg",
       "n": 2,
       "sec": null
     },
@@ -39,7 +39,7 @@
           "text": "Press Save to apply the changes to the channel."
         }
       ],
-      "media": "pSZptPZWxUbBUtKz0WRTh.jpg",
+      "media": "lVA6WgssB7O-np3PcxuLj.jpg",
       "n": 3,
       "sec": null
     },
@@ -51,10 +51,10 @@
           "text": "Saved changes are pushed to the channels together."
         }
       ],
-      "media": "nDVupLXne3LriB9bw4asX.jpg",
+      "media": "hCvteH8_QQm2z7gP-Qmfk.jpg",
       "n": 4,
       "sec": null
     }
   ],
-  "title": "VCMS availability change"
+  "title": "VCMS stop sell change"
 }

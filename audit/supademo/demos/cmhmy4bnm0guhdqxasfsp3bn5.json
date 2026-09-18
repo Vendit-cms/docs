@@ -28,7 +28,7 @@
     {
       "hotspots": [
         {
-          "html": "52ccc3548c9d",
+          "html": "b8a38ab0bd14",
           "style": "Area",
           "text": "옮기고 싶은 객실의 객실 타입을 선택해 주세요."
         }
@@ -58,7 +58,7 @@
     {
       "hotspots": [
         {
-          "html": "6f3ee2216923",
+          "html": "9c57e5a9707a",
           "style": "Area",
           "text": "줄어든 객실 수 만큼 다른 객실 타입을 옮길 수 있어요."
         }
@@ -70,7 +70,7 @@
     {
       "hotspots": [
         {
-          "html": "9d916c078a75",
+          "html": "710d47350209",
           "style": "Circle",
           "text": "저장 버튼을 누르면 해당 객실 타입의 객실 수가 줄어듭니다."
         }
@@ -82,7 +82,7 @@
     {
       "hotspots": [
         {
-          "html": "2db539265a6c",
+          "html": "cacb3ebb9dae",
           "style": "Circle",
           "text": "저장 버튼을 눌러 주세요."
         }
@@ -94,7 +94,7 @@
     {
       "hotspots": [
         {
-          "html": "59746a77e137",
+          "html": "7adeaf9a3b6d",
           "style": "Area",
           "text": "객실을 추가할 객실 타입을 선택해 주세요."
         }
@@ -106,7 +106,7 @@
     {
       "hotspots": [
         {
-          "html": "1f67972ce8b9",
+          "html": "13c47a07a3db",
           "style": "Circle",
           "text": "원하는 객실 수 만큼 추가할 수 있습니다.\n현재 결제된 총 객실 수를 초과할 경우, 추가 결제가 필요합니다."
         }
@@ -118,7 +118,7 @@
     {
       "hotspots": [
         {
-          "html": "3d41d9589558",
+          "html": "d7d5c43c93d7",
           "style": "Circle",
           "text": "객실 추가가 완료되면,\n저장 버튼을 눌러주세요."
         }
@@ -130,7 +130,7 @@
     {
       "hotspots": [
         {
-          "html": "9c770d65e30e",
+          "html": "e517bb8df241",
           "style": "Circle",
           "text": "저장 버튼을 눌러주세요."
         }
