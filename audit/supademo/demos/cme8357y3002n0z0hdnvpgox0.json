@@ -17,18 +17,20 @@
         }
       ],
       "media": "BWtANs4iUR8dDLWSw_1PO.jpg",
-      "n": 1
+      "n": 1,
+      "sec": null
     },
     {
       "hotspots": [
         {
-          "html": "b8a38ab0bd14",
+          "html": "52ccc3548c9d",
           "style": "Circle",
           "text": "연동 버튼을 눌러주세요."
         }
       ],
       "media": "z9BRobt0kQL0iyjNthDAW.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [
@@ -39,7 +41,8 @@
         }
       ],
       "media": "_ZZcwM71J12gmbpb8Gpdd.jpg",
-      "n": 3
+      "n": 3,
+      "sec": null
     },
     {
       "hotspots": [
@@ -50,7 +53,8 @@
         }
       ],
       "media": "kpIm2_yCsV8vH7ksmul_D.jpg",
-      "n": 4
+      "n": 4,
+      "sec": null
     },
     {
       "hotspots": [
@@ -61,7 +65,8 @@
         }
       ],
       "media": "KiV6WIYoGf7CjyyoY7VAk.jpg",
-      "n": 5
+      "n": 5,
+      "sec": null
     },
     {
       "hotspots": [
@@ -72,7 +77,8 @@
         }
       ],
       "media": "2exYXYPgGRe222MUcLZ7v.jpg",
-      "n": 6
+      "n": 6,
+      "sec": null
     },
     {
       "hotspots": [
@@ -83,23 +89,26 @@
         }
       ],
       "media": "l3dwNVhhpHCdbvYKNRGTx.jpg",
-      "n": 7
+      "n": 7,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": "8-QNl8Vb5HH5j9Q1rd01M.mp4",
-      "n": 8
+      "n": 8,
+      "sec": 1.09
     },
     {
       "hotspots": [
         {
-          "html": "9c57e5a9707a",
+          "html": "6f3ee2216923",
           "style": "Circle",
           "text": "연동 버튼을 눌러주시면, 연동 설정으로 이동합니다."
         }
       ],
       "media": "ZGs6l0U7Nd3W_rf9YzQD6.jpg",
-      "n": 9
+      "n": 9,
+      "sec": null
     },
     {
       "hotspots": [
@@ -110,7 +119,8 @@
         }
       ],
       "media": "SzD9VHHRGz7A1Ayuiptd4.jpg",
-      "n": 10
+      "n": 10,
+      "sec": null
     },
     {
       "hotspots": [
@@ -121,7 +131,8 @@
         }
       ],
       "media": "bXpgigyqM1C5GcyUrvaLE.jpg",
-      "n": 11
+      "n": 11,
+      "sec": null
     },
     {
       "hotspots": [
@@ -132,7 +143,8 @@
         }
       ],
       "media": "5dQzTL6b5sStWge5A0h53.jpg",
-      "n": 12
+      "n": 12,
+      "sec": null
     },
     {
       "hotspots": [
@@ -143,7 +155,8 @@
         }
       ],
       "media": "_PlRBTbMq_JokrF0B5hvU.jpg",
-      "n": 13
+      "n": 13,
+      "sec": null
     }
   ],
   "title": "연동서비스 연결 방법"

@@ -16,7 +16,8 @@
         }
       ],
       "media": "Zc5SKbkodKzjnmf_nBhtU.jpg",
-      "n": 1
+      "n": 1,
+      "sec": null
     },
     {
       "hotspots": [
@@ -27,7 +28,8 @@
         }
       ],
       "media": "MgE4fO8Yv0ixgLn3yVAZB.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [
@@ -38,7 +40,8 @@
         }
       ],
       "media": "TW4vTdWev-9GvlQYwMXyS.jpg",
-      "n": 3
+      "n": 3,
+      "sec": null
     },
     {
       "hotspots": [
@@ -49,7 +52,8 @@
         }
       ],
       "media": "4ko6oIMa53y9gZZyyG3KE.jpg",
-      "n": 4
+      "n": 4,
+      "sec": null
     }
   ],
   "title": "Adjusting rates for every room at once"

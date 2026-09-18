@@ -17,7 +17,8 @@
         }
       ],
       "media": "bS_BVuXCFuxEK8DGdQv_O.jpg",
-      "n": 1
+      "n": 1,
+      "sec": null
     },
     {
       "hotspots": [
@@ -28,7 +29,8 @@
         }
       ],
       "media": "mmdfukSJl9yX9pwyUQooj.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [
@@ -39,12 +41,14 @@
         }
       ],
       "media": "XellZQOre_LmdtlxMafGw.jpg",
-      "n": 3
+      "n": 3,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": "Ix469J1sknPK0J89ae8zA.mp4",
-      "n": 4
+      "n": 4,
+      "sec": 1.85
     },
     {
       "hotspots": [
@@ -55,7 +59,8 @@
         }
       ],
       "media": "KxAXZHyuLc0kk2lrKdjiG.png",
-      "n": 5
+      "n": 5,
+      "sec": null
     }
   ],
   "title": "트립닷컴(eBooking) 연동 설정"

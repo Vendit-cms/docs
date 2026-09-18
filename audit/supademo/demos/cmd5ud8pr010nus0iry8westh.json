@@ -10,7 +10,8 @@
     {
       "hotspots": [],
       "media": "video.m3u8",
-      "n": 1
+      "n": 1,
+      "sec": 2.34
     },
     {
       "hotspots": [
@@ -21,17 +22,20 @@
         }
       ],
       "media": "5hlhx0pMPAOlZehzKyZBr.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": "video.m3u8",
-      "n": 3
+      "n": 3,
+      "sec": 1.0
     },
     {
       "hotspots": [],
       "media": "video.m3u8",
-      "n": 4
+      "n": 4,
+      "sec": 1.54
     },
     {
       "hotspots": [
@@ -42,12 +46,14 @@
         }
       ],
       "media": "mjQa6AoJGR0Rqf5q56tFP.jpg",
-      "n": 5
+      "n": 5,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": "video.m3u8",
-      "n": 6
+      "n": 6,
+      "sec": 1.69
     },
     {
       "hotspots": [
@@ -58,12 +64,14 @@
         }
       ],
       "media": "2WCXdf5xDhqY_FpsfaDKR.jpg",
-      "n": 7
+      "n": 7,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": "video.m3u8",
-      "n": 8
+      "n": 8,
+      "sec": 1.0
     }
   ],
   "title": "VCMS 일자별 요금 조절"

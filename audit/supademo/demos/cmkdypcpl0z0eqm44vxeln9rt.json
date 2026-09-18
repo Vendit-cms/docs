@@ -11,7 +11,8 @@
     {
       "hotspots": [],
       "media": null,
-      "n": 1
+      "n": 1,
+      "sec": null
     },
     {
       "hotspots": [
@@ -22,18 +23,20 @@
         }
       ],
       "media": "_4FILkIc3gKqnUSnLe27d.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [
         {
-          "html": "b8a38ab0bd14",
+          "html": "52ccc3548c9d",
           "style": "Circle",
           "text": "\"다운로드\" 버튼을 눌러 날짜 기간에 맞는 예약 내역을 CSV 파일로 다운로드할 수 있습니다."
         }
       ],
       "media": "u4v-PKOgVaOBBSEhIvs_T.jpg",
-      "n": 3
+      "n": 3,
+      "sec": null
     }
   ],
   "title": "VCMS 예약내역 다운로드"

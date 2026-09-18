@@ -16,7 +16,8 @@
         }
       ],
       "media": "lQEnjLIlGbC8N6wF3KnFu.jpg",
-      "n": 1
+      "n": 1,
+      "sec": null
     },
     {
       "hotspots": [
@@ -27,7 +28,8 @@
         }
       ],
       "media": "uCJMZQQCSDSDas6E0FAQn.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [
@@ -38,7 +40,8 @@
         }
       ],
       "media": "dm6PS63-ExkTDFu29zuMo.jpg",
-      "n": 3
+      "n": 3,
+      "sec": null
     },
     {
       "hotspots": [
@@ -49,7 +52,8 @@
         }
       ],
       "media": "pMH9-iLpcfQogvmYq5lZk.jpg",
-      "n": 4
+      "n": 4,
+      "sec": null
     },
     {
       "hotspots": [
@@ -60,7 +64,8 @@
         }
       ],
       "media": "L5vnNQGS7M_WT1Ai6rXsi.jpg",
-      "n": 5
+      "n": 5,
+      "sec": null
     },
     {
       "hotspots": [
@@ -71,7 +76,8 @@
         }
       ],
       "media": "R2fU0UgfYKSejbzSbHIKM.jpg",
-      "n": 6
+      "n": 6,
+      "sec": null
     }
   ],
   "title": "Moving a room to another room type"

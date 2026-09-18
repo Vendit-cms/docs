@@ -17,7 +17,8 @@
         }
       ],
       "media": "-WCW-vmh5Avjl43F0R9ob.jpg",
-      "n": 1
+      "n": 1,
+      "sec": null
     },
     {
       "hotspots": [
@@ -28,7 +29,8 @@
         }
       ],
       "media": "8yfIEAp8NJZm4LydtMrF1.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [
@@ -39,18 +41,20 @@
         }
       ],
       "media": "mDGKf5I4aZXWUo0LWzwLg.jpg",
-      "n": 3
+      "n": 3,
+      "sec": null
     },
     {
       "hotspots": [
         {
-          "html": "9c770d65e30e",
+          "html": "52ccc3548c9d",
           "style": "Circle",
           "text": "시간 변경이 끝나면 임시 저장 버튼을 눌러 주세요."
         }
       ],
       "media": "GRnEJu4x9Jno7JwttdtlI.jpg",
-      "n": 4
+      "n": 4,
+      "sec": null
     },
     {
       "hotspots": [
@@ -61,7 +65,8 @@
         }
       ],
       "media": "khlNmqxqOGPe3EMOKyzLW.jpg",
-      "n": 5
+      "n": 5,
+      "sec": null
     },
     {
       "hotspots": [
@@ -72,7 +77,8 @@
         }
       ],
       "media": "WcdTGnccr1X8YJmphEMdS.jpg",
-      "n": 6
+      "n": 6,
+      "sec": null
     },
     {
       "hotspots": [
@@ -83,7 +89,8 @@
         }
       ],
       "media": "mZEsUcUqegPdryMKq4QEJ.jpg",
-      "n": 7
+      "n": 7,
+      "sec": null
     },
     {
       "hotspots": [
@@ -94,34 +101,38 @@
         }
       ],
       "media": "KcKHUnay36i1FeeDaGSbf.jpg",
-      "n": 8
+      "n": 8,
+      "sec": null
     },
     {
       "hotspots": [
         {
-          "html": "b8a38ab0bd14",
+          "html": "6f3ee2216923",
           "style": "Circle",
           "text": "시간 변경이 끝나면 임시 저장 버튼을 눌러 주세요."
         }
       ],
       "media": "vaoFxrwOKhGHD6CNl-CGG.jpg",
-      "n": 9
+      "n": 9,
+      "sec": null
     },
     {
       "hotspots": [
         {
-          "html": "9c57e5a9707a",
+          "html": "9d916c078a75",
           "style": "Circle",
           "text": "저장 버튼을 누르면 변경된 입/퇴실 시간이 적용됩니다."
         }
       ],
       "media": "Q5PSW-ohkuzlZgHeBtO3B.jpg",
-      "n": 10
+      "n": 10,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": null,
-      "n": 11
+      "n": 11,
+      "sec": null
     },
     {
       "hotspots": [
@@ -132,7 +143,8 @@
         }
       ],
       "media": "Ah5fiyiN3lruWsdMYwuTK.jpg",
-      "n": 12
+      "n": 12,
+      "sec": null
     },
     {
       "hotspots": [
@@ -143,34 +155,38 @@
         }
       ],
       "media": "pWNsuOBazD-pGQ8Mli9J8.jpg",
-      "n": 13
+      "n": 13,
+      "sec": null
     },
     {
       "hotspots": [
         {
-          "html": "710d47350209",
+          "html": "2db539265a6c",
           "style": "Circle",
           "text": "잘못된 시간 설정은 변경 전 값으로 되돌리기 할 수 있어요!"
         }
       ],
       "media": "MSvdA0kneWbxhNxlaJ2N8.jpg",
-      "n": 14
+      "n": 14,
+      "sec": null
     },
     {
       "hotspots": [
         {
-          "html": "cacb3ebb9dae",
+          "html": "59746a77e137",
           "style": "Circle",
           "text": "저장 버튼을 누를 경우, 시간이 01:00 변경됩니다. (단, 야놀자는 10:00 적용)"
         }
       ],
       "media": "pikOFtsV6ieYK1smCCaFC.jpg",
-      "n": 15
+      "n": 15,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": null,
-      "n": 16
+      "n": 16,
+      "sec": null
     },
     {
       "hotspots": [
@@ -181,7 +197,8 @@
         }
       ],
       "media": "edAFGVDuNS3JJxQv_zb-3.jpg",
-      "n": 17
+      "n": 17,
+      "sec": null
     },
     {
       "hotspots": [
@@ -192,18 +209,20 @@
         }
       ],
       "media": "59LyhMbO8WqP_NHD57T27.jpg",
-      "n": 18
+      "n": 18,
+      "sec": null
     },
     {
       "hotspots": [
         {
-          "html": "7adeaf9a3b6d",
+          "html": "1f67972ce8b9",
           "style": "Circle",
           "text": "저장 버튼을 눌러 주세요."
         }
       ],
       "media": "ObOyxBD3gbKdIBMHy7mXw.jpg",
-      "n": 19
+      "n": 19,
+      "sec": null
     },
     {
       "hotspots": [
@@ -214,12 +233,14 @@
         }
       ],
       "media": "vNM5Uek1QjhI7BqrpC15S.jpg",
-      "n": 20
+      "n": 20,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": null,
-      "n": 21
+      "n": 21,
+      "sec": null
     }
   ],
   "title": "입/퇴실 시간 변경"

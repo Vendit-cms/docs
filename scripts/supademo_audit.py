@@ -92,6 +92,22 @@ def fetch(demo_id):
     return r.stdout.replace('\\"', '"').replace("\\\\", "\\")
 
 
+def step_seconds(s):
+    """영상 스텝의 재생 길이(초). 이미지 스텝은 None.
+
+    trimStart/trimEnd 는 초가 아니라 videoDuration 에 대한 퍼센트다. 두 번 속았다.
+    """
+    vd = s.get("videoDuration")
+    if not vd:
+        return None
+    try:
+        ts = float(s.get("trimStart") or 0)
+        te = float(s.get("trimEnd") if s.get("trimEnd") is not None else 100)
+        return round((te - ts) / 100.0 * float(vd), 2)
+    except (TypeError, ValueError):
+        return None
+
+
 def parse(demo_id, raw):
     steps, best = None, None
     for m in re.finditer(r'"steps":\s*\[', raw):
@@ -129,6 +145,9 @@ def parse(demo_id, raw):
             "n": s.get("number"),
             # 전체 URL 은 계정 id 를 물고 다닌다. 파일명만 남겨도 교체 여부는 그대로 보인다.
             "media": os.path.basename(media.split("?")[0]) if media else None,
+            # 영상 스텝이 몇 초인지. trimStart/trimEnd 는 videoDuration 에 대한 퍼센트다.
+            # 이걸 안 적으면 트림을 고쳐도 diff 가 조용해서 이력이 안 남는다(2026-09-18).
+            "sec": step_seconds(s),
             "hotspots": [],
         }
         for h in s.get("hotspots") or []:

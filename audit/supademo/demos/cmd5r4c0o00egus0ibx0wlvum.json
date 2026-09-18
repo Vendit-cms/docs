@@ -10,7 +10,8 @@
     {
       "hotspots": [],
       "media": "video.m3u8",
-      "n": 1
+      "n": 1,
+      "sec": 1.0
     },
     {
       "hotspots": [
@@ -21,12 +22,14 @@
         }
       ],
       "media": "aUC4Pr6qa2awX7ZduXGRw.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": "video.m3u8",
-      "n": 3
+      "n": 3,
+      "sec": 2.34
     },
     {
       "hotspots": [
@@ -37,12 +40,14 @@
         }
       ],
       "media": "T1_mSTF7Z4vfxjSqrNMzC.jpg",
-      "n": 4
+      "n": 4,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": "video.m3u8",
-      "n": 5
+      "n": 5,
+      "sec": 1.0
     }
   ],
   "title": "VCMS 잔여 재고 변경"

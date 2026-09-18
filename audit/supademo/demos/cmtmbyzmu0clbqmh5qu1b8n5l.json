@@ -11,7 +11,8 @@
     {
       "hotspots": [],
       "media": null,
-      "n": 1
+      "n": 1,
+      "sec": null
     },
     {
       "hotspots": [
@@ -22,7 +23,8 @@
         }
       ],
       "media": "uj-hIi5YFAz9H9RjAkFKB.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [
@@ -33,7 +35,8 @@
         }
       ],
       "media": "dXFRQhf6c_RdIXoQQ0YJr.jpg",
-      "n": 3
+      "n": 3,
+      "sec": null
     },
     {
       "hotspots": [
@@ -44,7 +47,8 @@
         }
       ],
       "media": "4APmFJ6LbfAENgVxxnYw8.jpg",
-      "n": 4
+      "n": 4,
+      "sec": null
     },
     {
       "hotspots": [
@@ -55,7 +59,8 @@
         }
       ],
       "media": "hbmoq0MKeqRVlXUxZ49rz.jpg",
-      "n": 5
+      "n": 5,
+      "sec": null
     },
     {
       "hotspots": [
@@ -66,7 +71,8 @@
         }
       ],
       "media": "xMO9uTKESBFPRFVlVVTMR.jpg",
-      "n": 6
+      "n": 6,
+      "sec": null
     },
     {
       "hotspots": [
@@ -77,7 +83,8 @@
         }
       ],
       "media": "gXww6Vz4XoCNz7KiP1HDw.jpg",
-      "n": 7
+      "n": 7,
+      "sec": null
     },
     {
       "hotspots": [
@@ -88,12 +95,14 @@
         }
       ],
       "media": "suGe-CMSSWI2NOknXFz1d.jpg",
-      "n": 8
+      "n": 8,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": "CcOMNLepi5A1z4bchSnKe.mp4",
-      "n": 9
+      "n": 9,
+      "sec": 1.25
     },
     {
       "hotspots": [
@@ -104,7 +113,8 @@
         }
       ],
       "media": "4_YkZAvfR1s00ePu5cH-K.jpg",
-      "n": 10
+      "n": 10,
+      "sec": null
     },
     {
       "hotspots": [
@@ -115,7 +125,8 @@
         }
       ],
       "media": "IGywjsskTIVblCqo97cHg.jpg",
-      "n": 11
+      "n": 11,
+      "sec": null
     },
     {
       "hotspots": [
@@ -126,12 +137,14 @@
         }
       ],
       "media": "jjScWgzgunKxLEULl_6gz.jpg",
-      "n": 12
+      "n": 12,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": null,
-      "n": 13
+      "n": 13,
+      "sec": null
     }
   ],
   "title": "익스피디아, 요금 및 제한 사항 대량 업데이트"

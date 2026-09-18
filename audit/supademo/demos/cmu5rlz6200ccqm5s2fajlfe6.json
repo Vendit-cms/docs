@@ -16,7 +16,8 @@
         }
       ],
       "media": "L_CRCSeMhHqp_GK7VjnOO.jpg",
-      "n": 1
+      "n": 1,
+      "sec": null
     },
     {
       "hotspots": [
@@ -27,7 +28,8 @@
         }
       ],
       "media": "hfOkHcm_xZZjUWf3Me6XH.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [
@@ -38,7 +40,8 @@
         }
       ],
       "media": "pSZptPZWxUbBUtKz0WRTh.jpg",
-      "n": 3
+      "n": 3,
+      "sec": null
     },
     {
       "hotspots": [
@@ -49,7 +52,8 @@
         }
       ],
       "media": "nDVupLXne3LriB9bw4asX.jpg",
-      "n": 4
+      "n": 4,
+      "sec": null
     }
   ],
   "title": "VCMS availability change"

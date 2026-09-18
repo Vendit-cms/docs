@@ -11,7 +11,8 @@
     {
       "hotspots": [],
       "media": null,
-      "n": 1
+      "n": 1,
+      "sec": null
     },
     {
       "hotspots": [
@@ -22,7 +23,8 @@
         }
       ],
       "media": "McOSlEWn4ssXjrk7riocf.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [
@@ -33,7 +35,8 @@
         }
       ],
       "media": "McOSlEWn4ssXjrk7riocf.jpg",
-      "n": 3
+      "n": 3,
+      "sec": null
     },
     {
       "hotspots": [
@@ -44,7 +47,8 @@
         }
       ],
       "media": "7XlNdo7PMzV1JgNVbC1Xe.jpg",
-      "n": 4
+      "n": 4,
+      "sec": null
     },
     {
       "hotspots": [
@@ -55,7 +59,8 @@
         }
       ],
       "media": "7XlNdo7PMzV1JgNVbC1Xe.jpg",
-      "n": 5
+      "n": 5,
+      "sec": null
     }
   ],
   "title": "결제 카드 등록"
