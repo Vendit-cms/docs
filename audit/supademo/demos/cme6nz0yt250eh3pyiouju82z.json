@@ -17,7 +17,8 @@
         }
       ],
       "media": "XEkXX0ShLD7etvuJJBsnD.jpg",
-      "n": 1
+      "n": 1,
+      "sec": null
     },
     {
       "hotspots": [
@@ -28,7 +29,8 @@
         }
       ],
       "media": "Nu8wcWOEx-nb9xzM2CLEh.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [
@@ -39,12 +41,14 @@
         }
       ],
       "media": "5oNpEp7aLNh-o5qNmueEi.jpg",
-      "n": 3
+      "n": 3,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": "0ljdMth6eoQVStljGljdV.mp4",
-      "n": 4
+      "n": 4,
+      "sec": 1.73
     },
     {
       "hotspots": [
@@ -55,17 +59,20 @@
         }
       ],
       "media": "ErKKLSarvTWDwEcydim1H.jpg",
-      "n": 5
+      "n": 5,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": null,
-      "n": 6
+      "n": 6,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": null,
-      "n": 7
+      "n": 7,
+      "sec": null
     }
   ],
   "title": "아고다(YCS) 커넥티비티 연동 설정"

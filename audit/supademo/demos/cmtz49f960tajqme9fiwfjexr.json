@@ -16,7 +16,8 @@
         }
       ],
       "media": "RjizXprVodO1IDGWv7TTg.jpg",
-      "n": 1
+      "n": 1,
+      "sec": null
     },
     {
       "hotspots": [
@@ -27,7 +28,8 @@
         }
       ],
       "media": "ufxAHfLIz7NdfFe9XIHeo.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [
@@ -38,7 +40,8 @@
         }
       ],
       "media": "iWVCz8DL9-2kigck8AKGN.jpg",
-      "n": 3
+      "n": 3,
+      "sec": null
     },
     {
       "hotspots": [
@@ -49,12 +52,14 @@
         }
       ],
       "media": "01PdjVQYcTuw0ig9mHFTy.jpg",
-      "n": 4
+      "n": 4,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": "nIuo_CiAGDrheKKSiXgsP.mp4",
-      "n": 5
+      "n": 5,
+      "sec": 2.52
     },
     {
       "hotspots": [
@@ -65,7 +70,8 @@
         }
       ],
       "media": "Wc4zwpdREAX92XuRpT051.jpg",
-      "n": 6
+      "n": 6,
+      "sec": null
     },
     {
       "hotspots": [
@@ -76,7 +82,8 @@
         }
       ],
       "media": "aMbn7IzN5dlHO6L4tBU82.jpg",
-      "n": 7
+      "n": 7,
+      "sec": null
     }
   ],
   "title": "Changing a rate"

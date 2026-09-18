@@ -10,7 +10,8 @@
     {
       "hotspots": [],
       "media": "video.m3u8",
-      "n": 1
+      "n": 1,
+      "sec": 1.21
     },
     {
       "hotspots": [
@@ -21,12 +22,14 @@
         }
       ],
       "media": "L0lzN8mAlDs9gsNi8MOI2.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": "video.m3u8",
-      "n": 3
+      "n": 3,
+      "sec": 1.0
     },
     {
       "hotspots": [
@@ -37,12 +40,14 @@
         }
       ],
       "media": "xJoKr2CyflgW4R24c3ZLX.jpg",
-      "n": 4
+      "n": 4,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": "video.m3u8",
-      "n": 5
+      "n": 5,
+      "sec": 1.5
     },
     {
       "hotspots": [
@@ -53,17 +58,20 @@
         }
       ],
       "media": "tKsI0g-YMZXv52bZgb-o0.jpg",
-      "n": 6
+      "n": 6,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": "video.m3u8",
-      "n": 7
+      "n": 7,
+      "sec": 1.0
     },
     {
       "hotspots": [],
       "media": "video.m3u8",
-      "n": 8
+      "n": 8,
+      "sec": 1.0
     }
   ],
   "title": "VCMS 객실 타입별 요금 조절"

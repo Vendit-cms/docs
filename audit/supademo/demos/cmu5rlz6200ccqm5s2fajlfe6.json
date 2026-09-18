@@ -1,0 +1,60 @@
+{
+  "domainURL": "https://www.vcms.io/accommodations/ULID:47dc4cd2/inventories?date=2026-09-17",
+  "embeddedIn": [
+    "en/distributions/usage.mdx"
+  ],
+  "id": "cmu5rlz6200ccqm5s2fajlfe6",
+  "published": true,
+  "stepCount": 4,
+  "steps": [
+    {
+      "hotspots": [
+        {
+          "html": "52ccc3548c9d",
+          "style": "Circle",
+          "text": "Click the availability cell for the date you want and type how many rooms to sell on the channel."
+        }
+      ],
+      "media": "L_CRCSeMhHqp_GK7VjnOO.jpg",
+      "n": 1,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "6f3ee2216923",
+          "style": "Circle",
+          "text": "Drag to change availability for several dates at once."
+        }
+      ],
+      "media": "hfOkHcm_xZZjUWf3Me6XH.jpg",
+      "n": 2,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "9d916c078a75",
+          "style": "Area",
+          "text": "Press Save to apply the changes to the channel."
+        }
+      ],
+      "media": "pSZptPZWxUbBUtKz0WRTh.jpg",
+      "n": 3,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "3f698f9cf8ea",
+          "style": "Circle",
+          "text": "Saved changes are pushed to the channels together."
+        }
+      ],
+      "media": "nDVupLXne3LriB9bw4asX.jpg",
+      "n": 4,
+      "sec": null
+    }
+  ],
+  "title": "VCMS availability change"
+}

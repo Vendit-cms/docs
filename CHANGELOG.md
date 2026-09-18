@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2026-09-18
+- 영어 잔여 재고 데모 재촬영, 저장을 눌러서 적용된 화면과 컨페티까지 들어갔다. 영상 스텝은 안 쓴다 (en/distributions/usage.mdx)
+- 슈파데모 스냅샷 갱신, 새 데모 하나 추가 (audit/supademo/)
+- 3초를 넘는 영상 스텝 16개를 1초로 줄였다. 데모 6편, 최장 34.05초였다. 이제 문서에 박힌 데모 23편의 영상 스텝 31개가 전부 3초 이하다 (audit/supademo/)
+- 스냅샷에 스텝 재생 길이 `sec` 추가. 이게 없어서 트림을 고쳐도 diff 가 조용했다 (scripts/supademo_audit.py)
+
 ## 2026-09-17
 - 개인정보 동의서의 수집 항목을 현행 연동 채널로 교체, 한국어와 영어 양쪽 (ko/reference/personal-information-consent.mdx, en/reference/personal-information-consent.mdx)
 - 동의서의 캠퍼레스트 항목을 화면 라벨과 같은 캠핑장 ID 로 정정, 호텔 코드가 아니다 (ko/reference/personal-information-consent.mdx, en/reference/personal-information-consent.mdx)

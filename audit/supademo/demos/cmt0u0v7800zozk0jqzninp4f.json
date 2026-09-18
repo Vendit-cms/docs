@@ -13,7 +13,8 @@
     {
       "hotspots": [],
       "media": null,
-      "n": 1
+      "n": 1,
+      "sec": null
     },
     {
       "hotspots": [
@@ -24,7 +25,8 @@
         }
       ],
       "media": "PVrkBqOqgyHCNAKhZHQIB.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [
@@ -35,7 +37,8 @@
         }
       ],
       "media": "B-Yow6wYfYAGEzR3AWN1u.jpg",
-      "n": 3
+      "n": 3,
+      "sec": null
     },
     {
       "hotspots": [
@@ -46,7 +49,8 @@
         }
       ],
       "media": "EbUvpK3WfYxmJpxGnzRTn.jpg",
-      "n": 4
+      "n": 4,
+      "sec": null
     },
     {
       "hotspots": [
@@ -57,12 +61,14 @@
         }
       ],
       "media": "6LSkLKuHHHYcS56MH5ey7.jpg",
-      "n": 5
+      "n": 5,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": null,
-      "n": 6
+      "n": 6,
+      "sec": null
     }
   ],
   "title": "(모바일) 예약 내역"

@@ -13,7 +13,8 @@
     {
       "hotspots": [],
       "media": null,
-      "n": 1
+      "n": 1,
+      "sec": null
     },
     {
       "hotspots": [
@@ -24,7 +25,8 @@
         }
       ],
       "media": "RXe56XWoq2Rl_7Y7sC07U.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [
@@ -35,7 +37,8 @@
         }
       ],
       "media": "aMMBvIPj76CFcgriLTjuz.jpg",
-      "n": 3
+      "n": 3,
+      "sec": null
     },
     {
       "hotspots": [
@@ -46,17 +49,20 @@
         }
       ],
       "media": "77wDeZXB7CWf_-p6ptPpY.jpg",
-      "n": 4
+      "n": 4,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": "video.m3u8",
-      "n": 5
+      "n": 5,
+      "sec": 1.0
     },
     {
       "hotspots": [],
       "media": null,
-      "n": 6
+      "n": 6,
+      "sec": null
     },
     {
       "hotspots": [
@@ -67,7 +73,8 @@
         }
       ],
       "media": "NHPQmL2bfnuGhLwLpsHhu.jpg",
-      "n": 7
+      "n": 7,
+      "sec": null
     },
     {
       "hotspots": [
@@ -78,12 +85,14 @@
         }
       ],
       "media": "tYL7WtKn-BKkFYVcsblGH.jpg",
-      "n": 8
+      "n": 8,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": "video.m3u8",
-      "n": 9
+      "n": 9,
+      "sec": 1.0
     },
     {
       "hotspots": [
@@ -94,12 +103,14 @@
         }
       ],
       "media": "WxpDQac6aE38vgjizewPC.jpg",
-      "n": 10
+      "n": 10,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": "video.m3u8",
-      "n": 11
+      "n": 11,
+      "sec": 1.0
     },
     {
       "hotspots": [
@@ -110,12 +121,14 @@
         }
       ],
       "media": "uDAzEdKvqVZs3emrjMexD.jpg",
-      "n": 12
+      "n": 12,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": null,
-      "n": 13
+      "n": 13,
+      "sec": null
     }
   ],
   "title": "(모바일) 판매 관리"

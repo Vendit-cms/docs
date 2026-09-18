@@ -16,7 +16,8 @@
         }
       ],
       "media": "ZizfGSlCUmi8HUIrR5uvZ.jpg",
-      "n": 1
+      "n": 1,
+      "sec": null
     },
     {
       "hotspots": [
@@ -27,7 +28,8 @@
         }
       ],
       "media": "C6QC3aWno6kwvD0ORrBhB.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [
@@ -38,7 +40,8 @@
         }
       ],
       "media": "Xl0HDc8Anrz-MTEV3mauo.jpg",
-      "n": 3
+      "n": 3,
+      "sec": null
     },
     {
       "hotspots": [
@@ -49,7 +52,8 @@
         }
       ],
       "media": "Bs6Rw0l2ZhP3QFANNBBdH.jpg",
-      "n": 4
+      "n": 4,
+      "sec": null
     }
   ],
   "title": "Adjusting rates for one room type"

@@ -17,7 +17,8 @@
         }
       ],
       "media": "9rN5okjd4Pzo_DdnvBb9M.jpg",
-      "n": 1
+      "n": 1,
+      "sec": null
     },
     {
       "hotspots": [
@@ -28,7 +29,8 @@
         }
       ],
       "media": "QuJVVaGLr7Iykl7LHWigM.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [
@@ -39,7 +41,8 @@
         }
       ],
       "media": "MoHJ-jihFLgXSD1qNbxfn.jpg",
-      "n": 3
+      "n": 3,
+      "sec": null
     },
     {
       "hotspots": [
@@ -50,7 +53,8 @@
         }
       ],
       "media": "l1uhTR7qIIgAq6HobpB-p.jpg",
-      "n": 4
+      "n": 4,
+      "sec": null
     },
     {
       "hotspots": [
@@ -61,7 +65,8 @@
         }
       ],
       "media": "EIdInGJqSORBhL4Wn5DhO.jpg",
-      "n": 5
+      "n": 5,
+      "sec": null
     },
     {
       "hotspots": [
@@ -72,7 +77,8 @@
         }
       ],
       "media": "adROpAXFDZcA-mQUnUKup.jpg",
-      "n": 6
+      "n": 6,
+      "sec": null
     },
     {
       "hotspots": [
@@ -83,12 +89,14 @@
         }
       ],
       "media": "u9ehgMihhd5Q6muMB2Ryn.jpg",
-      "n": 7
+      "n": 7,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": null,
-      "n": 8
+      "n": 8,
+      "sec": null
     },
     {
       "hotspots": [
@@ -99,7 +107,8 @@
         }
       ],
       "media": "be5uByD0wj4cPgRNSr9rz.jpg",
-      "n": 9
+      "n": 9,
+      "sec": null
     },
     {
       "hotspots": [
@@ -110,7 +119,8 @@
         }
       ],
       "media": "llxkCGU6_Gnpp0rqhdNnM.jpg",
-      "n": 10
+      "n": 10,
+      "sec": null
     },
     {
       "hotspots": [
@@ -121,7 +131,8 @@
         }
       ],
       "media": "iNpOSujZlnCsbt5WQRIYR.jpg",
-      "n": 11
+      "n": 11,
+      "sec": null
     },
     {
       "hotspots": [
@@ -132,7 +143,8 @@
         }
       ],
       "media": "2bwcJkzu0TlqxtMUSRx_n.jpg",
-      "n": 12
+      "n": 12,
+      "sec": null
     },
     {
       "hotspots": [
@@ -143,12 +155,14 @@
         }
       ],
       "media": "c2MPq42TsqIgakEiZJcdP.jpg",
-      "n": 13
+      "n": 13,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": null,
-      "n": 14
+      "n": 14,
+      "sec": null
     },
     {
       "hotspots": [
@@ -159,12 +173,14 @@
         }
       ],
       "media": "6lcUredxh5rCHaQgdkqhG.jpg",
-      "n": 15
+      "n": 15,
+      "sec": null
     },
     {
       "hotspots": [],
       "media": "62Sz1GdaNfWV_arMde9v6.mp4",
-      "n": 16
+      "n": 16,
+      "sec": 1.05
     },
     {
       "hotspots": [
@@ -175,7 +191,8 @@
         }
       ],
       "media": "x4WQRuKtn-BX1alYPno0U.jpg",
-      "n": 17
+      "n": 17,
+      "sec": null
     },
     {
       "hotspots": [
@@ -186,7 +203,8 @@
         }
       ],
       "media": "c53YIT0TEhCyRfooC_5TW.jpg",
-      "n": 18
+      "n": 18,
+      "sec": null
     },
     {
       "hotspots": [
@@ -197,7 +215,8 @@
         }
       ],
       "media": "OwqLKIE1-Gmt0KGQgCXPL.jpg",
-      "n": 19
+      "n": 19,
+      "sec": null
     }
   ],
   "title": "Change of check-in/check-out times"

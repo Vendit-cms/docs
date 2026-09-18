@@ -11,7 +11,8 @@
     {
       "hotspots": [],
       "media": null,
-      "n": 1
+      "n": 1,
+      "sec": null
     },
     {
       "hotspots": [
@@ -22,7 +23,8 @@
         }
       ],
       "media": "_4FILkIc3gKqnUSnLe27d.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [
@@ -33,7 +35,8 @@
         }
       ],
       "media": "u4v-PKOgVaOBBSEhIvs_T.jpg",
-      "n": 3
+      "n": 3,
+      "sec": null
     }
   ],
   "title": "VCMS 예약내역 다운로드"

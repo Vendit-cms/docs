@@ -11,7 +11,8 @@
     {
       "hotspots": [],
       "media": null,
-      "n": 1
+      "n": 1,
+      "sec": null
     },
     {
       "hotspots": [
@@ -22,7 +23,8 @@
         }
       ],
       "media": "MB5OKShz0sFhXb_CvEUgT.jpg",
-      "n": 2
+      "n": 2,
+      "sec": null
     },
     {
       "hotspots": [
@@ -33,7 +35,8 @@
         }
       ],
       "media": "45FHhlBctOz6V-j_3iWEP.jpg",
-      "n": 3
+      "n": 3,
+      "sec": null
     },
     {
       "hotspots": [
@@ -44,7 +47,8 @@
         }
       ],
       "media": "tjvv5G0PkS-NShtRbjHpj.jpg",
-      "n": 4
+      "n": 4,
+      "sec": null
     },
     {
       "hotspots": [
@@ -55,7 +59,8 @@
         }
       ],
       "media": "oQApHvzcaz7DmkrCPwl_e.jpg",
-      "n": 5
+      "n": 5,
+      "sec": null
     },
     {
       "hotspots": [
@@ -66,7 +71,8 @@
         }
       ],
       "media": "njLUYcu-WAPoV1uibOa6D.jpg",
-      "n": 6
+      "n": 6,
+      "sec": null
     }
   ],
   "title": "기본 카드 설정"
