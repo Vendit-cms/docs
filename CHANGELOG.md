@@ -1,6 +1,9 @@
 # CHANGELOG
 
 ## 2026-09-19
+- 스냅샷이 매번 바뀌던 것 수정. 핫스팟 DOM 지문을 RSC 행 참조(`$1b`)로 해시하고 있었다. 행 번호는 페이로드 위치라서 데모가 그대로여도 밀린다. 데모 13편이 바뀐 것처럼 보였다 (scripts/supademo_audit.py)
+- 임베드 파싱을 `self.__next_f.push` 조각별 json.loads 로 교체. 통째 치환은 이스케이프된 따옴표까지 풀어서 문자열 경계가 깨진다 (scripts/supademo_audit.py)
+- 위 수정으로 핫스팟 지문 42개 재기록, 실제 데모 변경은 없다 (audit/supademo/)
 - 한국어 판매 상태 데모를 새로 찍었다. 한국어도 판매 상태와 잔여 재고가 같은 데모를 쓰고 있었다. 영어판과 같은 4스텝 구성 (ko/distributions/usage.mdx, audit/supademo/)
 
 ## 2026-09-18

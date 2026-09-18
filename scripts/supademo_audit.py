@@ -83,13 +83,73 @@ def block(raw, start, open_ch, close_ch):
     return None
 
 
+PUSH = "self.__next_f.push([1,"
+# RSC 행 머리. 줄 맨 앞의 `1b:T266b,` 는 26b3 바이트짜리 텍스트 행이라는 뜻이다.
+TEXT_ROW = re.compile(r"(?m)^([0-9a-f]{1,6}):T([0-9a-f]+),")
+FLIGHT_REF = re.compile(r"^\$[0-9a-f]{1,6}$")
+
+
+def json_string_at(raw, i):
+    """raw[i] 가 여는 따옴표. 닫는 따옴표까지의 JSON 문자열 리터럴을 그대로 잘라 준다."""
+    j, esc = i + 1, False
+    while j < len(raw):
+        c = raw[j]
+        if esc:
+            esc = False
+        elif c == "\\":
+            esc = True
+        elif c == '"':
+            return raw[i:j + 1]
+        j += 1
+    return None
+
+
 def fetch(demo_id):
     r = subprocess.run(["curl", "-sS", "-f", "--max-time", "45", EMBED.format(demo_id)],
                        capture_output=True, text=True)
     if r.returncode != 0 or len(r.stdout) < 500:
         raise RuntimeError(f"임베드를 못 받았다 (rc={r.returncode}, {len(r.stdout)} bytes): {r.stderr.strip()[:200]}")
-    # Next.js 페이로드는 한 번 더 이스케이프돼 있다. 문자열 리터럴로 되돌린 뒤 파싱한다.
-    return r.stdout.replace('\\"', '"').replace("\\\\", "\\")
+    # Next.js 는 페이로드를 self.__next_f.push([1,"..."]) 조각으로 흘려보낸다.
+    # 조각마다 json.loads 로 풀어서 이어 붙인다. 통째로 치환하면 이스케이프된 따옴표까지
+    # 같이 풀려서 문자열 경계가 깨진다.
+    parts, i = [], r.stdout.find(PUSH)
+    while i != -1:
+        q = r.stdout.find('"', i + len(PUSH))
+        lit = json_string_at(r.stdout, q) if q != -1 else None
+        if lit:
+            try:
+                parts.append(json.loads(lit))
+            except ValueError:
+                pass
+        i = r.stdout.find(PUSH, i + len(PUSH))
+    if not parts:
+        raise RuntimeError("페이로드 조각을 하나도 못 읽었다. 임베드 구조가 바뀐 것이다")
+    return "".join(parts)
+
+
+def flight_rows(payload):
+    """RSC 행 표. 번호 -> 텍스트.
+
+    같은 문자열을 두 번 보내지 않으려고 Next.js 는 `$1b` 같은 행 참조를 쓴다.
+    행 번호는 페이로드 안의 위치라서 위쪽이 조금만 바뀌어도 통째로 밀린다.
+    그 번호를 그대로 해시하면 데모는 그대로인데 스냅샷만 바뀐다.
+    2026-09-19 에 이것 때문에 13편이 한꺼번에 바뀐 것처럼 보였다.
+
+    길이는 행 머리에 바이트로 적혀 있다. 다음 행 머리를 찾아 자르면
+    행 번호가 빈 힌트 행(`:HL[...]`)에서 경계를 놓친다.
+    """
+    rows = {}
+    for m in TEXT_ROW.finditer(payload):
+        n = int(m.group(2), 16)
+        rows[m.group(1)] = payload[m.end():].encode("utf-8")[:n].decode("utf-8", "ignore")
+    return rows
+
+
+def deref(v, rows):
+    """`$1b` 꼴이면 행 내용으로 바꾼다. 못 찾으면 그대로 둔다."""
+    if isinstance(v, str) and FLIGHT_REF.match(v):
+        return rows.get(v[1:], v)
+    return v
 
 
 def step_seconds(s):
@@ -109,6 +169,7 @@ def step_seconds(s):
 
 
 def parse(demo_id, raw):
+    rows = flight_rows(raw)
     steps, best = None, None
     for m in re.finditer(r'"steps":\s*\[', raw):
         b = block(raw, m.end() - 1, "[", "]")
@@ -153,9 +214,9 @@ def parse(demo_id, raw):
         for h in s.get("hotspots") or []:
             rec["hotspots"].append({
                 # 사람이 읽는 문구. 이게 바뀌면 diff 에 그대로 보여야 한다.
-                "text": scrub((h.get("text") or "").strip()),
+                "text": scrub((deref(h.get("text"), rows) or "").strip()),
                 # 캡처된 DOM 조각. 통째로 넣으면 diff 가 읽을 수 없게 된다. 지문만 남긴다.
-                "html": short(h.get("htmlValue") or "", 12),
+                "html": short(deref(h.get("htmlValue"), rows) or "", 12),
                 "style": h.get("style"),
             })
         out["steps"].append(rec)
