@@ -12,6 +12,9 @@ MCP 도 API 키도 안 쓰니 크론이나 CI 에 그대로 걸 수 있다.
     python3 scripts/supademo_audit.py            # 스냅샷 갱신
     python3 scripts/supademo_audit.py --check    # 비교만. 달라졌으면 exit 1. 트리는 안 건드린다
 
+exit 1 은 데모가 바뀌었다, exit 2 는 확인을 못 했다(임베드를 못 받았거나 mdx 를 못 읽었다).
+둘을 가르지 않으면 네트워크가 한 번 흔들린 걸 데모 변경으로 읽는다(2026-09-19 에 한 번 그랬다).
+
 출력이 결정적이다. 바뀐 게 없으면 파일 바이트가 그대로라 `git status` 가 깨끗하다.
 그래서 수집 시각을 파일에 안 적는다. 수집 시각은 커밋 날짜가 말해준다.
 """
@@ -346,7 +349,7 @@ def main():
         # 한 편이라도 못 받으면 아무것도 안 쓴다. 반쪽 스냅샷을 커밋하면
         # 멀쩡한 데모가 사라진 것처럼 보인다.
         print("\n%d편을 못 받았다. 스냅샷을 쓰지 않는다." % len(failed), file=sys.stderr)
-        return 1
+        return 2
 
     if check:
         # 트리에 쓰고 git 으로 되돌리던 때가 있었다. 그러면 커밋 전의 새 스냅샷까지

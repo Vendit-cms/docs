@@ -2,6 +2,7 @@
 
 ## 2026-09-19
 - 행 참조 해석이 반쪽이었던 것 수정. 텍스트 행 뒤에 줄바꿈 없이 붙는 행을 놓쳐서 참조 44개 중 30개가 번호째 해시되고 있었다. 행을 앞에서부터 길이대로 읽는다. 지문 30개 재기록, 데모 변경은 없다 (scripts/supademo_audit.py, audit/supademo/)
+- 스냅샷 확인에서 임베드를 못 받으면 exit 2, 데모가 바뀌면 exit 1 로 갈랐다. 네트워크가 한 번 흔들린 걸 변경으로 읽을 뻔했다 (scripts/supademo_audit.py)
 - 녹화 뒤 슈파데모 편집 도구 추가. 인트로와 영상 스텝 삭제, 핫스팟 문구, 제목과 메타 설명을 에디터 화면 없이 내부 API 로 고치고 공개 임베드로 반영을 확인한다 (scripts/supademo_edit.py)
 - steps 배열 추출을 raw_steps() 로 분리, 편집 도구가 같이 쓴다 (scripts/supademo_audit.py)
 - 하네스 머리말의 낡은 규칙 둘 정정: 확정 Save 는 누른다(Dean 09-18), 녹화 단축키는 CDP 로 안 닿고 툴바 실클릭이 필요하다 (scripts/supademo_take.py)
