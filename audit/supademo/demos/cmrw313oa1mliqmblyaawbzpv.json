@@ -5,6 +5,7 @@
     "ko/faq/billing/default-card-setting.mdx"
   ],
   "id": "cmrw313oa1mliqmblyaawbzpv",
+  "metadesc": "두장 이상의 카드가 등록된 경우, 결제할 카드를 선택할 수 있어요.",
   "published": true,
   "stepCount": 6,
   "steps": [
