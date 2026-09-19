@@ -12,6 +12,8 @@
 - CDP 로 보낸 키/마우스는 신뢰된 이벤트라 익스텐션에 그대로 전달된다.
   녹화 토글은 `⌘⇧8` = `Input.dispatchKeyEvent(key="8", code="Digit8", vk=56, modifiers=12)`.
 - 익스텐션은 클릭마다 스크린샷 스텝을, 드래그 구간은 mp4 비디오 스텝을 만든다.
+  드래그는 mp4 스텝 하나와 손을 뗀 자리의 스크린샷 스텝 하나로 들어온다. mp4 는 지우고 스크린샷을 쓴다.
+  너무 빨리 끌면(8단계, 0.03초) 둘 다 안 생긴다. `drag()` 기본 속도로 끌어라(2026-09-19).
 - 워크스페이스 기본 **인트로 챕터**가 1번 스텝으로 따라붙는다. 찍고 나서 `delete_steps` 로 지운다.
   (아웃트로 Tally 설문은 2026-09-12 에 Dean 이 워크스페이스 기본값에서 껐다.)
 - AI Enhancement 가 영어 핫스팟 문구를 자동으로 붙인다. 그대로 두지 말고
@@ -147,10 +149,11 @@ HEADING = ('(()=>{const w=document.createTreeWalker(document.body,NodeFilter.SHO
            'if(r.width>0&&r.top<90)return {x:Math.round((r.left+r.right)/2),y:Math.round((r.top+r.bottom)/2)};}'
            'return null;})()')
 
+# 한국어 UI 에서도 잡는다. 영어만 보던 때는 한국어 테이크에서 저장 바를 못 찾고 멈췄다(2026-09-18).
 PENDING_BAR = ('(()=>{const o=[];const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;'
                'while(n=w.nextNode()){const t=(n.nodeValue||"").trim();if(!t)continue;'
                'const g=document.createRange();g.selectNodeContents(n);const r=g.getBoundingClientRect();'
-               'if(r.width>0&&r.top<120&&/temporary change|^Save$|^Cancel$/i.test(t))'
+               'if(r.width>0&&r.top<120&&/temporary change|임시 변경|^(Save|Cancel|저장|취소)$/i.test(t))'
                'o.push([t,Math.round((r.left+r.right)/2),Math.round((r.top+r.bottom)/2)]);}return o;})()')
 
 
@@ -260,7 +263,12 @@ async def type_into(cdp, x, y, text, label=""):
 
 
 async def drag(cdp, x0, y0, x1, y1, steps=14):
-    """셀 우하단 손잡이를 잡아 오른쪽으로 끌어 값을 전파한다. 익스텐션이 이 구간을 mp4 로 만든다."""
+    """셀 우하단 손잡이를 잡아 오른쪽으로 끌어 값을 전파한다. 익스텐션이 이 구간을 mp4 로 만든다.
+
+    판매 중지 토글도 된다. 토글 가운데가 아니라 셀 우하단 삼각형에서 시작해야 하고,
+    원본 셀의 상태를 복사하니까 원본을 먼저 켜야 한다. 꺼진 셀을 끌면 아무것도 안 바뀐다.
+    2026-09-18 에 이 둘을 몰라서 "판매 중지는 드래그가 안 된다" 고 잘못 적었다.
+    """
     await cdp.send("Input.dispatchMouseEvent", type="mouseMoved", x=x0, y=y0, buttons=0)
     await asyncio.sleep(0.5)
     await cdp.send("Input.dispatchMouseEvent", type="mousePressed", x=x0, y=y0,
@@ -333,7 +341,7 @@ async def discard_changes(cdp):
     `Save` 는 확정이므로 절대 누르지 않는다.
     """
     bar = await cdp.js(PENDING_BAR)
-    cancel = next((b for b in (bar or []) if b[0] == "Cancel"), None)
+    cancel = next((b for b in (bar or []) if b[0] in ("Cancel", "취소")), None)
     if cancel:
         await click(cdp, cancel[1], cancel[2], "Cancel", 3.0)
     else:
