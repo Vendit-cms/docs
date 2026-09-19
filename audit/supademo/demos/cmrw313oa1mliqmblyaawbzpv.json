@@ -5,6 +5,7 @@
     "ko/faq/billing/default-card-setting.mdx"
   ],
   "id": "cmrw313oa1mliqmblyaawbzpv",
+  "metadesc": "두장 이상의 카드가 등록된 경우, 결제할 카드를 선택할 수 있어요.",
   "published": true,
   "stepCount": 6,
   "steps": [
@@ -41,7 +42,7 @@
     {
       "hotspots": [
         {
-          "html": "9c770d65e30e",
+          "html": "4e2d14013110",
           "style": "Area",
           "text": "기본 카드 설정을 선택해 주세요."
         }
@@ -53,7 +54,7 @@
     {
       "hotspots": [
         {
-          "html": "b8a38ab0bd14",
+          "html": "802cfd2cf985",
           "style": "Area",
           "text": "저장 버튼을 눌러주세요."
         }

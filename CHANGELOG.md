@@ -1,6 +1,14 @@
 # CHANGELOG
 
 ## 2026-09-19
+- 행 참조 해석이 반쪽이었던 것 수정. 텍스트 행 뒤에 줄바꿈 없이 붙는 행을 놓쳐서 참조 44개 중 30개가 번호째 해시되고 있었다. 행을 앞에서부터 길이대로 읽는다. 지문 30개 재기록, 데모 변경은 없다 (scripts/supademo_audit.py, audit/supademo/)
+- `--check` 가 트리에 쓰고 git checkout, git clean 으로 되돌리던 것을 임시 디렉터리 비교로 바꿨다. 커밋 전 새 스냅샷을 지우고 있었다 (scripts/supademo_audit.py)
+- 문서에서 빠진 데모의 스냅샷을 지운다. 교체된 잔여 재고 데모 cmtyc75ri0hrxqme9293l1cf5 가 옛 embeddedIn 을 달고 남아 있었다 (scripts/supademo_audit.py, audit/supademo/)
+- 스냅샷에 메타 설명 `metadesc` 추가. 한국어 판매 상태 데모 설명에 'sales management' 가 있었는데 아무 검사기도 못 봤다 (scripts/supademo_audit.py, audit/supademo/)
+- 데모 용어 검사가 영어 원본 데모 7편을 문자열 0개로 통과시키던 것 수정, 번역본이 없으면 핫스팟 문구를 본다. 메타 설명도 검사한다. 144개에서 199개 (scripts/demo_glossary_check.py)
+- 스냅샷이 매번 바뀌던 것 수정. 핫스팟 DOM 지문을 RSC 행 참조(`$1b`)로 해시하고 있었다. 행 번호는 페이로드 위치라서 데모가 그대로여도 밀린다. 데모 13편이 바뀐 것처럼 보였다 (scripts/supademo_audit.py)
+- 임베드 파싱을 `self.__next_f.push` 조각별 json.loads 로 교체. 통째 치환은 이스케이프된 따옴표까지 풀어서 문자열 경계가 깨진다 (scripts/supademo_audit.py)
+- 위 수정으로 핫스팟 지문 42개 재기록, 실제 데모 변경은 없다 (audit/supademo/)
 - 한국어 판매 상태 데모를 새로 찍었다. 한국어도 판매 상태와 잔여 재고가 같은 데모를 쓰고 있었다. 영어판과 같은 4스텝 구성 (ko/distributions/usage.mdx, audit/supademo/)
 
 ## 2026-09-18

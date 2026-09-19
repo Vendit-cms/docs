@@ -10,12 +10,12 @@ Growth 플랜부터라 못 켠다. 즉 슈파데모 안에는 되돌리기도 �
 MCP 도 API 키도 안 쓰니 크론이나 CI 에 그대로 걸 수 있다.
 
     python3 scripts/supademo_audit.py            # 스냅샷 갱신
-    python3 scripts/supademo_audit.py --check    # 비교만. 달라졌으면 exit 1
+    python3 scripts/supademo_audit.py --check    # 비교만. 달라졌으면 exit 1. 트리는 안 건드린다
 
 출력이 결정적이다. 바뀐 게 없으면 파일 바이트가 그대로라 `git status` 가 깨끗하다.
 그래서 수집 시각을 파일에 안 적는다. 수집 시각은 커밋 날짜가 말해준다.
 """
-import hashlib, json, os, re, subprocess, sys
+import filecmp, hashlib, json, os, re, shutil, subprocess, sys, tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -83,13 +83,97 @@ def block(raw, start, open_ch, close_ch):
     return None
 
 
-def fetch(demo_id):
-    r = subprocess.run(["curl", "-sS", "-f", "--max-time", "45", EMBED.format(demo_id)],
+PUSH = "self.__next_f.push([1,"
+FLIGHT_REF = re.compile(r"^\$[0-9a-f]{1,6}$")
+
+
+def json_string_at(raw, i):
+    """raw[i] 가 여는 따옴표. 닫는 따옴표까지의 JSON 문자열 리터럴을 그대로 잘라 준다."""
+    j, esc = i + 1, False
+    while j < len(raw):
+        c = raw[j]
+        if esc:
+            esc = False
+        elif c == "\\":
+            esc = True
+        elif c == '"':
+            return raw[i:j + 1]
+        j += 1
+    return None
+
+
+def fetch(demo_id, lang=None):
+    url = EMBED.format(demo_id) + ("&lang=" + lang if lang else "")
+    r = subprocess.run(["curl", "-sS", "-f", "--max-time", "45", url],
                        capture_output=True, text=True)
     if r.returncode != 0 or len(r.stdout) < 500:
         raise RuntimeError(f"임베드를 못 받았다 (rc={r.returncode}, {len(r.stdout)} bytes): {r.stderr.strip()[:200]}")
-    # Next.js 페이로드는 한 번 더 이스케이프돼 있다. 문자열 리터럴로 되돌린 뒤 파싱한다.
-    return r.stdout.replace('\\"', '"').replace("\\\\", "\\")
+    # Next.js 는 페이로드를 self.__next_f.push([1,"..."]) 조각으로 흘려보낸다.
+    # 조각마다 json.loads 로 풀어서 이어 붙인다. 통째로 치환하면 이스케이프된 따옴표까지
+    # 같이 풀려서 문자열 경계가 깨진다.
+    parts, i = [], r.stdout.find(PUSH)
+    while i != -1:
+        q = r.stdout.find('"', i + len(PUSH))
+        lit = json_string_at(r.stdout, q) if q != -1 else None
+        if lit:
+            try:
+                parts.append(json.loads(lit))
+            except ValueError:
+                pass
+        i = r.stdout.find(PUSH, i + len(PUSH))
+    if not parts:
+        raise RuntimeError("페이로드 조각을 하나도 못 읽었다. 임베드 구조가 바뀐 것이다")
+    return "".join(parts)
+
+
+def flight_rows(payload):
+    """RSC 행 표. 번호 -> 텍스트.
+
+    같은 문자열을 두 번 보내지 않으려고 Next.js 는 `$1b` 같은 행 참조를 쓴다.
+    행 번호는 페이로드 안의 위치라서 위쪽이 조금만 바뀌어도 통째로 밀린다.
+    그 번호를 그대로 해시하면 데모는 그대로인데 스냅샷만 바뀐다.
+    2026-09-19 에 이것 때문에 13편이 한꺼번에 바뀐 것처럼 보였다.
+
+    행은 앞에서부터 차례로 읽어야 한다. 텍스트 행(`1b:T266b,`)은 머리에 적힌 바이트 수만큼이
+    내용이고, 끝나면 줄바꿈 없이 바로 다음 행 머리가 붙는다. 처음엔 줄 맨 앞의 머리만 찾아서
+    텍스트 행 뒤에 붙은 행을 다 놓쳤다. 참조 44개 중 30개가 안 풀린 채 번호로 해시됐고,
+    번호가 가끔 밀릴 때만 스냅샷이 흔들려서 한참 몰랐다(2026-09-19).
+    행 번호가 빈 힌트 행(`:HL[...]`)도 있다.
+    """
+    data = payload.encode("utf-8")
+    rows, i, n = {}, 0, len(data)
+    head = re.compile(rb"([0-9a-f]*):")
+    text = re.compile(rb"T([0-9a-f]+),")
+    while i < n:
+        m = head.match(data, i)
+        if not m:
+            # 행 머리가 아닌 자리. 다음 줄에서 다시 맞춘다
+            j = data.find(b"\n", i)
+            if j == -1:
+                break
+            i = j + 1
+            continue
+        rid, j = m.group(1).decode(), m.end()
+        t = text.match(data, j)
+        if t:
+            size = int(t.group(1), 16)
+            body = data[t.end():t.end() + size]
+            i = t.end() + size
+        else:
+            k = data.find(b"\n", j)
+            k = n if k == -1 else k
+            body = data[j:k]
+            i = k + 1
+        if rid:
+            rows[rid] = body.decode("utf-8", "ignore")
+    return rows
+
+
+def deref(v, rows):
+    """`$1b` 꼴이면 행 내용으로 바꾼다. 못 찾으면 그대로 둔다."""
+    if isinstance(v, str) and FLIGHT_REF.match(v):
+        return rows.get(v[1:], v)
+    return v
 
 
 def step_seconds(s):
@@ -109,6 +193,7 @@ def step_seconds(s):
 
 
 def parse(demo_id, raw):
+    rows = flight_rows(raw)
     steps, best = None, None
     for m in re.finditer(r'"steps":\s*\[', raw):
         b = block(raw, m.end() - 1, "[", "]")
@@ -127,15 +212,20 @@ def parse(demo_id, raw):
     if steps is None:
         raise RuntimeError("steps 배열을 못 찾았다. 임베드 구조가 바뀌었을 수 있다")
 
-    def field(key, pattern=r'"([^"]*)"'):
-        m = re.search(r'"%s":\s*%s' % (re.escape(key), pattern), raw)
-        return m.group(1) if m else None
+    def field(key):
+        m = re.search(r'"%s":\s*"' % re.escape(key), raw)
+        lit = json_string_at(raw, m.end() - 1) if m else None
+        return json.loads(lit) if lit else None
 
     out = {
         "id": demo_id,
         "title": field("title"),
         "published": '"published":true' in raw,
         "domainURL": scrub(field("domainURL") or ""),
+        # 링크 미리보기, 공유 페이지, 검색에 뜨는 설명. 슈파데모 AI 가 영어로 지어 붙인다.
+        # 한국어 데모에 "sales management" 가 박혀 있었는데 아무 검사기도 못 봤다(2026-09-19).
+        # 키 이름은 metadesc 다. seoDescription 은 켜고 끄는 설정값(true/false)이라 헷갈리지 마라.
+        "metadesc": scrub((field("metadesc") or "").strip()),
         "stepCount": len(steps),
         "steps": [],
     }
@@ -153,19 +243,19 @@ def parse(demo_id, raw):
         for h in s.get("hotspots") or []:
             rec["hotspots"].append({
                 # 사람이 읽는 문구. 이게 바뀌면 diff 에 그대로 보여야 한다.
-                "text": scrub((h.get("text") or "").strip()),
+                "text": scrub((deref(h.get("text"), rows) or "").strip()),
                 # 캡처된 DOM 조각. 통째로 넣으면 diff 가 읽을 수 없게 된다. 지문만 남긴다.
-                "html": short(h.get("htmlValue") or "", 12),
+                "html": short(deref(h.get("htmlValue"), rows) or "", 12),
                 "style": h.get("style"),
             })
         out["steps"].append(rec)
     return out
 
 
-def write(demo, used):
+def write(demo, used, out=OUT):
     demo = dict(demo)
     demo["embeddedIn"] = used.get(demo["id"], [])
-    p = os.path.join(OUT, "demos", demo["id"] + ".json")
+    p = os.path.join(out, "demos", demo["id"] + ".json")
     os.makedirs(os.path.dirname(p), exist_ok=True)
     with open(p, "w", encoding="utf-8") as f:
         json.dump(demo, f, ensure_ascii=False, indent=2, sort_keys=True)
@@ -173,7 +263,7 @@ def write(demo, used):
     return p
 
 
-def index(demos, used):
+def index(demos, used, out=OUT):
     lines = [
         "# Supademo 스냅샷",
         "",
@@ -191,10 +281,43 @@ def index(demos, used):
             "예" if d["published"] else "아니오",
             " ".join("`%s`" % x for x in docs) or "-"))
     lines += ["", "합계 %d편." % len(demos), ""]
-    p = os.path.join(OUT, "index.md")
-    os.makedirs(OUT, exist_ok=True)
+    p = os.path.join(out, "index.md")
+    os.makedirs(out, exist_ok=True)
     open(p, "w", encoding="utf-8").write("\n".join(lines))
     return p
+
+
+def prune(demos, out=OUT):
+    """문서에서 빠진 데모의 스냅샷을 지운다. 지운 id 목록을 돌려준다.
+
+    안 지우면 교체된 데모가 옛 embeddedIn 을 단 채 남아서 아직 쓰이는 것처럼 보인다.
+    2026-09-19 에 cmtyc75ri0hrxqme9293l1cf5 가 그랬다. 26개 파일에 index 는 25편.
+    기록은 git 에 남는다.
+    """
+    keep = {d["id"] + ".json" for d in demos}
+    base = os.path.join(out, "demos")
+    gone = []
+    for f in sorted(os.listdir(base)) if os.path.isdir(base) else []:
+        if f.endswith(".json") and f not in keep:
+            os.remove(os.path.join(base, f))
+            gone.append(f[:-5])
+    return gone
+
+
+def tree_diff(a, b):
+    """두 디렉터리를 파일 단위로 비교한다. 바뀐 것, a 에만, b 에만 있는 상대 경로."""
+    changed, only_a, only_b = [], [], []
+
+    def walk(c, rel):
+        changed.extend(os.path.join(rel, f) for f in c.diff_files)
+        only_a.extend(os.path.join(rel, f) for f in c.left_only)
+        only_b.extend(os.path.join(rel, f) for f in c.right_only)
+        for name, sub in c.subdirs.items():
+            walk(sub, os.path.join(rel, name))
+
+    # 방금 쓴 파일이라 mtime 이 늘 달라서 dircmp 가 바이트까지 내려가 비교한다.
+    walk(filecmp.dircmp(a, b), "")
+    return sorted(changed), sorted(only_a), sorted(only_b)
 
 
 def main():
@@ -219,10 +342,33 @@ def main():
         print("\n%d편을 못 받았다. 스냅샷을 쓰지 않는다." % len(failed), file=sys.stderr)
         return 1
 
+    if check:
+        # 트리에 쓰고 git 으로 되돌리던 때가 있었다. 그러면 커밋 전의 새 스냅샷까지
+        # git clean 이 지운다. 임시 디렉터리에 쓰고 비교만 한다.
+        tmp = tempfile.mkdtemp(prefix="supademo-check-")
+        try:
+            for d in demos:
+                write(d, used, tmp)
+            index(demos, used, tmp)
+            changed, fresh, stale = tree_diff(tmp, OUT)
+        finally:
+            shutil.rmtree(tmp, ignore_errors=True)
+        if not (changed or fresh or stale):
+            print("\n디스크의 스냅샷과 동일하다. 바뀐 데모 없음.")
+            return 0
+        for label, xs in (("바뀜", changed), ("새로 생김", fresh), ("문서에서 빠짐", stale)):
+            for x in xs:
+                print("  %s  %s" % (label, x))
+        print("\n--check 라 아무것도 안 썼다. 반영하려면 --check 없이 돌려라.")
+        return 1
+
     for d in demos:
         write(d, used)
+    gone = prune(demos)
     index(demos, used)
     print("\n%d편 기록. %s" % (len(demos), os.path.relpath(OUT, ROOT)))
+    for g in gone:
+        print("  문서에서 빠져서 지움: %s" % g)
 
     drift = subprocess.run(["git", "-C", ROOT, "status", "--porcelain", "--", "audit/supademo"],
                            capture_output=True, text=True).stdout.strip()
@@ -231,11 +377,6 @@ def main():
         return 0
     print("\n바뀐 것:")
     print(drift)
-    if check:
-        print("\n--check 라 되돌린다.")
-        subprocess.run(["git", "-C", ROOT, "checkout", "--", "audit/supademo"])
-        subprocess.run(["git", "-C", ROOT, "clean", "-qfd", "--", "audit/supademo"])
-        return 1
     return 0
 
 

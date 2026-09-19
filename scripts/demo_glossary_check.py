@@ -2,16 +2,19 @@
 """임베드된 Supademo 데모의 영어 번역 문자열을 실제 배포본에서 긁어 용어 검사한다.
 
 전사하지 않는다. `?lang=English` 로 받은 임베드 HTML 안의 translatedTexts 를 그대로 판다.
+번역본이 없는 영어 원본 데모는 핫스팟 문구를 본다. 메타 설명(metadesc)도 같이 본다.
 
     python3 scripts/demo_glossary_check.py [en 디렉터리]
 """
-import json, re, subprocess, sys, os, importlib.util
+import json, re, sys, os, importlib.util
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 spec = importlib.util.spec_from_file_location("g", os.path.join(HERE, "glossary_check.py"))
 G = importlib.util.module_from_spec(spec); spec.loader.exec_module(G)
 
-EMBED = "https://preview.vendit.co.kr/embed/{}?embed_v=2&lang=English"
+# 임베드 파싱은 스냅샷 도구 것을 쓴다. 따옴표를 통째로 치환하던 사본은 문자열 경계를 깨뜨렸다.
+spec = importlib.util.spec_from_file_location("a", os.path.join(HERE, "supademo_audit.py"))
+A = importlib.util.module_from_spec(spec); spec.loader.exec_module(A)
 
 
 def demo_ids(root):
@@ -25,30 +28,26 @@ def demo_ids(root):
 
 
 def texts(demo_id):
-    html = subprocess.run(["curl", "-s", EMBED.format(demo_id)],
-                          capture_output=True, text=True).stdout
-    # Next.js 페이로드는 한 번 더 이스케이프돼 있다. 문자열 리터럴로 되돌린 뒤 파싱한다.
-    raw = html.replace('\\"', '"').replace("\\\\", "\\")
+    raw = A.fetch(demo_id, "English")
     out = []
     for m in re.finditer(r'"translatedTexts":\s*\[', raw):
-        i = m.end() - 1
-        depth, j = 0, i
-        while j < len(raw):
-            if raw[j] == "[":
-                depth += 1
-            elif raw[j] == "]":
-                depth -= 1
-                if depth == 0:
-                    break
-            j += 1
+        b = A.block(raw, m.end() - 1, "[", "]")
         try:
-            arr = json.loads(raw[i:j + 1])
-        except Exception:
+            arr = json.loads(b) if b else []
+        except ValueError:
             continue
         for e in arr:
             t = (e.get("text") or "").strip()
             if t:
                 out.append((e.get("entityType", "?"), t))
+    demo = A.parse(demo_id, raw)
+    if not out:
+        # 영어로 찍은 데모는 번역본이 없어서 translatedTexts 가 비어 있다. 원문 핫스팟이 곧 영어다.
+        # 이걸 안 보면 영어 데모 7편이 문자열 0개로 검사를 통과했다(2026-09-19).
+        out = [("hotspot", h["text"]) for st in demo["steps"] for h in st["hotspots"] if h["text"]]
+    if demo.get("metadesc"):
+        # 링크 미리보기에 뜨는 설명. 한국어 데모라도 슈파데모 AI 가 영어로 붙인다.
+        out.append(("metadesc", demo["metadesc"]))
     return out
 
 

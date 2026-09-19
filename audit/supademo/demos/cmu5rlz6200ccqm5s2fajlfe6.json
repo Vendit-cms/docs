@@ -4,13 +4,14 @@
     "en/distributions/usage.mdx"
   ],
   "id": "cmu5rlz6200ccqm5s2fajlfe6",
+  "metadesc": "Learn how to update Deluxe room availability for specific dates, save inventory changes, and configure room distribution and pricing settings in vcms.io.",
   "published": true,
   "stepCount": 4,
   "steps": [
     {
       "hotspots": [
         {
-          "html": "9c770d65e30e",
+          "html": "0e87d6ebd902",
           "style": "Circle",
           "text": "Click the availability cell for the date you want and type how many rooms to sell on the channel."
         }
@@ -22,7 +23,7 @@
     {
       "hotspots": [
         {
-          "html": "b8a38ab0bd14",
+          "html": "09c4be5ace4d",
           "style": "Circle",
           "text": "Drag to change availability for several dates at once."
         }
@@ -34,7 +35,7 @@
     {
       "hotspots": [
         {
-          "html": "9c57e5a9707a",
+          "html": "cdab0d8cbb92",
           "style": "Area",
           "text": "Press Save to apply the changes to the channel."
         }

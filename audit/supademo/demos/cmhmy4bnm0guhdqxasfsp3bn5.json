@@ -4,6 +4,7 @@
     "ko/faq/inventory-rate/move-room-to-other-type.mdx"
   ],
   "id": "cmhmy4bnm0guhdqxasfsp3bn5",
+  "metadesc": "",
   "published": true,
   "stepCount": 13,
   "steps": [
@@ -28,7 +29,7 @@
     {
       "hotspots": [
         {
-          "html": "b8a38ab0bd14",
+          "html": "84bc49f0b213",
           "style": "Area",
           "text": "옮기고 싶은 객실의 객실 타입을 선택해 주세요."
         }
@@ -58,7 +59,7 @@
     {
       "hotspots": [
         {
-          "html": "9c57e5a9707a",
+          "html": "bef6c16283a6",
           "style": "Area",
           "text": "줄어든 객실 수 만큼 다른 객실 타입을 옮길 수 있어요."
         }
@@ -70,7 +71,7 @@
     {
       "hotspots": [
         {
-          "html": "710d47350209",
+          "html": "bef6c16283a6",
           "style": "Circle",
           "text": "저장 버튼을 누르면 해당 객실 타입의 객실 수가 줄어듭니다."
         }
@@ -82,7 +83,7 @@
     {
       "hotspots": [
         {
-          "html": "cacb3ebb9dae",
+          "html": "b25e02d7aeac",
           "style": "Circle",
           "text": "저장 버튼을 눌러 주세요."
         }
@@ -94,7 +95,7 @@
     {
       "hotspots": [
         {
-          "html": "7adeaf9a3b6d",
+          "html": "cd2b110c0bc2",
           "style": "Area",
           "text": "객실을 추가할 객실 타입을 선택해 주세요."
         }
@@ -106,7 +107,7 @@
     {
       "hotspots": [
         {
-          "html": "13c47a07a3db",
+          "html": "a128d317258d",
           "style": "Circle",
           "text": "원하는 객실 수 만큼 추가할 수 있습니다.\n현재 결제된 총 객실 수를 초과할 경우, 추가 결제가 필요합니다."
         }
@@ -118,7 +119,7 @@
     {
       "hotspots": [
         {
-          "html": "d7d5c43c93d7",
+          "html": "68f87818534e",
           "style": "Circle",
           "text": "객실 추가가 완료되면,\n저장 버튼을 눌러주세요."
         }
@@ -130,7 +131,7 @@
     {
       "hotspots": [
         {
-          "html": "e517bb8df241",
+          "html": "ba52492e0e63",
           "style": "Circle",
           "text": "저장 버튼을 눌러주세요."
         }

@@ -4,6 +4,7 @@
     "en/distributions/usage.mdx"
   ],
   "id": "cmtz35id90swnqme9v8xtizqs",
+  "metadesc": "Learn how to configure check-in and check-out settings, adjust package rates with temporary changes, and manage room inventory and pricing in vcms.io.",
   "published": true,
   "stepCount": 4,
   "steps": [
@@ -22,7 +23,7 @@
     {
       "hotspots": [
         {
-          "html": "9c770d65e30e",
+          "html": "1b22824a0852",
           "style": "Area",
           "text": "Please enter the surcharge or discount amount."
         }
@@ -34,7 +35,7 @@
     {
       "hotspots": [
         {
-          "html": "b8a38ab0bd14",
+          "html": "10418d7d6c87",
           "style": "Area",
           "text": "Click Temporary change to save it as a draft."
         }

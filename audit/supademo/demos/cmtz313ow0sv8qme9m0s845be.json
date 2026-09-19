@@ -4,6 +4,7 @@
     "en/distributions/usage.mdx"
   ],
   "id": "cmtz313ow0sv8qme9m0s845be",
+  "metadesc": "Learn how to set rate adjustments for specific dates, apply temporary pricing changes to your distribution, and access inventory management controls in VCMS.",
   "published": true,
   "stepCount": 4,
   "steps": [
@@ -22,7 +23,7 @@
     {
       "hotspots": [
         {
-          "html": "9c770d65e30e",
+          "html": "1b22824a0852",
           "style": "Area",
           "text": "Please enter the surcharge or discount amount."
         }
@@ -34,7 +35,7 @@
     {
       "hotspots": [
         {
-          "html": "b8a38ab0bd14",
+          "html": "890b5f62669c",
           "style": "Area",
           "text": "Click Temporary change to save it as a draft."
         }

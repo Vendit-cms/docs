@@ -4,13 +4,14 @@
     "en/distributions/usage.mdx"
   ],
   "id": "cmu72a5il1rasqmct0g7nd6kl",
+  "metadesc": "Learn how to close room inventory and block booking dates using Stop sell switches in your distribution settings, then save and manage availability across vcms.io.",
   "published": true,
   "stepCount": 4,
   "steps": [
     {
       "hotspots": [
         {
-          "html": "9c770d65e30e",
+          "html": "180cd73fb3a9",
           "style": "Circle",
           "text": "Turn on Stop sell for the date you want and that room type stops selling on the channel."
         }
@@ -22,7 +23,7 @@
     {
       "hotspots": [
         {
-          "html": "b8a38ab0bd14",
+          "html": "4df4261467e8",
           "style": "Circle",
           "text": "Use the All rooms row to stop selling every room type on that date."
         }
@@ -34,7 +35,7 @@
     {
       "hotspots": [
         {
-          "html": "9c57e5a9707a",
+          "html": "cdab0d8cbb92",
           "style": "Area",
           "text": "Press Save to apply the changes to the channel."
         }

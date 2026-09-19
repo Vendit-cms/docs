@@ -5,6 +5,7 @@
     "ko/release-notes/2026-01-14.mdx"
   ],
   "id": "cmkdypcpl0z0eqm44vxeln9rt",
+  "metadesc": "",
   "published": true,
   "stepCount": 3,
   "steps": [
@@ -29,7 +30,7 @@
     {
       "hotspots": [
         {
-          "html": "9c770d65e30e",
+          "html": "3da6e005f65e",
           "style": "Circle",
           "text": "\"다운로드\" 버튼을 눌러 날짜 기간에 맞는 예약 내역을 CSV 파일로 다운로드할 수 있습니다."
         }

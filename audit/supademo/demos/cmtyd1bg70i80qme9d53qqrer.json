@@ -5,6 +5,7 @@
     "en/faq/inventory-rate/daily-chek-in-out-time.mdx"
   ],
   "id": "cmtyd1bg70i80qme9d53qqrer",
+  "metadesc": "Learn how to configure check-in and check-out times for hotel room types using bulk and individual update options, then manage your hotel's inventory and distribution settings.",
   "published": true,
   "stepCount": 19,
   "steps": [
@@ -23,7 +24,7 @@
     {
       "hotspots": [
         {
-          "html": "9c770d65e30e",
+          "html": "48d95867db92",
           "style": "Area",
           "text": "Bulk update applies the same time to every channel package connected to that room type."
         }
@@ -35,7 +36,7 @@
     {
       "hotspots": [
         {
-          "html": "b8a38ab0bd14",
+          "html": "d379d71caaf1",
           "style": "Area",
           "text": "Individual update sets the time for one package at a time."
         }
@@ -71,7 +72,7 @@
     {
       "hotspots": [
         {
-          "html": "9c57e5a9707a",
+          "html": "9a081def26bf",
           "style": "Area",
           "text": "Press Save once you have finished changing the time."
         }
@@ -149,7 +150,7 @@
     {
       "hotspots": [
         {
-          "html": "710d47350209",
+          "html": "e0902a0e0605",
           "style": "Area",
           "text": "Incorrect time settings can be reverted to the previous value."
         }
@@ -197,7 +198,7 @@
     {
       "hotspots": [
         {
-          "html": "cacb3ebb9dae",
+          "html": "a7521bf7cfa6",
           "style": "Area",
           "text": "Please press the save button."
         }

@@ -5,6 +5,7 @@
     "ko/faq/integrations/vcloud.mdx"
   ],
   "id": "cme8357y3002n0z0hdnvpgox0",
+  "metadesc": "",
   "published": true,
   "stepCount": 13,
   "steps": [
@@ -23,7 +24,7 @@
     {
       "hotspots": [
         {
-          "html": "9c770d65e30e",
+          "html": "d9c00bd343b3",
           "style": "Circle",
           "text": "연동 버튼을 눌러주세요."
         }
@@ -101,7 +102,7 @@
     {
       "hotspots": [
         {
-          "html": "b8a38ab0bd14",
+          "html": "f8524f736c63",
           "style": "Circle",
           "text": "연동 버튼을 눌러주시면, 연동 설정으로 이동합니다."
         }
