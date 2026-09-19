@@ -153,7 +153,7 @@
 | 이미지 | 상태 |
 | --- | --- |
 | `en-distribution-syncing.png` | 영어 캡처 완료 |
-| `Distribution-Booking-Sync-Only.png` | Dean 확인 필요 — 영어 배너가 {date} 를 그대로 찍는다. 값이 안 꽂히는 문제다. 2026-09-16 에 vcms-i18n origin/main 의 locales/latest/en.json 을 다시 열어봤는데 launchedAt 은 0건이고 app.sync-banner.description.* 는 여전히 {date} 다. 배포를 기다리면 풀린다고 적어놨던 건 틀렸다. 원인부터 다시 봐야 한다. en-distribution-booking-sync-only.png 는 준비돼 있다 |
+| `Distribution-Booking-Sync-Only.png` | Dean 확인 필요 — 앱 버그다. 번역 문제가 아니다(2026-09-17 확인). 같은 키 app.sync-banner.description.stopped-inventory-and-rate 를 ko 도 en 도 {date} 자리표시자로 똑같이 들고 있는데, 한국어 화면은 '2026-07-27 18:32:25 이후,' 로 값이 박히고 영어 화면은 'Since {date},' 를 글자 그대로 찍는다. 로케일만 다르고 문자열·키·화면이 같으니 값을 꽂는 쪽이 영어에서만 안 도는 것이다. {date} 를 쓰는 키는 전체 30개라 이 배너만의 일도 아니다. vcms-web 이 고쳐야 풀린다. en-distribution-booking-sync-only.png 는 찍어뒀지만 그 캡처에도 {date} 가 그대로 찍혀서 못 쓴다 |
 | `260727-channel-example.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/distributions/understanding.mdx`

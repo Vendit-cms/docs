@@ -13,6 +13,7 @@
 ## 2026-09-17
 - 개인정보 동의서의 수집 항목을 현행 연동 채널로 교체, 한국어와 영어 양쪽 (ko/reference/personal-information-consent.mdx, en/reference/personal-information-consent.mdx)
 - 동의서의 캠퍼레스트 항목을 화면 라벨과 같은 캠핑장 ID 로 정정, 호텔 코드가 아니다 (ko/reference/personal-information-consent.mdx, en/reference/personal-information-consent.mdx)
+- sync 배너 캡처의 원인을 앱 버그로 정정, 번역 문제가 아니었다 (scripts/images_manifest.py)
 
 ## 2026-09-16
 - 이용약관 논리 오류 4건 수정, 한국어 정본과 영어 양쪽 (ko/reference/terms-conditions.mdx, en/reference/terms-conditions.mdx)
