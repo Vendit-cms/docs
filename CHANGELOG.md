@@ -2,6 +2,9 @@
 
 ## 2026-09-19
 - 행 참조 해석이 반쪽이었던 것 수정. 텍스트 행 뒤에 줄바꿈 없이 붙는 행을 놓쳐서 참조 44개 중 30개가 번호째 해시되고 있었다. 행을 앞에서부터 길이대로 읽는다. 지문 30개 재기록, 데모 변경은 없다 (scripts/supademo_audit.py, audit/supademo/)
+- 녹화 뒤 슈파데모 편집 도구 추가. 인트로와 영상 스텝 삭제, 핫스팟 문구, 제목과 메타 설명을 에디터 화면 없이 내부 API 로 고치고 공개 임베드로 반영을 확인한다 (scripts/supademo_edit.py)
+- steps 배열 추출을 raw_steps() 로 분리, 편집 도구가 같이 쓴다 (scripts/supademo_audit.py)
+- 하네스 머리말의 낡은 규칙 둘 정정: 확정 Save 는 누른다(Dean 09-18), 녹화 단축키는 CDP 로 안 닿고 툴바 실클릭이 필요하다 (scripts/supademo_take.py)
 - 판매 상태 데모를 영어, 한국어 둘 다 드래그판으로 다시 찍었다. 2번 스텝이 전체 객실 행에서 셀 드래그로 바뀌어 본문의 '좌우로 끌어' 설명과 맞는다. 4스텝, 영상 0 (en/distributions/usage.mdx, ko/distributions/usage.mdx, audit/supademo/)
 - '판매 중지는 드래그가 안 된다' 는 틀렸다. 토글 가운데서, 꺼진 원본으로 끌어서 안 된 것이다. 핸들에서 켜진 원본으로 끌면 CDP 로도 된다 (HANDOFF.md)
 - 한국어 판매 상태 iframe 높이 415px 고정을 영어판과 같은 비율 1.6 으로, Dean 승인 한 줄 (ko/distributions/usage.mdx, CLAUDE.md)

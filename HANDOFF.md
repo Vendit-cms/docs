@@ -111,11 +111,12 @@ en 에서 다시 찍은 자리와 같은 위치의 한국어 이미지 84 장을
 `ko/distributions/usage.mdx` 8행 iframe 만 바꿨다(Dean 승인, CLAUDE.md 장부 참고).
 교체돼서 문서에서 빠진 데모: `cmtyc75ri0hrxqme9293l1cf5`(잔여 재고 첫 판), `cmu72a5il1rasqmct0g7nd6kl`, `cmu761pkp1x92qmct4lfhx3le`(판매 상태 전체 객실판).
 
-절차와 함정은 전부 `scripts/supademo_take.py` 의 docstring 에 적었다. 핵심만:
+절차와 함정은 전부 `scripts/supademo_take.py` 의 docstring 에 적었다. 녹화 뒤 편집(인트로와 영상 스텝 삭제, 문구,
+제목, 메타 설명)은 `scripts/supademo_edit.py` 로 한다. 에디터 화면을 안 띄운다. 핵심만:
 - 녹화 패널은 **페이지 로드당 한 번만** 열린다. 테이크마다 `Page.reload` 로 시작.
 - **탭이 백그라운드면 그리드가 렌더 안 된다**(`content-visibility:auto`). `Page.bringToFront` 필수.
-- 워크스페이스 기본 인트로 챕터가 1번 스텝으로 붙는다. `delete_steps` 로 지워라.
-- AI 가 붙인 영어 핫스팟 문구는 기존 번역으로 갈아끼워라(`demo_glossary_check.texts()` 로 긁는다).
+- 워크스페이스 기본 인트로 챕터가 1번 스텝으로 붙는다. `supademo_edit.py tidy` 로 지워라.
+- AI 가 붙인 핫스팟 문구, 제목, 메타 설명은 손으로 갈아끼워라(`supademo_edit.py texts`, `meta`).
 - **임시 변경은 상단 바의 `Cancel` 을 눌러서 버려라.** `Shift+Esc` 는 포커스가 입력칸에 있으면
   씹힌다(09-13 실측, 변경이 그대로 남아 있었다).
 - 입력칸 값 교체는 `Input.dispatchKeyEvent` 에 **`commands:["selectAll"]`** 을 같이 보내야 한다.
