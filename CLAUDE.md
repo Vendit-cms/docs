@@ -13,8 +13,13 @@
 - `docs.json` 은 `navigation.languages[]` 안에서 **en 블록만** 만진다. ko 블록은 그대로 둔다.
 - 영어 캡처는 여전히 `en-` 접두 새 파일로 넣는다.
 
-마지막으로 승인된 ko 변경: 채널 카드 아이콘 19개를 실제 브랜드 SVG 로 교체
-(`51e7e39`, `0ffec72`). 여기까지가 끝이다.
+승인된 ko 변경, 이 목록 밖은 없다:
+- 채널 카드 아이콘 19개를 실제 브랜드 SVG 로 교체 (`51e7e39`, `0ffec72`)
+- `ko/distributions/usage.mdx` 8행 판매 상태 데모 iframe `src` 교체 (`382a8a2`, Dean 2026-09-19 "수정하고 배포한다")
+- 같은 iframe 을 한국어 드래그판 데모로 다시 교체하고 `height="415"` 를 영어판과 같은
+  `style={{ aspectRatio:"1.6", height:"auto" }}` 로 (Dean 2026-09-19, 이 한 줄만 서식 허용)
+
+iframe 한 줄 허용이 ko iframe 일반 허용은 아니다. 다른 ko 페이지는 여전히 묻는다.
 
 ## 레포 함정
 

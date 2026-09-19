@@ -3,20 +3,20 @@
   "embeddedIn": [
     "en/distributions/usage.mdx"
   ],
-  "id": "cmu72a5il1rasqmct0g7nd6kl",
-  "metadesc": "Learn how to close room inventory and block booking dates using Stop sell switches in your distribution settings, then save and manage availability across vcms.io.",
+  "id": "cmu7o8fw50ebhqm4x8duizui4",
+  "metadesc": "Turn on Stop sell for a date or several dates in VCMS Distribution and save to push the change to all channels.",
   "published": true,
   "stepCount": 4,
   "steps": [
     {
       "hotspots": [
         {
-          "html": "180cd73fb3a9",
+          "html": "3742d4886554",
           "style": "Circle",
-          "text": "Turn on Stop sell for the date you want and that room type stops selling on the channel."
+          "text": "Turn on Stop sell on the date you want and that room type stops selling on the channel."
         }
       ],
-      "media": "LBvZJ4H-qDgnNxfVZM0iQ.jpg",
+      "media": "qaHYTker5vLThdivEB0FV.jpg",
       "n": 1,
       "sec": null
     },
@@ -25,10 +25,10 @@
         {
           "html": "4df4261467e8",
           "style": "Circle",
-          "text": "Use the All rooms row to stop selling every room type on that date."
+          "text": "Drag across the dates to stop selling several days at once."
         }
       ],
-      "media": "TGkyN8W0fIEqh3QK5ig2e.jpg",
+      "media": "YXYpojkYSlZtRGtEknOXY.jpg",
       "n": 2,
       "sec": null
     },
@@ -40,7 +40,7 @@
           "text": "Press Save to apply the changes to the channel."
         }
       ],
-      "media": "lVA6WgssB7O-np3PcxuLj.jpg",
+      "media": "eymQCSG7pGmJOW69F0Xdi.jpg",
       "n": 3,
       "sec": null
     },
@@ -52,10 +52,10 @@
           "text": "Saved changes are pushed to the channels together."
         }
       ],
-      "media": "hCvteH8_QQm2z7gP-Qmfk.jpg",
+      "media": "L3hbxoHqD1ujDajb9tVpE.jpg",
       "n": 4,
       "sec": null
     }
   ],
-  "title": "VCMS stop sell change"
+  "title": "VCMS sell status change"
 }
