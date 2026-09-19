@@ -36,7 +36,7 @@
     {
       "hotspots": [
         {
-          "html": "6f3ee2216923",
+          "html": "d379d71caaf1",
           "style": "Area",
           "text": "Individual update sets the time for one package at a time."
         }
@@ -72,7 +72,7 @@
     {
       "hotspots": [
         {
-          "html": "9d916c078a75",
+          "html": "9a081def26bf",
           "style": "Area",
           "text": "Press Save once you have finished changing the time."
         }
@@ -150,7 +150,7 @@
     {
       "hotspots": [
         {
-          "html": "2db539265a6c",
+          "html": "e0902a0e0605",
           "style": "Area",
           "text": "Incorrect time settings can be reverted to the previous value."
         }
@@ -198,7 +198,7 @@
     {
       "hotspots": [
         {
-          "html": "59746a77e137",
+          "html": "a7521bf7cfa6",
           "style": "Area",
           "text": "Please press the save button."
         }

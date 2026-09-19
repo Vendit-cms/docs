@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## 2026-09-19
+- 행 참조 해석이 반쪽이었던 것 수정. 텍스트 행 뒤에 줄바꿈 없이 붙는 행을 놓쳐서 참조 44개 중 30개가 번호째 해시되고 있었다. 행을 앞에서부터 길이대로 읽는다. 지문 30개 재기록, 데모 변경은 없다 (scripts/supademo_audit.py, audit/supademo/)
 - `--check` 가 트리에 쓰고 git checkout, git clean 으로 되돌리던 것을 임시 디렉터리 비교로 바꿨다. 커밋 전 새 스냅샷을 지우고 있었다 (scripts/supademo_audit.py)
 - 문서에서 빠진 데모의 스냅샷을 지운다. 교체된 잔여 재고 데모 cmtyc75ri0hrxqme9293l1cf5 가 옛 embeddedIn 을 달고 남아 있었다 (scripts/supademo_audit.py, audit/supademo/)
 - 스냅샷에 메타 설명 `metadesc` 추가. 한국어 판매 상태 데모 설명에 'sales management' 가 있었는데 아무 검사기도 못 봤다 (scripts/supademo_audit.py, audit/supademo/)

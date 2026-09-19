@@ -84,8 +84,6 @@ def block(raw, start, open_ch, close_ch):
 
 
 PUSH = "self.__next_f.push([1,"
-# RSC 행 머리. 줄 맨 앞의 `1b:T266b,` 는 26b3 바이트짜리 텍스트 행이라는 뜻이다.
-TEXT_ROW = re.compile(r"(?m)^([0-9a-f]{1,6}):T([0-9a-f]+),")
 FLIGHT_REF = re.compile(r"^\$[0-9a-f]{1,6}$")
 
 
@@ -136,13 +134,38 @@ def flight_rows(payload):
     그 번호를 그대로 해시하면 데모는 그대로인데 스냅샷만 바뀐다.
     2026-09-19 에 이것 때문에 13편이 한꺼번에 바뀐 것처럼 보였다.
 
-    길이는 행 머리에 바이트로 적혀 있다. 다음 행 머리를 찾아 자르면
-    행 번호가 빈 힌트 행(`:HL[...]`)에서 경계를 놓친다.
+    행은 앞에서부터 차례로 읽어야 한다. 텍스트 행(`1b:T266b,`)은 머리에 적힌 바이트 수만큼이
+    내용이고, 끝나면 줄바꿈 없이 바로 다음 행 머리가 붙는다. 처음엔 줄 맨 앞의 머리만 찾아서
+    텍스트 행 뒤에 붙은 행을 다 놓쳤다. 참조 44개 중 30개가 안 풀린 채 번호로 해시됐고,
+    번호가 가끔 밀릴 때만 스냅샷이 흔들려서 한참 몰랐다(2026-09-19).
+    행 번호가 빈 힌트 행(`:HL[...]`)도 있다.
     """
-    rows = {}
-    for m in TEXT_ROW.finditer(payload):
-        n = int(m.group(2), 16)
-        rows[m.group(1)] = payload[m.end():].encode("utf-8")[:n].decode("utf-8", "ignore")
+    data = payload.encode("utf-8")
+    rows, i, n = {}, 0, len(data)
+    head = re.compile(rb"([0-9a-f]*):")
+    text = re.compile(rb"T([0-9a-f]+),")
+    while i < n:
+        m = head.match(data, i)
+        if not m:
+            # 행 머리가 아닌 자리. 다음 줄에서 다시 맞춘다
+            j = data.find(b"\n", i)
+            if j == -1:
+                break
+            i = j + 1
+            continue
+        rid, j = m.group(1).decode(), m.end()
+        t = text.match(data, j)
+        if t:
+            size = int(t.group(1), 16)
+            body = data[t.end():t.end() + size]
+            i = t.end() + size
+        else:
+            k = data.find(b"\n", j)
+            k = n if k == -1 else k
+            body = data[j:k]
+            i = k + 1
+        if rid:
+            rows[rid] = body.decode("utf-8", "ignore")
     return rows
 
 
