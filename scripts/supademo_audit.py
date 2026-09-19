@@ -192,8 +192,8 @@ def step_seconds(s):
         return None
 
 
-def parse(demo_id, raw):
-    rows = flight_rows(raw)
+def raw_steps(raw):
+    """페이로드에서 steps 배열을 원본 그대로(id, hotspot id 포함) 꺼낸다."""
     steps, best = None, None
     for m in re.finditer(r'"steps":\s*\[', raw):
         b = block(raw, m.end() - 1, "[", "]")
@@ -211,6 +211,12 @@ def parse(demo_id, raw):
                 steps, best = cand, key
     if steps is None:
         raise RuntimeError("steps 배열을 못 찾았다. 임베드 구조가 바뀌었을 수 있다")
+    return steps
+
+
+def parse(demo_id, raw):
+    rows = flight_rows(raw)
+    steps = raw_steps(raw)
 
     def field(key):
         m = re.search(r'"%s":\s*"' % re.escape(key), raw)
