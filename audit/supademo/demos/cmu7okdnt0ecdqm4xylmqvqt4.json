@@ -3,32 +3,32 @@
   "embeddedIn": [
     "ko/distributions/usage.mdx"
   ],
-  "id": "cmu761pkp1x92qmct4lfhx3le",
-  "metadesc": "Learn how to toggle room closure status for specific dates, update inventory availability, save changes, and access sales management to view pricing details on vcms.io.",
+  "id": "cmu7okdnt0ecdqm4xylmqvqt4",
+  "metadesc": "VCMS 판매 관리에서 날짜별 판매 중지를 켜고 끌어서 여러 날짜에 한 번에 적용한 뒤 저장하면 모든 채널에 반영돼요.",
   "published": true,
   "stepCount": 4,
   "steps": [
     {
       "hotspots": [
         {
-          "html": "529dab3f8b54",
+          "html": "231719c8fc26",
           "style": "Circle",
-          "text": "판매 중지를 켜서 그 날짜의 판매를 막아 보세요!"
+          "text": "원하는 날짜의 객실 타입에서 판매 중지를 켜면 그 객실 타입의 판매가 채널에서 막혀요."
         }
       ],
-      "media": "7fo7uptcavvyP1HF11oK-.jpg",
+      "media": "-cmcVrHhQ7vp_hD2OXF_j.jpg",
       "n": 1,
       "sec": null
     },
     {
       "hotspots": [
         {
-          "html": "f76d4b5642a5",
+          "html": "1b759b8851da",
           "style": "Circle",
-          "text": "전체 객실에서 켜면 그 날짜의\n모든 객실 타입이 한번에 닫혀요."
+          "text": "좌우로 끌면 여러 날짜를 한 번에 판매 중지할 수 있어요."
         }
       ],
-      "media": "n--lrKEBjeXal2kjSDPKM.jpg",
+      "media": "Xoww7iv6EAFUqb1x-0AaY.jpg",
       "n": 2,
       "sec": null
     },
@@ -37,10 +37,10 @@
         {
           "html": "e6f8426042bf",
           "style": "Area",
-          "text": "저장을 눌러 변경 사항을\n채널에 적용해 주세요."
+          "text": "저장을 눌러 변경 사항을 채널에 적용해 주세요."
         }
       ],
-      "media": "nh1KHeLCptsBsXgGtCmLI.jpg",
+      "media": "BjccgmO5lOJuZxUhmlyYk.jpg",
       "n": 3,
       "sec": null
     },
@@ -52,7 +52,7 @@
           "text": "저장한 변경 사항은 채널에 함께 반영돼요."
         }
       ],
-      "media": "vAfWSk29J3DM1BrYRm81m.jpg",
+      "media": "kNT5Z0RdoNiXaLhGilVeI.jpg",
       "n": 4,
       "sec": null
     }

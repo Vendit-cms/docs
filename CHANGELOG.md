@@ -2,6 +2,15 @@
 
 ## 2026-09-19
 - 행 참조 해석이 반쪽이었던 것 수정. 텍스트 행 뒤에 줄바꿈 없이 붙는 행을 놓쳐서 참조 44개 중 30개가 번호째 해시되고 있었다. 행을 앞에서부터 길이대로 읽는다. 지문 30개 재기록, 데모 변경은 없다 (scripts/supademo_audit.py, audit/supademo/)
+- 스냅샷 확인에서 임베드를 못 받으면 exit 2, 데모가 바뀌면 exit 1 로 갈랐다. 네트워크가 한 번 흔들린 걸 변경으로 읽을 뻔했다 (scripts/supademo_audit.py)
+- 녹화 뒤 슈파데모 편집 도구 추가. 인트로와 영상 스텝 삭제, 핫스팟 문구, 제목과 메타 설명을 에디터 화면 없이 내부 API 로 고치고 공개 임베드로 반영을 확인한다 (scripts/supademo_edit.py)
+- steps 배열 추출을 raw_steps() 로 분리, 편집 도구가 같이 쓴다 (scripts/supademo_audit.py)
+- 하네스 머리말의 낡은 규칙 둘 정정: 확정 Save 는 누른다(Dean 09-18), 녹화 단축키는 CDP 로 안 닿고 툴바 실클릭이 필요하다 (scripts/supademo_take.py)
+- 판매 상태 데모를 영어, 한국어 둘 다 드래그판으로 다시 찍었다. 2번 스텝이 전체 객실 행에서 셀 드래그로 바뀌어 본문의 '좌우로 끌어' 설명과 맞는다. 4스텝, 영상 0 (en/distributions/usage.mdx, ko/distributions/usage.mdx, audit/supademo/)
+- '판매 중지는 드래그가 안 된다' 는 틀렸다. 토글 가운데서, 꺼진 원본으로 끌어서 안 된 것이다. 핸들에서 켜진 원본으로 끌면 CDP 로도 된다 (HANDOFF.md)
+- 한국어 판매 상태 iframe 높이 415px 고정을 영어판과 같은 비율 1.6 으로, Dean 승인 한 줄 (ko/distributions/usage.mdx, CLAUDE.md)
+- 새 데모 제목과 메타 설명을 손으로 지정, 영어 제목 'VCMS stop sell change' 를 섹션 제목에 맞춰 'VCMS sell status change' 로 (audit/supademo/)
+- 촬영 하네스의 저장 바 감지가 한국어 UI 를 못 잡던 것 수정, 드래그 조건 주석 (scripts/supademo_take.py)
 - `--check` 가 트리에 쓰고 git checkout, git clean 으로 되돌리던 것을 임시 디렉터리 비교로 바꿨다. 커밋 전 새 스냅샷을 지우고 있었다 (scripts/supademo_audit.py)
 - 문서에서 빠진 데모의 스냅샷을 지운다. 교체된 잔여 재고 데모 cmtyc75ri0hrxqme9293l1cf5 가 옛 embeddedIn 을 달고 남아 있었다 (scripts/supademo_audit.py, audit/supademo/)
 - 스냅샷에 메타 설명 `metadesc` 추가. 한국어 판매 상태 데모 설명에 'sales management' 가 있었는데 아무 검사기도 못 봤다 (scripts/supademo_audit.py, audit/supademo/)

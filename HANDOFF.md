@@ -95,24 +95,28 @@ en 에서 다시 찍은 자리와 같은 위치의 한국어 이미지 84 장을
 
 ## 2-2. Supademo 영어 데모 직접 촬영 (2026-09-12 ~ 09-13)
 
-크롬 익스텐션(⌘⇧8)을 CDP 로 몰아서 **영어 데모를 우리가 직접 찍는다**. 여섯 편 완료.
+크롬 익스텐션(⌘⇧8)을 CDP 로 몰아서 **영어 데모를 우리가 직접 찍는다**. 지금 문서에 붙은 건 일곱 편이다(2026-09-19).
 
 | 새 데모 | ID | 스텝 | 붙인 곳 |
 | --- | --- | --- | --- |
-| VCMS availability change | `cmtyc75ri0hrxqme9293l1cf5` | 5 (이미지 3, 영상 2) | `en/distributions/usage.mdx` 2곳 |
+| VCMS sell status change | `cmu7o8fw50ebhqm4x8duizui4` | 4 (이미지 4) | `en/distributions/usage.mdx` 판매 상태 |
+| VCMS availability change | `cmu5rlz6200ccqm5s2fajlfe6` | 4 (이미지 4) | `en/distributions/usage.mdx` 잔여 재고 |
 | Change of check-in/check-out times | `cmtyd1bg70i80qme9d53qqrer` | 19 (이미지 16, 영상 1, 챕터 2) | `en/distributions/usage.mdx`, `en/faq/inventory-rate/daily-chek-in-out-time.mdx` |
 | Adjusting rates for every room at once | `cmtz313ow0sv8qme9m0s845be` | 4 | `en/distributions/usage.mdx` |
 | Adjusting rates for one room type | `cmtz35id90swnqme9v8xtizqs` | 4 | `en/distributions/usage.mdx` |
 | Changing a rate | `cmtz49f960tajqme9fiwfjexr` | 7 (이미지 6, 영상 1) | `en/distributions/usage.mdx` |
 | Moving a room to another room type | `cmtz4k5800tcwqme9w39nmeeb` | 6 | `en/faq/inventory-rate/move-room-to-other-type.mdx` |
 
-한국어 원본은 `ko/` 에 그대로 있다. 건드리지 않았다.
+한국어 원본은 `ko/` 에 그대로 있다. 예외 하나: 판매 상태 한국어 데모 `cmu7okdnt0ecdqm4xylmqvqt4` 를 새로 찍어
+`ko/distributions/usage.mdx` 8행 iframe 만 바꿨다(Dean 승인, CLAUDE.md 장부 참고).
+교체돼서 문서에서 빠진 데모: `cmtyc75ri0hrxqme9293l1cf5`(잔여 재고 첫 판), `cmu72a5il1rasqmct0g7nd6kl`, `cmu761pkp1x92qmct4lfhx3le`(판매 상태 전체 객실판).
 
-절차와 함정은 전부 `scripts/supademo_take.py` 의 docstring 에 적었다. 핵심만:
+절차와 함정은 전부 `scripts/supademo_take.py` 의 docstring 에 적었다. 녹화 뒤 편집(인트로와 영상 스텝 삭제, 문구,
+제목, 메타 설명)은 `scripts/supademo_edit.py` 로 한다. 에디터 화면을 안 띄운다. 핵심만:
 - 녹화 패널은 **페이지 로드당 한 번만** 열린다. 테이크마다 `Page.reload` 로 시작.
 - **탭이 백그라운드면 그리드가 렌더 안 된다**(`content-visibility:auto`). `Page.bringToFront` 필수.
-- 워크스페이스 기본 인트로 챕터가 1번 스텝으로 붙는다. `delete_steps` 로 지워라.
-- AI 가 붙인 영어 핫스팟 문구는 기존 번역으로 갈아끼워라(`demo_glossary_check.texts()` 로 긁는다).
+- 워크스페이스 기본 인트로 챕터가 1번 스텝으로 붙는다. `supademo_edit.py tidy` 로 지워라.
+- AI 가 붙인 핫스팟 문구, 제목, 메타 설명은 손으로 갈아끼워라(`supademo_edit.py texts`, `meta`).
 - **임시 변경은 상단 바의 `Cancel` 을 눌러서 버려라.** `Shift+Esc` 는 포커스가 입력칸에 있으면
   씹힌다(09-13 실측, 변경이 그대로 남아 있었다).
 - 입력칸 값 교체는 `Input.dispatchKeyEvent` 에 **`commands:["selectAll"]`** 을 같이 보내야 한다.
@@ -152,9 +156,15 @@ Dean: **VENDIT HOTEL 은 테스트 업장이라 뭘 눌러도 된다.** 09-13 �
    번역 대상은 아니지만 영어 데모에서는 `hide_row("Rate period")` 로 가리고 찍었다.
 3. 기존 영어 번역 "Click Edit to save it as a draft." 는 낡았다. 지금 버튼은 `Temporary change` 다.
    새 데모에는 고쳐 넣었고 i18n 쪽도 같이 봐야 한다.
-4. 그리드 셀의 **좌우 드래그 복사는 CDP 마우스 이벤트로 재현이 안 된다**(HTML5 drag 로 보인다).
-   `Input.dispatchMouseEvent` 로는 값이 안 번진다. 요금 변경 데모는 드래그 대신 방식 드롭다운
-   (`Adjust by percent`)으로 구성했다. 문서 본문의 드래그 설명은 글로만 남아 있다.
+4. **드래그 복사는 CDP 로 된다.** 잔여 재고(09-18)와 판매 중지(09-19) 둘 다 실측. 조건이 둘이다.
+   셀 가운데가 아니라 **오른쪽 아래 삼각형 핸들에서** 시작하고, 드래그는 **원본 셀의 상태를 복사**하니까
+   원본을 먼저 바꿔야 한다. 처음에 "재현이 안 된다" 고 적은 건 이 둘을 몰라서였다(판매 중지는 09-18 에
+   꺼진 토글 가운데서 끌었다). 요금 셀은 다시 안 해봤다. 요금 변경 데모는 여전히 방식 드롭다운 구성이다.
+   녹화하면 드래그가 mp4 스텝과 손 뗀 자리 스크린샷 스텝 둘로 들어온다. mp4 는 지운다.
+5. **판매 상태 부모/자식 덮어쓰기.** 임시 변경 안에서는 묻지 않는다. Deluxe 9.21 을 개별로 켠 뒤 전체 객실
+   9.21 을 켜고 끄면 Deluxe 도 그대로 따라 꺼졌다(09-19 실측). 저장된 하위 설정이 있는 상태에서 판매를 재개할 때는
+   `개별 설정 유지` 가 있는 확인 팝오버가 뜨고, 그 안의 저장을 눌러야 상단 저장 바가 나온다(09-18 실측).
+   영어 `<Check>` 콜아웃("choose whether to keep ... or overwrite")은 이 경우라 그대로 뒀다.
 
 ---
 
