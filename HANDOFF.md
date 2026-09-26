@@ -197,7 +197,7 @@ Dean 이 창에 띄워주면 `python3 scripts/shoot_now.py en-vcloud-disconnect.
 `image-34`, `image-(1)`, `image(65)`, `image(66)`: 에어비앤비, 야놀자 FAQ 페이지의 파트너 화면. manifest 정규식이 `\(` 에서 끊겨서 "내 몫"으로 잘못 세고 있었다.
 
 ### 그 외 미해결
-- `term_coverage.py` 가 뽑은 후보 70 건이 아직 검증 안 됐다.
+- ~~`term_coverage.py` 가 뽑은 후보 70 건이 아직 검증 안 됐다.~~ 2026-09-27 검증: 71건 중 진짜 6건(숙박업소 이름 → accommodation name 4, 숙소 → accommodation 1, 판매 재개 → resume 1)은 PR #73. 나머지 65건은 오탐(조사 '가' 가 붙은 판매, Check-in/out 표기, 제3자 화면 라벨, cancel the subscription 어순).
 - 내비게이션에 없는 페이지 11 개의 폴백 처리 방침을 Dean 이 아직 안 골랐다.
 - UI 언어는 브라우저 localStorage 다(2-1 절). 캡처 프로필은 2026-09-11 에 한국어로 돌려놨다. 영어로 찍을 땐 `en` 으로 바꾸고 끝나면 `ko` 로 되돌려라.
 - VENDIT HOTEL 의 기간 이름이 한국어 데이터다(`어린이날 전날 🇰🇷`, `여름 성수기 (8월)(평일)`). `en-period-list`, `en-period-rate-weighting`, `en-pkg-bulk-rate-plan-modal`, `en-pkg-period-weighting` 에 그대로 보인다. PR #42 때부터 이 상태다. 바꾸려면 Dean 이 이름을 바꾸고 다시 찍는다.
