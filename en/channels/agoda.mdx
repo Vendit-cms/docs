@@ -31,25 +31,25 @@ Finish the connectivity setup in [YCS](https://ycs.agoda.com/mldc/ko-kr/public/l
 
 ## Things to watch
 
-### Set occupancy-based pricing in VCMS
+### Set occupancy-based rates in VCMS
 
-Agoda prices against occupancy. Any package you connect to Agoda has to have occupancy-based pricing set in VCMS.
+Agoda sets rates by occupancy. Any package you map to Agoda has to have occupancy-based rates set in VCMS.
 
 <Warning>
-  **On occupancy-based pricing**
+  **On occupancy-based rates**
 
-  - Set occupancy-based pricing on a channel that does not support it and the rate is applied against max occupancy. If that is not what you want, split the packages by whether the channel supports occupancy-based pricing.
-    - Channels without occupancy-based pricing
-      - Yanolja, Yeogiottae owner app, Yeogiottae Partner Center, Coolstay, Naver, Ddnayodotcom, Onda, Tripbtoz
+  - Set occupancy-based rates on a channel that does not support them and the rate is applied against max occupancy. If that is not what you want, split the packages by whether the channel supports occupancy-based rates.
+    - Channels without occupancy-based rates
+      - Yanolja, Yeogiottae owner app, Yeogiottae partner, Coolstay, Naver, Ddnayodotcom, Onda, Tripbtoz
       - Tripdotcom and Expedia vary by contract.
-  - VCMS supports occupancy-based pricing for adults. Set child rates directly in YCS.
+  - VCMS supports occupancy-based rates for adults. Set child rates directly in YCS.
 </Warning>
 
 ---
 
-### Connecting several Agoda packages to one room type means matching their inventory
+### Mapping several Agoda packages to one room type means matching their inventory
 
-When several Agoda packages hang off the same room type, availability is controlled at the room type level, so each package has to carry the same inventory.
+When several Agoda packages are mapped to the same room type, availability is controlled at the room type level, so each package has to carry the same inventory.
 
 <Warning>
   This holds even with auto top-up switched on in VCMS. Set the same quantity on every package. Different quantities keep moving availability around and inventory drifts out of line.
@@ -75,9 +75,9 @@ In YCS, directly.
 
 ### The integration works but my packages are not showing on Agoda's booking site.
 
-Check in YCS whether a rate plan is attached and whether the package is on sale. Without a rate plan, or in any state other than on sale, the package cannot sell.
+Check in YCS whether a rate plan is linked and whether the package is on sale. Without a linked rate plan, or in any state other than on sale, the package cannot sell.
 
-<Accordion title="Checking whether a rate plan is attached">
+<Accordion title="Checking whether a rate plan is linked">
   📍Path: \[YCS\] - \[Rates & availability\] - \[Rate plan settings\]
 
   <Frame>
