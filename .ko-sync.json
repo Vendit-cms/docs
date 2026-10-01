@@ -1,0 +1,13 @@
+{
+  "ko_commit": "c92a080d92864c2d2af9ca67c8680307757680d5",
+  "from": "fe609297c2930166f2c378f2af65a93eadfe5781",
+  "synced_at": "2026-10-01T16:58:47+09:00",
+  "pages": {
+    "ko/release-notes/2026-05-15.mdx": "109ac6c988e21e4cb8e13871103df9c61f00216f",
+    "ko/release-notes/2026-06-09.mdx": "f15383e3fb251449de69374e3f4ff7c02a03a428",
+    "ko/release-notes/2026-09-03.mdx": "37b0bcc971960db5dfd9e8d4783e914924935678",
+    "ko/release-notes/2026-09-18.mdx": "07f279cafb2acd1678cbc448f16584d33206cc8b",
+    "ko/release-notes/2026-09-30.mdx": "b79482405b5f7208f50f5a398f8a9ba3659597df"
+  },
+  "note": "English matches Korean as of ko_commit, plus the listed pages at the listed Korean blobs. Written by vcms-i18n scripts/docs_sync.py."
+}
