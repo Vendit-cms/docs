@@ -1,6 +1,6 @@
 ---
 title: "How do I set inventory and rates?"
-description: "Set inventory and rates on the VCMS package, then link the channel package to it and those values sync to the channel."
+description: "Set inventory and rates on the VCMS package, then map the channel package to it and those values sync to the channel."
 ---
 
 <Steps>
@@ -9,26 +9,26 @@ description: "Set inventory and rates on the VCMS package, then link the channel
   <Step title="Build the package in VCMS on top of a room type.">
     Create the package from the room types and rates your property uses.
   </Step>
-  <Step title="Link the sales channel's packages to your VCMS packages so inventory and rate management run cleanly.">
-    Channel packages sitting under a linked package all take the same package rate, and they share inventory.
+  <Step title="Map the sales channel's packages to your VCMS packages so inventory and rate management run cleanly.">
+    Channel packages sitting under a mapped package all take the same package rate, and they share inventory.
   </Step>
-  <Step title="Link the channel package to the VCMS package.">
-    A linked channel package takes the VCMS package's rate exactly, and shares its inventory.
+  <Step title="Map the channel package to the VCMS package.">
+    A mapped channel package takes the VCMS package's rate exactly, and shares its inventory.
   </Step>
 </Steps>
 
 <Info>
-  If you use the Vendit VCLOUD service, a channel package not linked to a package is created under an unassigned room type.
+  If you use the Vendit VCLOUD service, a channel package not mapped to a package is created under an unassigned room type.
 </Info>
 
 ## FAQ
 
 <AccordionGroup>
   <Accordion title="Can I hide or delete packages I don't sell?">
-    Hide, yes. Delete, no. Deleting an unlinked channel package could take the booking data attached to it, so for safety and data integrity there is hiding but no deleting. Here is how to hide an unlinked channel package you do not sell.
+    Hide, yes. Delete, no. Deleting an unmapped channel package could take the booking data attached to it, so for safety and data integrity there is hiding but no deleting. Here is how to hide an unmapped channel package you do not sell.
 
     <Steps>
-      <Step title="In [Settings] - [Channels] - [Channel packages], press the ⚙️ unlinked channel package display setting.">
+      <Step title="In [Settings] - [Channels] - [Channel packages], press the ⚙️ 'Unmapped package visibility' setting.">
         <Frame>
           ![Channel package display setting](/images/en-channel-packages.png)
         </Frame>
@@ -43,7 +43,7 @@ description: "Set inventory and rates on the VCMS package, then link the channel
 </AccordionGroup>
 
 <Accordion title="Can I mark up or discount a single channel package?">
-  Yes. Set that channel package's final channel rate.
+  Yes. Set a channel package's final channel rate and you can sell just that channel package at a markup or discount.
 
   <Steps>
     <Step title="In [connected channel] - [Channel packages], pick the channel package to mark up or discount.">

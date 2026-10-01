@@ -1,6 +1,6 @@
 ---
 title: "Bookings"
-description: "Bookings shows every booking that came in through a channel or a connected integration."
+description: "Bookings shows booking information synced through channels and integrations."
 ---
 
 ---
@@ -13,17 +13,17 @@ Bookings are grouped by where they are in the process.
   ![Booking Default](/images/en-bookings-default.png)
 </Frame>
 
-- **All**: every booking, whatever its status.
-- **Completed**: the booking has synced.
-- **Cancelled**: the booking was cancelled.
-- **Assigned**: the booking was assigned to a room in the connected integration (VCLOUD).
+- **All**: every booking in any status, including booked, canceled, assigned, and pending.
+- **Booked**: the booking has synced.
+- **Canceled**: the booking was canceled.
+- **Assigned**: the booking was assigned to a room in the integration (VCLOUD).
 - **Pending**: the booking has not synced yet and is waiting.
 
 ---
 
 ## Searching bookings
 
-Find a specific booking fast by guest name, booking number, or phone number.
+Find a specific booking fast by Guest name, Booking ID, or Phone number.
 
 ---
 
@@ -33,37 +33,37 @@ Choose which columns appear and reorder them however you like.
 
 ### Shown by default
 
-- **Booking check**: whether the booking details have been reviewed
-- **Stay type**: overnight or day use
-- **Booking status**: completed, cancelled, assigned, or pending
+- **Confirmed**: whether the booking details have been reviewed
+- **Stay type**: the booking's stay type (for example, overnight or day use)
+- **Status**: the booking's status (booked, canceled, assigned, or pending)
 - **Check-in**: scheduled check-in date and time
 - **Check-out**: scheduled check-out date and time
 - **Nights**: length of stay
-- **Total guests**: number of guests on the booking
+- **Guests**: number of guests on the booking
   <Warning>
     Yanolja, Yeogiottae, Naver, and Coolstay do not send guest counts, so their bookings show 1 guest.
   </Warning>
-- **Source**: where the booking came from
+- **Source**: where the synced booking came from
 - **Integration**: the connected integration
-- **Guest**: name of the lead guest
+- **Guest name**: name of the lead guest
 - **Room type**: room type on the synced booking
-- **Booking number**: the channel's booking number
-- **Quantity**: number of rooms booked
+- **Booking ID**: the channel's booking number for the synced booking
+- **Quantity**: quantity on the synced booking
 - **Phone number**: guest phone number
 - **Sales amount**: the sell rate on the connected channel
-- **Memo**: a note written by your property, editable from the booking detail
+- **Memo**: a memo recorded by the accommodation, editable in Booking details
 - **Synced at**: when the booking synced
 
 ### Hidden by default
 
 - **Paid at**: when the booking was paid
 - **Request**: what the guest wrote when booking
-- **Package**: the VCMS package linked to the channel package
-- **Channel package**: the channel package on the booking
-- **Net amount**: the channel's net rate
-- **Outstanding amount**: what the channel still owes
-- **Transport**: how the guest is arriving
-- **Cancelled at**: when the booking was cancelled
+- **Package**: the VCMS package mapped to the channel package
+- **Channel package**: the channel package on the synced booking
+- **Net amount**: the net rate on the connected channel
+- **Amount due**: the amount still outstanding from the connected channel
+- **Transport type**: how the guest on the synced booking is arriving
+- **Canceled at**: when the synced booking was canceled
 - **Adults, children, infants**: guest counts by age group
 
 ---
@@ -73,8 +73,8 @@ Choose which columns appear and reorder them however you like.
 Filters narrow the list to the bookings you want.
 
 - **Date**: pick the dates to look at.
-- **Date basis**: stay period, check-in, check-out, or synced at.
-- **Stay type**: overnight or day use.
+- **Date type**: choose stay period, check-in, check-out, or synced at.
+- **Stay type**: choose overnight or day use.
 - **Channel**: only connected channels appear.
 - **Room type**: filter by room type.
 - **Package**: filter by package.
@@ -99,21 +99,21 @@ The booking list reads as a list or as cards.
 
 ---
 
-## Booking detail
+## Booking details
 
-Click a booking and the detail panel opens, split into **Booking info** and **Change history**.
+Click a booking in the list and the Booking details panel opens. It has two tabs: **Booking info** and **Change history**.
 
 ### Booking info
 
 The booking's details, grouped by topic. For example:
 
-- **Guest info**: stay type, booking status, guest, phone number
-- **Sync info**: source, booking number, synced at
+- **Guest information**: stay type, status, guest name, phone number
+- **Integration information**: source, Booking ID, synced at
 - **Stay period**: check-in, check-out, nights
-- **Booking info**: room type, channel package, package, quantity, total guests, transport
-- **Request and memo**
-- **Payment info**: sales amount, net amount, amount due, paid at
-- **Booking check**
+- **Booking info**: room type, channel package, package, quantity, guests, transport type
+- **Request and memo: Request, Memo**
+- **Payment info: Sales amount, Net amount, Amount due, Paid at**
+- **Confirmed**
 
 ### Change history
 
@@ -121,9 +121,9 @@ Who changed what, and when. Each entry shows the changed field as "before → af
 
 ---
 
-## CSV download
+## Download CSV
 
-Bookings download as a CSV. Press **CSV download** above the list and every booking matching the filters you have applied (stay date range and the rest) is saved to the file.
+Bookings download as a CSV. Press **Download CSV** at the top right of the list and every booking matching the filters you have applied (stay date range and the rest) is saved to the file.
 
 <Frame>
   ![Booking CSV Download](/images/en-booking-csv-download-2.png)

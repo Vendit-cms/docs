@@ -11,7 +11,7 @@ description: "Hello from Vendit. Here is what changed in VCMS in the fourth week
 
 ### Daily rate adjustment is rebuilt
 
-> For owners managing rates closely, date by date
+> For properties managing rates closely, date by date
 
 The screen for adjusting rates by date and room type in Distribution has been substantially reworked. It used to offer bulk adjustment only. Now you can adjust in bulk, or edit rates package by package.
 
@@ -32,15 +32,15 @@ The screen for adjusting rates by date and room type in Distribution has been su
 
 ### Drag to copy rates
 
-> For owners levelling rates across dates and rooms
+> For properties levelling rates across dates and rooms
 
-In Distribution (all rooms and room type), drag a rate to copy it to other dates. Rates set individually are copied as they are.
+In Distribution (all rooms and room types), drag a rate to copy it to other dates. Rates set individually are copied as they are.
 
 <Frame>
   ![Drag to copy rates](/images/260820-rate-drag-2.png "Drag to copy rates")
 </Frame>
 
-- Choose between "copy rate" and "copy adjustment".
+- Choose between 'Copy rate' and 'Copy adjustment'.
 - Items on a fixed rate are excluded, both as source and as target.
 - Copying does not apply to cells in a different currency.
 
@@ -55,7 +55,7 @@ In Distribution (all rooms and room type), drag a rate to copy it to other dates
 
 ### Rate scale factor gives packages different swings
 
-> For owners selling bundles, or wanting a different swing per room type
+> For properties selling bundles, or wanting a different swing per room type
 
 Set a rate scale factor on a package and it is applied to the adjustment automatically when you change rates, giving the final sell rate. One adjustment produces a different swing per package, with no per-package work.
 
@@ -65,7 +65,7 @@ Set a rate scale factor on a package and it is applied to the adjustment automat
 
 For example:
 
-- **Selling bundles**: on a package that bundles 2 units as 1, set the rate scale factor to 2. Raise the rate by KRW 50,000 and the bundle goes up by KRW 100,000 with no extra step.
+- **Selling bundles**: on a package that bundles 2 inventory units as 1, set the rate scale factor to 2. Raise the rate by KRW 50,000 and the bundle goes up by KRW 100,000 with no extra step.
 - **High-value rooms**: set a higher rate scale factor on a suite and the same adjustment swings it further than the other room types.
 
 ---
@@ -78,22 +78,22 @@ Check-in and check-out times can be dragged to other dates in Distribution.
   ![Drag to copy timetables](/images/260820-timetable-drag.png "Drag to copy timetables")
 </Frame>
 
-- If check-in and check-out times are not visible in Distribution, check [view settings](/en/distributions/view-setting). Hidden there, they do not appear.
+- If check-in and check-out times are not visible in Distribution, check [View settings](/en/distributions/view-setting). Hidden there, they do not appear.
   <Frame>
     ![Showing check-in and check-out times](/images/en-260820-timetable-shown.png "Showing check-in and check-out times")
   </Frame>
 
 ---
 
-### Payment detail for manual payments
+### Payment details for manual payments
 
-> For owners using manual payments
+> For properties using manual payments
 
-Under Subscription \> Payment history, manually processed payments now carry payment detail too.
+Under Subscription \> Payment history, you can now see Payment details for manually processed payments too.
 
 ---
 
-## Improved
+## Improvements
 
 ### A clearer signal when units per booking is unavailable
 
@@ -108,4 +108,4 @@ When a package cannot use units per booking, that is now easier to notice.
 ### Fixed and locked rates behave more predictably
 
 - A rate or inclusion with a fixed amount is excluded from every subsequent rate adjustment.
-- Turn on rate lock and the item is excluded from every adjustment in Distribution, including adjustments, copies, and bulk updates, and so are the items below it.
+- Turn on rate lock and the item is excluded from every adjustment in Distribution, including rate adjustments, copies, and bulk updates, and so are the items below it.

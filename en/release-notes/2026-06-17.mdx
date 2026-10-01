@@ -14,7 +14,7 @@ description: "Hello from Vendit. Here is what changed in VCMS in the third week 
 
 ### One booking can draw down several units of inventory
 
-> For properties selling several rooms as one package, capsules for instance
+> For properties selling several rooms (units) as one package, capsules for instance
 
 <Frame>
   ![Units per booking setting](/images/260617-Booking-Multiplier-Setting-2.png)
@@ -33,10 +33,10 @@ Set units per booking on a package and each booking draws down that many units o
 **More detail**
 
 - How: \[Settings\] - \[Packages\], set units per booking
-- A units-per-booking badge appears on Distribution, packages, booking details, and channel package linking, and availability is calculated against it.
-- Linking a channel package to a units-per-booking package goes through a confirmation dialog.
+- A units-per-booking badge appears on the Distribution, Packages, Booking details, and channel package mapping screens, and availability is calculated against it.
+- Mapping a channel package to a units-per-booking package goes through a confirmation dialog, so the mapping is safe.
 - Booking details and channel package mapping work on mobile too.
-- The [guide](https://docs.vcms.io/en/inventory-rate/package-stay) covers the cases in full.
+- The [guide](https://docs.vcms.io/en/inventory-rate/package-stay#create-package) covers the cases in full.
 
 <Warning>
   A change to units per booking applies from the moment you set it. Existing packages are untouched.
@@ -44,7 +44,7 @@ Set units per booking on a package and each booking draws down that many units o
 
 ---
 
-## **Improved**
+## **Improvements**
 
 ### Rate setting is much easier
 
@@ -58,9 +58,9 @@ Changing a package rate can now apply to its rate periods in one pass. Rates can
 
 **More detail**
 
-- In \[Packages\] - \[Rate information\], a rate change can be applied to rate periods in bulk.
-- Editing a package rate shows a before-and-after preview dialog.
-- The [guide](https://docs.vcms.io/en/inventory-rate/package-stay) covers the cases in full.
+- In \[Packages\] - \[Rate plan\], a rate change can be applied to rate periods in bulk.
+- Editing a package rate shows a before-and-after rate preview dialog.
+- The [guide](https://docs.vcms.io/en/inventory-rate/package-stay#setting-rate-periods) covers the cases in full.
 
 ---
 
@@ -82,7 +82,7 @@ Edit or delete a room type, or change its max occupancy, and the connected packa
   ![Grouped booking details](/images/260609-Booking.png)
 </Frame>
 
-The booking detail dialog groups information by topic, so what you need is easier to find. Mobile gets the same layout.
+The Booking details dialog groups booking information by topic, so what you need is easier to find. Mobile gets the same layout.
 
 ---
 
@@ -90,4 +90,4 @@ The booking detail dialog groups information by topic, so what you need is easie
 
 - Fixed borders and background corners misaligning on the Distribution table.
 - Airbnb: fixed the adjustment handle not appearing after a rate change on a channel package with max inventory of 1.
-- Fixed the bulk update dialog opening wrongly when dragging sell status across weekdays excluded in view settings.
+- Fixed the Bulk update dialog opening wrongly when dragging sell status across weekdays excluded in View settings.
