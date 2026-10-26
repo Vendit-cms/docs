@@ -1,59 +1,96 @@
 ---
 title: "Periods"
-description: "Package rates can differ by month, by weekday, and by day of the month, set through periods."
+description: "Create periods that take different rates by season, such as peak season, holidays and weekends, then link them to packages to sell with rate periods."
 ---
 
-### Period list
+---
 
-<Check>
-  **The periods that drive rate-by-period.**
+## Period list
 
-  - Search by the month, weekday, or day you want.
-  - Reorder periods freely.
-  - When periods overlap, the one higher in the list (the higher priority) applies first. A package's own period order can be brought in line with this priority through 'Align period order' on [overnight packages](/en/inventory-rate/package-stay).
-</Check>
+This screen is where you add and manage periods that take different rates by season, such as peak season, holidays and weekends. A period you add takes effect for sale only after you link it to a package. You can reorder periods freely.
 
-![Period list](/images/en-period-list.png)
+{/* 📸 Screenshot needed: full period list screen (Search periods · month filter · Create period button · list · options (⋮) menu) */}
 
-### Creating a period
+- **Search periods**: Use the search box at the top to find a period by name.
+- **Month filter**: Click 'All' or a January–December chip to show only the periods that apply in that month.
+- **Priority**: When periods overlap, the rate of the period higher in the list (the higher priority) applies first. Drag the handle on the left of a row to reorder. A package's own period order can be brought in line with this priority through 'Align period order' on [Overnight package](/en/inventory-rate/package-stay).
 
-<Check>
-  **Add the period you want.**
+On each period row, you can do the following right away.
 
-  - **Period name (required)**
-  - **End date**
-    - Run the period indefinitely, or give it a start and end date to use it temporarily.
-  - **Select months**
-    - Pick any months from January to December.
-  - **Select days**
-    - Pick any days from Sunday to Saturday.
-  - **Select days of the month**
-    - Pick any dates from the 1st to the 31st.
-</Check>
+- **Set package links**: Set the packages and rates to link to that period.
+- **Duplicate**: Copy a period's settings to make a similar period quickly.
+- **Delete**: Delete that period.
 
-![Creating a period](/images/en-period-create.png)
+<Info>
+  A period with a rate adjustment shows an adjustment badge such as 'KRW +50%'. A period built from weekday or repeat conditions also shows a 'Repeat continuously' badge.
+</Info>
 
-### Period rate adjustment
+---
 
-![Period rate adjustment](/images/en-period-rate-adjust.png)
+## Creating a period
 
-<Check>
-  **Adjust the rate across the whole period, by amount or by percent.**
+Click 'Create period' and enter the details below in the window that opens. You can change an existing period at any time in the same window through 'Edit details'.
 
-  - Turn period rate adjustment on and rates flex by period.
-  - Mark up or discount per currency.
-  - Rate adjustment methods
-    - By amount
-    - By percent
-    - By percent, then an extra amount on top
-</Check>
+{/* 📸 Screenshot needed: Create period / Edit details modal (period name · month/date/weekday selection · Applied dates · Rate adjustment) */}
 
-### Deleting a period
+- **Period name (required)**: Enter a name to tell the period apart.
+- **Select months (required)**: Choose 'All' or 'Custom'. With Custom, pick the months you want from January to December.
+- **Select days of the month (required)**: Choose 'All' or 'Custom'. With Custom, pick the dates you want from the 1st to the 31st.
+- **Select days (required)**: Choose 'All' or 'Custom' to set the weekdays it applies to.
+- **Applied dates**: Use 'Apply always' to run the period with no end, or 'Specify dates' to set a start and end date and use it temporarily.
+- **Rate adjustment**: Turn on 'Set' to give a markup or discount for the whole period. With 'Not set', the base rate stays without adjustment.
 
-![Deleting a period](/images/en-period-delete-icon.png)
+<Info>
+  When you edit a period created from Holidays or a Date range, a 'Select period' field also appears, so you can choose which holidays or periods apply.
+</Info>
 
-<Check>
-  **A period you no longer use can be deleted.**
-</Check>
+---
 
-![Period deletion](/images/en-period-delete-confirm.png)
+## Set package links
+
+A period you create affects the rates you sell at only after you link it to a package. Click 'Set package links' on a period row. In the window that opens, select the packages to link to that period and enter the rate to sell at during this period.
+
+{/* 📸 Screenshot needed: Set package links modal (packages grouped by room type · rate range · period rate input · Select all/Deselect all) */}
+
+- **Grouped by room type**: Packages are grouped by room type (for example, Room 1101), so you can find the one you want easily.
+- **Rate range**: Each package shows its rate range (for example, ₩10,000 ↔ No limit), so you know right away what range to enter within.
+- **Period rate**: Select a package and enter the rate to sell at during this period, in the package's currency.
+- **Select all · Deselect all**: Select or clear all packages in the list at once.
+
+<Warning>
+  Packages with no rate show 'No rate set', and packages with a fixed rate show 'Fixed rate'. Neither can be linked. Packages with Units per booking set also show a units-per-booking badge such as 'Booking×2'.
+</Warning>
+
+<Info>
+  When you finish and click 'Save', what you linked is applied to the package's rate periods. To add and manage periods from the package side, see [Overnight package](/en/inventory-rate/package-stay).
+</Info>
+
+---
+
+## Deleting a period
+
+You can delete periods you no longer use. Delete them one at a time with Delete on a period row, or clear out matching periods all at once from the options (⋮) menu at the top right of the list.
+
+### Delete past periods
+
+Select 'Delete past periods' in the options (⋮) menu to see all periods whose applied dates have fully passed. Select the periods to delete and click 'Delete selected periods'.
+
+{/* 📸 Screenshot needed: Delete past periods modal (notice callout · period checkbox list · Select all/Deselect all) */}
+
+<Warning>
+  Because all applied dates of these periods have passed, deleting them does not affect sales. The matching period rows added to packages are deleted too.
+</Warning>
+
+### Delete unlinked periods
+
+Select 'Delete unlinked periods' in the options (⋮) menu to see all periods not added to any package. Select the periods to delete and click 'Delete selected periods'.
+
+{/* 📸 Screenshot needed: Delete unlinked periods modal (notice callout · period checkbox list · Select all/Deselect all) */}
+
+<Warning>
+  The list can include periods you created recently and have not yet added to a package. Check the list before you delete.
+</Warning>
+
+<Info>
+  In both delete windows, you can use 'Select all · Deselect all' to pick several periods at once.
+</Info>
