@@ -66,6 +66,7 @@
                     "group": "채널별 운영 노트",
                     "pages": [
                       "ko/channels/naver",
+                      "ko/channels/yanolja",
                       "ko/channels/ddananyo",
                       "ko/channels/liveanywhere",
                       "ko/channels/ban-life",
@@ -122,7 +123,8 @@
                 "expanded": false,
                 "pages": [
                   "ko/faq/channels/available-channels",
-                  "ko/faq/channels/max-sync-days"
+                  "ko/faq/channels/max-sync-days",
+                  "ko/faq/channels/yanolja-2fa"
                 ]
               },
               {
