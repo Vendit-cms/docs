@@ -1,15 +1,10 @@
 {
-  "ko_commit": "ac4f2dc4431457e08f5136fe36f472e9ad237f7d",
-  "from": "0e10f11aa212c9bfc99310edc4b255eb21c05a78",
-  "synced_at": "2026-10-26T17:38:05+09:00",
+  "ko_commit": "04b48ea6ca6d9e3f2bdfb37aac8d4add49d36793",
+  "from": "ac4f2dc4431457e08f5136fe36f472e9ad237f7d",
+  "synced_at": "2026-10-28T15:39:14+09:00",
   "pages": {
-    "ko/distributions/understanding.mdx": "60b1a11bec8f36378d4ad141a1fed60d0134a3f0",
-    "ko/distributions/usage.mdx": "32cb9e156d5c31ee8796373d2ae6167a77535e14",
-    "ko/inventory-rate/package-stay.mdx": "756f5887f5d5401df2a8295cdc1a0001033a6369",
-    "ko/inventory-rate/period.mdx": "2aeded7e044b7421744ce420e11d75e7bec5064c",
-    "ko/release-notes/2026-09-30.mdx": "910a3f4ff2d273ba22b80e09ea518d2692a795ca",
-    "ko/release-notes/2026-10-14.mdx": "6d31ff6a34ca568c6d05f4a988c88eda1713fc88",
-    "ko/release-notes/2026-10-23.mdx": "c1d208f6a374cfe4e510d676898e582811f81e7d"
+    "ko/release-notes/2026-10-23.mdx": "f3c9bd0c5307d5c64571a7063bce8e2f4e2a3d32",
+    "ko/release-notes/2026-10-29.mdx": "7fb4423cc11a25d4b0156c0688c9a4da2c8e5b78"
   },
   "note": "English matches Korean as of ko_commit, plus the listed pages at the listed Korean blobs. Written by vcms-i18n scripts/docs_sync.py."
 }
