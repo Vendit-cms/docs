@@ -452,5 +452,11 @@
         ]
       }
     ]
+  },
+  "thumbnails": {
+    "appearance": "dark",
+    "fonts": {
+      "family": "Noto Sans KR"
+    }
   }
 }
