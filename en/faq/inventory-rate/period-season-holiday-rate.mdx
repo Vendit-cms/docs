@@ -1,25 +1,25 @@
 ---
 title: "Set rates for peak seasons, long holidays, and public holidays"
-description: "How to create periods for rates that vary by time of year, such as peak seasons, public holidays, and weekends, and apply a markup or discount."
+description: "How to create periods for times with different rates, such as peak seasons, public holidays, and weekends, and apply a markup or discount."
 ---
 
 ## How do I set rates for public holidays, long holidays, and traditional holidays?
 
-> In VCMS, create a period with the holiday dates, add a markup, and link the period to your packages.
+> In VCMS, create a period with the holiday dates, add a markup, and link it to your packages.
 
 <Info>
-  When inventory and rate sync is on, a rate you enter directly on a channel returns to the VCMS rate within 5 minutes. Set holiday rates in VCMS instead of entering them on each channel.
+  When inventory and rate sync is on, rates you enter directly on a channel also return to the VCMS rate within 5 minutes. Do not enter holiday rates channel by channel. Set them in VCMS.
 </Info>
 
-1. Create a period in Settings > Periods.
-   Include the year and a name, such as '2026 Chuseok holiday', so it is easy to find.
-2. Choose the holiday dates in Select months and Select days of the month. For Applied dates, use `Specify dates` to match this year's holiday.
+1. Go to Settings > Periods and create a period.
+   A name with the year, such as '2026 Chuseok holiday', is easy to find.
+2. In Select months and Select days of the month, choose the holiday dates. Then set Applied dates to `Specify dates` to match this year's holiday.
    If you leave it on `Apply always`, the markup also applies to the same dates next year.
 3. Turn on Rate adjustment and enter the markup as an Amount or Percent.
 4. In the period list, move the holiday period above your weekend and day-of-week periods.
    When periods overlap, the rate of the period higher in the list applies first.
-5. In Settings > Packages > Rate plan, add the holiday period to the package and click `Save`.
-   Use the `Add N unlinked periods` link at the top of the list to add it to several packages at once. A package you do not link sells at its base rate during that time.
+5. Go to Settings > Packages > Rate plan, add the holiday period to the package, and click `Save`.
+   You can use the `Add N unlinked periods` link at the top of the list to add it to multiple packages at once. Packages you do not link sell at the base rate during that time.
 
 <Tip>
   **To change a single day**
@@ -28,30 +28,30 @@ description: "How to create periods for rates that vary by time of year, such as
 </Tip>
 
 <Note>
-  You cannot adjust rates in VCMS for rental-type channels such as Liveanywhere, Banlife Stay, and Camperest, or for properties using the new rate plan on Onda Pension Plus.
+  You cannot adjust rates in VCMS for properties that use a new rate plan on rental-type channels such as Liveanywhere, Banlife Stay, and Camperest, and on Onda Pension Plus.
 </Note>
 
 **Related articles**
 
 - [Periods](/en/inventory-rate/period)
-- [I want to mark up or discount rates for a specific period all at once](/en/faq/inventory-rate/bulk-period-rate-adjustment)
+- [I want to apply a markup or discount to specific period rates all at once](/en/faq/inventory-rate/bulk-period-rate-adjustment)
 
 ## Which rate applies when period rates overlap?
 
 > On days when periods overlap, the rate of the period higher in the period list applies first.
 
 <Info>
-  For example, the second Saturday of August falls in both the 'Saturday' period and the 'Summer peak season' period. In this case, VCMS treats the order of the period list as the priority and applies the rate of the higher period. If a package's Period order does not match the period list, it may sell at a rate you did not intend.
+  For example, the Saturday of the second week of August is in both the 'Saturday' period and the 'Summer peak season' period. In this case, VCMS treats the order of the period list as the priority and applies the rate of the higher period. If a package's Period order does not match the period list, the package can sell at a rate you did not intend.
 </Info>
 
-1. In Settings > Periods, drag the periods into the priority order you want.
-2. In Settings > Packages > Rate plan, click `Align period order` in the options (⋮) menu.
-   The Period order of all packages now matches the period list. To align a single package, click `Align order` on its package card.
+1. Go to Settings > Periods and drag the periods into the priority order you want.
+2. Go to Settings > Packages > Rate plan, open the options (⋮) menu, and click `Align period order`.
+   The Period order of every package then matches the period list. To align only one package, click `Align order` on its package card.
 3. Click `Save` at the top.
    If you leave the page without saving, your changes are lost.
 
 <Note>
-  Align order only changes the order. No periods are added or deleted, and rates and adjustment values stay the same. You can see the period applied to a date under Rate period in Distribution.
+  Align order only changes the order. No periods are added or deleted, and rates and adjustments stay the same. You can check which period applies to a date under Rate period in Distribution.
 </Note>
 
 **Related articles**
@@ -59,24 +59,24 @@ description: "How to create periods for rates that vary by time of year, such as
 - [Periods](/en/inventory-rate/period)
 - [Overnight packages](/en/inventory-rate/package-stay)
 
-## I want to mark up or discount rates for a specific period all at once
+## I want to apply a markup or discount to specific period rates all at once
 
-> In VCMS, you can mark up or discount the rates of a specific period, such as peak season, off-season, weekdays, or weekends, all at once.
+> In VCMS, you can apply a markup or discount all at once to the rates for a specific period, such as peak season, off-season, weekdays, or weekends.
 
-1. In Settings > Periods, set the markup or discount weight for the rate you will sell at during the specific period.
-   You can set a different rate weight for each currency.
-2. In Settings > Packages > Rate plan, link the period to a package. The weight then applies during that period without a separate rate adjustment.
-   A package with no Rate periods set sells at its base rate in all periods.
+1. Go to Settings > Periods and set the markup or discount weight for the rates you will sell during the specific period.
+   You can set different rate weights for each currency.
+2. Go to Settings > Packages > Rate plan and link the period to a package. The weight then applies during that period with no separate rate adjustment.
+   Packages without Rate periods sell at the base rate in all periods.
 
 <Tip>
-  **To apply to several packages at once**
+  **To apply to multiple packages at once**
 
-  Use `Bulk apply rate periods` in the options (⋮) menu at the top of Settings > Packages > Rate plan to apply one package's period setup to several packages at once.
+  Use `Bulk apply rate periods` in the options (⋮) menu at the top of Settings > Packages > Rate plan to apply one package's period setup to multiple packages at once.
 </Tip>
 
 <Info>
   - On days when periods overlap, the rate of the period higher in the Settings > Periods list applies first.
-  - If a calculated rate falls outside the package's minimum and maximum rate range, it is automatically corrected to fall within the range. If the markup is lower than you expected, check the package's Rate range.
+  - If a calculated rate falls outside the package's minimum and maximum Rate range, it is automatically corrected to fall within the range. If the markup is lower than expected, check the package's Rate range.
 </Info>
 
 **Related articles**

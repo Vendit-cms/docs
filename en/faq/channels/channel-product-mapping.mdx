@@ -1,105 +1,105 @@
 ---
 title: "How do I map channel packages?"
-description: "How to map channel packages to VCMS packages, and how to fix things when a mapping is wrong or room setups differ by channel."
+description: "How to map channel packages to VCMS packages, and how to fix a wrong mapping or align room setups that differ by channel."
 ---
 
-## If channel package mapping is wrong, will inventory be off?
+## Does inventory go wrong if channel packages are mapped incorrectly?
 
-> Yes. If a channel package is not mapped to a VCMS package, or is mapped to a different room type, bookings come in but the right inventory is not deducted.
+> Yes. If a channel package isn't mapped to a VCMS package, or is mapped to a different room type, the correct inventory isn't deducted when a booking comes in.
 
 <Info>
-  VCMS inventory runs in this order: room type, package, channel package. When a booking comes in through an unmapped channel package, VCMS cannot tell which room type it belongs to, so inventory is not deducted. If another channel sells the same room in the meantime, you get an overbooking. When you create a new promotional package or rate plan on a channel, a new channel package appears, and it is not mapped automatically.
+  VCMS inventory runs in this order: room type, package, channel package. When a booking comes in through an unmapped channel package, VCMS can't tell which room type it belongs to, so inventory isn't deducted. If the same room sells on another channel in the meantime, an overbooking occurs. When you create a new promotion package or rate plan on a channel, a new channel package appears, but it isn't mapped automatically.
 </Info>
 
-1. In Settings > Channel list, check for any channel marked `Unmapped channel packages`.
-2. In Settings > Channels > Connected channels > Channel packages, choose the VCMS package of the right room type for each unmapped channel package, map it, and save.
-   Do not map Yanolja hard block packages. Leave them unmapped.
-3. If a package you just created on a channel is not in the list, go to Settings > Channels > Connected channels, choose the channel, and click `Sync channel packages` in Property info.
-4. In Distribution, if Availability differs from the number of rooms actually left, correct it and click `Save`.
+1. In Settings > Channel list, check whether any channel shows the `Unmapped channel packages` label.
+2. In Settings > Channel > Connected channels > Channel packages, choose the VCMS package of the correct room type for each unmapped channel package, map it, and save.
+   Don't map Yanolja hard block packages. Leave them unmapped.
+3. If a package you newly created on the channel isn't in the list, go to Settings > Channel > Connected channels, choose the channel, and click `Sync channel packages` in Property info.
+4. In Distribution, if Availability differs from the actual number of rooms left, correct it and click `Save`.
 
 <Note>
   If you also use VCLOUD, bookings from unmapped channel packages are created under an unassigned room type.
 </Note>
 
-If this does not solve the problem, click the Support button and report it.
+If that doesn't fix it, click the Support button and report it.
 
-**Related docs**
+**Related articles**
 
 - [Distribution overview](/en/distributions/understanding)
-- [An overbooking has occurred.](/en/faq/booking/overbooking)
+- [An overbooking occurred.](/en/faq/booking/overbooking)
 
 ## How do I set inventory and rates?
 
 > You set inventory and rates on the VCMS package. When you map a channel package to the VCMS package, those values sync to the channel.
 
-1. Create packages in VCMS based on room types.
-   Create packages first, based on the room types and rates your accommodation uses.
+1. In VCMS, create packages based on room types.
+   Create packages first, based on the room types and rates in use at your accommodation.
 2. Map channel packages to VCMS packages.
    A mapped channel package gets the same rate as the VCMS package and shares its inventory.
 
 <Info>
-  If you use the VENDIT VCLOUD service, channel packages that are not mapped to a package are created under an unassigned room type.
+  If you use the VENDIT VCLOUD service, channel packages that aren't mapped to a package are created under an unassigned room type.
 </Info>
 
 <Accordion title="Can I hide or delete packages I don't sell?">
-  You can hide them, but deleting is not supported. Deleting an unmapped channel package could also remove the booking data tied to it. To keep data consistent, VCMS offers hiding instead of deleting.
+  You can hide them, but deleting isn't supported. Deleting an unmapped channel package could also remove the booking data tied to it, so to keep data consistent, VCMS offers hiding instead of deleting.
 
-  1. In Settings > Channels > Connected channels > Channel packages, click 'Unmapped channel packages view settings'.
+  1. In Settings > Channel > Connected channels > Channel packages, click 'Unmapped package visibility'.
   2. Click the Hide/Show button and save to hide the channel packages you want.
 
-  Hiding applies only to the VCMS screen. Do not hide a package you are selling on a channel. Map it to a VCMS package instead. A hidden channel package that is still on sale on the channel can still get bookings, which can cause an overbooking.
+  Hiding applies only to VCMS screens. Don't hide packages being sold on a channel. Map them to VCMS packages instead. A hidden channel package that is still being sold on the channel can receive bookings and cause an overbooking.
 </Accordion>
 
-<Accordion title="Can I sell only certain channel packages at a markup or discount?">
-  Yes. Set the Final channel rate on a channel package to mark up or discount only that channel package. In Settings > Channels > Connected channels > Channel packages, choose the channel package to mark up or discount and set its Final channel rate. The change then applies.
+<Accordion title="Can I sell only certain channel packages at a surcharge or discount?">
+  Yes. Set the Final channel rate of a channel package to sell only that channel package at a surcharge or discount. In Settings > Channel > Connected channels > Channel packages, choose the channel package and set its Final channel rate to apply it.
 </Accordion>
 
-## How do I fix a channel package that is mapped incorrectly?
+## How do I fix an incorrectly mapped channel package?
 
-> On the Channel packages screen, unmap it and map it again to the right VCMS package. You can change the mapping at any time.
+> On the Channel packages screen, unmap the channel package and map it again to the correct VCMS package. You can change a mapping at any time.
 
 <Info>
-  If a channel package is mapped to a package of a different room type, bookings from that channel reduce the wrong type's inventory, and the type actually sold stays on sale. Left as is, this can lead to overbooking.
+  If a channel package is mapped to a package of a different room type, bookings from that channel reduce the wrong type's inventory, while the type that actually sold keeps selling. If you leave it, this can lead to an overbooking.
 </Info>
 
-1. In Bookings, open the booking that deducted inventory incorrectly and check the sales channel package name.
-2. In Settings > Channels > Connected channels > Channel packages, click that channel package.
-3. Click `Unmap channel package`, choose the right VCMS package, map it again, and save.
-   Inventory and rates are not adjusted on a package you have unmapped. Do not leave it unmapped. Map it again right away.
-4. In Distribution, check that Availability for the related room type matches the number of rooms actually left. If it differs, correct it and save.
+1. In Bookings, open the booking that deducted inventory incorrectly and check the name of the channel package it sold through.
+2. In Settings > Channel > Connected channels > Channel packages, click that channel package.
+3. Click `Unmap channel package`, choose the correct VCMS package, map it again, and save.
+   Inventory and rates aren't adjusted for an unmapped package. Don't leave it unmapped. Map it again right away.
+4. In Distribution, check that Availability for the affected room type matches the actual number of rooms left. If it doesn't, correct it and save.
 
-If this does not solve the problem, click the Support button and report it.
+If that doesn't fix it, click the Support button and report it.
 
-**Related docs**
+**Related articles**
 
-- [Connect a channel](/en/channels/channel-setting)
-- [An overbooking has occurred.](/en/faq/booking/overbooking)
+- [Channel connection](/en/channels/channel-setting)
+- [An overbooking occurred.](/en/faq/booking/overbooking)
 
-## How do I map when room setups differ by channel?
+## How do I map packages when room setups differ by channel?
 
 > If you have a mix of channels that sell by room number and channels that sell by type, align your VCMS room types and package structure first, then map.
 
 <Info>
-  VCMS sets inventory from a room type's Number of rooms. If you map type-based channel packages (for example, 5 Standard rooms) and room-based channel packages (for example, Room 301) to the same package, VCMS cannot tell which room sold, so inventory counts can seem wrong. Once the structure is aligned, the counts match.
+  VCMS sets inventory from a room type's Number of rooms. If you map type-based channel packages (for example, Standard, 5 rooms) and room-based channel packages (for example, Room 301) to the same package, VCMS can't tell which room sold, and the inventory count may seem wrong. Aligning the structure fixes this.
 </Info>
 
-<Accordion title="Method 1. Split room types by room number">
-  Use this when rooms differ in setup and cannot be assigned in place of each other. In Settings > Room types, create a room type for each room (for example, Room 301 type, Room 302 type) and create a package for each type. Then map the room packages from all channels one by one.
+<Accordion title="Method 1. Split room types by individual room">
+  Use this when rooms differ in setup and can't be assigned in place of one another. In Settings > Room types, create a room type for each room (for example, Room 301 type, Room 302 type) and create a package for each type. Then map the room packages of all channels one by one.
 </Accordion>
 
-<Accordion title="Method 2. Create separate packages per room">
-  Use this when it is fine to swap rooms when assigning them. In Settings > Packages, create a package for each room and set `Max inventory` to 1 in Inventory settings. Map room-based channel packages to the room packages, and type-based channel packages to the type packages.
+<Accordion title="Method 2. Create separate packages for each room">
+  Use this when it's fine to swap room assignments. In Settings > Packages, create a package for each room and set `Max inventory` to 1 in Inventory settings. Map room-based channel packages to the room packages, and type-based channel packages to the type packages.
 </Accordion>
 
-After that, in Settings > Channels > Connected channels > Channel packages, check that every channel package is mapped to fit the new structure, then save.
+After you reorganize, go to Settings > Channel > Connected channels > Channel packages, check that every channel package is mapped to match the new structure, and save.
 
 <Warning>
-  - If you delete a room type, its mapped packages are deleted too. Map the channel packages that were mapped to those packages again.
-  - Moving a room to a different type changes inventory counts. If you are syncing inventory, check the dates you are selling before you move it.
-  - If you also use VCLOUD, make the room types and Number of rooms identical in VCLOUD and VCMS. They do not match automatically.
+  - When you delete a room type, its mapped packages are deleted too. Map the channel packages that were mapped to those packages again.
+  - When you move a room to another type, the inventory count changes. If inventory sync is on, check the dates that are Open sell before you move the room.
+  - If you also use VCLOUD, make the room types and Number of rooms the same in VCLOUD and VCMS. They don't match automatically.
 </Warning>
 
-**Related docs**
+**Related articles**
 
 - [Room types](/en/inventory-rate/roomType)
-- [Can I move a room to a different type?](/en/faq/inventory-rate/move-room-to-other-type)
+- [Can I move a room to another type?](/en/faq/inventory-rate/move-room-to-other-type)

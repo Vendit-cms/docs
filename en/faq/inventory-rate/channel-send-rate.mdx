@@ -1,6 +1,6 @@
 ---
-title: "The displayed rate differs by channel"
-description: "Why the amount shown on an OTA differs from your VCMS rate, how to set Final channel rate and Commission, and how to fix stacked discounts."
+title: "Rates shown differ by channel"
+description: "Why the amount shown on an OTA differs from your VCMS rate, how to set Final channel rate and Commission, and how to fix overlapping discounts."
 ---
 
 ## The amount on the OTA differs from the rate I set in VCMS
@@ -10,107 +10,107 @@ description: "Why the amount shown on an OTA differs from your VCMS rate, how to
 <Info>
   **When the amount can look different**
 
-  - Channel promotions and taxes: On channels with frequent promotions, such as Agoda and Tripdotcom, a channel discount can make the amount look lower.
+  - Channel promotions and taxes: Channels with frequent promotions, such as Agoda and Tripdotcom, can add channel discounts, so the amount may look lower.
   - Fixed-rate packages set by the channel: Yanolja Hot Deal and Gold Class are fixed at the amount Yanolja sets, so VCMS rates do not apply.
   - Final channel rate: If you set a markup or discount on a channel or channel package, the amount sent changes by that much.
   - Occupancy-based pricing: Channels that do not support Occupancy-based pricing receive the rate for the maximum occupancy.
-  - Rate range: If an adjusted rate falls outside the package's min or max rate, the amount at the end of the range is sent.
+  - Rate range: If an adjusted rate falls outside the package's Min rate or Max rate, the amount at the end of the range is sent.
 </Info>
 
-1. In Distribution, click the Rate adjustment area for the date. You can see the final amount sent for each channel package, with Final channel rate applied.
-2. In the channel admin screen, check the rate for the same date and the same package. If the two amounts match, VCMS is sending correctly.
-3. If the two amounts differ, check Final channel rate, the package's Rate range, and Occupancy-based pricing, in that order.
+1. In Distribution, click the Rate adjustment area for that date. You can see the final amount sent for each channel package, with the Final channel rate applied.
+2. On the channel admin screen, check the rate for the same date and the same package. If the two amounts match, VCMS is sending correctly.
+3. If the two amounts differ, check the Final channel rate, the package's Rate range, and Occupancy-based pricing, in that order.
 
 <Note>
   **Airbnb**
 
-  When you connect Airbnb, existing promotions are reset, but rule sets such as last-minute booking discounts and early booking discounts stay as they are. If the Airbnb amount looks low, check whether a discount remains in your rule sets.
+  When you connect Airbnb, existing promotions are reset, but rule sets such as last-minute booking discounts and early booking discounts stay as they are. If the amount on Airbnb looks low, check whether a discount remains in a rule set.
 </Note>
 
-If this does not solve the problem, click the Support button and report it.
+If this does not solve the issue, click the Support button and report it.
 
-**Related articles**
+**Related docs**
 
-- [I want to apply a markup or discount to specific sales channels only](/en/faq/inventory-rate/channel-final-rate)
+- [I want to sell on a specific sales channel at a markup or discount](/en/faq/inventory-rate/channel-final-rate)
 - [Can I adjust inventory or rates on Yanolja Hot Deal and Gold Class packages?](/en/faq/inventory-rate/yanolja-hotdeal-goldclass)
 - [My Airbnb promotion settings were reset](/en/faq/inventory-rate/airbnb-promotion-reset)
 
-## I want to apply a markup or discount to specific sales channels only
+## I want to sell on a specific sales channel at a markup or discount
 
 > Set a sales channel's Final channel rate to keep rates similar between overseas channels with frequent promotions (Agoda, Tripdotcom) and other channels.
 
-1. Go to Settings > Channels > Property info and click the Final channel rate button for the property you want to connect.
-2. Set Final channel rate and enter a markup or discount weight.
-3. Save your settings, and the weight applies to Final channel rate. Example: If you set a -30% discount weight on the Yanolja Final channel rate, a 100,000 KRW package is applied on Yanolja at 70,000 KRW.
+1. In Settings > Channels > Property info, click the Final channel rate button for the property to connect.
+2. Set the Final channel rate and enter a markup or discount weight.
+3. Save the settings. The weight you set applies to the Final channel rate. Example: If you set a -30% discount weight on the Yanolja Final channel rate, a KRW 100,000 package is applied on Yanolja at KRW 70,000.
 
 <Accordion title="Can I apply a markup or discount to just one channel package?">
-  Yes. Go to Settings > Channels > Connected channels > Channel packages, select a channel package, and set Final channel rate. It applies only to that channel package.
+  Yes. In Settings > Channels > Connected channels > Channel packages, select a channel package and set its Final channel rate. It applies only to that channel package.
 </Accordion>
 
 <Accordion title="Can I send higher rates only to channels with high commission?">
-  Yes. Enter a + weight in that channel's Final channel rate. The Distribution rate stays the same, and only the rate sent to that channel goes up. If you raise the Distribution rate itself, rates also go up on the other channels that sync rates. Commission calculates the Sell rate and Net rate of incoming bookings, so it does not change the rate sent to channels.
+  Yes. Enter a + weight in that channel's Final channel rate. The Distribution rate stays the same, and only the rate sent to that channel goes up. If you raise the Distribution rate itself, the rates of other channels that rates sync to go up as well. Commission is a setting that calculates the Sell rate and Net rate of incoming bookings, so it does not change the rates sent to channels.
 </Accordion>
 
 <Check>
-  In Distribution, click the Rate adjustment area to see the final amount sent for each channel package, with Final channel rate applied. Inventory and rates sync with channels every 5 minutes.
+  In Distribution, click the Rate adjustment area to see the final amount sent for each channel package, with the Final channel rate applied. Inventory and rates sync with channels every 5 minutes.
 </Check>
 
 <Tip>
-  You can set Final channel rate for each channel on the channel settings screen. For details, see ['Final channel rate' in the channel connection guide](/en/channels/channel-setting#final-channel-rate).
+  You can set the Final channel rate for each channel on the channel settings screen. For details, see ['Final channel rate' in the channel connection guide](/en/channels/channel-setting#final-channel-rate).
 </Tip>
 
-**Related articles**
+**Related docs**
 
 - [Can I set channel commission separately?](/en/faq/inventory-rate/channels-commission-setting)
 
-## Discounts and Final channel rate stack
+## Discounts and the Final channel rate overlap
 
-> Final channel rate is applied once more on top of the Distribution rate. If you put a discount in both places, the discounts stack.
+> The Final channel rate is applied once more on top of the Distribution rate. If you add a discount in both places, the discounts overlap.
 
-The amount sent to a channel starts with the Distribution rate. Final channel rate is then applied to that amount. The Distribution rate reflects the package's base rate, Rate periods, Rate multiplier, and any Rate adjustment you made in Distribution.
+The amount sent to a channel starts with the Distribution rate. The Final channel rate is then applied to that amount. The Distribution rate reflects the package's Base rate, Rate periods, Rate multiplier, and any Rate adjustment made in Distribution.
 
 <Note>
-  Example: In Distribution, you discount 100,000 KRW by 10% to 90,000 KRW and enter -10% in Final channel rate. That channel receives 81,000 KRW.
+  Example: If you discount KRW 100,000 by 10% to KRW 90,000 in Distribution and enter -10% in the Final channel rate, KRW 81,000 is sent to that channel.
 </Note>
 
 1. In Distribution, click the Rate adjustment area for the date in question and check the final amount sent for each channel package.
-2. Check whether old values remain in Final channel rate under Settings > Channels > Property info, and in the Final channel rate for each channel package under Settings > Channels > Connected channels > Channel packages.
-3. Under Settings > Packages, check for discounts left in Rate multiplier and Rate periods.
+2. Check whether old values remain in the Final channel rate under Settings > Channels > Property info and in the per-channel-package Final channel rate under Settings > Channels > Connected channels > Channel packages.
+3. In Settings > Packages, check for discounts left in Rate multiplier and Rate periods.
 4. Keep the discount in only one place, delete the other discount values, and save.
 
 <Tip>
   **Split your discounts like this**
 
   - Same discount on all channels: Rate adjustment in Distribution, or the package's Rate periods
-  - Discount on a specific channel only: That channel's Final channel rate
-  - A different amount for one channel package only: That channel package's Final channel rate
+  - Discount on specific channels only: That channel's Final channel rate
+  - Different setting for one channel package: That channel package's Final channel rate
 </Tip>
 
-If this does not solve the problem, click the Support button and report it.
+If this does not solve the issue, click the Support button and report it.
 
-**Related articles**
+**Related docs**
 
-- [I want to apply a markup or discount to specific sales channels only](/en/faq/inventory-rate/channel-final-rate)
+- [I want to sell on a specific sales channel at a markup or discount](/en/faq/inventory-rate/channel-final-rate)
 - [Overnight packages](/en/inventory-rate/package-stay)
 
 ## Can I set channel commission separately?
 
-> Yes. For channels that do not provide the Sell rate and Net rate in Booking info, set Commission to manage accurate Sell rates and Net rates.
+> Yes. For channels that do not provide the Sell rate and Net rate in Booking info, you can set Commission to manage accurate Sell rates and Net rates.
 
-1. Go to Settings > Channels > Property info and click Commission for the property you want to set up.
-2. Once you set the commission rate, it applies to the Net rate or Sell rate of that channel property. For the basis, choose `At time of setting` or `Today's check-in`.
+1. In Settings > Channels > Property info, click Commission for the property you want to set.
+2. Set the Commission. It applies to the Net rate or Sell rate of that channel property. Choose when it applies: `New bookings only` or `All check-ins from today`.
 
 <Info>
   **When the booking amount comes in as the Net rate**
 
-  A booking's Sales amount and Net amount are taken exactly as the channel sends them in Booking info. Channels send different amounts, so for a channel that sends only the Net rate, you need to set Commission to see both the Sell rate and the Net rate. Calculated amounts can differ slightly from the actual amounts because of channel promotions or taxes.
+  A booking's Sales amount and Net amount are taken as is from what the channel sends in its booking information. The amounts sent differ by channel. For channels that send only the Net rate, you must set Commission to see both the Sell rate and the Net rate. Calculated amounts can differ slightly from actual amounts because of channel promotions or taxes.
 </Info>
 
 <Note>
-  Commission is a setting for showing booking amounts, so it does not change the rate sent to channels. To send a higher rate to a specific channel only, use Final channel rate.
+  Commission is a setting for showing booking amounts, so it does not change the rates sent to channels. To send a higher rate to a specific channel only, use the Final channel rate.
 </Note>
 
-**Related articles**
+**Related docs**
 
-- [I want to apply a markup or discount to specific sales channels only](/en/faq/inventory-rate/channel-final-rate)
+- [I want to sell on a specific sales channel at a markup or discount](/en/faq/inventory-rate/channel-final-rate)
 - [Bookings](/en/bookings/bookings)
