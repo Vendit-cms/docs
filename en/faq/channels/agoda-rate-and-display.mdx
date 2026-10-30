@@ -1,54 +1,54 @@
 ---
-title: "Agoda rates aren't being applied"
-description: "What to check when Agoda rates aren't applied: occupancy settings, and the difference between booking amounts and displayed prices."
+title: "Agoda rates aren't applied"
+description: "What to do when Agoda rates aren't applied, how occupancy settings affect them, and why booking amounts and displayed rates differ."
 ---
 
 ## Rates set in VCMS aren't applied on Agoda
 
-> First check that the VCMS package mapped to Agoda has Occupancy-based pricing, and that its base occupancy and max occupancy match YCS.
+> First check that the VCMS package mapped to Agoda has occupancy-based pricing, and that its base occupancy and maximum occupancy match YCS.
 
 <Info>
-  Agoda takes rates as Occupancy-based pricing. If the mapped VCMS package has no Occupancy-based pricing, or its occupancy settings differ from the YCS room, rates and Stop sell aren't applied. Without a rate, the YCS calendar shows only the number of rooms.
+  Agoda receives rates as occupancy-based pricing. If the mapped VCMS package has no occupancy-based pricing, or its occupancy settings differ from the YCS room, rates and Stop sell aren't applied. Without rates, the YCS calendar shows only the number of rooms.
 </Info>
 
-1. Under Settings > Packages, open the package mapped to Agoda and check that Occupancy-based pricing is set.
-   If you don't add an extra rate, you can set the extra rate per guest to 0 KRW.
-2. Check that the package's base occupancy and max occupancy match the occupancy under Property > Room settings in YCS.
-3. Under Settings > Channels > Connected channels > Channel packages, check that the Agoda package is mapped to the right VCMS package.
-   Also check that `Rate` isn't turned off on the channel package, and that Sync at the top of `Distribution` is on.
-4. In YCS, check the rate plan link and the Sell status.
-   Check the rate plan link under Rates & bookings settings > Rate plan settings in YCS, and the Sell status under Property > Room settings. You can't sell while the status is Pending sale.
+1. Go to Settings > Package, open the package mapped to Agoda, and check that occupancy-based pricing is set.
+   If you don't add an extra rate, you can set the extra rate per guest to 0 won.
+2. Check that the package's base occupancy and maximum occupancy match the occupancy in YCS under Property > Room settings.
+3. Go to Settings > Channel > Connected channels > Channel packages and check that the Agoda package is mapped to the correct VCMS package.
+   Also check that `Rate` isn't turned off for the channel package, and that sync at the top of `Distribution` is on.
+4. In YCS, check the rate plan link and the sell status.
+   Check the rate plan link in YCS under Rates & booking settings > Rate plan settings, and the sell status under Property > Room settings. You can't sell while the status is pending sale.
 
 <Note>
-  Derived packages with a link icon on the YCS calendar can't have their rates changed in YCS either. VENDIT can't edit information that you can't edit on the channel yourself.
+  You can't change the rate of a derived package with a link icon on the YCS calendar, even in YCS. VENDIT can't edit information that you can't edit directly on the channel yourself.
 </Note>
 
-If this doesn't solve the problem, press the Support button to report it.
+If that doesn't fix it, click the Support button and report it.
 
 **Related articles**
 
 - [Agoda](/en/channels/agoda)
 - [Overnight packages](/en/inventory-rate/package-stay)
 
-## Agoda base occupancy and max occupancy differ from VCMS
+## Agoda's base occupancy and maximum occupancy differ from VCMS
 
-> Make the occupancy in YCS room settings and the base occupancy and max occupancy of the VCMS package the same. If they differ, rates may not be sent.
+> Make the occupancy in YCS room settings match the base occupancy and maximum occupancy of the VCMS package. If they differ, rates may not be sent.
 
 <Info>
-  Agoda supports Occupancy-based pricing, so when guests exceed the base occupancy, an extra rate per guest is added to the Room rate. If the Occupancy-based pricing VCMS sends doesn't match the YCS room occupancy, rates aren't applied.
+  Agoda supports occupancy-based pricing, so when guests exceed the base occupancy, an extra rate per guest is added to the room rate. If the occupancy-based pricing VCMS sends doesn't match the YCS room occupancy, rates aren't applied.
 </Info>
 
-1. Under Property > Room settings in YCS, check the occupancy of each room.
-2. Under Settings > Packages in VCMS, open the package mapped to Agoda, enter the same base occupancy and max occupancy as YCS in Occupancy-based pricing, and press `Save`.
-   If you don't add an extra rate, set the extra rate per guest to 0 KRW.
+1. In YCS, go to Property > Room settings and check the occupancy of each room.
+2. In VCMS, go to Settings > Package and open the package mapped to Agoda. Enter the same base occupancy and maximum occupancy as YCS under occupancy-based pricing, then click `Save`.
+   If you don't add an extra rate, set the extra rate per guest to 0 won.
 
 <Warning>
-  If you change a room type's max occupancy in VCMS, the base occupancy and max occupancy of its connected packages adjust automatically. After you edit a room type, check again that the package occupancy matches YCS.
+  When you change the maximum occupancy of a room type in VCMS, the base occupancy and maximum occupancy of its connected packages are adjusted automatically. After you edit a room type, check again that the package occupancy matches YCS.
 </Warning>
 
 <Note>
-  - VCMS supports Occupancy-based pricing for adults only. Set child rates directly in YCS.
-  - If you map the same package to a channel that doesn't support Occupancy-based pricing (Yanolja, Yeogiottae, Coolstay, Naver, Ddnayodotcom, Onda, Tripbtoz), the rate for max occupancy applies. If you don't want this, split it into separate packages.
+  - VCMS supports occupancy-based pricing for adults only. Set child rates directly in YCS.
+  - If you map the same package to channels that don't support occupancy-based pricing (Yanolja, Yeogiottae, Coolstay, Naver, Ddnayodotcom, ONDA, Tripbtoz), the rate for the maximum occupancy applies. If you don't want this, use separate packages.
 </Note>
 
 **Related articles**
@@ -56,47 +56,47 @@ If this doesn't solve the problem, press the Support button to report it.
 - [Agoda](/en/channels/agoda)
 - [Overnight packages](/en/inventory-rate/package-stay)
 
-## Agoda booking amount differs from the guest's Payment amount
+## The Agoda booking amount differs from the guest's payment amount
 
-> Agoda bookings come into VCMS at the Net rate. This can differ from the amount the guest paid.
+> Agoda bookings come into VCMS at the net rate. This can differ from the amount the guest paid.
 
 <Info>
-  Agoda is an official integration, so VCMS can only receive the information Agoda sends. The booking amount Agoda sends is the Net rate. So the VCMS booking amount is closer to what the property will receive than to what the guest paid.
+  Agoda is an official integration, so VCMS can receive only the information Agoda sends. The booking amount Agoda sends is the net rate. So the booking amount in VCMS is closer to what the property receives than to what the guest paid.
 </Info>
 
-1. Check the booking amount in VCMS Bookings and compare it with the amount of the same booking in YCS.
-2. If you want to manage by Sell rate, set `Commission` for the Agoda property under Settings > Channels > Property info.
-   For when it applies, pick either `Time of setting` or `Today's check-in`.
+1. Check the booking amount in VCMS under Bookings and compare it with the amount for the same booking in YCS.
+2. To manage by sell rate, go to Settings > Channel > Property info and set `Commission` for the Agoda property.
+   To set when it applies, choose either `New bookings only` or `All check-ins from today`.
 
 <Note>
-  With Agoda, promotions and contract terms mean amounts don't come out exactly by the commission. Treat amounts calculated with Commission as a reference only. Commission is used only on incoming booking amounts, so the rates sent to Agoda don't change.
+  Depending on promotions and contract terms, Agoda amounts don't come out exactly at the commission rate. Treat amounts calculated with Commission as a reference only. Commission is used only on incoming booking amounts, so it doesn't change the rates sent to Agoda.
 </Note>
 
 **Related articles**
 
-- [Can I set channel commissions separately?](/en/faq/inventory-rate/channels-commission-setting)
-- [Final channel rate and OTA displayed price](/en/faq/inventory-rate/channel-send-rate)
+- [Can I set channel commission separately?](/en/faq/inventory-rate/channels-commission-setting)
+- [Final channel rate and OTA displayed rate](/en/faq/inventory-rate/channel-send-rate)
 
-## Agoda shows a lower price than the rate you set
+## Agoda shows a lower price than the rate I set
 
-> A YCS promotion may be applied. Check your promotions and, if needed, mark up the Agoda rate with Final channel rate.
+> A YCS promotion may be applied. Check your promotions and, if needed, use Final channel rate to mark up the Agoda rate.
 
 <Info>
-  VCMS sends Distribution rates to Agoda, but Agoda decides the final price guests see. If a promotion is running in YCS, the discount is applied to the rate VCMS sent. YCS promotions are managed in YCS, separately from VCMS.
+  VCMS sends the rates in Distribution to Agoda, but Agoda sets the final price guests see. If a promotion is running in YCS, the discount applies to the rate VCMS sent. YCS promotions are managed in YCS, separately from VCMS.
 </Info>
 
 1. Check whether any promotions are running in YCS.
-2. To keep the promotion and still match the price, add a markup weight to the Agoda `Final channel rate` under Settings > Channels > Property info.
-3. To stop Agoda sales on specific dates only, change the Agoda channel package for those dates to Stop sell in `Distribution` and press `Save`.
-   If Stop sell isn't applied on Agoda, check that the mapped VCMS package has Occupancy-based pricing, and that its base occupancy and max occupancy match YCS room settings.
+2. To keep a promotion and still match the price, go to Settings > Channel > Property info and enter a markup weight in `Final channel rate` for Agoda.
+3. To stop selling on Agoda for specific dates only, go to `Distribution`, change the Agoda channel package to Stop sell for those dates, and click `Save`.
+   If Stop sell isn't applied on Agoda, check that the mapped VCMS package has occupancy-based pricing, and that its base occupancy and maximum occupancy match YCS room settings.
 
 <Warning>
-  If you use Stop sell at the room type or package level, sales on other channels stop too. To stop Agoda only, select the Agoda channel package and change that.
+  If you apply Stop sell to a room type or package, selling stops on other channels too. To stop only Agoda, select the Agoda channel package and change that.
 </Warning>
 
-If this doesn't solve the problem, press the Support button to report it.
+If that doesn't fix it, click the Support button and report it.
 
 **Related articles**
 
-- [Final channel rate and OTA displayed price](/en/faq/inventory-rate/channel-send-rate)
+- [Final channel rate and OTA displayed rate](/en/faq/inventory-rate/channel-send-rate)
 - [Agoda](/en/channels/agoda)

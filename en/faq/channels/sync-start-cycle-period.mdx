@@ -1,18 +1,18 @@
 ---
-title: "How often does VCMS sync, and what is the sync period?"
-description: "What happens to channel status when you turn on sync, how often bookings, inventory, and rates sync, and how to set the sync period."
+title: "Sync interval and Sync period"
+description: "What happens to channels when you turn on sync, how often bookings, inventory, and rates sync, and how to set the Sync period."
 ---
 
-## Does turning on sync reopen rooms I closed on the channel?
+## Does turning on sync reopen rooms I blocked on the channel?
 
-> Yes, it can. When you turn on sync, channel values are matched to the VCMS Distribution values.
+> Yes, it can. When you turn on sync, channel values change to match the values in VCMS Distribution.
 
 <Info>
-  While syncing, VCMS `Distribution` is the reference. VCMS can't see dates you set to Stop sell directly in the channel's partner center, so if a date is on sale in VCMS, it goes back on sale on the channel too. If you change a value directly on the channel while syncing, it returns to the VCMS value within 5 minutes.
+  While syncing, VCMS `Distribution` is the reference. VCMS can't see dates you set to Stop sell directly in the channel's partner center, so if a date is on sale in VCMS, the channel sells it again. If you change a value directly on the channel while syncing, it returns to the VCMS value within 5 minutes.
 </Info>
 
-1. Check which dates you set to Stop sell directly on the channel, and why (phone bookings, group bookings, construction, and so on).
-2. For phone or group bookings, lower Availability for those dates in `Distribution`.
+1. Check which dates you set to Stop sell directly on the channel and why (phone bookings, group bookings, construction, and so on).
+2. For phone or group bookings, reduce the Availability for those dates in `Distribution`.
 3. For dates you won't sell, set Stop sell in `Distribution` and click `Save` at the top.
 4. Check Availability, rates, and Sell status again, then start sync.
 
@@ -20,62 +20,62 @@ description: "What happens to channel status when you turn on sync, how often bo
   For properties that use Inventory without Rate, VCMS doesn't automatically open packages that aren't set up on the channel. On Naver, syncing inventory and rates together deletes Today's Deal and Holidays schedules.
 </Note>
 
-**Related docs**
+**Related articles**
 
 - [Channel sync](/en/distributions/channel-sync)
 - [How to use Distribution](/en/distributions/usage)
 
-## How far ahead can a channel sync?
+## How many days can I sync with a channel?
 
-> You can set the channel sync period to up to 180 days. Pick 30, 60, 90, 120, 150, or 180 days. Inventory and rates sync to the sales channel for the period you set.
+> You can set the channel Sync period to up to 180 days. You can choose 30, 60, 90, 120, 150, or 180 days. Inventory and rates sync to your sales channels for the period you set.
 
-1. Go to Settings > Accommodation > Sync period.
+1. Go to Settings > Accommodation > Sync period settings.
 2. Select the period you want.
-   The sync period moves forward one day every day. If you set it to 30 days, 30 days from today are open, and the next day one more day opens.
+   The Sync period moves forward one day every day. If you set it to 30 days, 30 days starting today are open, and one more day opens the next day.
 
 <Note>
-  Where a sales channel limits its own selling window, the channel's policy wins.
+  If a sales channel limits its sales period, the channel's policy takes priority.
 </Note>
 
 <Info>
-  **What happens if I shorten the sync period?**
+  **What happens if I shorten the Sync period?**
 
-  Bookings, inventory, and rates stop syncing for dates beyond the shortened period. Dates already open on the channel don't change to Stop sell automatically. Before you shorten the period, set Stop sell in `Distribution` for dates you won't sell.
+  Booking, inventory, and rate sync stops for dates beyond the shortened period. Dates already open on the channel don't change to Stop sell automatically. Before you shorten the period, set Stop sell in `Distribution` for dates you won't sell.
 </Info>
 
 <Info>
-  **What happens if I extend the sync period?**
+  **What happens if I extend the Sync period?**
 
-  On some sales channels, packages that have no rate or inventory set yet can appear as available to book. Before you extend the period, check the rates and inventory for the newly opened dates in `Distribution`.
+  On some sales channels, packages with no rate or inventory set yet may show as available for sale. Before you extend the period, check the rates and inventory for the dates that will open in `Distribution`.
 </Info>
 
 <Warning>
-  If you keep a channel's selling window open longer than the sync period, VCMS doesn't send rates for dates outside the sync period, so those dates can sell at old rates. For those dates, set Stop sell directly on the channel or check the rates.
+  If you keep a channel's sales period open longer than the Sync period, VCMS doesn't send rates for dates outside the Sync period, so those dates may sell at old rates. For those dates, set Stop sell directly on the channel or check the rates.
 </Warning>
 
 ## How often do channels sync?
 
-> VCMS syncs Booking info with channels every minute, and inventory and rates every 5 minutes.
+> VCMS syncs booking info with channels every minute, and inventory and rates every 5 minutes.
 
 <Info>
-  Changes saved in `Distribution` and inventory reduced by new bookings go to the channel right away, without waiting for the cycle. VCMS also rechecks all dates every 5 minutes. If a channel value differs, VCMS changes it to match the VCMS value.
+  Changes saved in `Distribution` and inventory reduced by new bookings go to channels right away, without waiting for the interval. VCMS also rechecks all dates every 5 minutes. If a channel value is different, VCMS changes it to match the VCMS value.
 </Info>
 
 - Airbnb, Expedia: Bookings, inventory, and rates all sync every 5 minutes.
-- Yanolja: Only bookings within 4 days, including today, come in every minute. Bookings for later dates can arrive up to about 10 minutes late.
+- Yanolja: Only bookings within 4 days, including today, come in every minute. Bookings for later dates can come in up to about 10 minutes late.
 
 <Check>
-  **If changes don't appear on the channel, check the following**
+  **If your changes don't reach the channel, check the following**
 
-  - Whether you saved the change with `Save` at the top
-  - Whether `Distribution` is set to Sync stopped. While sync is stopped, only bookings sync. Inventory and rates don't go to the channel.
+  - Whether you saved your changes with `Save` at the top
+  - Whether `Distribution` is in Sync stopped status. While sync is stopped, it's Booking sync only, and inventory and rates don't go to channels.
 </Check>
 
 <Note>
-  If you change a value directly on the channel while syncing, it returns to the VCMS value within 5 minutes. To exclude only certain channel packages, turn off `Inventory` and `Rate` under Settings > Channels > Connected channels > Channel packages. To exclude a whole room type, change Management type to `Managed in channel` under Settings > Room types.
+  If you change a value directly on the channel while syncing, it returns to the VCMS value within 5 minutes. To exclude only specific channel packages, go to Settings > Channel > Connected channels > Channel packages and turn off `Inventory` and `Rate`. To exclude a whole room type, go to Settings > Room types and change Management type to `Managed in channel`.
 </Note>
 
-**Related docs**
+**Related articles**
 
 - [Channel sync](/en/distributions/channel-sync)
 - [Yanolja booking sync is delayed](/en/faq/issue/yanolja-booking-delay)

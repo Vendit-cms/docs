@@ -1,65 +1,65 @@
 ---
 title: "Inventory counts do not match"
-description: "Covers differences between VCMS, channel and VCLOUD inventory, rooms that are out of order or under construction, negative inventory, and how phone and walk-in bookings are reflected."
+description: "Covers VCMS, channel, and VCLOUD inventory that differs, rooms that are broken or under construction, negative inventory, and how to reflect phone and walk-in bookings."
 ---
 
 ## VCMS inventory looks different from channel or VCLOUD inventory
 
-> Inventory counts can seem not to match. This is a settings issue, so you can fix it by checking the items below in order.
+> It can seem like inventory counts do not match. This is a settings issue, so you can fix it by checking the items below in order.
 
-While Syncing, VCMS checks all dates every 5 minutes. If a channel value differs, VCMS changes it to match the VCMS value. If the numbers keep differing, check the settings below.
+While Syncing, VCMS checks all dates every 5 minutes. If a channel value differs, VCMS changes it to match VCMS. If the numbers keep differing, check the settings below.
 
 1. Check whether Distribution is in `Sync stopped` status.
-   In Sync stopped status, only bookings sync. Inventory and rates are not sent to channels.
-2. In Settings > Channel > Connected channels > Channel packages, check for unmapped channel packages.
-   Bookings that come in through an unmapped channel package do not reduce VCMS inventory. If you sell that package, map it to a VCMS package.
-3. In Settings > Room type, check that Management type is CMS.
+   In this status, only bookings sync. Inventory and rates do not go to channels.
+2. In Settings > Channels > Connected channels > Channel packages, check for unmapped channel packages.
+   Bookings that come in through unmapped channel packages do not reduce VCMS inventory. If you sell the package, map it to a VCMS package.
+3. In Settings > Room types, check that the Management type is CMS.
    With `Managed in channel`, only bookings sync. Inventory and rates do not sync.
-4. If you also use VCLOUD, check that both services have the same room types and number of rooms.
-   Inventory goes down only when a booking assigned in VCLOUD maps to a VCMS room type.
+4. If you also use VCLOUD, check that the room types and Number of rooms match in both services.
+   Inventory goes down only when a booking assigned in VCLOUD is mapped to a VCMS room type.
 
 <Warning>
   **Do not map Yanolja hard block packages**
 
-  A hard block is a package whose rooms the sales channel buys in advance and resells, so you cannot adjust its inventory or rates. Leave it unmapped. Mapping it can affect the count of rooms sold.
+  With a hard block package, the sales channel buys rooms in advance and resells them, so you cannot adjust inventory or rates. Leave these packages unmapped. Mapping them can affect the calculation of quantities sold.
 </Warning>
 
 <Note>
-  - If you change a count directly in a channel, it returns to the VCMS value within 5 minutes while inventory and rate sync is on. Change inventory in VCMS.
-  - Setting a room to Stop sell in VCLOUD does not carry over to VCMS. If a guest checks out early, VCMS holds the inventory until the booking's check-out time.
-  - Channel screens display information differently from one channel to another. To check for Stop sell, use the calendar screen that shows Sell status by date.
+  - If you change a quantity directly on a channel, it returns to the VCMS value within 5 minutes while inventory and rate sync is on. Change inventory in VCMS.
+  - Setting a room to Stop sell in VCLOUD is not reflected in VCMS. Even if a guest checks out early, VCMS holds the inventory until the booking's check-out time.
+  - Each channel displays its screens differently. To check Stop sell, use the calendar screen that shows Sell status by date.
 </Note>
 
-If this does not solve the issue, press the Support button and report it. It goes faster if you include the date and room type where inventory differs, the channel package name, the related Booking ID, and a screenshot.
+If this does not solve the problem, press the Support button to report it. It goes faster if you include the dates and room type where inventory differs, the channel package name, the related Booking ID, and a screenshot.
 
 **Related documents**
 
 - [Channel sync](/en/distributions/channel-sync)
 - [VCLOUD](/en/faq/integrations/vcloud)
-- [How does VCMS inventory reflect a guest's early check-out?](/en/faq/booking/vcloud-early-checkout-inventory)
+- [How is VCMS inventory reflected when a guest checks out early?](/en/faq/booking/vcloud-early-checkout-inventory)
 
-## How do I handle inventory for rooms that are out of order or under construction?
+## How do I handle inventory for rooms that are broken or under construction?
 
-> Remove rooms you cannot use from inventory yourself in VCMS. Setting them to Stop sell in VCLOUD does not change VCMS inventory.
+> Remove rooms you cannot use from inventory yourself in VCMS. Setting Stop sell in VCLOUD is not reflected in VCMS inventory.
 
-**When the end date is unknown or the period is long**
+**When you do not know the end date or the period is long**
 
-1. In Settings > Room type, select the room type that has the room.
-2. Change the room status of the room that is out of order or under construction to Inactive, then save.
-   Inactive rooms leave sellable inventory immediately, and Distribution updates right away.
+1. In Settings > Room types, select the room type that has the room.
+2. Change the room status of the broken or under-construction room to Inactive and Save.
+   Inactive rooms leave sellable inventory right away, and Distribution reflects this right away too.
 
 **When you only need to remove specific dates**
 
-1. In Distribution, lower the availability on those dates by the number of rooms you are removing.
+1. In Distribution, reduce the availability for those dates by the number of rooms you are removing.
    For a long period, you can change it all at once with `Bulk update`.
 2. Press `Save` at the top to apply the change to channels.
 
 <Warning>
-  If you set Stop sell only in VCLOUD or on a kiosk, channels keep selling that room. If you also use VCLOUD, handle it in both VCLOUD and VCMS.
+  If you set Stop sell only in VCLOUD or on a kiosk, the room keeps selling on channels. If you also use VCLOUD, handle it separately in both VCLOUD and VCMS.
 </Warning>
 
 <Note>
-  When repairs are finished, restore the room status you set to Inactive and the availability you lowered. If you do not, rooms you could sell will not sell on channels.
+  When repairs are finished, restore the room status you set to Inactive and the availability you reduced. If you do not, rooms you could sell will not sell on channels.
 </Note>
 
 **Related documents**
@@ -70,62 +70,62 @@ If this does not solve the issue, press the Support button and report it. It goe
 
 ## Inventory shows a negative number. Why?
 
-> Availability such as -1 means more bookings came in for that date than you could sell.
+> If availability shows a number like -1, more bookings came in for that date than you could sell.
 
 <Info>
   **Common causes**
 
   - The same room was booked on several channels at the same time, within a few minutes
-  - A booking was extended, or another booking came in, on a date where you had manually lowered availability
-  - A booking synced from a channel was entered again in VCLOUD or elsewhere, so it was counted twice
+  - A booking was extended or added on a date where you had manually reduced availability
+  - A booking synced from a channel was entered again in VCLOUD or elsewhere and counted twice
 </Info>
 
 1. In Bookings, check the bookings that check in on that date and their room types.
-2. If the same booking was entered twice, clear up the duplicate you added manually.
-   Bookings synced from channels are reflected in inventory without being entered again.
-3. If you really are short of rooms, take care of the guest first.
-4. To stop taking bookings, set that date to Stop sell in Distribution and press `Save`.
+2. If the same booking was entered twice, clean up the duplicate you added manually.
+   Bookings that sync from channels are reflected in inventory without being entered again.
+3. If you really are short of rooms, take care of your guests first.
+4. To stop taking more bookings, set that date to Stop sell in Distribution and press `Save`.
 
 <Warning>
   Do not manually change the availability number to 0. A negative number reflects the actual number of bookings, so changing it can throw off inventory later.
 </Warning>
 
 <Note>
-  Conversely, a date where you entered more availability than the number of rooms shows `Exceeds availability`. You could sell more rooms than you actually have, so check the count.
+  On the other hand, a date where you entered more availability than the Number of rooms shows `Exceeds availability`. You could sell more rooms than you actually have, so check the quantity.
 </Note>
 
-If this does not solve the issue, press the Support button and report it.
+If this does not solve the problem, press the Support button to report it.
 
 **Related documents**
 
-- [Overbooking occurred.](/en/faq/booking/overbooking)
+- [An overbooking occurred.](/en/faq/booking/overbooking)
 - [Bookings](/en/bookings/bookings)
 - [How to use Distribution](/en/distributions/usage)
 
 ## Are phone and walk-in bookings reflected in channel inventory?
 
-> They reach channels only if you register them in VCLOUD or lower inventory yourself in Distribution.
+> They are reflected on channels only if you register them in VCLOUD or reduce inventory yourself in Distribution.
 
 <Info>
-  VCMS has no feature for creating bookings directly. VCMS cannot know about bookings taken outside channels, such as phone or walk-in bookings. Unless you reflect them separately, channels keep selling that room.
+  VCMS has no feature for creating bookings directly. VCMS cannot know about bookings you take outside channels, such as phone or walk-in bookings. Unless you reflect them separately, the room keeps selling on channels.
 </Info>
 
 <Accordion title="When you also use VCLOUD">
-  Register it in VCLOUD as a manual booking. Booking info syncs between VCMS and VCLOUD. After registering it, check in Distribution that availability went down on that date.
+  Register the booking in VCLOUD as a manual booking. Booking info syncs between VCMS and VCLOUD. After you register it, check in Distribution that availability for that date went down.
 </Accordion>
 
-<Accordion title="When you use VCMS only">
-  1. In Distribution, press the availability cell for the booking date and lower it by the number of rooms booked. If you will not sell any more on that date, you can change Sell status to Stop sell instead.
+<Accordion title="When you use only VCMS">
+  1. In Distribution, press the availability cell for the booking date and reduce it by the number of rooms booked. If you will not sell any more for that date, you can change the Sell status to Stop sell instead.
   2. Press `Save` at the top.
-  3. If the booking is canceled, raise the inventory you lowered or remove Stop sell, then press `Save`.
+  3. If the booking is canceled, increase the inventory you reduced or remove Stop sell, then press `Save`.
 </Accordion>
 
 <Warning>
-  - If you set Stop sell directly in a channel's Partner Center, it returns to the VCMS value within 5 minutes while inventory and rate sync is on, and the room goes back on sale. Set Stop sell in Distribution.
-  - If you enter a booking synced from a channel into VCLOUD again, inventory is deducted twice. Enter only bookings you took outside channels.
+  - If you set Stop sell directly in a channel's partner center, it returns to the VCMS value within 5 minutes while inventory and rate sync is on, and the room sells again. Set Stop sell in Distribution.
+  - If you enter a booking that syncs from a channel into VCLOUD again, inventory is reduced twice. Enter only bookings you took outside channels.
 </Warning>
 
 **Related documents**
 
-- [Can I connect VCMS to VCLOUD and use them together?](/en/faq/booking/use-with-vcloud)
+- [Can I use VCMS together with VCLOUD?](/en/faq/booking/use-with-vcloud)
 - [How to use Distribution](/en/distributions/usage)
