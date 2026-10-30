@@ -132,7 +132,8 @@
                   "ko/faq/channels/channel-sync-scope",
                   "ko/faq/channels/channel-product-mapping",
                   "ko/faq/channels/naver-connection",
-                  "ko/faq/channels/yeogieottae-connection"
+                  "ko/faq/channels/yeogieottae-connection",
+                  "ko/faq/channels/naver-product-rate-inventory"
                 ]
               },
               {
