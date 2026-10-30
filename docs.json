@@ -168,7 +168,8 @@
                   "ko/faq/billing/default-card-setting",
                   "ko/faq/billing/repay-after-unpaid",
                   "ko/faq/billing/billing-date-pending-change",
-                  "ko/faq/billing/pricing-plan"
+                  "ko/faq/billing/pricing-plan",
+                  "ko/faq/billing/payment-and-cancellation"
                 ]
               },
               {
