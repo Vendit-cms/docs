@@ -1,0 +1,166 @@
+---
+title: "Set special-price, multi-night, and extra-guest rates"
+description: "How to set up special-price packages such as on-foot specials, multi-night and long-stay rates, extra-guest rates, and Min rates."
+---
+
+## How do I set up special-price packages such as on-foot and same-day specials?
+
+> Create a separate overnight package for the special in VCMS, then map the channel's special-price package to it. Inventory is deducted from the same room type.
+
+1. In Settings > Packages, select the room type you want to sell the special for and create an overnight package.
+   Use a Package name that sets it apart from standard packages, such as 'Standard on-foot special'. Once created, the room type cannot be changed.
+2. Enter the discount in Rate multiplier.
+   You can enter an amount or a percent, and you can see the calculated final rate right away.
+3. If your standard package has Rate periods, add the same periods to the special-price package.
+   Use `Import` on the package card to bring in another package's Rate periods all at once.
+4. In Settings > Channels > Connected channels > Channel packages, map the channel's special-price package to the VCMS package you just created.
+
+<Tip>
+  **Adjust sales quantity and amount**
+
+  - Sell only 1 per day: Set Max inventory on the channel package to 1. Once it sells, it is sold out.
+  - Send a different special to a specific channel: Set Final channel rate on that channel package.
+</Tip>
+
+<Note>
+  Rate multiplier does not apply to rates created with Fixed rate. If the discounted result is below the package's Min rate, the Min rate is sent.
+</Note>
+
+**Related documents**
+
+- [Overnight packages](/en/inventory-rate/package-stay)
+- [Can I sell only 1 of a specific channel package per day?](/en/faq/inventory-rate/limit-inventory-by-channel)
+- [I want to mark up or discount rates for a specific channel only](/en/faq/inventory-rate/channel-final-rate)
+
+## How do I use timetables?
+
+> You can set different check-in and check-out times for each package you sell, such as early check-in or late check-out.
+
+1. Click Create timetable, then set a name and times.
+
+   - **Import existing timetable**: Import details from the accommodation's default timetable or a timetable you already created.
+   - **Time unit**: Set check-in and check-out times in 30-minute or 60-minute units. If a channel does not support 30-minute units, the time is rounded up (for example, 15:30 → 16:00).
+   - **Check-in/out**: Set times separately for each day, from Sunday to Saturday.
+   - **Apply to selected days**: Copy a time and apply it to the days you select.
+2. Map the timetable to a package to apply it.
+
+<Note>
+  You can only change these times on channels (OTAs) that accept check-in and check-out times when inventory and rates are adjusted.
+</Note>
+
+<Check>
+  **Channels where you can change check-in and check-out times**
+
+  - Yeogiottae (Motel)
+  - Coolstay (Motel, Hotel, Pension)
+  - Yanolja (Motel, Hotel, Guest house)
+</Check>
+
+<Warning>
+  **Channels where you cannot change check-in and check-out times**
+
+  Set the times directly on these channels: Yeogiottae Partner, Ddnayodotcom, Naver, Airbnb, Onda (Hotel, Pension), Agoda, Tripdotcom, Yanolja (Pension).
+</Warning>
+
+<Accordion title="Create early check-in and late check-out packages">
+  Create another overnight package with the same room type and a different timetable. The packages share inventory, but you can sell them with different check-in and check-out times and rates.
+
+  - In Settings > Packages, create an overnight package with the same room type and select the new timetable in Timetable.
+  - In Rate multiplier, enter the amount or percent to add on top of the standard package.
+  - In Settings > Channels > Connected channels > Channel packages, map the channel's early check-in and late check-out packages to this package.
+  - Rate periods are linked to each package separately. If you need period rates such as Holidays, add them to this package too.
+</Accordion>
+
+<Accordion title="I want different check-in and check-out times for Agoda only">
+  Agoda overnight bookings include only the Check-in and Check-out dates, so the booking is created with the times from the timetable of the VCMS package mapped to the Agoda package. Create a timetable for Agoda and map it to a VCMS package used only for Agoda. Then, in Settings > Channels > Connected channels > Channel packages, map the Agoda package to that package. Set the check-in and check-out times shown to guests separately in YCS.
+</Accordion>
+
+**Related documents**
+
+- [Timetables](/en/inventory-rate/timetable)
+- [Can I change Check-in/out by date?](/en/faq/inventory-rate/daily-chek-in-out-time)
+- [Overnight packages](/en/inventory-rate/package-stay)
+
+## How are multi-night and long-stay rates set?
+
+> VCMS sends the channel a one-night rate for each date. The channel calculates the multi-night amount from those rates.
+
+<Check>
+  You cannot set multi-night rates separately in VCMS. Manage one-night rates in Distribution or Settings > Packages.
+</Check>
+
+<Info>
+  **What to know by channel**
+
+  - Camfit: Even if you entered multi-night rates in Camfit, the VCMS one-night rate applies.
+  - Ddnayodotcom: A multi-night booking comes into VCMS as several bookings, one per night.
+  - Agoda: A derived rate plan linked to another rate plan shows a link icon on the YCS calendar, and its rate cannot be changed in YCS either.
+</Info>
+
+<Warning>
+  If bookings can also come in through a derived rate plan, such as a multi-night plan, go to Settings > Channels > Connected channels > Channel packages and map that channel package to the right VCMS package. If you do not map it, inventory is not deducted when a booking comes in.
+</Warning>
+
+<Note>
+  If a long-stay amount on Airbnb differs from the VCMS rate, check the discount items in Airbnb's pricing settings.
+</Note>
+
+**Related documents**
+
+- [A Ddnayodotcom multi-night booking is split into several bookings](/en/faq/booking/ddananyo-booking-split)
+- [Camfit](/en/channels/camfit)
+- [Agoda](/en/channels/agoda)
+
+## How do I set a Min rate?
+
+> You can set a Min rate and a Max rate for each package. If an adjusted rate falls outside the range, the Min rate or Max rate applies.
+
+1. In Settings > Packages, open the package you want to set a Rate range for.
+2. In Rate range, enter the Min rate and Max rate.
+   You can enter both or only one. The Max rate must be greater than the Min rate.
+3. Click `Save`.
+   If a room type has several packages, set each package separately.
+
+<Info>
+  **If you lowered a rate but the channel amount did not change**
+
+  If the rate calculated in Distribution is below the package's Min rate, the Min rate applies. The Rate adjustment screen then shows the notice 'Rates outside the rate range are applied at the Min rate or Max rate.' If you set the Min rate close to your usual rate, discounts do not apply as much as you intended.
+</Info>
+
+<Warning>
+  If you delete the Min rate because a rate will not change, a rate entered by mistake can also be sent as is. Lower the amount instead of deleting it.
+</Warning>
+
+**Related documents**
+
+- [Overnight packages](/en/inventory-rate/package-stay)
+- [I want to mark up or discount rates for a specific channel only](/en/faq/inventory-rate/channel-final-rate)
+- [How to use Distribution](/en/distributions/usage)
+
+## How do I set extra-guest rates?
+
+> Set base occupancy, Max occupancy, and Occupancy-based pricing on the package. Channels that do not support it receive the rate for Max occupancy.
+
+1. In Settings > Room types, check the room type's Max occupancy.
+   If you change Max occupancy, the occupancy settings of connected packages adjust automatically to fit the range. If an adjustment is needed, a confirmation dialog appears first.
+2. In Settings > Packages, open the package and enter the occupancy settings (base occupancy, Max occupancy).
+3. In Occupancy-based pricing, enter the extra rate per person above base occupancy, then save.
+   VCMS supports Occupancy-based pricing for adults. Set child rates directly on the channel.
+
+<Info>
+  **Support by channel**
+
+  On channels that support Occupancy-based pricing (for example, Agoda), an extra rate per person is added above base occupancy. Channels that do not support it receive the rate for Max occupancy.
+
+  - Not supported: Yanolja, Yeogiottae, Yeogiottae Partner, Coolstay, Naver, Ddnayodotcom, Onda, Tripbtoz
+  - If you use Occupancy-based pricing on Expedia, make sure to set it in VCMS too.
+</Info>
+
+<Warning>
+  Agoda sets rates based on Occupancy-based pricing. If you do not set it on a package you will map to Agoda, the rate is not applied.
+</Warning>
+
+**Related documents**
+
+- [Overnight packages](/en/inventory-rate/package-stay)
+- [Agoda](/en/channels/agoda)

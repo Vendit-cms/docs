@@ -8,7 +8,7 @@ hidden: true
   Delayed Yanolja booking sync is caused by a problem on the Yanolja channel.
 
   - Inventory and rate sync keep working, but Yanolja booking sync can run more than an hour behind.
-  - On the front desk computer you use, open the Yanolja booking list and check whether the Yanolja system error below appears. 👉 [Yanolja booking search](https://partner.yanolja.com/reservation/search)
+  - On the front desk computer you use, open the Yanolja Bookings screen and check whether the Yanolja system error message below appears. 👉 [Bookings search: Go to page](https://partner.yanolja.com/reservation/search)
     <img
       src="/images/blocked.png"
       alt="Yanolja system error"
@@ -17,9 +17,9 @@ hidden: true
 </Check>
 
 <Warning>
-  Check the Yanolja `pause` setting that guards against overbooking.
+  Check the Yanolja `Temporarily stop sale` setting that guards against overbooking.
 
-  - Without the Yanolja pause setting, you have to manage inventory for Yanolja bookings yourself until booking sync recovers, or you risk overbooking.
+  - Without the Yanolja Temporarily stop sale setting, you have to manage inventory for Yanolja bookings yourself until booking sync recovers, or you risk overbooking.
     <img
       src="/images/yanolja-system-error-modal-1.png"
       alt="Yanolja system error dialog"
@@ -27,17 +27,17 @@ hidden: true
       className="mr-auto"
       style={{ width:"53%" }}
     />
-    > ### What is the Yanolja pause setting?
+    > ### What is the Yanolja Temporarily stop sale setting?
     >
     > - When a Yanolja system error delays booking sync, it temporarily stops Yanolja packages selling, to prevent overbooking.
-    > - While paused, selling on Yanolja is halted for the length of the VCMS sync window. Once the Yanolja system error clears, the packages on Stop sell go back on sale by themselves.
+    > - During Temporarily stop sale, selling on Yanolja is halted for the Syncing period in VCMS. Once the Yanolja system error clears, the Sell status of the packages on Stop sell is restored automatically.
     > - If the same class of system error keeps recurring, the package is set to Stop sell automatically to prevent overbooking.
 </Warning>
 
 <Check>
-  When a channel integration problem occurs, we notify the contact your property registered, by SMS or KakaoTalk.
+  When a channel integration problem occurs, we notify the notification contact your accommodation set, by SMS or KakaoTalk.
 
-  - With no notification contact registered, enter a phone number under VCMS Settings \> Accommodation \> Notification contacts.
+  - With no notification contact registered, enter the phone number you want to be contacted on under VCMS Settings \> Accommodation \> Notification contacts.
 
   <img
     src="/images/en-accommodation-info.png"
@@ -48,10 +48,10 @@ hidden: true
 
 ---
 
-### How do I tell whether the booking list itself is failing?
+### How do I tell whether Bookings is failing to open?
 
 <Check>
-  Change the query on the Yanolja booking list, by switching to day view or changing the date range in detailed search, and the system error screen appears.
+  Change the query on the Yanolja Bookings screen, such as the date range in day view or detailed search, and the system error screen appears.
 
   ![Yanolja booking list error](/images/image-10.png)
 
@@ -72,13 +72,13 @@ hidden: true
 <Check>
   If the delay returns, you may get another booking sync delay notification.
 
-  When you do, check whether the Yanolja Partner Center booking list is failing again.
+  When you do, check whether the Yanolja Partner Center Bookings screen is failing again.
 </Check>
 
 ### Reporting the Yanolja system error
 
 <Check>
-  Report intermittent Yanolja Partner Center errors to Yanolja customer support.
+  Report temporary Yanolja Partner Center errors to Yanolja customer support.
 </Check>
 
 <Steps>
@@ -91,7 +91,7 @@ hidden: true
     - A screenshot of the PC screen showing the error, with the whole screen visible
   </Step>
   <Step title="3. Recovery">
-    - Once the booking sync delay clears, the Yanolja Partner Center booking search opens again and VCMS booking sync recovers with it.
+    - Once the booking sync delay clears, the Yanolja Partner Center Bookings search screen opens again and VCMS booking sync recovers with it.
   </Step>
 </Steps>
 

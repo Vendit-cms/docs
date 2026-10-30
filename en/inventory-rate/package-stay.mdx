@@ -30,13 +30,13 @@ Check and set a package's base rate and its rate periods.
 
 Two things make the Rate plan screen easier to work in.
 
-- **Expand or collapse all**: "Expand all | Collapse all" at the top of the list opens or closes the rate plan for every package at once. With many packages, you get to the one you want quickly.
+- **Expand or collapse all**: "Expand all | Collapse all" at the top of the list expands or collapses the rate plan for every package at once. With many packages, you get to the one you want quickly.
 - **Multi-select room type filter**: the room type chips at the top take more than one selection, so you can pull up just the types you want and compare them side by side.
 
 <Note>
   **Changes apply temporarily first. Nothing is final until you press "Save"**
 
-  Everything you do on the Rate plan tab (bulk apply, Import, Add period, Align order, editing rows) lands on screen first as a temporary change.
+  Everything you do on the Rate plan tab (Bulk apply rate periods, Import, Add period, Align order, editing rows) lands on screen first as a temporary change.
 
   - A changed package card carries a "Temporary change" badge, and the changed cells and order are highlighted.
   - The Undo (↩︎) button on a card reverts only that package's changes to their pre-save state.
@@ -68,7 +68,7 @@ Here is what you enter:
   Change the units per booking and it applies to rate adjustments made from then on. Adjustments already in place are untouched.
 </Warning>
 
-<Accordion title="Spotting a booking with units per booking applied">
+<Accordion title="Spotting a booking with units per booking applied in Bookings">
   When a booking comes in for a package that sets units per booking, that setting shows up in Bookings.
 
   <Frame>
@@ -85,7 +85,7 @@ Here is what you enter:
   ![Create Pkg Rate](/images/en-create-pkg-rate.png)
 </Frame>
 
-Turn on the Rate setting and you control this package's rate directly.
+Turn on Rate settings and you control this package's rate directly.
 
 <Frame>
   ![Create Pkg Rate Select](/images/en-create-pkg-rate-select.png)
@@ -99,9 +99,9 @@ Pick the rate to apply. If the one you need does not exist, press `+ Create rate
   ![Create Pkg Inclusions](/images/create-pkg-inclusions.png)
 </Frame>
 
-Pick the inclusions that apply to this package alone. Their total, summed by inclusion quantity, becomes the package's base rate. If the inclusion you need does not exist, press `+ Create inclusion`. The [inclusions guide](/en/inventory-rate/inclusion) covers this in full.
+Pick the inclusions that apply to this package alone. Their total, summed by inclusion quantity, becomes the package's base rate. If the inclusion you need does not exist, press `+ Create inclusion` and make it on the spot. The [inclusions guide](/en/inventory-rate/inclusion) covers this in full.
 
-### Extra rate adjustment
+### Rate multiplier
 
 <Frame>
   ![Create package, rate scale factor](/images/en-create-pkg-rate-scale.png)
@@ -115,7 +115,7 @@ Add a markup or a discount on top of the package's base rate. The final rate, ca
   ![Create Pkg Min Max](/images/en-create-pkg-rate-range.png)
 </Frame>
 
-Set a minimum and maximum for the selling rate. Set both, or just one. The maximum has to be higher than the minimum.
+Set a minimum and maximum for the selling rate. Set both, or just one. The Max rate has to be higher than the Min rate.
 
 ### Occupancy-based pricing
 
@@ -123,7 +123,7 @@ Set a minimum and maximum for the selling rate. Set both, or just one. The maxim
   ![Create Pkg Obp](/images/en-create-pkg-obp.png)
 </Frame>
 
-On channels that support occupancy-based pricing (Agoda, for one), a per-person surcharge is added to the room rate once guests exceed base occupancy. Channels without that support price against max occupancy.
+On channels that support occupancy-based pricing (Agoda, for one), an extra per-person rate is added to the room rate once guests exceed base occupancy. Channels without that support price against max occupancy.
 
 ---
 
@@ -148,7 +148,7 @@ Link a period you built on the periods page to a package, and it has rate period
     ![Add multiple periods](/images/en-pkg-add-unlinked-periods.png "Add multiple periods")
   </Frame>
 
-- **Add to a single package**: use the "Add period" button on the package card. The adjustment stored on the period comes across as the starting value.
+- **Add to a single package**: use the "Add period" button on the package card to pick a period and add it. The adjustment stored on the period comes across as the starting value.
   <Frame>
     ![Add a period to one package](/images/en-pkg-add-period.png "Add a period to one package")
   </Frame>
@@ -166,22 +166,22 @@ Rate periods set on one package can be carried over to others, so you are not re
   ![Bulk update rate plan modal](/images/en-pkg-bulk-rate-plan-modal.png "Bulk update rate plan modal")
 </Frame>
 
-- **Bulk apply**: from the option (⋮) menu at the top of the list, pick one package to copy from and apply it to many at once.
+- **Bulk apply rate periods**: from the option (⋮) menu at the top of the list, pick one Source package and apply it to many at once.
   <Frame>
     ![Bulk update rate plan button](/images/en-pkg-bulk-rate-plan-button.png "Bulk update rate plan button")
   </Frame>
-- **Import**: the "Import" button on a package card pulls another package's rate periods into this one.
+- **Import**: the "Import" button on a package card pulls another package's rate periods into the current package.
   <Frame>
     ![Import rate plan into one package](/images/en-pkg-import-rate-plan.png "Import rate plan into one package")
   </Frame>
 
 <Info>
-  **What copies is the period structure and the adjustments, not the amounts**
+  **What copies is "Period setup and rate adjustments to import", not the amounts**
 
   - The final rate is recalculated by applying the adjustments to each package's own rate. A package's base rate never moves.
   - Periods that exist only on the receiving package are kept, and rates you changed individually are kept too.
-  - A calculated rate that falls outside the package's minimum or maximum is pulled back inside the range.
-  - Packages on a fixed rate, packages with no rate set, and packages in a different currency are excluded, and the list says why.
+  - A calculated rate that falls outside the package's min and max rate range is automatically pulled back inside it.
+  - Packages on a fixed rate, packages with no rate set, and packages in a different currency are excluded from Apply to, and the list says why.
 </Info>
 
 ### Align period order

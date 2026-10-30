@@ -1,0 +1,130 @@
+---
+title: "Adjust the inventory shown on channels"
+description: "This page covers the inventory shown on channels, Max inventory and Auto top-up, and inventory mapping for special-price packages."
+---
+
+## Can I limit a specific channel package to 1 sale per day?
+
+> Packages that should sell only 1 per day, such as business specials or first-come, first-served packages, can have their own sell quantity.
+
+1. Select Settings > Channels > Connected channels > Channel packages.
+2. Click the channel package you want.
+3. Set Max inventory for the channel package.
+4. When the setting is complete, availability for that channel package is set to 1, and it sells out once sold.
+
+<Accordion title="Can I limit the sell quantity on all channels mapped to a package?">
+  Yes. Select the package in Settings > Packages and enter Max inventory in Inventory settings. You can enter up to the room type's Number of rooms. To keep showing the same quantity after each sale, also enter Auto top-up. When actual inventory reaches 0, VCMS sends 0 to the channel even if Auto top-up is on.
+</Accordion>
+
+<Note>
+  - Airbnb, Ddnayodotcom, and Yanolja pension channel packages work by selling or Stop sell, so the sell quantity of one channel package is 1 at most.
+  - If you mapped several Agoda packages to the same room type, set the same quantity for each package, even if you use Auto top-up.
+</Note>
+
+**Related docs**
+
+- [Overnight packages](/en/inventory-rate/package-stay)
+- [Agoda](/en/channels/agoda)
+
+## The inventory shown on a channel is lower than actual. Why?
+
+> This is usually caused by the Auto top-up or Max inventory setting on the VCMS package. This is normal behavior: the channel shows the value you set.
+
+<Info>
+  Each time a channel package sells, Auto top-up refills its availability to the number you set. For example, if 10 rooms are actually left and Auto top-up is 2, the channel shows 2 rooms. When 1 room sells, it refills to 2 rooms. You can keep selling as long as actual inventory is left.
+</Info>
+
+1. In Settings > Packages, check the Auto top-up and Max inventory values for the package.
+2. In Settings > Channels > Connected channels > Channel packages, check whether Max inventory is set separately on the channel package.
+3. To show more of the rooms you actually have left, increase the values and save.
+   The channel screen may take a few minutes to update.
+
+<Note>
+  The channel also shows less if you reduced availability directly in Distribution or deactivated some rooms in Settings > Room types. On Airbnb, Ddnayodotcom, and Yanolja pension, when inventory drops, availability goes to 0 one channel package at a time, starting from the lowest channel package in Distribution.
+</Note>
+
+<Warning>
+  Do not edit the number of rooms directly in the channel's Partner Center. While inventory and rate sync is on, a change made on the channel returns to the VCMS value within 5 minutes. Change the displayed quantity in VCMS.
+</Warning>
+
+If this does not solve the problem, click the Support button to report it.
+
+**Related docs**
+
+- [Overnight packages](/en/inventory-rate/package-stay)
+- [Can I limit a specific channel package to 1 sale per day?](/en/faq/inventory-rate/limit-inventory-by-channel)
+- [Channel sync](/en/distributions/channel-sync)
+
+## How do I set Max inventory?
+
+> In Inventory settings under Settings > Packages, you can set the upper limit on the quantity a package can sell.
+
+1. In Settings > Packages, select the package to set.
+2. In Inventory settings, enter Max inventory.
+   You can enter up to the room type's Number of rooms.
+3. To refill the quantity after each sale, also enter Auto top-up, then click `Save`.
+
+<Info>
+  If you lower Number of rooms, all packages of that room type sell less. If you lower Max inventory, only that package sells less. If you actually have fewer rooms, change the room status to Inactive in Settings > Room types.
+</Info>
+
+<Note>
+  To limit just one channel package, click it in Settings > Channels > Connected channels > Channel packages and set Max inventory.
+</Note>
+
+**Related docs**
+
+- [Can I limit a specific channel package to 1 sale per day?](/en/faq/inventory-rate/limit-inventory-by-channel)
+- [I want to change the number of rooms](/en/faq/inventory-rate/change-room-count)
+
+## How is inventory mapped for special-price and Hot Deal packages?
+
+> Special-price channel packages also share the room type's inventory through the VCMS package they are mapped to.
+
+<Info>
+  VCMS inventory is structured in this order: room type, package, channel package. Special-price channel packages have the same structure, so they share inventory with standard packages under the same room type. When 1 room sells at the special price, inventory on the other channels of that room type also drops, so the same room does not sell twice.
+</Info>
+
+If you do not limit the special-price sell quantity separately, it can sell up to the inventory left. Set the quantity with the channel package's Max inventory.
+
+1. In Settings > Channels > Connected channels > Channel packages, click the special-price channel package.
+2. Enter the quantity you want in Max inventory and save.
+   If you set it to 1, it sells only 1 per day and then sells out.
+
+<Warning>
+  If you do not map a special-price channel package to a VCMS package, bookings from that package are not counted in inventory. When a new special-price channel package appears, map it right away.
+</Warning>
+
+**Related docs**
+
+- [Can I limit a specific channel package to 1 sale per day?](/en/faq/inventory-rate/limit-inventory-by-channel)
+- [Can I adjust inventory or rates on Yanolja Hot Deal and Gold Class packages?](/en/faq/inventory-rate/yanolja-hotdeal-goldclass)
+- [Distribution overview](/en/distributions/understanding)
+
+## How do I change the sell quantity (room availability)?
+
+> You can change the quantity to sell on channels directly in Distribution, date by date.
+
+1. In Distribution, click the availability cell for the date you want to change and enter the quantity to sell.
+   Drag left or right to change availability for several dates at once.
+2. Click `Save` at the top.
+   What you save applies to all connected channels at once.
+
+<Tip>
+  For a long period, you can change it all at once with `Bulk update` in Distribution.
+</Tip>
+
+<Warning>
+  - The quantity you can sell goes up to the room type's Number of rooms. If you enter more, `Exceeds availability` appears, and you may sell more than your actual rooms, which can cause overbooking.
+  - To stop taking more bookings, use Stop sell instead of editing the availability number.
+</Warning>
+
+<Note>
+  If you change availability directly in the channel's Partner Center, it returns to the VCMS value within 5 minutes while inventory and rate sync is on. If the Number of rooms itself has changed, change it in Settings > Room types.
+</Note>
+
+**Related docs**
+
+- [I want to change Sell status, inventory, and rates for a Specific period at once](/en/faq/inventory-rate/bulk-edit-period-inventory)
+- [I want to change the number of rooms](/en/faq/inventory-rate/change-room-count)
+- [How to use Distribution](/en/distributions/usage)

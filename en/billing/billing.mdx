@@ -1,6 +1,6 @@
 ---
 title: "Subscription"
-description: "Check your subscription and manage payment methods."
+description: "Check your subscription info and manage payment methods."
 ---
 
 ---
@@ -17,7 +17,7 @@ Subscribe to as much of VCMS as you actually use. Booking sync is free. Inventor
   ![Subscription, service selection](/images/en-subscription-service.png "Subscription service selection")
 </Frame>
 
-- Booking sync is included and free.
+- Booking sync is one of the Basic services and is free to use.
 - Paid subscriptions come as Inventory alone, or Inventory together with Rate.
   - Rate cannot be used on its own. It goes with Inventory.
 - Each service is paid annually or monthly, your choice.
@@ -63,7 +63,7 @@ Paid every month on the set payment date.
 
 Register and manage the cards used for subscription payments.
 
-- **Default payment method**: the subscription is paid automatically from the card registered as default.
+- **Default payment method**: the subscription is paid automatically from the card registered as the Default method.
 - **Backup cards**: up to four. They are never used for automatic payment.
 
 ---
@@ -97,23 +97,23 @@ Annual and monthly subscriptions can both move to a payment date you choose. Usa
 
 Change what you subscribe to, or cancel.
 
-- On Inventory and Rate together, you can drop back to Inventory alone.
+- On Inventory and Rate together, you can change to Use inventory only.
 - Cancellation works two ways.
   - **Use until the next payment date, then cancel**: keep the service for the rest of the period, cancel at the next payment date.
-  - **Cancel immediately**: the subscription ends the moment you ask.
+  - **Cancel subscription immediately**: the subscription ends the moment you ask.
 
 <Warning>
-  **Canceling immediately has consequences.**
+  **Be careful with Cancel subscription immediately.**
 
   - Cancel Inventory immediately and channel sync stops at once, which can produce overbooking.
   - Cancel Rate immediately and channel sync stops at once, so rates edited in VCMS never reach the channels. Manage rates on the channels themselves after canceling.
-  - Cancel extra notification contacts immediately and only the default contact keeps receiving notifications.
+  - Cancel the Additional notification contact immediately and only the default contact keeps receiving notifications.
 </Warning>
 
 <Note>
   **On Naver, be careful when using Inventory alone**
 
-  While the Naver channel is connected, stopping Rate can disturb Naver's own rate settings. Take particular care if your Naver room list has Today's Deal (a set discount applied if the room has not sold by 00:00) or holiday schedules registered.
+  While the Naver channel is connected, stopping Rate can disturb Naver's own rate settings. Take particular care if your Naver room list has Today's Deal (the set Discount rate applied if the room has not sold by 00:00) or holiday schedules registered.
 
   - Sync inventory and rates together and Today's Deal and the holiday schedules are deleted, replaced by the inventory and rates on the VCMS Distribution screen.
   - Sync inventory only and, because the rate plan was deleted, packages can go unsold on holiday dates, or sell at some older rate you registered earlier.
@@ -127,16 +127,16 @@ Change what you subscribe to, or cancel.
   ![Subscription, payment history](/images/en-subscription-history.png "Subscription payment history")
 </Frame>
 
-Every subscription payment in one place, each showing payment status, date and time, payment item, payment amount, and discount amount.
+Every subscription payment in one place, each showing Status, Paid at, payment item, Payment amount, and discount amount.
 
 - **By status**: succeeded, failed, refunded, or canceled.
-- **Sort**: change the sort order by payment date.
+- **Sort**: change the sort order by Paid at.
 - **Payment items**: payments from Add room, Add notification contact, or a plan change are each recorded as their own entry.
   - **Payment details**
   <Frame>
     ![Subscription, payment detail](/images/en-subscription-history-detail.png "Subscription payment detail")
   </Frame>
-  - **Receipt**: each payment's receipt opens in a new window.
+  - **Receipt**: each payment's receipt (sales slip) opens in a new window.
 
 <Info>
   When a payment happens, a KakaoTalk or SMS notification goes to the contact registered for the accommodation, and it also appears in the notifications at the top. (Sent one day before a payment, when the free trial ends, and when a payment completes.)
@@ -150,11 +150,11 @@ Every subscription payment in one place, each showing payment status, date and t
   - Inventory only: KRW 5,000 per room (up to 10 rooms, the base rate is KRW 50,000 per month)
   - Inventory and Rate together: KRW 10,000 per room (up to 10 rooms, the base rate is KRW 100,000 per month)
   - One notification contact is included. Each additional contact is KRW 5,000.
-  - These figures exclude VAT. The final payment amount includes 10% VAT.
-- If you use another Vendit service, you can get a bundle discount. Ask Vendit for the discount percentage.
+  - These rates are VAT excluded. The final payment amount includes 10% VAT.
+- If you use another VENDIT service, you can get a bundle discount. Ask VENDIT for the Discount rate.
   - The discount never cuts below the base rate. Even with it applied, you pay at least the base rate.
-- Cancel immediately, or keep the service until the next recurring payment date and cancel then.
-- Cancel immediately and you are refunded for the unused period before the subscription ends. Refunds go back to the original payment method.
+- Cancel subscription immediately, or keep the service until the next recurring payment date and cancel then.
+- If you choose Cancel subscription immediately, you are refunded for the unused period before the subscription ends. Refunds go back to the original payment method.
   - With no refund due, you keep the service until the end of the paid period.
 - **Monthly subscription refunds**
   - Cancel within 7 days of the payment date and you are refunded the amount less the period used.
@@ -163,7 +163,7 @@ Every subscription payment in one place, each showing payment status, date and t
   - Cancel within 7 days of the payment date and you are refunded at the discounted rate, less the period used.
   - After 7 days you are refunded for the remaining period, less the annual subscription discount.
 - A canceled subscription cannot be restored. Using the service again means subscribing again.
-- A subscription you canceled before it started can be re-subscribed at any time.
+- A canceled subscription can be re-subscribed at any time.
 - Once a failed payment goes through, the service reactivates from that moment.
 
 <Warning>

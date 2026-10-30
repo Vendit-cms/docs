@@ -1,0 +1,90 @@
+---
+title: "Signing up for Agoda and mapping packages"
+description: "How to sign up for Agoda (YCS), how to clean up packages that appear as duplicates, and how YCS differs from Agoda Homes."
+---
+
+## How do I sign up for Agoda (YCS)?
+
+> You can start registering your property from the Agoda banner under Connectable channels in VCMS Settings > Channels.
+
+1. In VCMS, go to Settings > Channels, choose Agoda under Connectable channels, and click the banner.
+   If Agoda is already connected, the banner doesn't appear.
+2. Follow the instructions and enter the Property info.
+   Apply only once per property. If you create the same property through more than one route, you end up with two properties.
+
+<Tip>
+  If you create your Agoda property through VENDIT, partnership benefits apply automatically.
+</Tip>
+
+<Warning>
+  If you search for your property on the Agoda site and register it yourself, it may be created as an Agoda Homes property. Homes accounts can't connect to VCMS, so create it as a YCS property.
+</Warning>
+
+<Info>
+  If you already have a property on Agoda, you don't need to sign up again. Finish the connectivity settings in YCS, then give your Accommodation ID to your assigned trainer. Properties that are already registered don't get the Subscription discount.
+</Info>
+
+**Related docs**
+
+- [Agoda](/en/channels/agoda)
+- [Which sales channels can I connect?](/en/faq/channels/available-channels)
+
+## Agoda packages appear as duplicates
+
+> Old rate plans still in YCS are pulled in too. Map only the packages you sell and hide the rest.
+
+<Info>
+  The VCMS Channel packages list pulls in every Agoda package registered in YCS. Rate plans you used before and packages you no longer sell also appear if they are still in YCS. You can't delete channel packages in VCMS. You can only hide them. Deleting one could also erase that package's booking data.
+</Info>
+
+1. In YCS, go to Rate & booking settings > Rate plan settings and check which rate plans you are selling now.
+2. Go to Settings > Channels > Connected channels > Channel packages and map only the Agoda packages you are selling to VCMS packages.
+3. Hide the packages you don't sell with `Unmapped package visibility`.
+
+<Warning>
+  If you hide a package that receives bookings and leave it unmapped, bookings for that package don't deduct inventory.
+</Warning>
+
+<Check>
+  If you mapped several Agoda packages to the same room type, set the same inventory count on each package. Availability is adjusted per room type, so if the counts differ, your inventory can seem wrong. The same applies when you use Auto top-up.
+</Check>
+
+**Related docs**
+
+- [Agoda](/en/channels/agoda)
+- [Connecting channels](/en/channels/channel-setting)
+
+## What's the difference between Agoda YCS and Homes, and between Yeogiottae and Yeogiottae Partner?
+
+> For Agoda, connect through YCS only. For Yeogiottae, connect through the site that fits your business type. All channels you can connect are listed in the guide.
+
+<Accordion title="Can both YCS and Agoda Homes connect?">
+  Agoda runs two admin sites: YCS and Agoda Homes. Only YCS has official support, so Agoda Homes accounts can't connect to VCMS. To connect to VCMS, create a YCS account with Agoda first. If you don't have a YCS property yet, you can start registering from the Agoda banner under Connectable channels in VCMS Settings > Channels.
+</Accordion>
+
+<Accordion title="What's the difference between Yeogiottae and Yeogiottae Partner?">
+  Yeogiottae is a Distribution site for motels only. Yeogiottae Partner is a site for managing hotels, pensions, and similar properties. However, the 'Home & Villa' category in Yeogiottae Partner doesn't connect to VCMS.
+</Accordion>
+
+**Related docs**
+
+- [Which sales channels can I connect?](/en/faq/channels/available-channels)
+- [Agoda](/en/channels/agoda)
+
+## I want different check-in and check-out times for Agoda only
+
+> Create a Timetable just for Agoda and map it to a VCMS package used only for Agoda.
+
+<Info>
+  Agoda Overnight bookings come in with only the Check-in and Check-out dates, so the booking is created with the times in the Timetable of the VCMS package mapped to the Agoda package.
+</Info>
+
+1. Create a Timetable for Agoda and map it to a VCMS package used only for Agoda.
+2. Go to Settings > Channels > Connected channels > Channel packages and map the Agoda package to that package.
+3. Set the check-in and check-out times that guests see separately in YCS.
+
+**Related docs**
+
+- [Special deals, long stays, and extra guest rates](/en/faq/inventory-rate/special-longstay-extra-person-rate)
+- [Timetable](/en/inventory-rate/timetable)
+- [Agoda](/en/channels/agoda)

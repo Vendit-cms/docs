@@ -1,0 +1,116 @@
+---
+title: "Bookings are missing or don't match"
+description: "What to check when channel bookings do not come into VCMS, how early-morning check-in dates are calculated, and what to check when bookings differ from VCLOUD."
+---
+
+## Channel bookings are not coming into VCMS
+
+> Check the search conditions, channel connection status, channel package mapping, and Sync period, in that order.
+
+1. In Bookings, search by Booking ID, Guest name, or Phone number.
+   Set the Status filter to All and change the Date type to Synced at. This makes the booking easier to find.
+2. Check whether there is a Disconnected badge at the top of the screen.
+   If there is, go to Settings > Channels and reconnect that channel. If you changed the channel password, connect with the new password.
+3. In Settings > Channels > Connected channels > Channel packages, check that the booking's channel package is mapped to a VCMS package.
+   If a package you just created on the channel does not appear, click `Sync channel packages`.
+4. In Settings > Accommodation > Sync period settings, check that the booking date is within the Sync period.
+
+<Info>
+  Bookings can still come in through unmapped channel packages or hidden packages. These bookings have no room type, so they do not come off inventory. Map every channel package that can receive bookings.
+</Info>
+
+<Warning>
+  Inventory does not go down on dates with a missing booking, so the same room can sell again on another channel. As soon as you find one, first set that date to Stop sell in Distribution.
+</Warning>
+
+If this does not solve it, click the Support button and report the issue.
+
+**Related articles**
+
+- [How many days can a channel sync cover?](/en/faq/channels/max-sync-days)
+- [Bookings are not syncing to VCLOUD](/en/faq/issue/vcloud-booking-not-synced)
+- [An overbooking has occurred](/en/faq/booking/overbooking)
+
+---
+
+## Which date does an early-morning check-in count for?
+
+> The VCMS day starts at 6:00 AM. A check-in after midnight but before 6:00 AM counts for the previous date.
+
+<Check>
+  VCMS treats 6:00 AM through 5:59:59 AM the next day as one day. Both the inventory date and the Nights calculation follow this rule.
+</Check>
+
+- Check-in on August 16 at 00:30: inventory for August 15 goes down by 1.
+- Check-in on April 1 at 16:00, check-out on April 3 at 04:00: check-out is before 6:00 AM, so the night of April 2 does not count as an overnight, and the booking counts as 1 night.
+
+<Info>
+  Bookings from channels that do not send check-in and check-out times come in with the times from the Default timetable. If the timetable does not match your actual operating hours, date calculations can also be off, so check the timetable. Changing the timetable does not affect bookings that have already come in.
+</Info>
+
+<Note>
+  VCLOUD daily sales follow the reset time in VCLOUD settings, which may not be 6:00 AM. So VCLOUD daily sales and the VCMS Sold count can look different.
+</Note>
+
+**Related articles**
+
+- [How do I use timetables?](/en/faq/inventory-rate/timetables)
+- [Edit accommodation info](/en/accommodation/accommodation-setting)
+- [Bookings](/en/bookings/bookings)
+
+---
+
+## Inventory counts differ between VCLOUD and VCMS
+
+> VCMS and VCLOUD may divide the day at different times. Set the VCLOUD reset time to 6:00 AM and the counts match.
+
+<Info>
+  VCMS treats 6:00 AM through 5:59:59 AM the next day as one day. VCLOUD divides the day at the `Daily sales report reset time` each accommodation sets. If the two times differ, the same booking can appear on a different date, or inventory counts can look different.
+</Info>
+
+1. In VCLOUD settings, check the `Daily sales report reset time`.
+   If it is not 6:00 AM, VCLOUD and VCMS divide the day at different times.
+2. To make the two screens match, change the reset time to 6:00 AM.
+   This also changes the daily sales totals and the date divisions on the booking calendar in VCLOUD.
+3. If you keep the reset time as it is, check inventory counts in VCMS Distribution.
+   Inventory sent to channels is calculated on the VCMS 6:00 AM basis.
+
+<Accordion title="See an example">
+  The VCLOUD reset time is 12:00, and a booking has check-in on May 1 and check-out on May 4 at 11:00. VCMS takes inventory out for May 1 through May 3. VCLOUD treats May 3 at 12:00 through May 4 at 12:00 as May 3, but the guest checks out at 11:00 and does not complete that day. So the VCLOUD calendar does not show the room as occupied on May 3.
+</Accordion>
+
+If this does not solve it, click the Support button and report the issue.
+
+---
+
+## Bookings don't match between the channel and VCMS
+
+> Match the Date type and Status to the channel, then compare bookings one at a time by Booking ID.
+
+1. In the Bookings filter, set the Date type to match the channel.
+   You can choose from Stay period, Check-in, Check-out, and Synced at.
+2. For Status, select both Completed and Canceled.
+3. Scroll to the end of the list to load all bookings, then click `Download CSV`.
+   The CSV contains only the bookings loaded on the screen. Compare the downloaded file with the channel's booking list by Booking ID.
+4. For any booking that looks different, check the `Change history` tab in Booking details.
+   You can see when it changed, who changed it, and what changed.
+
+<Info>
+  **These differences are normal**
+
+  - A booking that was already canceled when first imported comes in only as canceled, with no Canceled at time and no Change history.
+  - Ddnayodotcom multi-night bookings are split by night and come in as several bookings.
+  - If the Guest name or Phone number is changed on the channel, VCMS keeps the information it first received.
+</Info>
+
+<Warning>
+  You cannot cancel or edit channel bookings in VCMS. If a channel booking changed in a way you did not intend, contact that sales channel.
+</Warning>
+
+If this does not solve it, click the Support button and report the issue.
+
+**Related articles**
+
+- [Bookings](/en/bookings/bookings)
+- [A canceled booking has no Canceled at time or Change history](/en/faq/booking/cancelled-booking-no-history)
+- [A Ddnayodotcom multi-night booking is split into several bookings](/en/faq/booking/ddananyo-booking-split)

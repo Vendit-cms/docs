@@ -1,0 +1,137 @@
+---
+title: "Closures are not reflected on the channel"
+description: "Covers checking that closures and rate changes reached the channel, closing a room type, bulk updates by period or day of the week, and automatic closing across channels."
+---
+
+## How do I check that a closure or rate change reached the channel?
+
+> Check against the Distribution screen in VCMS. If the status is Syncing and you saved, the change is applied to the channel.
+
+VCMS sends the values you save in Distribution to connected channels. Every 5 minutes it checks all dates, and if a channel's value differs, it resets the channel to the VCMS value. Even if you change a value directly in the channel, it returns to the VCMS value within 5 minutes.
+
+1. Check that the sync status in Distribution is Syncing.
+   In `Sync stopped` status, saved changes are not applied to the channel.
+2. If a cell you changed still shows the Temporary change mark, click `Save` at the top.
+3. In Settings > Channels > Connected channels > Channel packages, check that the channel package is mapped to a VCMS package and that its inventory and rate sync badges are on.
+4. In Settings > Room types, check that Management type is CMS.
+   With `Managed in channel`, only bookings sync, and inventory and rates are not applied to the channel.
+
+<Note>
+  Not every channel lets you adjust rates. For channels that sell as rentals, such as Liveanywhere, Banlife Stay, and Camperest, and for properties using the new rate plan on Onda Pension Plus, rates you change in VCMS are not applied to the channel.
+</Note>
+
+<Info>
+  Channel screens display differently from channel to channel. To check for Stop sell, use a screen that shows Sell status by date, such as a calendar. Airbnb and Expedia sync every 5 minutes, so the change may not show yet right after you save.
+</Info>
+
+<Warning>
+  If a VCMS package mapped to Agoda has no Occupancy-based pricing set, it can stay bookable on Agoda even after Stop sell. Always set Occupancy-based pricing on packages mapped to Agoda.
+</Warning>
+
+If this does not solve the problem, click the Support button to report it.
+
+**Related docs**
+
+- [How to use Distribution](/en/distributions/usage)
+- [Channel sync](/en/distributions/channel-sync)
+
+## I closed a room type, but some channel packages did not close
+
+> A channel package under it still has a sell setting you changed manually. When you set Stop sell, choose `Bulk update selected items`.
+
+<Info>
+  Distribution is organized as room type, then package, then channel package. When you change the Sell status of a higher-level item and a lower-level item has a manually changed setting, you can choose to change that setting too or keep it.
+
+  - `Bulk update selected items`: Lower-level items all change to the same value.
+  - `Keep manually changed items`: Manually changed settings on lower-level items stay as they are. Channel packages you manually set to Open sell keep selling.
+</Info>
+
+1. In Distribution, expand the room type and look for packages or channel packages with a different Sell status.
+2. Click the room type's Sell status cell and change it to Stop sell.
+3. When the window for choosing the change method appears, select `Bulk update selected items`.
+4. Click `Save` at the top to apply the change to the channel.
+
+<Note>
+  The same window appears when you start selling again. If you choose `Keep manually changed items`, channel packages you manually set to Stop sell stay in Stop sell.
+</Note>
+
+If this does not solve the problem, click the Support button to report it.
+
+**Related docs**
+
+- [How to use Distribution](/en/distributions/usage)
+- [Distribution overview](/en/distributions/understanding)
+
+## I want to change Sell status, inventory, and rates for a period all at once
+
+> Bulk update in Distribution lets you change Sell status, inventory, and rates for a specific period at the same time.
+
+1. In Distribution, click `Bulk update`.
+2. Select the Date and the items for Apply to, then click the add button at the top.
+3. Review the added conditions and click the `Bulk update` button at the bottom.
+4. Review the Temporary change items, then click `Save` at the top to apply them to the channel.
+
+<Tip>
+  **To set All rooms to Stop sell for a period**
+
+  - In Apply to, select all room types, packages, and channel packages, and change Sell status to Stop sell.
+  - To set Stop sell for just a few days, you can also click the Sell status cell in Distribution, change it, and save. Drag left or right to change several dates at once.
+</Tip>
+
+<Warning>
+  - If you leave the screen without clicking `Save`, the Temporary change is not applied to the channel.
+  - Dates outside the Sync period are not applied to the channel. Manage those dates in the channel yourself.
+</Warning>
+
+**Related docs**
+
+- [How to use Distribution](/en/distributions/usage)
+- [What is the maximum number of days a channel can sync?](/en/faq/channels/max-sync-days)
+
+## Can I block sales on specific days of the week only?
+
+> Yes. In Distribution, show only the days you want on the screen and set them to Stop sell.
+
+1. In Distribution, open `View settings` and, in Select days of the week, choose only the days you want to set to Stop sell.
+   For example, if you choose only Friday and Saturday, the screen shows only those days.
+2. Click the Sell status cell for each date and change it to Stop sell.
+3. Click `Save` at the top to apply the change to the channel.
+4. When you finish, set Select days of the week in `View settings` back to Every day.
+
+<Info>
+  Select days of the week only changes which dates the screen shows. It does not affect sales. If you leave it changed, other dates can look as if they have disappeared.
+</Info>
+
+**Related docs**
+
+- [View settings](/en/distributions/view-setting)
+- [How to use Distribution](/en/distributions/usage)
+
+## If one channel gets a booking, do other channels close automatically?
+
+> Yes. If the room type is managed by CMS and the status is Syncing, inventory on other channels goes down too.
+
+When a booking comes in from one channel, VCMS reduces the room type's Availability and sends the reduced inventory to the other channels connected to the same room type. When Availability reaches 0, all mapped channel packages stop selling. If the booking is canceled, inventory goes back up.
+
+<Check>
+  **If channels do not close automatically, check the following**
+
+  - In Settings > Room types, check that Management type is CMS. With `Managed in channel`, only bookings sync, and inventory does not sync.
+  - Check that the sync status in Distribution is Syncing. In Sync stopped status, only bookings sync.
+  - In Settings > Channels > Connected channels > Channel packages, check that all channel packages on sale are mapped to VCMS packages. Unmapped channel packages do not share inventory.
+</Check>
+
+<Info>
+  Airbnb, Ddnayodotcom, and Yanolja pension sell one channel package as one room. When inventory goes down, Availability drops to 0 in turn, starting from the bottom channel package in Distribution.
+</Info>
+
+<Note>
+  - Even if a guest checks out early, the room does not go back on sale automatically. If you can sell it, open it manually in Distribution.
+  - VCMS cannot detect phone or walk-in bookings. Register them in VCLOUD or reduce inventory manually in Distribution.
+</Note>
+
+**Related docs**
+
+- [How do I set inventory and rates?](/en/faq/inventory-rate/channel-inventory-rate-setting)
+- [Distribution overview](/en/distributions/understanding)
+- [How is VCMS inventory updated when a guest checks out early?](/en/faq/booking/vcloud-early-checkout-inventory)

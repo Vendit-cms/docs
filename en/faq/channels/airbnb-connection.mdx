@@ -1,0 +1,109 @@
+---
+title: "How do I connect Airbnb?"
+description: "The account to connect with, how inventory and rates sync, and how to set up listings for each room."
+---
+
+## Which account do I use to connect Airbnb?
+
+> Sign in to Chrome on your on-site PC with the Airbnb host account that manages the property. Then connect with the VCMS extension.
+
+1. In Chrome on your on-site PC, sign in with the Airbnb account of the property you want to connect.
+   Leave the signed-in tab open.
+2. In the VCMS Chrome extension, sign in with your VCMS account, choose the property, and press `Use` for Airbnb.
+3. In VCMS, go to Settings > Channel, connect the Airbnb property, map each listing to a VCMS package, and press `Save`.
+
+<Warning>
+  **If you run more than one property**
+
+  - You can connect only one property to a Chrome profile. Add a Chrome profile for each property and install the extension separately in each.
+  - Don't sign in with a different Airbnb account in the tab that is syncing.
+  - If a co-host account also has listings from other branches, all bookings on the connected account sync.
+</Warning>
+
+<Note>
+  Airbnb listing information updates once an hour. If you just created a listing, check the channel package list again a little later.
+</Note>
+
+**Related documents**
+
+- [Airbnb](/en/channels/airbnb)
+- [Airbnb/Expedia got disconnected](/en/faq/issue/airbnb-disconnected)
+
+## What do I do if Airbnb gets disconnected?
+
+> Check these in order: the Chrome extension sign-in, whether the extension is on, the Windows power options, and the network.
+
+<Info>
+  When the connection drops, a Disconnected badge appears at the top of the VCMS screen. While disconnected, booking import and sales sync stop. You can't restore the connection from a phone. Check it on the on-site PC where the extension is installed.
+</Info>
+
+1. Check the sign-in status in the Airbnb tab pinned on the left side of Chrome.
+   If you are signed out, sign in again and don't close the tab. You can minimize the window. The pinned tab is only for sync, so don't work in it yourself.
+2. Check that the VCMS extension is on in Chrome.
+3. In the Windows power options, set sleep and screen off to 'Never'.
+   On Windows 11, go to Settings > System > Power & battery, set them all to 'Never', and choose 'Best performance' for the power mode.
+4. If it still won't connect after you check all of the above, check the network at your site.
+
+<Info>
+  See the documents below for detailed screens and power settings by Windows version.
+</Info>
+
+If that doesn't solve it, press the Support button and report it.
+
+**Related documents**
+
+- [Airbnb/Expedia got disconnected](/en/faq/issue/airbnb-disconnected)
+- [Airbnb](/en/channels/airbnb)
+
+## Does Airbnb sync inventory and rates too?
+
+> Yes. When you connect with the Chrome extension, Airbnb bookings, inventory, and rates sync with VCMS every 5 minutes.
+
+<Info>
+  Since the April 2026 update, Airbnb connects through the Chrome extension, so inventory and rates sync along with bookings. If you were told earlier that only bookings sync, that has changed.
+</Info>
+
+<Warning>
+  When you sync, VCMS rates take priority and promotions set on Airbnb are reset. Rule combinations such as last-minute discounts and early bird discounts stay as they are. Before you connect, finish the inventory and rate settings in Distribution.
+</Warning>
+
+To keep using promotions, sync inventory only and manage rates directly on Airbnb.
+
+1. Go to Settings > Channel > Connected channels > Channel packages and press the Airbnb channel package.
+2. In `Sync settings`, turn off `Rate`, leave `Inventory` on, and save.
+
+<Note>
+  To keep sync running, Chrome with the extension installed, the signed-in Airbnb tab, and the on-site PC must all stay on. You can't control unpublished listings from VCMS.
+</Note>
+
+**Related documents**
+
+- [Airbnb](/en/channels/airbnb)
+- [My Airbnb promotion settings were reset](/en/faq/inventory-rate/airbnb-promotion-reset)
+
+## Do I need a listing for each room on Airbnb?
+
+> Yes. On Airbnb, one listing sells as one room. If you have several rooms of the same type, create a listing for each room.
+
+<Info>
+  Airbnb has no concept of quantity, so one channel package can sell a quantity of 1 at most. If you put 3 rooms of the same type on one listing, you can sell only one at a time.
+</Info>
+
+Create and publish a listing for each room, then map them in the way that fits how you operate.
+
+<Accordion title="Method 1. Group listings of the same type under one package">
+  In Settings > Channel > Connected channels > Channel packages, map all listings of the same type to the VCMS package for that type. Listings sell up to the availability count. As inventory drops, channel packages go to Stop sell in order, starting with the lowest one in Distribution. Use this when it doesn't matter which listing goes to Stop sell first.
+</Accordion>
+
+<Accordion title="Method 2. Split into a package for each room">
+  In Settings > Package, create a package for each room, as many as you have listings, and set `Max inventory` to 1 in Inventory settings. Map each listing to its own room's package, one to one, and save.
+</Accordion>
+
+<Note>
+  You can't adjust inventory or rates in VCMS for unpublished listings. Keep the listings you want to sell published on Airbnb.
+</Note>
+
+**Related documents**
+
+- [Airbnb](/en/channels/airbnb)
+- [January 29, 2026 update](/en/release-notes/2026-01-29)

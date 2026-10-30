@@ -1,0 +1,168 @@
+---
+title: "How do I manage the sync PC and notifications?"
+description: "This page covers replacing and powering the PC for channels you sync from an on-site PC, and notifications when sync is disconnected."
+---
+
+## Do I need to set things up again if I change or format my PC?
+
+> On a new PC, you only need to sign in to use VCMS as before. Just reconnect the channels you synced from your on-site PC on the new PC.
+
+<Info>
+  VCMS data such as room types, packages, rates, and bookings is stored on the server. You only need to set up channels you synced from your on-site PC, such as Airbnb, Expedia, and Ddnayodotcom, again on the new PC.
+</Info>
+
+1. In Windows Power Options on the new PC, set sleep and turning off the display to 'Never'.
+2. If you use Airbnb or Expedia, connect them again in Chrome on the new PC.
+   Install the VCMS extension from the Chrome Web Store and follow the connection guide for each channel.
+3. If you use Ddnayodotcom, sign in to Ddnayodotcom in Chrome on the new PC and complete two-factor authentication.
+4. Delete the VCMS extension from your old PC and any other devices that still have it.
+   If it stays installed, you may get disconnection notifications when you turn off that device or close that laptop.
+
+<Note>
+  Formatting also erases Chrome and the extension. Connect again right after you format.
+</Note>
+
+**Related articles**
+
+- [Airbnb](/en/channels/airbnb)
+- [Expedia](/en/channels/expedia)
+- [Ddnayodotcom](/en/channels/ddananyo)
+- [Airbnb/Expedia is disconnected](/en/faq/issue/airbnb-disconnected)
+
+## How do I change the number that gets notifications?
+
+> You can change the number that gets VCMS notifications in Notification contacts under Settings > Accommodation.
+
+1. Go to Settings > Accommodation.
+2. In Notification contacts under Basic information, edit a number or add a new one.
+   Notifications are sent as KakaoTalk notification messages. Enter a mobile number that uses KakaoTalk.
+3. Click `Save`.
+
+<Info>
+  Each accommodation includes 1 Notification contact by default. If you add more contacts, you pay 5,000 won (VAT excluded) for each one.
+</Info>
+
+<Warning>
+  - If you register a front desk landline number, you cannot get notifications.
+  - People you invited as Users do not get notifications. Notifications go only to numbers registered as Notification contacts.
+  - Register Notification contacts separately for each accommodation.
+</Warning>
+
+**Related articles**
+
+- [Edit accommodation info](/en/accommodation/accommodation-setting)
+- [Subscription](/en/billing/billing)
+- [A channel property was disconnected automatically](/en/faq/issue/channel-auto-disconnected)
+
+## Which PC should I use for sync?
+
+> For channels that need an on-site PC, such as Airbnb, Expedia, and Ddnayodotcom, sync from one on-site PC that stays on 24 hours a day.
+
+<Check>
+  Choose one front desk PC that stays on 24 hours a day as your sync PC. We do not recommend a laptop you carry around or a home PC, because sync can disconnect the moment you turn it off or close it.
+</Check>
+
+1. Choose one on-site PC that has Chrome installed.
+2. In Windows Power Options, set sleep and turning off the display to 'Never'.
+3. Check that your internet connection is stable.
+4. Follow the connection guide for each channel (Airbnb, Expedia, Ddnayodotcom) and sync from that PC.
+   If other PCs also have the VCMS extension, delete it.
+
+<Info>
+  Without an on-site PC, you cannot complete two-factor authentication for Ddnayodotcom, so you cannot sync it.
+</Info>
+
+**Related articles**
+
+- [Airbnb](/en/channels/airbnb)
+- [Expedia](/en/channels/expedia)
+- [Ddnayodotcom](/en/channels/ddananyo)
+- [Airbnb/Expedia is disconnected](/en/faq/issue/airbnb-disconnected)
+
+## Will I miss bookings if the sync PC turns off?
+
+> Channels you sync from an on-site PC stop syncing while the PC or Chrome is off. After you reconnect, check the bookings from that period.
+
+<Info>
+  For channels you sync from an on-site PC, such as Airbnb, Expedia, and Ddnayodotcom, booking import and sales sync stop while they are disconnected. During that time, rooms you set to Stop sell in VCMS and rates you changed are not applied to the channel either, so overbooking can occur.
+</Info>
+
+1. Turn on the PC and open Chrome.
+   The Airbnb and Expedia tabs open automatically.
+2. If a sync tab is signed out, sign in again.
+   Expedia requires you to sign in again after a reboot or after you close and reopen the window. Also check that the VCMS extension is on, using the puzzle icon at the top right of Chrome.
+3. If Ddnayodotcom asks for two-factor authentication, authenticate again on that PC.
+4. Compare the bookings from the time the PC was off against the channel.
+   In Bookings, change the Date type filter to Sync date to see the most recently received bookings first. If a booking is missing from VCMS, first set that date to Stop sell in Distribution.
+
+<Warning>
+  Register a Notification contact in Settings > Accommodation so you know right away when a connection drops.
+</Warning>
+
+If this does not solve the problem, click the Support button and report it.
+
+**Related articles**
+
+- [Airbnb/Expedia is disconnected](/en/faq/issue/airbnb-disconnected)
+- [Bookings](/en/bookings/bookings)
+- [An overbooking occurred](/en/faq/booking/overbooking)
+
+## Can I get a notification when a channel is disconnected?
+
+> Yes. When a channel is disconnected, a KakaoTalk notification message goes to your Notification contacts, and a Disconnected badge appears at the top of the VCMS screen.
+
+<Check>
+  If you register a Notification contact in Settings > Accommodation, we notify you by KakaoTalk notification message (or SMS if that cannot be received) in these cases:
+
+  - The channel sign-in dropped (for example, the channel password changed)
+  - VCMS automatically disconnected a channel property (Agoda, Tripdotcom, Yanolja, Naver)
+  - A new package was created on a channel, so there are unmapped channel packages
+  - Booking sync is delayed because of a Yanolja system issue
+</Check>
+
+1. Find the disconnected channel from the notification or the badge at the top of the screen.
+   If several channels are disconnected, the badge shows '[Channel name] and N more disconnected'.
+2. If you changed the channel password, reconnect with the new password in Settings > Channel.
+3. For Airbnb and Expedia, sign in again in the channel tab on the left of Chrome on your on-site PC.
+   You cannot reconnect these two channels from a mobile phone.
+4. If the notification is about unmapped channel packages, map them to VCMS packages in Settings > Channel > the connected channel > Channel packages.
+
+<Warning>
+  If the Notification contact is empty or a landline number, you cannot get notifications. Register a mobile number that uses KakaoTalk.
+</Warning>
+
+**Related articles**
+
+- [A channel property was disconnected automatically](/en/faq/issue/channel-auto-disconnected)
+- [Airbnb/Expedia is disconnected](/en/faq/issue/airbnb-disconnected)
+- [Edit accommodation info](/en/accommodation/accommodation-setting)
+
+## Do I have to keep the sync PC or browser window on all the time?
+
+> If you use Airbnb, Expedia, or Ddnayodotcom, the sync PC, Chrome, and the pinned channel tabs must stay on for sync to continue.
+
+<Check>
+  Airbnb and Expedia need Chrome running with the extension and the channel tabs on the left open. Ddnayodotcom needs the on-site PC where you completed two-factor authentication to stay on. You can minimize the window.
+</Check>
+
+1. Do not close Chrome or the channel tabs pinned on the left.
+   If you need to view a channel screen, open a new tab. If you go to another page in a pinned tab, sync stops and the channel is disconnected.
+2. In Windows Power Options, set sleep and turning off the display to 'Never'.
+   On Windows 11, go to Settings > System > Power & battery, choose 'Never' for all of them, and set the power mode to 'Best performance'.
+3. If you rebooted or closed Chrome, open Chrome again and check that you are signed in on the pinned tabs.
+   Expedia requires you to sign in again after a reboot or after you close and reopen the window.
+
+<Warning>
+  You cannot fix an Airbnb or Expedia connection from a mobile phone. Sign in again in Chrome on the on-site PC where the extension is installed.
+</Warning>
+
+<Note>
+  The channel is also disconnected if the Airbnb tab is not on the host screen, or if the Airbnb account signed in on the tab differs from the account connected to VCMS.
+</Note>
+
+**Related articles**
+
+- [Airbnb/Expedia is disconnected](/en/faq/issue/airbnb-disconnected)
+- [Airbnb](/en/channels/airbnb)
+- [Expedia](/en/channels/expedia)
+- [Ddnayodotcom](/en/channels/ddananyo)
