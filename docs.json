@@ -127,7 +127,8 @@
                 "pages": [
                   "ko/faq/channels/available-channels",
                   "ko/faq/channels/max-sync-days",
-                  "ko/faq/channels/yanolja-2fa"
+                  "ko/faq/channels/yanolja-2fa",
+                  "ko/faq/channels/sync-start-cycle-period"
                 ]
               },
               {
