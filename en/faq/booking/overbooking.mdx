@@ -1,0 +1,116 @@
+---
+title: "How do I prevent and handle overbooking?"
+description: "How to check inventory after a forced assignment, and how to respond to and prevent overbooking."
+---
+
+## What happens to inventory after a forced assignment?
+
+> After you force-assign a booking to a different room type in VCLOUD, be sure to check Availability for both room types in VCMS Distribution.
+
+<Info>
+  Forced assignment is a VCLOUD feature that puts a guest in a room of a different type when you cannot give them the room type they booked. VCMS calculates Sold and Availability based on the room type the booking is assigned to.
+</Info>
+
+1. After the forced assignment, check Availability for the original room type and the assigned room type in VCMS Distribution.
+2. To stop selling the original room type on that date, change it to Stop sell and click `Save`.
+   In the `Sync stopped` state, this does not apply to channels.
+
+<Warning>
+  If the room types and number of rooms in VCLOUD and VCMS do not match, assigned bookings are not counted correctly in inventory. After you change a room type, check that both services are set up the same way.
+</Warning>
+
+If this does not solve the problem, click the Support button and report it.
+
+**Related docs**
+
+- [VCLOUD](/en/faq/integrations/vcloud)
+- [Using Distribution](/en/distributions/usage)
+
+---
+
+## An overbooking happened.
+
+> If an overbooking happens, check the items below first.
+
+<Check>
+  For stable sync, VCMS syncs booking info with channels every minute, and inventory and rates every 5 minutes. If an overbooking happens, report it with the Support button and include the information below. We reply within 2 business days after checking.
+
+  - Source
+  - Guest name
+  - Booking ID
+  - Check-in and Check-out
+  - Channel package name
+</Check>
+
+<Info>
+  Compensation is difficult if the cause is confirmed to be overbooking from simultaneous bookings within 5 minutes, or a booking problem from incorrect inventory or rate settings.
+</Info>
+
+1. In Bookings, find all the overlapping bookings.
+   Check Source, Booking ID, Check-in, and Synced at. Synced at shows which booking came in first.
+2. For any booking you cannot give a room to, work out a change or cancellation with the guest on the channel where they booked.
+   You cannot cancel or change channel bookings in VCMS.
+3. In Distribution, change that date and room type to Stop sell and click `Save` at the top.
+   Even if Availability shows -1, do not change the number to 0 yourself. The negative number reflects the actual number of bookings, so changing it can throw off inventory later.
+
+<Accordion title="Check that it does not happen again">
+  - In Settings > Room types, check that Number of rooms matches the number of rooms you actually operate.
+  - In Settings > Channels > Connected channels > Channel packages, check that no channel package is left unmapped to a VCMS package. Yanolja hard block channel packages are packages the sales channel buys rooms for in advance and resells, so leave them unmapped.
+  - Check that Distribution is not in the `Sync stopped` state.
+  - If you received a channel booking sync delay notification, check that channel booking yourself, then set Stop sell or adjust Availability in Distribution.
+</Accordion>
+
+**Related docs**
+
+- [Bookings](/en/bookings/bookings)
+- [Using Distribution](/en/distributions/usage)
+- [Channel sync](/en/distributions/channel-sync)
+
+---
+
+## Can simultaneous bookings cause overbooking?
+
+> Yes. If the same room is booked on multiple channels within minutes of each other, overbooking can occasionally happen.
+
+<Info>
+  VCMS syncs booking info with channels every minute, and inventory and rates every 5 minutes. When VCMS pulls in a booking, it reduces inventory right away and sends the update to the other channels, but there is a short delay between the moment a guest books and the moment VCMS pulls in the booking. If another channel sells the same room during that gap, both bookings can come in. Airbnb and Expedia sync bookings, inventory, and rates every 5 minutes.
+</Info>
+
+1. On days with few rooms left, reduce the quantity you release to channels.
+   In Settings > Channels > Connected channels > Channel packages, set a channel package's Max inventory, and it sells only up to that quantity.
+2. On days that are almost full, set Stop sell in Distribution ahead of time and click `Save`.
+   In the `Sync stopped` state, this does not apply to channels.
+
+<Warning>
+  Compensation is difficult for overbooking caused by simultaneous bookings within 5 minutes. On days when bookings are heavy, adjust the quantity on sale ahead of time.
+</Warning>
+
+**Related docs**
+
+- [Can I sell only one of a specific channel package per day?](/en/faq/inventory-rate/limit-inventory-by-channel)
+- [Using Distribution](/en/distributions/usage)
+
+---
+
+## How should I manage inventory to reduce overbooking?
+
+> Match the number of rooms you actually operate and leave some margin in the quantity you release to channels. This can greatly reduce overbooking.
+
+1. In Settings > Room types, check that Number of rooms matches the number of rooms you actually operate.
+   Change rooms that are out of use because of breakdowns or construction to Inactive. Rooms set to Stop sell in VCLOUD do not carry into VCMS.
+2. In Settings > Packages, use Max inventory to set the quantity you release to channels.
+   To reduce only specific channel packages, set the channel package's Max inventory in Settings > Channels > Connected channels > Channel packages.
+3. On days with almost no rooms left, set Stop sell in Distribution ahead of time and click `Save`.
+4. Reflect phone and walk-in bookings in inventory as soon as you take them.
+   If you use VCLOUD, register them as manual bookings. If you do not, reduce Availability or set Stop sell in Distribution.
+5. In Settings > Channels > Connected channels > Channel packages, check that there are no unmapped channel packages.
+   Bookings that come in through unmapped channel packages do not reduce inventory. Leave Yanolja hard block packages unmapped.
+
+<Warning>
+  If you set Stop sell directly in a channel's partner center, it returns to the VCMS value within 5 minutes while inventory and rate sync is on. Set Stop sell in Distribution.
+</Warning>
+
+**Related docs**
+
+- [Can I sell only one of a specific channel package per day?](/en/faq/inventory-rate/limit-inventory-by-channel)
+- [Room types](/en/inventory-rate/roomType)

@@ -1,0 +1,58 @@
+---
+title: "What happens to existing bookings when I change a room type?"
+description: "How to safely sort out existing bookings and inventory when you add, edit, delete, or split a room type."
+---
+
+## I want to add or delete a room type, or change its name
+
+> You can add, edit, and delete room types yourself in Settings > Room types. After a change, also check the mapping between packages and channel packages.
+
+1. In Settings > Room types, create a new room type or click the room type you want to change.
+   You can enter and edit Room type name, room information, Max occupancy, and Management type on the same screen.
+2. When the confirmation dialog appears, check the package settings that will be adjusted automatically, then proceed.
+   The Max inventory, Units per booking, and occupancy settings of connected packages are adjusted automatically to fit the allowed range.
+3. For a new room type, create a package and map it to the channel package.
+   VCMS does not create room types on channels. Register the same room type on the channel too, then map it in Settings > Channels > Connected channels > Channel packages.
+
+<Warning>
+  **Delete room type**
+
+  You can delete a room type only when it has no rooms. Deleting it also deletes its mapped packages. If channel packages were mapped, clear those mappings first.
+</Warning>
+
+<Note>
+  Rooms you add while subscribed apply after the usage amount for the added rooms has been paid. Don't delete a room that is only taking a short break. Change it to Inactive.
+</Note>
+
+**Related docs**
+
+- [Room types](/en/inventory-rate/roomType)
+- [I want to change the number of rooms](/en/faq/inventory-rate/change-room-count)
+- [Can I move a room to another type?](/en/faq/inventory-rate/move-room-to-other-type)
+
+## What happens to existing bookings when I split a room type?
+
+> Splitting a type or moving rooms changes the inventory count for each type. Make the change while on Stop sell, then correct Availability.
+
+<Warning>
+  If you move rooms or change channel package mappings during Open sell, other channels can sell more rooms in the meantime. Always make the change while on Stop sell.
+</Warning>
+
+1. In Distribution, set the room type you are changing to Stop sell and click `Save`.
+   You can also set only the dates that have bookings to Stop sell.
+2. In Settings > Room types, create a new room type and move the rooms to it.
+3. Create packages for the new room type. Split the types on the channel the same way, then map the channel packages again.
+4. If you also use VCLOUD, make its room types and number of rooms match too, and reassign existing bookings to rooms of the new type.
+5. In Distribution, check that Availability for each date matches the number of rooms actually left, then change back to Open sell.
+
+<Note>
+  Even if you delete a room type on a channel, bookings already received for that type may remain on the channel. After deleting it, compare the channel's booking list with VCMS Bookings to check that no booking is missing.
+</Note>
+
+If this does not solve the problem, click the Support button to report it.
+
+**Related docs**
+
+- [Can I move a room to another type?](/en/faq/inventory-rate/move-room-to-other-type)
+- [Room types](/en/inventory-rate/roomType)
+- [An overbooking has occurred.](/en/faq/booking/overbooking)

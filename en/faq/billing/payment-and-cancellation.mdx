@@ -1,0 +1,125 @@
+---
+title: "How do payment and canceling a subscription work?"
+description: "This page covers VCMS payment methods, sync when a payment fails, and how to cancel a subscription."
+---
+
+## Can I pay by bank transfer or cash?
+
+> You can pay for VCMS by card only. You can register both personal and corporate cards.
+
+<Info>
+  VCMS subscriptions are paid automatically with the registered card on each recurring payment date. Payments that come up during a subscription, such as Add room, are processed with the same card.
+</Info>
+
+1. On the Subscription screen, select the `Add payment card` button.
+2. Choose a personal card or a corporate card and enter the details. For a personal card, enter the card number and expiration date, then complete identity verification. For a corporate card, you only enter the card number, expiration date, and business registration number. There is no separate verification.
+
+<Note>
+  You can register one default payment method and up to 4 secondary cards. Automatic payments use the default payment method only, so set a card with a high enough limit as your default payment method.
+</Note>
+
+**Related articles**
+
+- [How do I add a payment card?](/en/faq/billing/add-payment-card)
+- [Can I choose which card to pay with?](/en/faq/billing/default-card-setting)
+
+---
+
+## Can I use only Booking sync?
+
+> Yes. Booking sync is free, so you can use only Booking sync without subscribing to Inventory and Rate.
+
+<Check>
+  Booking sync is the basic service. If you do not subscribe to Inventory and Rate, you use Booking sync only. You can add Inventory and Rate by subscribing at any time you need them.
+</Check>
+
+<Info>
+  **To leave out only some room types**
+
+  In Settings > Room types, change that room type's Management type to `Managed in channel` and save.
+
+  - `CMS`: Bookings, inventory, and rates of mapped channel packages sync with VCMS. Rates do not sync for rental-type channels such as Liveanywhere, Banlife Stay, and Camperest, or for properties on the new Onda Pension Plus rate plan.
+  - `Managed in channel`: Booking sync only. Your accommodation manages inventory and rates directly.
+</Info>
+
+<Warning>
+  If you use only Booking sync, VCMS does not adjust channel inventory. When a booking comes in, apply Stop sell yourself on your other channels. Otherwise, overbooking can occur.
+</Warning>
+
+<Note>
+  If you later subscribe to Inventory, check that you changed the room type's Management type to `CMS`. If you leave it as `Managed in channel`, that room type stays on Booking sync only.
+</Note>
+
+**Related articles**
+
+- [Can I use Booking sync for free?](/en/faq/booking/booking-sync-free)
+- [Room types](/en/inventory-rate/roomType)
+- [Subscription](/en/billing/billing)
+
+---
+
+## Does sync stop if a payment fails?
+
+> Yes. After a missed payment, channel sync stops. When you pay again, the subscription reactivates right away.
+
+<Warning>
+  While sync is stopped, changes you make in VCMS to inventory, rates, and Sell status do not reach the channels, so overbooking can occur.
+</Warning>
+
+1. On the Subscription screen, select the `Add payment card` button and add the card to pay with. If the card is over its limit or expired, add a different card.
+2. Select the new card's `Edit` button and change it to the default payment method. The new payment attempt uses the default payment method.
+3. Select the button in the notice at the top of the screen to proceed with payment. If the payment does not go through, check the card limit and balance, then try again.
+4. In Subscription > Payment history, check that the payment you just made succeeded.
+
+<Info>
+  If you pay again, you pay for the period from the moment you pay through to the next recurring payment date. From then on, payment is made on the original recurring payment date.
+</Info>
+
+<Note>
+  When sync restarts, the values in VCMS Distribution are applied to the channels. Check the bookings that came in while sync was stopped, and adjust Availability in Distribution to match the actual numbers.
+</Note>
+
+If this does not solve the problem, select the Support button and report it.
+
+**Related articles**
+
+- [After a missed payment, how is the subscription billed when I pay again?](/en/faq/billing/repay-after-unpaid)
+- [Can I choose which card to pay with?](/en/faq/billing/default-card-setting)
+- [An overbooking occurred.](/en/faq/booking/overbooking)
+
+---
+
+## How do I cancel a subscription?
+
+> You can cancel it yourself on the Subscription screen. After you cancel, you can keep using Booking sync for free.
+
+<Check>
+  When you cancel, the paid features Inventory and Rate stop, and channel bookings keep coming into VCMS. After you cancel, manage inventory and rates directly in each channel.
+</Check>
+
+1. On the Subscription screen, check Subscribed services.
+2. Choose the service to cancel and how to cancel it. If you use both Inventory and Rate, you can also end only Rate and keep only Inventory.
+
+- `Use until the next payment date, then cancel`: You keep using it for the remaining period, and it is canceled on the next payment date.
+- `Cancel subscription immediately`: It is canceled as soon as you request it, and the amount for the remaining period is refunded to the existing payment method. If the refund amount is KRW 0, the status changes to scheduled for cancellation, and you can use it until the next payment date.
+
+<Warning>
+  **Check this before you use Cancel subscription immediately.**
+
+  - If you cancel Inventory immediately, channel sync stops right away and overbooking can occur.
+  - If you cancel Rate immediately, rate changes in VCMS are not applied to the channels.
+  - If you cancel Additional notification contact immediately, notifications no longer go to additional contacts other than the default contact.
+</Warning>
+
+<Note>
+  **Refund policy**
+
+  - Monthly subscription: If you cancel within 7 days of the payment date, you get a refund of the amount minus the period used. After 7 days, there is no refund, and you can use it until the next payment date.
+  - Annual subscription: If you cancel within 7 days, you get a refund of the amount minus the period used, based on the discounted price. After 7 days, you get a refund for the remaining period, based on the amount minus the annual subscription discount.
+  - A canceled subscription cannot be restored. To use it again, subscribe again.
+</Note>
+
+**Related articles**
+
+- [Subscription](/en/billing/billing)
+- [Can I change the payment date while cancellation of some services is scheduled?](/en/faq/billing/billing-date-pending-change)

@@ -1,0 +1,74 @@
+---
+title: "Fix Naver connection and account issues"
+description: "What you need to connect Naver: lifting a protection hold, the account permission to sync, and listing as a Motel or Inn."
+---
+
+## My Naver account has a protection hold. How do I lift it?
+
+> Lift the protection hold with identity verification on the Naver sign-in screen, then reconnect Naver in VCMS.
+
+<Info>
+  If a protection hold disconnects Naver, booking, inventory, and rate sync stops. After you lift the hold, you also need to select `Reconnect` in VCMS for sync to start again.
+</Info>
+
+1. On the Naver sign-in screen, lift the protection hold (identity verification).
+   If you changed your password while lifting the hold, you also need to enter the new password in VCMS.
+2. Turn off Naver two-step verification.
+   On a PC, go to Naver ID > Security settings > Basic security settings > Two-step verification management. Choose 'Completely turn off two-step verification and sign in with only ID/PW', then select 'Turn off'.
+3. In Naver Security settings > Sign-in blocking settings, turn off 'Block sign-in from other regions'.
+4. In VCMS, go to Settings > Channel > Naver, select `Reconnect`, and enter your Naver ID and password.
+   An application password you created earlier won't connect. Enter the actual password of your Naver ID.
+
+<Warning>
+  If you set up two-step verification again after connecting, the connection breaks again. Keep two-step verification turned off on the Naver account connected to VCMS.
+</Warning>
+
+If this doesn't solve it, select the Support button and report the issue.
+
+**Related documents**
+
+- [Naver](/en/channels/naver)
+
+## Can I sync without primary admin permission on Naver?
+
+> Connect with an account that can see the property in Naver SmartPlace. Only then can VCMS load the property and its room packages.
+
+<Info>
+  After you connect the account, select the property to connect under Settings > Channel > Naver. Channel packages appear only after that. If the property doesn't appear, the connected account often has no permission for it.
+</Info>
+
+1. Sign in to Naver SmartPlace yourself with the Naver ID you want to connect, and check that the property appears.
+2. If the property doesn't appear, move the property permission to that account on Naver, or add it.
+   For the permission change procedure and required documents, follow the guidance from the Naver SmartPlace customer center.
+3. Turn off two-step verification and 'Block sign-in from other regions' on the new account too.
+4. In VCMS, go to Settings > Channel > Naver, select `Reconnect`, enter the ID and password, then select the property to connect.
+
+<Warning>
+  If you change the connected account, bookings the previous account already received may not carry over to the new connection. Sort out the remaining bookings separately and manage them yourself.
+</Warning>
+
+If this doesn't solve it, select the Support button and report the issue.
+
+**Related documents**
+
+- [Naver](/en/channels/naver)
+- [Connect a channel](/en/channels/channel-setting)
+
+## Can Motel or Inn properties sync with Naver?
+
+> Naver reviews and decides which business types can list. Once your property and room packages are registered on Naver, you can connect them to VCMS.
+
+<Info>
+  VCMS sends inventory and rates to properties and room packages that already exist on Naver. It doesn't create new properties on Naver or go through the listing review for you. If you run a Motel or Inn, check the listing requirements with the Naver SmartPlace customer center first.
+</Info>
+
+1. Register your property on Naver SmartPlace and apply for the listing review.
+2. Once the listing is approved, create the room packages you want to sell in SmartPlace.
+3. Turn off Naver two-step verification and 'Block sign-in from other regions'.
+4. In VCMS, go to Settings > Channel, select Naver under Available channels, and connect it.
+5. Under Settings > Channel > Connected channels > Channel packages, map your Naver room packages to VCMS packages.
+
+**Related documents**
+
+- [Naver](/en/channels/naver)
+- [Connect a channel](/en/channels/channel-setting)

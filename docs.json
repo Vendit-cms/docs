@@ -311,6 +311,7 @@
                     "group": "Channel Notes",
                     "pages": [
                       "en/channels/naver",
+                      "en/channels/yanolja",
                       "en/channels/ddananyo",
                       "en/channels/liveanywhere",
                       "en/channels/ban-life",
@@ -359,7 +360,10 @@
                 "expanded": false,
                 "pages": [
                   "en/faq/account/verification-code-not-received",
-                  "en/faq/account/use-on-mobile"
+                  "en/faq/account/use-on-mobile",
+                  "en/faq/account/login-and-access",
+                  "en/faq/account/invite-and-signup",
+                  "en/faq/account/sync-pc-and-program"
                 ]
               },
               {
@@ -367,7 +371,17 @@
                 "expanded": false,
                 "pages": [
                   "en/faq/channels/available-channels",
-                  "en/faq/channels/max-sync-days"
+                  "en/faq/channels/max-sync-days",
+                  "en/faq/channels/yanolja-2fa",
+                  "en/faq/channels/sync-start-cycle-period",
+                  "en/faq/channels/channel-sync-scope",
+                  "en/faq/channels/channel-product-mapping",
+                  "en/faq/channels/naver-connection",
+                  "en/faq/channels/yeogieottae-connection",
+                  "en/faq/channels/naver-product-rate-inventory",
+                  "en/faq/channels/agoda-signup-account-product",
+                  "en/faq/channels/agoda-rate-and-display",
+                  "en/faq/channels/airbnb-connection"
                 ]
               },
               {
@@ -386,7 +400,13 @@
                   "en/faq/inventory-rate/yanolja-hotdeal-goldclass",
                   "en/faq/inventory-rate/airbnb-promotion-reset",
                   "en/faq/inventory-rate/channels-commission-setting",
-                  "en/faq/inventory-rate/channel-final-rate"
+                  "en/faq/inventory-rate/channel-final-rate",
+                  "en/faq/inventory-rate/period-season-holiday-rate",
+                  "en/faq/inventory-rate/special-longstay-extra-person-rate",
+                  "en/faq/inventory-rate/channel-send-rate",
+                  "en/faq/inventory-rate/display-inventory-and-auto-refill",
+                  "en/faq/inventory-rate/inventory-mismatch",
+                  "en/faq/inventory-rate/close-sales-and-channel-sync"
                 ]
               },
               {
@@ -399,7 +419,10 @@
                   "en/faq/booking/cancel-booking-in-vcms",
                   "en/faq/booking/use-with-vcloud",
                   "en/faq/booking/vcloud-early-checkout-inventory",
-                  "en/faq/booking/channel-cancel-booking-processing"
+                  "en/faq/booking/channel-cancel-booking-processing",
+                  "en/faq/booking/roomtype-change-existing-bookings",
+                  "en/faq/booking/missing-booking-and-mismatch",
+                  "en/faq/booking/overbooking"
                 ],
                 "expanded": false
               },
@@ -410,7 +433,9 @@
                   "en/faq/billing/add-payment-card",
                   "en/faq/billing/default-card-setting",
                   "en/faq/billing/repay-after-unpaid",
-                  "en/faq/billing/billing-date-pending-change"
+                  "en/faq/billing/billing-date-pending-change",
+                  "en/faq/billing/pricing-plan",
+                  "en/faq/billing/payment-and-cancellation"
                 ]
               },
               {
@@ -441,6 +466,9 @@
                 "group": "2026",
                 "expanded": true,
                 "pages": [
+                  "en/release-notes/2026-10-29",
+                  "en/release-notes/2026-10-23",
+                  "en/release-notes/2026-10-14",
                   "en/release-notes/2026-09-30",
                   "en/release-notes/2026-09-18",
                   "en/release-notes/2026-09-03",

@@ -1,0 +1,162 @@
+---
+title: "Naver packages, rates, and inventory don't match"
+description: "Covers Naver Sell status updates, room mapping, holidays and Today's Deal, inventory number differences, and package visibility."
+---
+
+## Sell status I changed in VCMS doesn't show on Naver right away
+
+> Inventory and rates sync with channels every 5 minutes. If nothing has changed after a few minutes, check the following in order.
+
+1. Check that you pressed `Save` at the top after making the change in `Distribution`.
+   About 5 minutes after saving, refresh the Naver Smart Place screen.
+2. Check the sync status at the top of the `Distribution` screen.
+   If sync is stopped, only bookings sync. Inventory, rates, and Sell status are not sent to Naver.
+3. In Settings > Channels > Connected channels > Channel packages, check that the Naver package is mapped to a VCMS package.
+   Unmapped channel packages don't receive inventory or rates. Also check that `Inventory` and `Rate` aren't turned off on the channel package.
+4. In `Distribution`, check that no Custom settings remain on the sub-items (package, channel package) for that date.
+
+<Warning>
+  VCMS manages Naver schedules by the month. VCMS can't change a schedule you created directly on Naver for a set period (for example, October 29 to November 10). That means it can keep selling on Naver even if you set Stop sell in VCMS. After the initial sync setup, don't change inventory or rates directly on Naver.
+</Warning>
+
+If that doesn't solve it, press the Support button and report it.
+
+**Related docs**
+
+- [Channel sync](/en/distributions/channel-sync)
+- [How to use Distribution](/en/distributions/usage)
+- [Naver](/en/channels/naver)
+
+## How do I map Naver rooms and packages?
+
+> Create Naver room packages in Smart Place, then map them to VCMS packages on the Channel packages screen in VCMS.
+
+<Info>
+  VCMS doesn't create new packages on channels. A mapped channel package gets the same rates as its VCMS package and shares its inventory.
+</Info>
+
+1. First, create the room packages you want to sell in Naver Smart Place.
+2. If a new package doesn't appear, go to Settings > Channels > Connected channels > Channel packages and press `Sync channel packages`.
+3. Find the Naver package and select the VCMS package to map it to.
+   Even if the package names are similar, make sure the room type matches.
+
+<Warning>
+  If you map to a package of a different room type, a Naver booking takes inventory from the wrong room type and the wrong rate is sent. After you change a package name on Naver, check the mapping again.
+</Warning>
+
+<Note>
+  You can't delete a channel package you don't sell, but you can hide it from the screen. This is because deleting it could also erase the booking data tied to that package.
+</Note>
+
+**Related docs**
+
+- [How do I set inventory and rates?](/en/faq/inventory-rate/channel-inventory-rate-setting)
+- [Connect a channel](/en/channels/channel-setting)
+
+## Rates and inventory disappeared when I turned on a Naver holiday schedule
+
+> While syncing, Naver holiday schedules are deleted and replaced with the values in VCMS Distribution. Set holiday rates in VCMS.
+
+<Info>
+  When inventory and rate sync is on, the Naver calendar is kept in line with the VCMS `Distribution` screen. Even if you turn on a holiday schedule on Naver, it is deleted within 5 minutes and returns to the inventory and rates in `Distribution`.
+</Info>
+
+1. Turn off the holiday schedule in the room list in Naver Smart Place.
+2. In VCMS `Distribution`, enter the rates for the holiday dates and press `Save` at the top.
+   You can drag left or right to change the rates for several dates at once.
+3. If you often change rates on set dates such as holidays, create a period in Settings > Periods and link it to the package rates.
+
+<Warning>
+  If you sync inventory only, the deleted rate information can stop packages from selling on holiday schedule dates, or they can sell at an old rate. For Naver, sync inventory and rates together.
+</Warning>
+
+**Related docs**
+
+- [Naver](/en/channels/naver)
+- [Periods](/en/inventory-rate/period)
+
+## Naver inventory numbers look different from VCMS Availability
+
+> Naver shows inventory as "quantity sold/total quantity open". The second number minus the first number is the VCMS Availability.
+
+<Info>
+  Because the display differs, the inventory numbers can seem not to match. For example, 1/2 on Naver means 1 of 2 has sold and 1 is left, so a VCMS Availability of 1 is correct. When both numbers are the same, as in 4/4, nothing more can be sold.
+</Info>
+
+1. On Naver, subtract the first number from the second to get the quantity left.
+2. Compare it with the Availability for the same date in VCMS `Distribution`.
+3. If the values differ, or the second Naver number is higher than the actual number of rooms for that room type, check that all bookings for that date are in VCMS Bookings.
+   Bookings received before syncing with VCMS, and bookings that didn't come into VCMS Bookings, aren't reflected in Availability.
+
+If that doesn't solve it, press the Support button and report it.
+
+**Related docs**
+
+- [Distribution overview](/en/distributions/understanding)
+- [An overbooking occurred.](/en/faq/booking/overbooking)
+
+## Can I use Naver Today's Deal or special offers with VCMS?
+
+> When you sync inventory and rates, Naver Today's Deal is deleted. Set discounts in VCMS.
+
+<Info>
+  When inventory and rates sync, the Today's Deal entries (the set Discount rate applies if not sold by 00:00) and holiday schedules in the Naver room list are deleted and replaced with the inventory and rates in VCMS `Distribution`. If you register Today's Deal on Naver again while syncing, it returns to the VCMS values within 5 minutes.
+</Info>
+
+1. To give the same discount on all channels, lower the rate for that date in `Distribution` and press `Save` at the top.
+2. To discount on Naver only, go to Settings > Channels > Property info and press the Final channel rate button for the Naver property.
+3. Enter a discount weight and save.
+   Example: If you set a -30% discount weight on Final channel rate, a KRW 100,000 package is applied on Naver at KRW 70,000.
+
+<Note>
+  Naver is a channel where you can't change Check-in/out by date from VCMS. Change Naver Check-in/out directly in Naver Smart Place.
+</Note>
+
+**Related docs**
+
+- [I want to sell at a markup or discount on specific sales channels only](/en/faq/inventory-rate/channel-final-rate)
+- [Can I change Check-in/out by date?](/en/faq/inventory-rate/daily-chek-in-out-time)
+- [Naver](/en/channels/naver)
+
+## My package doesn't appear on Naver
+
+> First check the VCMS Sell status and channel package mapping. If both are fine, check the package settings in Naver Smart Place.
+
+1. In VCMS `Distribution`, check that the date is on sale and has Availability and a rate.
+   If it is set to Stop sell, selling stops whatever the Availability. Dates outside the Sync period don't sync either.
+2. In Settings > Channels > Connected channels > Channel packages, check that the Naver package is mapped to a VCMS package.
+3. In Settings > Channels, press Naver and check the property's connection status.
+   If the property is hidden on Naver or its Naver partnership is terminated, VCMS disconnects it automatically and sends you a notification. Restore the property's status on Naver, then reconnect it yourself in VCMS.
+4. In Naver Smart Place, check that the room package has been created and all required information is filled in.
+5. If everything is fine and it still doesn't appear, ask the Naver customer center whether the package is visible.
+
+If that doesn't solve it, press the Support button and report it.
+
+**Related docs**
+
+- [A channel property was disconnected automatically](/en/faq/issue/channel-auto-disconnected)
+- [How far ahead can a channel sync?](/en/faq/channels/max-sync-days)
+
+## Does syncing Naver delete holiday schedules and Today's Deal?
+
+> Yes. When you sync inventory and rates, Today's Deal and holiday schedules are deleted and replaced with the inventory and rates in VCMS Distribution.
+
+<Info>
+  If you don't move the rate policies you used on Naver to VCMS before syncing, packages can sell at the base rates and inventory set in VCMS. Prepare in advance by following the steps below.
+</Info>
+
+1. Before syncing, take screenshots of the holiday schedules, Today's Deal, rates by date, and Sell status in the Naver room list.
+2. For rates with a set period, such as peak season or holidays, create a period in Settings > Periods and link it to the package rates.
+3. Set rates that vary by date and Stop sell in `Distribution`, then press `Save` at the top.
+4. When you're ready, start the sync.
+   You can start the sync once at least one channel package is mapped to VCMS.
+
+<Warning>
+  If you sync inventory only, the deleted rate information can stop packages from selling on holiday schedule dates, or they can sell at an old rate. For Naver, sync inventory and rates together.
+</Warning>
+
+**Related docs**
+
+- [Naver](/en/channels/naver)
+- [Channel sync](/en/distributions/channel-sync)
+- [Periods](/en/inventory-rate/period)

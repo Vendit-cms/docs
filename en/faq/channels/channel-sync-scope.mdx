@@ -1,0 +1,138 @@
+---
+title: "What syncs on each channel?"
+description: "Whether your own website and day use sync, syncing inventory only, and what syncs on Airbnb, Expedia, and Bookingdotcom."
+---
+
+## Do bookings from my own website (booking engine) sync with VCMS?
+
+> Bookings from your property's own website do not sync with VCMS. Only Booking Hub bookings from Yeogiottae Partner come through Booking sync.
+
+<Info>
+  A website your property runs itself and a third party's booking engine are not among the channels VCMS syncs with. Website bookings do not come into VCMS, and they do not reduce VCMS inventory.
+</Info>
+
+1. When a website booking comes in, reduce that date's Availability or apply Stop sell in `Distribution`, then click `Save` at the top.
+2. If rooms sell on other channels and none are left, close your website yourself as well.
+
+<Note>
+  **Yeogiottae Booking Hub bookings**
+
+  Booking Hub bookings from Yeogiottae Partner come in under a package with [HOMEPAGE] in front of the channel package name. When the first one comes in, map this package to a VCMS package under Settings > Channels > Connected channels > Channel packages. You can't adjust its rates or inventory in VCMS. Only bookings sync.
+</Note>
+
+<Warning>
+  If you don't enter bookings from sellers not connected to VCMS yourself, they can lead to overbooking. Enter each booking as soon as it comes in.
+</Warning>
+
+**Related pages**
+
+- [Which sales channels can VCMS sync with?](/en/faq/channels/available-channels)
+- [An overbooking occurred.](/en/faq/booking/overbooking)
+
+## Can I manage inventory and rates for day use?
+
+> VCMS currently manages inventory and rates for overnight packages only.
+
+<Check>
+  Day use supports Booking sync only. Inventory and rate features for day use are planned for later. We will let you know separately when they are added.
+</Check>
+
+- Change Day use sales hours, rates, and closures directly on each channel's admin screen. Applying Stop sell to overnight packages in `Distribution` does not apply it to day use.
+- Day use bookings come into Bookings. In the filter, choose Day use under Stay type to see only day use bookings.
+
+<Info>
+  If the VENDIT VCLOUD service is in use, day use channel packages that are not mapped to a VCMS day use package are created under an unassigned room type. Map your day use channel packages to VCMS day use packages too.
+</Info>
+
+**Related pages**
+
+- [Day use packages](/en/inventory-rate/package-day-use)
+- [Bookings](/en/bookings/bookings)
+
+## Can I sync inventory only, without rates?
+
+> Yes. If you subscribe to Inventory only, or turn off rate sync for a channel package, only inventory and bookings sync. You manage rates on each channel.
+
+<Info>
+  Booking sync is free. For a paid subscription, you choose Inventory alone or Inventory and Rate together. You can't use Rate on its own.
+</Info>
+
+1. To sync only inventory for the whole property, select Inventory only under Subscription.
+2. To manage rates on the channel for specific channel packages only, go to Settings > Channels > Connected channels > Channel packages, open `Sync settings` for that package, turn off `Rate`, and save.
+
+<Warning>
+  If you use Inventory only, VCMS does not automatically open a channel's unset packages. Unset packages are packages you have not yet listed for sale on the channel. Set the rate and when sales open on the channel first.
+</Warning>
+
+**Related pages**
+
+- [Subscription](/en/billing/billing)
+- [Channel sync](/en/distributions/channel-sync)
+- [Is Booking sync free?](/en/faq/booking/booking-sync-free)
+
+## Do Expedia, Bookingdotcom, and Airbnb sync too?
+
+> Airbnb and Expedia sync bookings, inventory, and rates. Bookingdotcom syncs bookings only.
+
+<Info>
+  You connect Airbnb and Expedia by installing the VCMS extension in Chrome on your property's PC. Bookings, inventory, and rates then sync every 5 minutes. Sync continues only while Chrome with the extension installed, the signed-in channel tab, and the property's PC all stay on.
+</Info>
+
+<Note>
+  **Bookingdotcom**
+
+  Bookingdotcom syncs bookings only. Inventory and rate changes you make in VCMS do not reach Bookingdotcom, so manage them yourself on the extranet. When a room sells on another channel, apply Stop sell on Bookingdotcom yourself.
+</Note>
+
+**Related pages**
+
+- [Airbnb](/en/channels/airbnb)
+- [Expedia](/en/channels/expedia)
+- [Airbnb or Expedia got disconnected](/en/faq/issue/airbnb-disconnected)
+
+## What does each channel sync, including inventory and rates?
+
+> Most channels sync bookings, inventory, and rates. Only some channels and special channel packages differ.
+
+- **Bookings, inventory, and rates all sync**: Channels you can connect that are not listed separately below. This includes Airbnb and Expedia.
+- **No Rate adjustment (only bookings and inventory sync)**: Liveanywhere, Banlife Stay, Camperest, and properties using a new rate plan on Onda Pension Plus
+- **Channel packages with Booking sync only**: Yeogiottae Partner Booking Hub packages ([HOMEPAGE]), manually created Yanolja bookings ([MANUAL]), Yanolja hard block packages, and Day use packages
+- Airbnb, Ddnayodotcom, and Yanolja pension limit the sale quantity of one channel package to a maximum of 1.
+
+<Warning>
+  Yanolja hard block packages are packages the sales channel buys rooms for in advance and then sells, so you can't adjust their inventory or rates. Do not map hard block channel packages to a VCMS package. Leave them unmapped.
+</Warning>
+
+1. Under Settings > Channels > Connected channels > Channel packages, check the inventory and rate sync badges for each package.
+2. To change the scope for a channel package, click it and turn `Inventory` and `Rate` on or off.
+3. To manage a whole room type directly, go to Settings > Room types and change Management type to `Managed in channel`.
+   After you change it to Managed in channel, the channel packages mapped to that room type sync bookings only.
+
+**Related pages**
+
+- [Which sales channels can VCMS sync with?](/en/faq/channels/available-channels)
+- [Connect channels](/en/channels/channel-setting)
+- [Room types](/en/inventory-rate/roomType)
+
+## What does Bookingdotcom sync cover?
+
+> Only bookings sync from Bookingdotcom to VCMS. Manage inventory and rates yourself on the Bookingdotcom extranet.
+
+<Info>
+  Bookingdotcom bookings come into VCMS Bookings, but inventory and rate changes you make in VCMS do not reach Bookingdotcom. When a booking from another channel reduces VCMS inventory, Stop sell is not applied on Bookingdotcom automatically.
+</Info>
+
+<Warning>
+  Bookingdotcom is not connected to VCMS inventory, so the risk of overbooking is higher than on other channels. On dates with few rooms left, reduce the sale quantity on the extranet in advance.
+</Warning>
+
+<Check>
+  **One booking with two or more rooms**
+
+  Bookings that need a check of Booking details require additional verification under Bookingdotcom's security policy, so they may not come in automatically. Always check these bookings on the extranet.
+</Check>
+
+**Related pages**
+
+- [An overbooking occurred.](/en/faq/booking/overbooking)
+- [Is Booking sync free?](/en/faq/booking/booking-sync-free)
