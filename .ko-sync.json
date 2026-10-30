@@ -1,8 +1,8 @@
 {
   "ko_commit": "ac4f2dc4431457e08f5136fe36f472e9ad237f7d",
   "from": "ac4f2dc4431457e08f5136fe36f472e9ad237f7d",
-  "engine": 3,
-  "synced_at": "2026-10-30T17:51:25+09:00",
+  "engine": 4,
+  "synced_at": "2026-10-30T17:56:20+09:00",
   "pages": {
     "ko/distributions/understanding.mdx": "60b1a11bec8f36378d4ad141a1fed60d0134a3f0",
     "ko/distributions/usage.mdx": "32cb9e156d5c31ee8796373d2ae6167a77535e14",
