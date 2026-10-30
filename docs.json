@@ -159,7 +159,8 @@
                   "ko/faq/booking/cancel-booking-in-vcms",
                   "ko/faq/booking/use-with-vcloud",
                   "ko/faq/booking/vcloud-early-checkout-inventory",
-                  "ko/faq/booking/channel-cancel-booking-processing"
+                  "ko/faq/booking/channel-cancel-booking-processing",
+                  "ko/faq/booking/roomtype-change-existing-bookings"
                 ],
                 "expanded": false
               },
