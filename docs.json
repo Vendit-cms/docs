@@ -149,7 +149,8 @@
                   "ko/faq/inventory-rate/channel-final-rate",
                   "ko/faq/inventory-rate/period-season-holiday-rate",
                   "ko/faq/inventory-rate/special-longstay-extra-person-rate",
-                  "ko/faq/inventory-rate/channel-send-rate"
+                  "ko/faq/inventory-rate/channel-send-rate",
+                  "ko/faq/inventory-rate/display-inventory-and-auto-refill"
                 ]
               },
               {
