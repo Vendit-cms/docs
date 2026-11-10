@@ -70,6 +70,7 @@
                       "ko/channels/ddananyo",
                       "ko/channels/liveanywhere",
                       "ko/channels/ban-life",
+                      "ko/channels/stayfolio",
                       "ko/channels/agoda",
                       "ko/channels/yeogieottae-partnercenter",
                       "ko/channels/airbnb",
@@ -77,8 +78,7 @@
                       "ko/channels/camperest",
                       "ko/channels/camfit",
                       "ko/channels/tripdotcom",
-                      "ko/channels/tripbtoz",
-                      "ko/channels/stayfolio"
+                      "ko/channels/tripbtoz"
                     ]
                   }
                 ]
