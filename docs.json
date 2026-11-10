@@ -317,6 +317,7 @@
                       "en/channels/ddananyo",
                       "en/channels/liveanywhere",
                       "en/channels/ban-life",
+                      "en/channels/stayfolio",
                       "en/channels/agoda",
                       "en/channels/yeogieottae-partnercenter",
                       "en/channels/airbnb",
@@ -468,6 +469,7 @@
                 "group": "2026",
                 "expanded": true,
                 "pages": [
+                  "en/release-notes/2026-11-09",
                   "en/release-notes/2026-10-29",
                   "en/release-notes/2026-10-23",
                   "en/release-notes/2026-10-14",

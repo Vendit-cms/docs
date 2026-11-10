@@ -1,0 +1,50 @@
+---
+title: "Stayfolio"
+description: "Check the items below before you connect Stayfolio."
+tag: "Rate control unsupported"
+mode: "default"
+---
+
+---
+
+## Integration notes
+
+### Only Overnight packages are synced
+
+Stayfolio sells Overnight packages only. Day use packages are not synced. Settings you make on the Day use tab in VCMS Distribution do not carry over to Stayfolio.
+
+---
+
+### Set your rates in Stayfolio
+
+Stayfolio does not support rate adjustment by date. If you adjust rates in VCMS, the change does not carry over to Stayfolio.
+
+<Info>
+  Set the rates you sell on Stayfolio directly in Stayfolio. In VCMS, you can manage inventory and bookings.
+</Info>
+
+---
+
+### Blocking and opening rooms is handled as an '예약불가' booking
+
+When you block a room in VCMS, a booking named '예약불가' is created in Stayfolio. When you open the room again, that booking is canceled.
+
+<Info>
+  An '예약불가' booking in your Stayfolio booking list is not a real guest booking. It means the inventory is blocked.
+</Info>
+
+---
+
+### Inventory is not adjusted for rooms with bookings
+
+Rooms booked by real guests are excluded from inventory control. Even if you increase inventory manually in VCMS, bookings that already came in are protected from cancellation.
+
+---
+
+### Some Booking info is not provided
+
+The Booking info sent from Stayfolio does not include the items below.
+
+- **Amount**: Only the Sell rate is provided.
+- **Arrival method**: There is no information, so it shows as 'On foot'.
+- **Check-in and check-out time**: There is no information, so the booking is created with the times set in your VCMS Timetable.
