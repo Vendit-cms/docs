@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2026-11-11
+- 온다 펜션 플러스 페이지에 신규 요금제 확인 절과 요금설정 사진 추가 (ko/channels/onda-pension-plus.mdx, images/onda-pension-plus-new-rate.png, CLAUDE.md)
+
 ## 2026-11-10
 - 푸시 전 검증 명령 추가: 트립닷컴 페이지에 새 절 제목이 있는지 확인 (.claude/verify.json)
 - 트립닷컴 연결 전 예약을 예약 파일로 가져올 수 있다는 안내 추가, 벤디트 관리자 문의로 연결. 연동 유의사항의 "직접 관리가 필요합니다" 삭제 (ko/channels/tripdotcom.mdx, CLAUDE.md)
