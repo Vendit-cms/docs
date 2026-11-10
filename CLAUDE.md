@@ -18,6 +18,7 @@
 - `ko/distributions/usage.mdx` 8행 판매 상태 데모 iframe `src` 교체 (`382a8a2`, Dean 2026-09-19 "수정하고 배포한다")
 - 같은 iframe 을 한국어 드래그판 데모로 다시 교체하고 `height="415"` 를 영어판과 같은
   `style={{ aspectRatio:"1.6", height:"auto" }}` 로 (Dean 2026-09-19, 이 한 줄만 서식 허용)
+- `ko/channels/tripdotcom.mdx` 연동 유의사항 고침, "연결 전 예약 가져오기" 절 추가 (Dean 2026-11-10 "직접 수정해도 되니까", 사용자에게 안 보이는 화면이라 벤디트 관리자 문의로 안내)
 
 iframe 한 줄 허용이 ko iframe 일반 허용은 아니다. 다른 ko 페이지는 여전히 묻는다.
 
