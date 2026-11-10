@@ -1,12 +1,14 @@
 {
-  "ko_commit": "89d8f2c632daf60e7325579506bf93865d532e93",
-  "from": "ac4f2dc4431457e08f5136fe36f472e9ad237f7d",
+  "ko_commit": "f92400244330e24a512accbcbc20c6ee2e2192d0",
+  "from": "89d8f2c632daf60e7325579506bf93865d532e93",
   "engine": 4,
-  "synced_at": "2026-11-04T14:49:34+09:00",
+  "synced_at": "2026-11-10T20:26:01+09:00",
   "pages": {
-    "ko/channels/yanolja.mdx": "7822f25e6a8d9710da3775ba16ccd96bc2965743",
-    "ko/faq/channels/yanolja-2fa.mdx": "5b6dcf9994e356c7251c2543b0bcd54423160fbc",
-    "ko/faq/issue/yanolja-booking-delay.mdx": "79ba6b4c732ab9b909a5c80148129036e933014e"
+    "ko/channels/liveanywhere.mdx": "f5446addd60aeb48605562dc6089df37dcb7df78",
+    "ko/channels/stayfolio.mdx": "3f4de04d123ce4989fda59aee72d07f4600ac162",
+    "ko/channels/tripdotcom.mdx": "5c594ae58324e418d4b416ca702cdca3db760bce",
+    "ko/release-notes/2026-10-29.mdx": "6a9ee9a91b279e519a7da773d307c4173ff3c639",
+    "ko/release-notes/2026-11-09.mdx": "7f8bb8f2df0a7122676f9f5184f45dc0f182c285"
   },
   "note": "English matches Korean as of ko_commit, plus the listed pages at the listed Korean blobs. Written by vcms-i18n scripts/docs_sync.py."
 }
