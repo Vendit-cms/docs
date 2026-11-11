@@ -78,7 +78,8 @@
                       "ko/channels/camperest",
                       "ko/channels/camfit",
                       "ko/channels/tripdotcom",
-                      "ko/channels/tripbtoz"
+                      "ko/channels/tripbtoz",
+                      "ko/channels/onda-pension-plus"
                     ]
                   }
                 ]
@@ -325,7 +326,8 @@
                       "en/channels/camperest",
                       "en/channels/camfit",
                       "en/channels/tripdotcom",
-                      "en/channels/tripbtoz"
+                      "en/channels/tripbtoz",
+                      "en/channels/onda-pension-plus"
                     ]
                   }
                 ]
