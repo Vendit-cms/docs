@@ -1,1 +1,1 @@
-{"commands":["grep -q '^## VCMS 연결 전 예약 가져오기$' ko/channels/tripdotcom.mdx"]}
+{"commands":["grep -q '^## VCMS 연결 전 예약 가져오기$' ko/channels/tripdotcom.mdx","grep -q \"\\\"ko/channels/onda-pension-plus\\\"\" docs.json && grep -q \"\\\"en/channels/onda-pension-plus\\\"\" docs.json"]}
