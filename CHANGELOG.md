@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2026-11-12
+- 채널 연결 안내의 "숙소 코드" 를 제품 문구대로 "호텔 코드" 로, 영어판은 hotel code 로 (ko/channels/channel-setting.mdx, en/channels/channel-setting.mdx, CLAUDE.md)
+
 ## 2026-11-11
 - 온다 펜션 플러스를 ko, en 메뉴에 다시 넣고 검증 명령에 메뉴 검사 추가 (docs.json, .claude/verify.json, CLAUDE.md)
 - 온다 펜션 플러스 페이지에 신규 요금제 확인 절과 요금설정 사진 추가 (ko/channels/onda-pension-plus.mdx, images/onda-pension-plus-new-rate.png, CLAUDE.md)
