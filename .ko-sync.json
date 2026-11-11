@@ -1,8 +1,8 @@
 {
   "ko_commit": "594d133b5f7e4e9e128346635eda2a90dce9fdd3",
-  "from": "f92400244330e24a512accbcbc20c6ee2e2192d0",
+  "from": "594d133b5f7e4e9e128346635eda2a90dce9fdd3",
   "engine": 4,
-  "synced_at": "2026-11-11T02:36:07+09:00",
+  "synced_at": "2026-11-11T22:00:05+09:00",
   "pages": {
     "ko/accommodation/create-accommodation.mdx": "3f1bf3489f50a702a0412a2bd59a09001fc57fc4",
     "ko/channels/airbnb.mdx": "19651f5d1a51f04a5a050056fd46d7f5db1a0091",
@@ -27,7 +27,8 @@
     "ko/faq/inventory-rate/close-sales-and-channel-sync.mdx": "df770b019b50f35856d52883249fa367980b8969",
     "ko/faq/inventory-rate/display-inventory-and-auto-refill.mdx": "1959b1924838369c19d30333a39696401b2513ec",
     "ko/faq/inventory-rate/inventory-mismatch.mdx": "58fecbc72ae5d3c8183036af34429a150fe88832",
-    "ko/faq/issue/airbnb-disconnected.mdx": "35003eda5724018503c62f6455675e6b69aac417"
+    "ko/faq/issue/airbnb-disconnected.mdx": "35003eda5724018503c62f6455675e6b69aac417",
+    "ko/channels/onda-pension-plus.mdx": "53b7e74f22d1a1ad163a3dbcef7df75e2e2e2155"
   },
   "note": "English matches Korean as of ko_commit, plus the listed pages at the listed Korean blobs. Written by vcms-i18n scripts/docs_sync.py."
 }
