@@ -22,6 +22,7 @@
 - `ko/channels/onda-pension-plus.mdx` "요금이 VCMS와 다르게 보인다면" 절과 요금설정 사진 추가 (Dean 2026-11-11 "고쳐", 사진은 Dean 이 숙소 정보를 지운 캡처)
 - `docs.json` ko 와 en 메뉴 "채널별 운영 노트" 끝에 온다 펜션 플러스를 넣음 (Dean 2026-11-11 "온다메뉴독스에추가". 2025-12-05 웹 편집기에서 빠진 뒤 주소로만 열리던 것. 쿨스테이, 떠나요닷컴, 여기어때 빈 페이지는 메뉴에 넣지 않는다)
 - `ko/channels/channel-setting.mdx` 40행 "숙소 코드" 를 제품 문구(`channel-accounts.connect-modal.label.hotel-code`)대로 "호텔 코드" 로 (Dean 2026-11-12 "독스도". en 은 property code → hotel code)
+- `ko/channels/agoda.mdx` 22행과 `ko/faq/channels/agoda-signup-account-product.mdx` 24행 "숙박업소 ID" 를 "아고다 호텔 코드" 로(숙박업소 ID 는 제품에서 VCLOUD 연동 창의 값), `ko/channels/channel-setting.mdx` 80행 "숙소 번호" 줄 삭제(톨지 Project 9 에 그 칸 문구가 없다. 옛 `channel-manage-modal.identifier`). en 같은 줄도 같이 (Dean 2026-11-12 "오케이수정하자")
 - ko 문서 24쪽의 낱말을 제품 용어(vcms-i18n)로 맞춤: 판매중지 → 판매 중지, 업장 → 숙박업소, 마감 → 판매 중지, 매핑 → 상품 연결 (Dean 2026-11-11 "독스고쳐", 낱말만 바꾸고 문장 뜻은 그대로. 릴리스 노트, 약관의 영업장, 네이버 2단계 인증, "남은 방" 은 그대로 둠)
 
 iframe 한 줄 허용이 ko iframe 일반 허용은 아니다. 다른 ko 페이지는 여전히 묻는다.
