@@ -1,9 +1,9 @@
 ---
-title: "Closures are not applied to the channel"
-description: "Covers checking that closures and rate changes reached the channel, closing a room type, bulk updates by period or day of the week, and automatic closure across channels."
+title: "Stop sell is not applied to the channel"
+description: "Covers checking that Stop sell and rate changes reached the channel, setting Stop sell on a room type, bulk updates by period or day of the week, and automatic Stop sell across channels."
 ---
 
-## How do I check that a closure or rate change reached the channel?
+## How do I check that Stop sell or a rate change reached the channel?
 
 > Check against the Distribution screen in VCMS. If the status is Syncing and you saved, the change is applied to the channel.
 
@@ -35,7 +35,7 @@ If this does not solve the problem, click the Support button and report it.
 - [How to use Distribution](/en/distributions/usage)
 - [Channel sync](/en/distributions/channel-sync)
 
-## I closed a room type, but some channel packages are still open
+## I set Stop sell on a room type, but some channel packages are still open
 
 > This happens when a lower-level channel package still has a sell setting you changed directly. In the dialog that appears when you set Stop sell, select `Stop sell`.
 
@@ -107,14 +107,14 @@ If this does not solve the problem, click the Support button and report it.
 - [View settings](/en/distributions/view-setting)
 - [How to use Distribution](/en/distributions/usage)
 
-## When a booking comes in on one channel, do other channels close automatically?
+## When a booking comes in on one channel, is Stop sell set automatically on other channels?
 
 > Yes. If the room type is Managed in CMS and the status is Syncing, inventory on other channels goes down too.
 
 When a booking comes in on one channel, VCMS reduces the room type's availability and sends the reduced inventory to the other channels connected to the same room type. When availability reaches 0, all mapped channel packages stop selling. If a booking is canceled, inventory goes back up.
 
 <Check>
-  **If channels do not close automatically, check the following**
+  **If Stop sell is not set automatically, check the following**
 
   - In Settings > Room types, check that Management type is `Managed in CMS`. With `Managed in channel`, only bookings sync, and inventory does not sync.
   - Check that the sync status in Distribution is Syncing. In Sync stopped status, only bookings sync.
