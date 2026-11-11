@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## 2026-11-11
+- 온다 펜션 플러스 페이지에 신규 요금제 확인 절과 요금설정 사진 추가 (ko/channels/onda-pension-plus.mdx, images/onda-pension-plus-new-rate.png, CLAUDE.md)
 - 한국어 문서 24쪽의 낱말을 제품 용어로 맞춤: 판매중지 → 판매 중지, 업장 → 숙박업소, 마감 → 판매 중지, 매핑 → 상품 연결. 릴리스 노트는 그대로 (ko/, CLAUDE.md)
 
 ## 2026-11-10
