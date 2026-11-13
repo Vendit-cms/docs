@@ -24,6 +24,7 @@
 - `ko/channels/channel-setting.mdx` 40행 "숙소 코드" 를 제품 문구(`channel-accounts.connect-modal.label.hotel-code`)대로 "호텔 코드" 로 (Dean 2026-11-12 "독스도". en 은 property code → hotel code)
 - `ko/channels/agoda.mdx` 22행과 `ko/faq/channels/agoda-signup-account-product.mdx` 24행 "숙박업소 ID" 를 "아고다 호텔 코드" 로(숙박업소 ID 는 제품에서 VCLOUD 연동 창의 값), `ko/channels/channel-setting.mdx` 80행 "숙소 번호" 줄 삭제(톨지 Project 9 에 그 칸 문구가 없다. 옛 `channel-manage-modal.identifier`). en 같은 줄도 같이 (Dean 2026-11-12 "오케이수정하자")
 - `ko/channels/agoda.mdx` "아직 아고다에 숙소를 등록하지 않으신 경우" 절에 아고다 입점 영상 iframe 한 줄 추가 (Dean 2026-11-13 "둘다 수정하고 올리자", en 같은 절에는 영어판 영상)
+- `ko/channels/agoda.mdx` 와 `ko/faq/channels/agoda-signup-account-product.mdx` 에서 끝난 혜택 문구(구독료 할인, 파트너십 혜택)와 `ocid=29` YCS 등록 링크를 뺌. 신규 등록 안내는 FAQ 와 같은 VCMS 아고다 배너 경로로 (Dean 2026-11-13 "다빼버리지머", "ocid=29 값 이거없애야해". 릴리스 노트 2026-04-24 는 기록이라 그대로. en 같은 줄도 같이)
 - ko 문서 24쪽의 낱말을 제품 용어(vcms-i18n)로 맞춤: 판매중지 → 판매 중지, 업장 → 숙박업소, 마감 → 판매 중지, 매핑 → 상품 연결 (Dean 2026-11-11 "독스고쳐", 낱말만 바꾸고 문장 뜻은 그대로. 릴리스 노트, 약관의 영업장, 네이버 2단계 인증, "남은 방" 은 그대로 둠)
 
 iframe 한 줄 허용이 ko iframe 일반 허용은 아니다. 다른 ko 페이지는 여전히 묻는다.
