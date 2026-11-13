@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026-11-14
+- 용어 커버리지 검사 오탐 68건 정리: 제품이 쓰는 대체 영어(Inclusion, Link, Map, Check-in/out), 글자만 같은 한국어(판매가 중지, 정해지고, 예약자), 복수형과 띄어쓰기 차이를 받게 하고 자가검사 17건 추가 (scripts/term_coverage.py)
+- 검증 명령에 용어 커버리지 검사 추가 (.claude/verify.json)
+
 ## 2026-11-13
 - 영어 FAQ 숙박업소 번역을 property 에서 accommodation 으로 (en/faq/inventory-rate/channel-inventory-rate-setting.mdx)
 - 금칙어 검사에 제품 문구 예외 2개 추가: Inclusion fee, Extra guest charge (scripts/glossary_check.py)
