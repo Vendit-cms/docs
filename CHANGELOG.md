@@ -1,6 +1,8 @@
 # CHANGELOG
 
 ## 2026-11-13
+- 영어 FAQ 숙박업소 번역을 property 에서 accommodation 으로 (en/faq/inventory-rate/channel-inventory-rate-setting.mdx)
+- 금칙어 검사에 제품 문구 예외 2개 추가: Inclusion fee, Extra guest charge (scripts/glossary_check.py)
 - 아고다 채널 페이지 신규 등록 절에 입점 영상 추가, 한국어판과 영어판 따로. 영상 스냅샷 2편 등록 (ko/channels/agoda.mdx, en/channels/agoda.mdx, audit/supademo/, CLAUDE.md)
 - 데모 용어 검사에 데모 단위 예외 추가: 아고다 입점 화면의 products 는 아고다 문구에 맞춘 것이라 허용 (scripts/demo_glossary_check.py)
 - 검증 명령에 아고다 입점 영상 임베드 검사 추가 (.claude/verify.json)
