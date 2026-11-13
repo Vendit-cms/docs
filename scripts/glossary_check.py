@@ -42,6 +42,8 @@ ALLOW = [
     r"https?://",                       # URL 안의 단어는 채널사 경로다
     r"reservation settings",            # 아고다 YCS 실제 메뉴명
     r"sales admin site for motels",     # 야놀자 오너앱 설명. VCMS 판매 관리가 아니다
+    r"inclusion fee",                   # 제품 문구 그대로다: inclusions.modify-modal.label.rate
+    r"extra guest charge",              # 제품 문구 그대로다: packages.day-use-modal.description.with-rate-plan
 ]
 # 요금(Rate) 규칙은 구독 청구 문맥에서 끈다.
 # i18n 자신이 그 문맥에 fee/charge 를 쓴다: 오늘 결제 금액 -> "Today's charge", 청구 -> "Billing"
