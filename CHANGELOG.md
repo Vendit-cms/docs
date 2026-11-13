@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2026-11-13
+- 아고다 채널 페이지 신규 등록 절에 입점 영상 추가, 한국어판과 영어판 따로. 영상 스냅샷 2편 등록 (ko/channels/agoda.mdx, en/channels/agoda.mdx, audit/supademo/, CLAUDE.md)
+- 데모 용어 검사에 데모 단위 예외 추가: 아고다 입점 화면의 products 는 아고다 문구에 맞춘 것이라 허용 (scripts/demo_glossary_check.py)
+- 검증 명령에 아고다 입점 영상 임베드 검사 추가 (.claude/verify.json)
+- 아고다 안내에서 끝난 구독료 할인, 파트너십 혜택 문구와 ocid=29 YCS 등록 링크 삭제. 신규 등록은 VCMS 아고다 배너 경로로 안내, 검증 명령에 ocid 재유입 검사 추가 (ko, en 의 channels/agoda.mdx, faq/channels/agoda-signup-account-product.mdx, .claude/verify.json, CLAUDE.md)
+
 ## 2026-11-12
 - 채널 연결 안내의 "숙소 코드" 를 제품 문구대로 "호텔 코드" 로, 영어판은 hotel code 로 (ko/channels/channel-setting.mdx, en/channels/channel-setting.mdx, CLAUDE.md)
 - 아고다 안내의 "숙박업소 ID" 를 "아고다 호텔 코드" 로, 제품에서 사라진 "숙소 번호" 줄 삭제 (ko, en 의 channels/agoda.mdx, faq/channels/agoda-signup-account-product.mdx, channels/channel-setting.mdx, CLAUDE.md)
