@@ -16,6 +16,10 @@ G = importlib.util.module_from_spec(spec); spec.loader.exec_module(G)
 spec = importlib.util.spec_from_file_location("a", os.path.join(HERE, "supademo_audit.py"))
 A = importlib.util.module_from_spec(spec); spec.loader.exec_module(A)
 
+# 데모 단위 예외. 아고다 입점 화면은 버튼 문구를 아고다 쪽 영어(products)에 맞췄다.
+# 용어집은 Package 가 맞지만 이 화면만 허용한다(Dean, 2026-11-13). 영상은 화면 문구를 그대로 읽는다.
+DEMO_ALLOW = {"cmuoxta570t95qmh168o57pxz": {"상품"}}
+
 
 def demo_ids(root):
     ids = set()
@@ -65,6 +69,8 @@ def main():
                 continue
             for term, variants in G.BAD.items():
                 if term not in rules:
+                    continue
+                if term in DEMO_ALLOW.get(d, ()):
                     continue
                 if term in G.BILLING_RULES and G.BILLING_CTX.search(t):
                     continue

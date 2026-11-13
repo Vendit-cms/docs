@@ -12,6 +12,7 @@
 | `cmtz35id90swnqme9v8xtizqs` | Adjusting rates for one room type | 4 | 예 | `en/distributions/usage.mdx` |
 | `cmtyd1bg70i80qme9d53qqrer` | Change of check-in/check-out times | 19 | 예 | `en/distributions/usage.mdx` `en/faq/inventory-rate/daily-chek-in-out-time.mdx` |
 | `cmtz49f960tajqme9fiwfjexr` | Changing a rate | 7 | 예 | `en/distributions/usage.mdx` |
+| `cmuoxta570t95qmh168o57pxz` | Listing your property on Agoda | 49 | 예 | `en/channels/agoda.mdx` |
 | `cmtz4k5800tcwqme9w39nmeeb` | Moving a room to another room type | 6 | 예 | `en/faq/inventory-rate/move-room-to-other-type.mdx` |
 | `cmu5rlz6200ccqm5s2fajlfe6` | VCMS availability change | 4 | 예 | `en/distributions/usage.mdx` |
 | `cmu7o8fw50ebhqm4x8duizui4` | VCMS sell status change | 4 | 예 | `en/distributions/usage.mdx` |
@@ -24,6 +25,7 @@
 | `cmhmy4bnm0guhdqxasfsp3bn5` | 객실을 다른 타입으로 옮기는 방법 안내 | 13 | 예 | `ko/faq/inventory-rate/move-room-to-other-type.mdx` |
 | `cmrw1o4xe1ktaqmbljgwzc9ow` | 결제 카드 등록 | 5 | 예 | `en/faq/billing/add-payment-card.mdx` `ko/faq/billing/add-payment-card.mdx` |
 | `cmrw313oa1mliqmblyaawbzpv` | 기본 카드 설정 | 6 | 예 | `en/faq/billing/default-card-setting.mdx` `ko/faq/billing/default-card-setting.mdx` |
+| `cmwdhtrp005ams51yem8rtcas` | 아고다 입점하기 | 49 | 예 | `ko/channels/agoda.mdx` |
 | `cme6nz0yt250eh3pyiouju82z` | 아고다(YCS) 커넥티비티 연동 설정 | 7 | 예 | `en/channels/agoda.mdx` `ko/channels/agoda.mdx` |
 | `cme8357y3002n0z0hdnvpgox0` | 연동서비스 연결 방법 | 13 | 예 | `en/faq/integrations/vcloud.mdx` `ko/faq/integrations/vcloud.mdx` |
 | `cmtmbyzmu0clbqmh5qu1b8n5l` | 익스피디아, 요금 및 제한 사항 대량 업데이트 | 13 | 예 | `en/channels/expedia.mdx` `ko/channels/expedia.mdx` |
@@ -32,4 +34,4 @@
 | `cmiwq6u664c4al8218tia6h1g` | 📱 (모바일) 예약 내역 화면 | 7 | 예 | `en/faq/booking/use-on-mobile.mdx` `ko/faq/booking/use-on-mobile.mdx` |
 | `cmiwifmmq47o2l821wf4fyavv` | 📱(모바일) 판매 관리 화면 | 12 | 예 | `en/faq/booking/use-on-mobile.mdx` `ko/faq/booking/use-on-mobile.mdx` |
 
-합계 25편.
+합계 27편.

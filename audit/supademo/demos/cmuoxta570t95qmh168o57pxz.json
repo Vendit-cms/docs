@@ -1,0 +1,595 @@
+{
+  "domainURL": "",
+  "embeddedIn": [
+    "en/channels/agoda.mdx"
+  ],
+  "id": "cmuoxta570t95qmh168o57pxz",
+  "metadesc": "Learn how to register your property on Agoda, configure hotel details with amenities, set up room types, define rate plans, and establish cancellation policies to launch your listing.",
+  "published": true,
+  "stepCount": 49,
+  "steps": [
+    {
+      "hotspots": [],
+      "media": null,
+      "n": 1,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "fb1fd7e2819b",
+          "style": "Area",
+          "text": "Click Start Agoda listing to begin registering your property."
+        }
+      ],
+      "media": "iPNT3xwrhJSD0QIZb2J2P.jpg",
+      "n": 2,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e1923995d670",
+          "style": "Area",
+          "text": "Enter your Agoda YCS account email."
+        }
+      ],
+      "media": "FoCMrDjq1dY8s4uJ35IdS.jpg",
+      "n": 3,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "bba5eeed7063",
+          "style": "Area",
+          "text": "Enter your property name in English."
+        }
+      ],
+      "media": "oL6Pjz1Kwbi0YLPYLwprJ.png",
+      "n": 4,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "3855bf836f16",
+          "style": "Area",
+          "text": "Click the Property type field."
+        }
+      ],
+      "media": "iux8zVSTpfmm3cATgkCQE.png",
+      "n": 5,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "03b392049efd",
+          "style": "Area",
+          "text": "Search for your property type in the list."
+        }
+      ],
+      "media": "AOeUkUvMX7NmqVQ3dOLJr.png",
+      "n": 6,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "43e32cd88ee2",
+          "style": "Area",
+          "text": "Select 34 · Hotel as the property type."
+        }
+      ],
+      "media": "khNS_sUUI79C9dc2wThYw.png",
+      "n": 7,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "910cddc26ae1",
+          "style": "Area",
+          "text": "Enter a property description in English (10+ characters)."
+        }
+      ],
+      "media": "HRStOAoK8C1yUtJUal8Td.png",
+      "n": 8,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e6f074e43924",
+          "style": "Area",
+          "text": "Click the Amenities field to choose amenities."
+        }
+      ],
+      "media": "FuEIZr_pzcS9Rfcvzeu9S.png",
+      "n": 9,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "428b1c36df5a",
+          "style": "Circle",
+          "text": "Search for and select the amenities you need."
+        }
+      ],
+      "media": "Q3TP6JWb3wnuU8OaD7RSd.png",
+      "n": 10,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e6f074e43924",
+          "style": "Area",
+          "text": "Select more amenities in the Amenities field."
+        }
+      ],
+      "media": "fkneCr6f_zVhQ-KPCNZmA.png",
+      "n": 11,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "a2f8eb6ec7d3",
+          "style": "Area",
+          "text": "Click Property photos to upload at least 3 photos."
+        }
+      ],
+      "media": "roJy6swOApWLMi6rj5s8q.jpg",
+      "n": 12,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "7f1158299a52",
+          "style": "Area",
+          "text": "Click Set as main photo."
+        }
+      ],
+      "media": "lSkC5WhgxSTanYX6Do7Am.jpg",
+      "n": 13,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "11707622e78c",
+          "style": "Area",
+          "text": "Search for your road address in Korean."
+        }
+      ],
+      "media": "WYeSicSokUTmuHe34HN5x.jpg",
+      "n": 14,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "72c0d49a2ca4",
+          "style": "Area",
+          "text": "Select the matching address from the results."
+        }
+      ],
+      "media": "lHMx9X1QOermOqosvD_SO.jpg",
+      "n": 15,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "bba5eeed7063",
+          "style": "Area",
+          "text": "Enter your first name in English."
+        }
+      ],
+      "media": "1VbH8k4GSKMd17DsNJTb3.jpg",
+      "n": 16,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "430c057bfdff",
+          "style": "Area",
+          "text": "Click Select to choose your phone number prefix."
+        }
+      ],
+      "media": "hRkw522io5zeZd4lrN8Od.png",
+      "n": 17,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "802041d67224",
+          "style": "Area",
+          "text": "Select 010."
+        }
+      ],
+      "media": "D5Zhu2KALB_lGfz1tIHY-.png",
+      "n": 18,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "772334ba9c22",
+          "style": "Area",
+          "text": "Enter the remaining digits of your phone number."
+        }
+      ],
+      "media": "s_FyzZ_hUEqGpkr7y5sl2.png",
+      "n": 19,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "3855bf836f16",
+          "style": "Area",
+          "text": "Click the Check-in field."
+        }
+      ],
+      "media": "D-So7XhMVZr-0OiqLVJ8_.png",
+      "n": 20,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "03b392049efd",
+          "style": "Area",
+          "text": "Search or pick a check-in time from the list."
+        }
+      ],
+      "media": "TVpzhdu9Ipo32mR5lUv4h.png",
+      "n": 21,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "3855bf836f16",
+          "style": "Area",
+          "text": "Click the Check-out field."
+        }
+      ],
+      "media": "oXfDSieW2OmSkf4dnKQja.png",
+      "n": 22,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "03b392049efd",
+          "style": "Area",
+          "text": "Search or pick a check-out time from the list."
+        }
+      ],
+      "media": "YpU_pSXov3ciLAais-3Ic.png",
+      "n": 23,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "c90361dc4612",
+          "style": "Area",
+          "text": "Click Save property to create your property."
+        }
+      ],
+      "media": "5KZXwCsR5hEVDePjYFMYF.png",
+      "n": 24,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Area",
+          "text": "After your property is created on Agoda, please wait until the contract is ready."
+        }
+      ],
+      "media": null,
+      "n": 25,
+      "sec": 1.02
+    },
+    {
+      "hotspots": [
+        {
+          "html": "5114bfca2331",
+          "style": "Area",
+          "text": "Check I have read and agree to this contract."
+        }
+      ],
+      "media": "C8Nhz7cviApRAOfF6HTDQ.png",
+      "n": 26,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "3ef190573912",
+          "style": "Area",
+          "text": "Click Sign contract to complete the contract."
+        }
+      ],
+      "media": "16AbqlCwe3uKFwGuqQdsp.png",
+      "n": 27,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "76bcb3c65d88",
+          "style": "Area",
+          "text": "Enter a rate plan name in English."
+        }
+      ],
+      "media": "6cRwaoaBjNGPLcY0vRW3t.png",
+      "n": 28,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "0cabf1c80dcf",
+          "style": "Area",
+          "text": "Click the Rate plan type field. It can't be changed later."
+        }
+      ],
+      "media": "P3fDvbdgEK0oKALl6CTKt.png",
+      "n": 29,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "c976821f198b",
+          "style": "Circle",
+          "text": "Select a rate plan type from the list."
+        }
+      ],
+      "media": "E4E6gFQzJIq2JcbsqwTdn.png",
+      "n": 30,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "c28df4e2216c",
+          "style": "Area",
+          "text": "Click Save rates."
+        }
+      ],
+      "media": "6PQRdZv8LXX_sibEClIwa.png",
+      "n": 31,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "76bcb3c65d88",
+          "style": "Area",
+          "text": "Enter the room name in English."
+        }
+      ],
+      "media": "1KRvwH9DHYyw6kija2PVB.png",
+      "n": 32,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "de49593b3e1b",
+          "style": "Area",
+          "text": "Enter a room description in English (10+ characters)."
+        }
+      ],
+      "media": "Gyc4J9Uiyq6YH-refaIe0.png",
+      "n": 33,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "0f288fd739fc",
+          "style": "Area",
+          "text": "Click Room amenities to search for amenities."
+        }
+      ],
+      "media": "dsS-CeoBgEqgtYpTArVlI.png",
+      "n": 34,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "921ddb6165c6",
+          "style": "Area",
+          "text": "Select hair dryer and any other amenities in the room."
+        }
+      ],
+      "media": "gD9NbM-HOCzbNsCI9CTk-.png",
+      "n": 35,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "b993e8c37488",
+          "style": "Area",
+          "text": "Enter the room size in Size (m²)."
+        }
+      ],
+      "media": "ysidmveG92nDX5dspMjHf.png",
+      "n": 36,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "98e0c9043529",
+          "style": "Area",
+          "text": "Click the Bed type field for Bedroom 1."
+        }
+      ],
+      "media": "8xAwnyssag0UNF_TFjEkm.png",
+      "n": 37,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "40c2acbfb615",
+          "style": "Area",
+          "text": "Select Single Bed."
+        }
+      ],
+      "media": "gdCvKWsSAT1Eub-aMRF_J.png",
+      "n": 38,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "73167f8151f1",
+          "style": "Area",
+          "text": "Enter the Number of beds for this bedroom."
+        }
+      ],
+      "media": "uonclSdJETeHjdWnLl6bb.png",
+      "n": 39,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "e3b0c44298fc",
+          "style": "Area",
+          "text": "Check what you entered, then move on to the next step."
+        }
+      ],
+      "media": null,
+      "n": 40,
+      "sec": 1.5
+    },
+    {
+      "hotspots": [
+        {
+          "html": "44f9692be326",
+          "style": "Area",
+          "text": "Click Save rooms."
+        }
+      ],
+      "media": "IpI-Uz5jxmNJrEE3d5TwW.png",
+      "n": 41,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "0f288fd739fc",
+          "style": "Area",
+          "text": "Click Room types using this rate plan and select the rooms."
+        }
+      ],
+      "media": "Ej-C_lgfPY9pMEQnBqgQr.png",
+      "n": 42,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "5dc009424cad",
+          "style": "Area",
+          "text": "Click the Selling ends field."
+        }
+      ],
+      "media": "pGmRE6rZQZPld4HF_RGd-.png",
+      "n": 43,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "5dc009424cad",
+          "style": "Area",
+          "text": "Click the calendar icon to pick a date."
+        }
+      ],
+      "media": "z9SXr15gxkpBibyelRdDi.png",
+      "n": 44,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "a16f8afca156",
+          "style": "Circle",
+          "text": "Select 2027. 10. 01. as the Selling ends date."
+        }
+      ],
+      "media": "XSbEy-OXY5tqflqR6vd0J.png",
+      "n": 45,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "8a73c245af72",
+          "style": "Area",
+          "text": "Click the Cancellation policy field."
+        }
+      ],
+      "media": "5o6wLURoGzjRK5FEVS4ET.png",
+      "n": 46,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "073cd7aaf65a",
+          "style": "Circle",
+          "text": "Select a cancellation policy to apply to this rate plan."
+        }
+      ],
+      "media": "1AorZn7znnGnSEqMvIOST.png",
+      "n": 47,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "5ce51544906f",
+          "style": "Circle",
+          "text": "Click Included benefits and select Breakfast."
+        }
+      ],
+      "media": "UiW6ETzbTcWwyI7rLj1-4.png",
+      "n": 48,
+      "sec": null
+    },
+    {
+      "hotspots": [
+        {
+          "html": "6707aff5c51d",
+          "style": "Area",
+          "text": "Finally, click Save products."
+        }
+      ],
+      "media": "gPd04BkT8NtKAW9JdGxts.png",
+      "n": 49,
+      "sec": null
+    }
+  ],
+  "title": "Listing your property on Agoda"
+}
