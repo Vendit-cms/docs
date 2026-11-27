@@ -138,8 +138,7 @@
                   "ko/faq/channels/naver-product-rate-inventory",
                   "ko/faq/channels/agoda-signup-account-product",
                   "ko/faq/channels/agoda-rate-and-display",
-                  "ko/faq/channels/airbnb-connection",
-                  "ko/faq/channels/naver-booking-info-verification"
+                  "ko/faq/channels/airbnb-connection"
                 ]
               },
               {
@@ -203,7 +202,8 @@
                   "ko/faq/issue/yanolja-booking-delay",
                   "ko/faq/issue/airbnb-disconnected",
                   "ko/faq/issue/channel-auto-disconnected",
-                  "ko/faq/issue/vcloud-booking-not-synced"
+                  "ko/faq/issue/vcloud-booking-not-synced",
+                  "ko/faq/issue/naver-booking-info-verification"
                 ]
               },
               {
