@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## 2026-11-28
+- 영어 릴리스 노트 2025-12-23 의 stop-sell, resume 를 Stop sell, Resume sell 로. 판매 재개는 Resume sell, 판매 중은 Open sell 로 구분 (2026-11-27 PM 결정) (en/release-notes/2025-12-23.mdx)
 - 떠나요 채널 페이지에 "요금은 시즌/요금설정 금액보다 높게 올릴 수 없어요" 절과 설명 사진 추가, 한국어판과 영어판 같이 (ko/channels/ddananyo.mdx, en/channels/ddananyo.mdx, images/ddananyo-rate-cap.png, images/ddananyo-rate-cap-en.png, CLAUDE.md)
 - 영어 릴리스 노트 2026-01-14 의 Open sell 을 Resume sell 로 (2026-11-27 PM 결정, 용어 커버리지 검사 통과용) (en/release-notes/2026-01-14.mdx)
 
