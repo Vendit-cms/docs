@@ -2,6 +2,7 @@
 
 ## 2026-11-28
 - 공개 이미지 49장의 개인정보와 타 업소 식별 정보(사람 이름, 이메일, 전화, 카드 끝자리, 예약 번호, 타 업소 이름·코드·주소, 헤더 계정 이니셜)를 단색 박스로 가린 -v2 새 파일로 교체하고 옛 파일과 같은 바이트 사본 59개 삭제, 참조는 이미지 줄만 교체 (images/*-v2.png, en/, ko/, IMAGES.md)
+- 영어판을 한국어 11-27 웹 편집기 변경분에 맞춤: 릴리스 노트 2026-11-27 과 FAQ 네이버 예약자 정보 본인 인증 영어판 신규(그림은 한국어 원본의 영어 이름 사본 2장), 영어 메뉴 두 곳 등록(페이지 126:126), 11-09와 10-23 릴리스 노트의 NEW 태그를 한국어와 같게 제거 (en/release-notes/2026-11-27.mdx, en/faq/issue/naver-booking-info-verification.mdx, en/release-notes/2026-11-09.mdx, en/release-notes/2026-10-23.mdx, docs.json, images/naver-privacy-verification-kakao-message.png, images/naver-privacy-verification-link.png)
 - 영어 릴리스 노트 2025-12-23 의 stop-sell, resume 를 Stop sell, Resume sell 로. 판매 재개는 Resume sell, 판매 중은 Open sell 로 구분 (2026-11-27 PM 결정) (en/release-notes/2025-12-23.mdx)
 - 떠나요 채널 페이지에 "요금은 시즌/요금설정 금액보다 높게 올릴 수 없어요" 절과 설명 사진 추가, 한국어판과 영어판 같이 (ko/channels/ddananyo.mdx, en/channels/ddananyo.mdx, images/ddananyo-rate-cap.png, images/ddananyo-rate-cap-en.png, CLAUDE.md)
 - 영어 릴리스 노트 2026-01-14 의 Open sell 을 Resume sell 로 (2026-11-27 PM 결정, 용어 커버리지 검사 통과용) (en/release-notes/2026-01-14.mdx)

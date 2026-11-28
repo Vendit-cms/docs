@@ -452,7 +452,8 @@
                   "en/faq/issue/yanolja-booking-delay",
                   "en/faq/issue/airbnb-disconnected",
                   "en/faq/issue/channel-auto-disconnected",
-                  "en/faq/issue/vcloud-booking-not-synced"
+                  "en/faq/issue/vcloud-booking-not-synced",
+                  "en/faq/issue/naver-booking-info-verification"
                 ]
               },
               {
@@ -473,6 +474,7 @@
                 "group": "2026",
                 "expanded": true,
                 "pages": [
+                  "en/release-notes/2026-11-27",
                   "en/release-notes/2026-11-09",
                   "en/release-notes/2026-10-29",
                   "en/release-notes/2026-10-23",
