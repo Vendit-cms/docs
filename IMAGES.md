@@ -5,7 +5,7 @@
 `en-` 로 시작하는 파일은 영어 UI 에서 새로 찍은 것이다. 나머지는 한국어 원본을 그대로 쓴다.
 `images/` 는 한국어 문서와 공유하므로 원본을 덮으면 한국어까지 바뀐다. 그래서 새 파일로 넣는다.
 
-참조 298건 중 239건 정리 완료, 59건 남음.
+참조 302건 중 243건 정리 완료, 59건 남음.
 
 ## `en/accommodation/create-accommodation.mdx`
 
@@ -350,6 +350,13 @@
 | --- | --- |
 | `channel-auto-disconnect-noti.png` | 재현 불가 — 카카오 알림톡 원문이다. 한국어로만 발송된다 |
 
+## `en/faq/issue/naver-booking-info-verification.mdx`
+
+| 이미지 | 상태 |
+| --- | --- |
+| `naver-privacy-verification-kakao-message.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `naver-privacy-verification-link.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+
 ## `en/faq/issue/vcloud-booking-not-synced.mdx`
 
 | 이미지 | 상태 |
@@ -669,4 +676,11 @@
 | 이미지 | 상태 |
 | --- | --- |
 | `stayfolio-1.png` | 영어 재캡처 필요 |
+
+## `en/release-notes/2026-11-27.mdx`
+
+| 이미지 | 상태 |
+| --- | --- |
+| `naver-privacy-verification-kakao-message.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `naver-privacy-verification-link.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
