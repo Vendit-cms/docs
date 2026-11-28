@@ -26,3 +26,19 @@ Book several nights on Ddnayodotcom and VCMS receives that booking **split night
 <Info>
   Ddnayodotcom sometimes bundles separate bookings into one. That can make the night count come out wrong, so VCMS splits Ddnayodotcom bookings into single nights. This way, inventory stays accurate even when part of a booking changes or is canceled.
 </Info>
+
+---
+
+### Rates cannot go above the amount in Ddnayodotcom's Season/Rate settings
+
+Ddnayodotcom treats the amount in its Season/Rate settings as the **maximum rate (cap)** for that period, and applies discount rates within it. If you raise a rate in VCMS above that amount, it is not applied on Ddnayodotcom, and the two screens can show different rates.
+
+For example, if peak season is 130,000 KRW in Ddnayodotcom's Season/Rate settings, raising the peak-season rate to 200,000 KRW in VCMS is applied on Ddnayodotcom only up to 130,000 KRW.
+
+<Frame>
+  ![VCMS peak-season rate set to 200,000 KRW, while Ddnayodotcom's Season/Rate settings cap peak season at 130,000 KRW](/images/ddananyo-rate-cap.png)
+</Frame>
+
+<Warning>
+  If you plan to raise rates for a period, such as peak season, first raise the amount for that period in Ddnayodotcom's Season/Rate settings. Then change the rate in VCMS and it will be applied on Ddnayodotcom.
+</Warning>

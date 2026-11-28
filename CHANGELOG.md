@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2026-11-28
+- 떠나요 채널 페이지에 "요금은 시즌/요금설정 금액보다 높게 올릴 수 없어요" 절과 설명 사진 추가, 한국어판과 영어판 같이 (ko/channels/ddananyo.mdx, en/channels/ddananyo.mdx, images/ddananyo-rate-cap.png, CLAUDE.md)
+
 ## 2026-11-14
 - 용어 커버리지 검사 오탐 68건 정리: 제품이 쓰는 대체 영어(Inclusion, Link, Map, Check-in/out), 글자만 같은 한국어(판매가 중지, 정해지고, 예약자), 복수형과 띄어쓰기 차이를 받게 하고 자가검사 17건 추가 (scripts/term_coverage.py)
 - 검증 명령에 용어 커버리지 검사 추가 (.claude/verify.json)
