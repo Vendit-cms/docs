@@ -5,23 +5,23 @@
 `en-` 로 시작하는 파일은 영어 UI 에서 새로 찍은 것이다. 나머지는 한국어 원본을 그대로 쓴다.
 `images/` 는 한국어 문서와 공유하므로 원본을 덮으면 한국어까지 바뀐다. 그래서 새 파일로 넣는다.
 
-참조 274건 중 236건 정리 완료, 38건 남음.
+참조 298건 중 239건 정리 완료, 59건 남음.
 
 ## `en/accommodation/create-accommodation.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
 | `en-accommodations-list.png` | 영어 캡처 완료 |
-| `Inviting-1.png` | 재현 불가 — 대기 중인 초대가 실재해야 한다 |
+| `Inviting-1-v2.png` | 영어 재캡처 필요 |
 
 ## `en/accommodation/invite-user.mdx`
 
 | 이미지 | 상태 |
 | --- | --- |
-| `en-users-list.png` | 영어 캡처 완료 |
+| `en-users-list-v2.png` | 영어 캡처 완료 |
 | `en-users-invite.png` | 영어 캡처 완료 |
-| `en-users-row-menu.png` | 영어 캡처 완료 |
-| `en-users-edit-role.png` | 영어 캡처 완료 |
+| `en-users-row-menu-v2.png` | 영어 캡처 완료 |
+| `en-users-edit-role-v2.png` | 영어 캡처 완료 |
 
 ## `en/accommodation/signup-login.mdx`
 
@@ -49,9 +49,9 @@
 | 이미지 | 상태 |
 | --- | --- |
 | `en-bookings-default.png` | 영어 캡처 완료 |
-| `en-booking-list-view-2.png` | 영어 캡처 완료 |
-| `en-booking-card-view-2.png` | 영어 캡처 완료 |
-| `en-booking-csv-download-2.png` | 영어 캡처 완료 |
+| `en-booking-list-view-2-v2.png` | 영어 캡처 완료 |
+| `en-booking-card-view-2-v2.png` | 영어 캡처 완료 |
+| `en-booking-csv-download-2-v2.png` | 영어 캡처 완료 |
 
 ## `en/channels/agoda.mdx`
 
@@ -87,17 +87,23 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `en-channel-connected-list.png` | 영어 캡처 완료 |
+| `en-channel-connected-list-v2.png` | 영어 캡처 완료 |
 | `en-channels-available.png` | 영어 캡처 완료 |
 | `en-channel-connect-form.png` | 영어 캡처 완료 |
 | `channel-property-info-none-connected.png` | 재현 불가 — 채널 연결 플로우 중간 단계라 실제로 연결을 눌러야 나온다. 운영 접근은 조회만 허용이라 못 찍는다(Dean, 2026-09-13) |
-| `channel-property-connect-1.png` | 재현 불가 — 채널 연결 플로우 중간 단계라 실제로 연결을 눌러야 나온다. 운영 접근은 조회만 허용이라 못 찍는다(Dean, 2026-09-13) |
+| `channel-property-connect-1-v2.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 | `en-channel-property-info.png` | 영어 캡처 완료 |
 | `en-channel-commission-modal.png` | 영어 캡처 완료 |
 | `en-channel-final-rate-modal.png` | 영어 캡처 완료 |
 | `en-channel-packages.png` | 영어 캡처 완료 |
 | `en-channel-package-edit.png` | 영어 캡처 완료 |
 | `en-channel-package-visibility.png` | 영어 캡처 완료 |
+
+## `en/channels/ddananyo.mdx`
+
+| 이미지 | 상태 |
+| --- | --- |
+| `ddananyo-rate-cap-en.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/channels/expedia.mdx`
 
@@ -126,6 +132,12 @@
 | `naver-connect.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 | `image-5.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
+## `en/channels/onda-pension-plus.mdx`
+
+| 이미지 | 상태 |
+| --- | --- |
+| `onda-pension-plus-new-rate.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+
 ## `en/channels/tripbtoz.mdx`
 
 | 이미지 | 상태 |
@@ -137,7 +149,7 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `image(59).png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `image(59)-v2.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 | `image(61).png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 | `image(63).png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 | `image(64).png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
@@ -146,7 +158,10 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `notification.png` | 재현 불가 — 채널 상품 알림이 있어야 한다. VENDIT HOTEL 은 알림 0건이고, dev 는 여는 순간 읽음 처리될 수 있어서 안 열었다(2026-09-12) |
+| `yanolja-2fa-1-connect.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `yanolja-2fa-3-phone.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `yanolja-2fa-4-code.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `yanolja-2fa-5-done.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/distributions/channel-sync.mdx`
 
@@ -192,7 +207,7 @@
 | --- | --- |
 | `image-34.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 | `KakaoTalk_Photo_2026-04-21-18-18-23-001-3.jpeg` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
-| `image-(1).png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `image-(1)-v2.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 | `KakaoTalk_Photo_2026-04-21-18-18-23-002-2.jpeg` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/faq/channels/available-channels.mdx`
@@ -219,6 +234,14 @@
 | `channels/trip.svg` | 채널 로고 (언어 무관) |
 | `channels/expedia.svg` | 채널 로고 (언어 무관) |
 
+## `en/faq/channels/yanolja-2fa.mdx`
+
+| 이미지 | 상태 |
+| --- | --- |
+| `yanolja-2fa-image.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `yanolja-2fa-image-2.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `yanolja-2fa-image-3.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+
 ## `en/faq/integrations/vcloud.mdx`
 
 | 이미지 | 상태 |
@@ -234,7 +257,7 @@
 | --- | --- |
 | `image-34.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 | `KakaoTalk_Photo_2026-04-21-18-18-23-001-3.jpeg` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
-| `image-(1).png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `image-(1)-v2.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 | `KakaoTalk_Photo_2026-04-21-18-18-23-002-2.jpeg` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
 ## `en/faq/inventory-rate/bulk-edit-period-inventory.mdx`
@@ -331,7 +354,7 @@
 
 | 이미지 | 상태 |
 | --- | --- |
-| `en-booking-confirm-button.png` | 영어 캡처 완료 |
+| `en-booking-confirm-button-v2.png` | 영어 캡처 완료 |
 
 ## `en/faq/issue/yanolja-booking-delay.mdx`
 
@@ -339,7 +362,7 @@
 | --- | --- |
 | `blocked.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 | `yanolja-system-error-modal-1.png` | 재현 불가 — 야놀자 장애 때만 뜨는 모달이라 재현 불가 |
-| `en-accommodation-info.png` | 영어 캡처 완료 |
+| `en-accommodation-info-v2.png` | 영어 캡처 완료 |
 | `image-10.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 | `image-9.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
 
@@ -382,16 +405,6 @@
 | `en-pkg-bulk-rate-plan-button.png` | 영어 캡처 완료 |
 | `en-pkg-import-rate-plan.png` | 영어 캡처 완료 |
 | `en-pkg-delete.png` | 영어 캡처 완료 |
-
-## `en/inventory-rate/period.mdx`
-
-| 이미지 | 상태 |
-| --- | --- |
-| `en-period-list.png` | 영어 캡처 완료 |
-| `en-period-create.png` | 영어 캡처 완료 |
-| `en-period-rate-adjust.png` | 영어 캡처 완료 |
-| `en-period-delete-icon.png` | 영어 캡처 완료 |
-| `en-period-delete-confirm.png` | 영어 캡처 완료 |
 
 ## `en/inventory-rate/rate.mdx`
 
@@ -441,8 +454,8 @@
 | `image-17.png` | 한국어 보존 — 요금 조절 모달이 Rate adjustment 로 전면 개편됐다. 평균 요금·초기화/저장 대신 OCC 배지·Amount/Percent·객실 타입 그룹. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
 | `image-12.png` | 한국어 보존 — 판매 중지 확인 모달(개별 설정 유지)이 없다. 임시 변경 바로 바로 간다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
 | `image-11.png` | 한국어 보존 — 판매 재개 확인 모달도 같이 없어졌다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
-| `image-14.png` | 재현 불가 — VCMS 아고다 연동 로그인 화면인데 아고다 채널 연결 버튼을 눌러야 나온다. 운영에서 채널 연결은 안 누른다 |
-| `image-16.png` | 한국어 유지 — 크롬 브라우저 확장 프로그램 메뉴다. VCMS 화면이 아니다 |
+| `image-14-v2.png` | 영어 재캡처 필요 |
+| `image-16-v2.png` | 영어 재캡처 필요 |
 
 ## `en/release-notes/2026-01-29.mdx`
 
@@ -458,7 +471,7 @@
 | `en-booking-date-filters.png` | 영어 캡처 완료 |
 | `en-bulk-update-selection.png` | 영어 캡처 완료 |
 | `en-bulk-update-date-range.png` | 영어 캡처 완료 |
-| `image-28.png` | 재현 불가 — 잘린 업장 이름을 툴팁으로 펼친 사진이다. 그 이름이 바로 가려야 하는 정보라 영어로 다시 찍어도 쓸 수 없다 |
+| `image-28-v2.png` | 영어 재캡처 필요 |
 
 ## `en/release-notes/2026-03-06.mdx`
 
@@ -485,7 +498,7 @@
 | `Banner-Agoda-Referral-1.png` | 한국어 보존 — 아고다 입점 배너가 현재 빌드에 없다(채널·판매관리·숙박업소 목록 확인). 캠페인 배너라 내려간 것으로 본다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
 | `en-import-channel-packages.png` | 영어 캡처 완료 |
 | `en-rebuilt-channel-page.png` | 영어 캡처 완료 |
-| `Update-Note-Subscription-1.png` | 재현 불가 — 유료 구독 상태 화면이다. 쓸 수 있는 업장 둘 다 무료 체험이고 구독 버튼은 안 누른다 |
+| `Update-Note-Subscription-1-v2.png` | 영어 재캡처 필요 |
 
 ## `en/release-notes/2026-04-28.mdx`
 
@@ -509,7 +522,7 @@
 | `260515-Mobile-Channel.png` | 재현 불가 — 폰 프레임에 스크린샷 3장을 얹은 합성이다. 화면 하나가 아니라 디자인 작업이다 |
 | `260515-Mobile-Channel-Mapping.png` | 재현 불가 — 같은 합성. 폰 프레임 3장 |
 | `en-260515-subscription.png` | 영어 캡처 완료 |
-| `260515-Billing-Cancel.png` | 재현 불가 — 구독 취소 버튼을 눌러야 나온다. 구독/결제 버튼은 안 누른다 |
+| `260515-Billing-Cancel-v2.png` | 영어 재캡처 필요 |
 | `en-260515-language.png` | 영어 캡처 완료 |
 
 ## `en/release-notes/2026-06-09.mdx`
@@ -524,7 +537,7 @@
 | 이미지 | 상태 |
 | --- | --- |
 | `260617-Booking-Multiplier-Setting-2.png` | 한국어 보존 — 상품 생성 모달과 예약 상세가 둘 다 바뀐 합성이다. 지금 화면으로 다시 찍으면 그 릴리즈 기록이 아니게 된다(Dean, 2026-09-14) |
-| `260617-Booking-OTA-Example-2.png` | 한국어 유지 — 채널사가 만든 화면이라 범위 밖이다. 본문 영어 번역만 하고 사진은 한국어 그대로 둔다(Dean, 2026-09-13) |
+| `260617-Booking-OTA-Example-2-v2.png` | 영어 재캡처 필요 |
 | `en-rate-setting.png` | 영어 캡처 완료 |
 | `en-room-type-settings.png` | 영어 캡처 완료 |
 | `260609-Booking.png` | 재현 불가 — 데스크톱 예약 상세와 폰 프레임을 나란히 얹은 합성이다. 화면 하나가 아니다 |
@@ -575,7 +588,7 @@
 | 이미지 | 상태 |
 | --- | --- |
 | `en-260807-search-accommodation.png` | 영어 캡처 완료 |
-| `en-260807-bookings-card-view.png` | 영어 캡처 완료 |
+| `en-260807-bookings-card-view-v2.png` | 영어 캡처 완료 |
 | `en-260807-edit-pkg-modal.png` | 영어 캡처 완료 |
 | `en-260807-edit-pkg-rate.png` | 영어 캡처 완료 |
 
@@ -605,4 +618,55 @@
 | `en-260903-expand-collapse.png` | 영어 캡처 완료 |
 | `en-260903-roomtype-filter-multi.png` | 영어 캡처 완료 |
 | `en-260903-temporary-change-bar.png` | 영어 캡처 완료 |
+
+## `en/release-notes/2026-09-18.mdx`
+
+| 이미지 | 상태 |
+| --- | --- |
+| `260921-distribution-rate-range-noti.png` | 영어 재캡처 필요 |
+| `260921-channel-added-meta-info.png` | 영어 재캡처 필요 |
+| `260921-audit-added-category.png` | 영어 재캡처 필요 |
+| `260921-icon-renewal-2.png` | 영어 재캡처 필요 |
+
+## `en/release-notes/2026-09-30.mdx`
+
+| 이미지 | 상태 |
+| --- | --- |
+| `260930-support-button-develop-1.png` | 영어 재캡처 필요 |
+| `260930-dida-banner-2.png` | 영어 재캡처 필요 |
+| `260930-noti-4.png` | 영어 재캡처 필요 |
+
+## `en/release-notes/2026-10-14.mdx`
+
+| 이미지 | 상태 |
+| --- | --- |
+| `261016-distribution-sidebar-1-v2.png` | 영어 재캡처 필요 |
+| `261016-distribution-sidebar-2-v2.png` | 영어 재캡처 필요 |
+| `create-period.gif` | 영어 재캡처 필요 |
+| `select-days.gif` | 영어 재캡처 필요 |
+| `261016-period-rate-multiplier-1.png` | 영어 재캡처 필요 |
+| `connect-pkg-1.gif` | 영어 재캡처 필요 |
+| `261016-delete-period.png` | 영어 재캡처 필요 |
+
+## `en/release-notes/2026-10-23.mdx`
+
+| 이미지 | 상태 |
+| --- | --- |
+| `261023-holiday-option-v2.png` | 영어 재캡처 필요 |
+| `261023-holiday-tooltip.png` | 영어 재캡처 필요 |
+| `261023-rate-list.png` | 영어 재캡처 필요 |
+| `261023-noti-update.png` | 영어 재캡처 필요 |
+
+## `en/release-notes/2026-10-29.mdx`
+
+| 이미지 | 상태 |
+| --- | --- |
+| `261029-accommodation-list-1-v2.png` | 영어 재캡처 필요 |
+| `261029-confirmed-booking-v2.png` | 영어 재캡처 필요 |
+
+## `en/release-notes/2026-11-09.mdx`
+
+| 이미지 | 상태 |
+| --- | --- |
+| `stayfolio-1.png` | 영어 재캡처 필요 |
 
